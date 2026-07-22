@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "manufacturing_package",
-  "summary": "FDM-printable compact Mini-ITX enclosure with perforated side panels, AXP120-X67 cooler support, a GPU mounted behind the motherboard, and a rear-zone 160 x 80 x 40 mm compact 1U power supply.",
+  "summary": "FDM-printable sub-4-liter Mini-ITX enclosure with perforated side panels, AXP120-X67 cooler support, compact discrete-GPU support, and an SFX power supply.",
   "required_interfaces": [
     {
       "id": "mini_itx_mounting",
@@ -21,14 +21,14 @@
     {
       "id": "gpu_fit",
       "kind": "internal_fit",
-      "description": "Fit the approved compact GPU envelope behind the motherboard, including its I/O bracket, PCIe riser path, and power-cable bend space.",
+      "description": "Fit the approved compact GPU envelope, its I/O bracket, PCIe riser, and power-cable bend space.",
       "source": "user_requested",
       "required": true
     },
     {
       "id": "psu_fit",
       "kind": "internal_fit",
-      "description": "Fit a compact 160 x 80 x 40 mm 1U/Flex power supply in the rear zone with AC inlet access, airflow, retention, and cable routing, spatially offset from the GPU.",
+      "description": "Fit a standard 125 x 100 x 63.5 mm SFX power supply with AC inlet access, airflow, retention, and cable routing.",
       "source": "user_requested",
       "required": true
     },
