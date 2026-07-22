@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-22-ac39c5c5-f7dc-44f9-af83-097d2f6223ee",
+  "documentId": "main",
+  "revision": 22,
+  "revisionId": "revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c",
+  "summary": "The enclosure is visually coherent and contains no visible component-envelope placeholders, but the required right-rear GPU service view remains obstructed. Seven exact-fit, clearance, routing, or installation-sequence requirements are not verified by the available static views.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The assembly reads as a complete, consistently proportioned enclosure with aligned panels, frame, feet, and controls and no obvious interpenetration. The one detached side panel is coherently presented as the intentional service-view panel rather than an unexplained loose part.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-988a2b053b8a1df35bf62792/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric overview shows the complete enclosure, detached service panel, chassis, ventilated faces, button, and feet with coherent scale and no visible collision."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-988a2b053b8a1df35bf62792/workbench_front.png",
+          "view": "front",
+          "description": "The front view shows a regular enclosure silhouette, aligned full-height ventilation panel, centered external control, and stable foot placement."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The views show the enclosure and internal tray only indirectly; they do not directly expose the Mini-ITX mounting-hole pattern, a fitted 170 x 170 mm board interface, or the rear-I/O access relationship. Exact fit and retention therefore cannot be established visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-d1a6bb890f18a2bdcc544579/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric enclosure view does not directly reveal the complete motherboard boss pattern or rear-I/O opening geometry needed to prove the interface."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "A ventilated cooler-side panel is visible, but no AXP120-X67 envelope or directly visible clearance gap is present. The images cannot prove cooler fit or preserved intake clearance to the side panel.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-d1a6bb890f18a2bdcc544579/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view visibly confirms side-panel perforation, but the cooler envelope and its separation from that panel are not exposed."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The enclosure views do not directly show an approved compact-GPU envelope within the rear supports, nor do they expose the full PCIe riser route and power-cable bend volume. Rear mounting fit cannot be established from these views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-d1a6bb890f18a2bdcc544579/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the overall rear-side enclosure volume but not the GPU envelope, complete riser path, or cable-bend space required for direct fit verification."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The static exterior views do not clearly expose the complete PSU cradle, retention features, AC-inlet opening, airflow route, and cable exit together. Fit of the specified 160 x 80 x 40 mm PSU and all associated access requirements is therefore not visually established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-d1a6bb890f18a2bdcc544579/workbench_iso.png",
+          "view": "iso",
+          "description": "The enclosure shell and ventilation are visible, but the PSU cradle interfaces and cable/inlet access are largely occluded."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "The front view directly confirms one externally reachable button, but the required internal path from the button to the motherboard header is not visible. The complete interface requirement is not verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-d1a6bb890f18a2bdcc544579/workbench_front.png",
+          "view": "front",
+          "description": "A single circular power button is clearly accessible on the front face, while no internal wiring or routing path can be seen."
+        }
+      ]
+    },
+    {
+      "checkId": "gpu-service-view",
+      "status": "fail",
+      "description": "The actual perforated right-side panel is visibly displaced outside the chassis, but the requested right-rear service presentation does not clearly expose the GPU mounting area: the rear ventilated wall and remaining enclosure surfaces visually obstruct the supports. The required clear maintenance view is therefore not achieved.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-faf80a130a771c5e86fc8f0b/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The isometric rear view clearly shows the real perforated panel moved outward, but the GPU installation region remains hidden behind the rear slotted wall and enclosure structure rather than being openly visible."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-faf80a130a771c5e86fc8f0b/workbench_back.png",
+          "view": "back",
+          "description": "The rear orthographic view is dominated by the ventilated rear wall; it does not present an unobstructed view into the GPU mounting region."
+        }
+      ]
+    },
+    {
+      "checkId": "gpu-four-step-mount",
+      "status": "not_verified",
+      "description": "Inspection identifies the four named mounting-object groups, but the supported images do not directly and clearly expose all required physical details: the two lower rails, two rear screw holes, front support frame, and two removable side clamps. Their complete four-step implementation is not visually verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-4c2eac0f32dfead888f3dcdd/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "Even in the enlarged focused rear-isometric view, the mounting hardware remains substantially occluded by the ventilated rear wall and enclosure faces, so the four required structures cannot all be visually distinguished."
+        }
+      ]
+    },
+    {
+      "checkId": "gpu-install-path",
+      "status": "not_verified",
+      "description": "The detached panel is visible and no GPU block placeholder is used, but the right, rear-isometric, and top views do not expose an unobstructed insertion corridor through the front and rear supports to the riser shelf. The stated installation sequence and final access to screws and clamps cannot be proven from the static views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-c837398faa5822839434edd0/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear-isometric image shows the panel in a service position, but enclosure walls occlude the proposed GPU insertion corridor and fastening sequence."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-c837398faa5822839434edd0/workbench_top.png",
+          "view": "top",
+          "description": "The top view is blocked by enclosure surfaces and does not reveal passage through both support frames or access to the riser and clamps."
+        }
+      ]
+    },
+    {
+      "checkId": "no-placeholders",
+      "status": "pass",
+      "description": "The reviewed assembly visually consists of enclosure panels, frame, tray/cradle, mounting structures, control, and feet; no motherboard, cooler, GPU, PSU, cable, or component-sized validation block is visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-18dc0ac482d960ed5fe75b14/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric assembly view shows only enclosure and mounting hardware, with no box-like mock motherboard, cooler, GPU, PSU, or cable envelope."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/look-18dc0ac482d960ed5fe75b14/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear-isometric view likewise contains only fabricated enclosure and support geometry and no component validation blocks."
+        }
+      ]
+    }
+  ]
+}

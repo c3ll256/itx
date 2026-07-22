@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-1-8b24bb57-cbc1-47dc-a30e-75f06b353588",
+  "documentId": "gpu-installation-guide",
+  "revision": 1,
+  "revisionId": "revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff",
+  "summary": "The GPU guide is a coherent instructional assembly and visibly communicates side insertion and final retention, but the dual-fan GPU depiction and downward riser-engagement action are not sufficiently clear. Mini-ITX, cooler, full GPU-envelope, PSU, and power-button interfaces are not verifiable from this guide-only revision.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The instructional assembly is visually coherent: the riser shelf and two support frames are aligned around the guide GPU, while the motion arrows and deliberately removed right panel are intentionally displaced. No obvious unintended collision, unsupported manufacturing part, or missing guide structure is visible in the cited views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-0aa3f9d34f50f52f5cf32108/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the shelf, rear and front support frames, guide GPU, arrows, and displaced side panel as one proportionally coherent installation diagram without an obvious unintended collision."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-0aa3f9d34f50f52f5cf32108/workbench_top.png",
+          "view": "top",
+          "description": "The top view confirms the longitudinal alignment of the guide GPU with the separated support frames and the intentionally offset right panel."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The revision does not visibly include a 170 x 170 mm motherboard envelope, Mini-ITX mounting-hole pattern, or the motherboard-to-rear-I/O relationship. The required fit, retention, and I/O access therefore cannot be established from these views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-561af6db7a9ff6a055c66d4a/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric render shows GPU-guide frames, a shelf, a guide card, arrows, and a removed perforated panel, but no Mini-ITX board envelope or mounting pattern."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "No AXP120-X67 cooler envelope, motherboard datum, installed side-panel relationship, or measurable intake-clearance volume is visible. Cooler fit and side-panel intake clearance cannot be verified from this guide revision.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-561af6db7a9ff6a055c66d4a/workbench_front.png",
+          "view": "front",
+          "description": "The front render contains no recognizable CPU cooler envelope or motherboard reference from which intake clearance could be judged."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The guide visibly includes a GPU body, rear I/O frame, PCIe edge, riser shelf, and front support, but it does not show an approved-envelope reference or any power connector, cable, or bend-space volume. The complete required rear-mounted GPU interface therefore cannot be verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-561af6db7a9ff6a055c66d4a/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric image supports the presence of the card guide and support path, but no power cable or bend-space envelope is visible."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "No 160 x 80 x 40 mm PSU envelope, AC inlet, PSU retention feature, airflow relationship, or associated cable-routing geometry is visible. The compact 1U PSU interface cannot be established from this revision.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-561af6db7a9ff6a055c66d4a/workbench_iso.png",
+          "view": "iso",
+          "description": "The rendered assembly is limited to GPU-installation guide geometry and does not display a PSU or any PSU-specific interface."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "The views do not identify an external power button or show an internal wire path to a motherboard header. External access and header routing therefore cannot be verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-561af6db7a9ff6a055c66d4a/workbench_front.png",
+          "view": "front",
+          "description": "No designated power-button control or internal button-cable path is recognizable in the front view."
+        }
+      ]
+    },
+    {
+      "checkId": "recognizable-gpu",
+      "status": "fail",
+      "description": "The focused views do not clearly present the guide object as a dual-fan, dual-slot GPU: the fan face is largely obscured by the perforated panel in the available viewing directions, and the guide geometry has no clear visual separation from the surrounding manufacturing structure. The required recognizable instructional depiction is therefore visibly unclear.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-4e4ab6cc168408a3e09b371b/workbench_iso.png",
+          "view": "iso",
+          "description": "Only a partial fan outline is visible through the surrounding geometry; two complete fans and a clear dual-slot form are not recognizable."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-4e4ab6cc168408a3e09b371b/workbench_right.png",
+          "view": "right",
+          "description": "The right-side view is blocked by the displaced perforated panel, preventing direct recognition of the two-fan face and its separation from the manufacturing model."
+        }
+      ]
+    },
+    {
+      "checkId": "side-insertion",
+      "status": "pass",
+      "description": "The images clearly show the perforated right panel displaced from the assembly, the GPU aligned with the front and rear support frames, and a horizontal arrow directing the card leftward through those supports.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-eab096dac9a39f1eee821138/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The isometric rear view visibly separates the perforated side panel and shows the guide card spanning the aligned rear and front support structures."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-eab096dac9a39f1eee821138/workbench_top.png",
+          "view": "top",
+          "description": "The top view makes the horizontal leftward insertion arrow and the card's path between the two end supports directly visible."
+        }
+      ]
+    },
+    {
+      "checkId": "riser-engagement",
+      "status": "fail",
+      "description": "The shelf's four fixing holes are visible, but the press-down arrow is largely occluded in the isometric view and collapses to an ambiguous end-on mark in the top view. The views therefore do not clearly communicate downward seating of the PCIe edge into the shelf-mounted riser.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-3678235451ffeb5659d189c5/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The enlarged isometric rear view clearly shows four circular shelf holes, but the press-down arrow is mostly hidden behind the card and surrounding geometry."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-42df6ac0d85db0a6a0585817/workbench_top.png",
+          "view": "top",
+          "description": "From above, the vertical-action arrow is seen end-on and does not visibly establish a downward insertion direction into the riser."
+        }
+      ]
+    },
+    {
+      "checkId": "final-retention",
+      "status": "pass",
+      "description": "The enlarged isometric rear view clearly shows two screw holes on the rear I/O frame and two distinct parallel right-side clamp pieces, providing visible retention features for the final locking step.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/gpu-installation-guide/observations/revision-1-05300d8d-ebe8-4a55-8815-a998c9938cff/look-a1227ef26ed52e0198a39e6e/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "Two small circular screw holes are visible along the top of the rear I/O frame, and two separate parallel clamp pieces are visible along the lower right side of the assembly."
+        }
+      ]
+    }
+  ]
+}

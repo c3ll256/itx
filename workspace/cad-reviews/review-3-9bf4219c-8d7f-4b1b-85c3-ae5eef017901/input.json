@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-3-9bf4219c-8d7f-4b1b-85c3-ae5eef017901",
+  "documentId": "gpu-installation-guide",
+  "revision": 3,
+  "revisionId": "revision-3-c6d2dc08-205a-4908-9a64-08f075baf920",
+  "targetSha256": "4e1388e74be43771bc38485fd70be3eb2f67a34f2df5acad3858a09f774ccdd7",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/gpu-installation-guide/brief.md",
+    "sha256": "3d10f9624e9dca3e9cf0d3ee8e4a44ae02c764c6dad0377e00157e550ee71351"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/gpu-installation-guide/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/revision.json",
+    "sha256": "dca20fe980450db61684fbab0852502396a516ac3b98c24901402ee98ab71299"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "577668d679a351ef92bec0e806b3aeee37267c351da855653fbb5ae97633fb05",
+    "stepSha256": "4ad4b8cc9c12f6ca76aabc5920483a880805cafe67ac6052b9a0a1434b17100e"
+  },
+  "stateRevision": "d68fd4204c39dac705df8149ce170c5d5dca59c174ef59643dd2f6d205342ff5",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "gpu-installation-guide",
+    "role": "gpu-installation-guide",
+    "geometry": {
+      "revision": 3,
+      "revisionId": "revision-3-c6d2dc08-205a-4908-9a64-08f075baf920",
+      "documentSha256": "78dd39ecaa44107f20d08d480229b2ec1433b1c07cd08c42e19283d8c939e6d0",
+      "manifestSha256": "577668d679a351ef92bec0e806b3aeee37267c351da855653fbb5ae97633fb05",
+      "stepSha256": "4ad4b8cc9c12f6ca76aabc5920483a880805cafe67ac6052b9a0a1434b17100e"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/gpu-installation-guide/brief.md",
+      "sha256": "3d10f9624e9dca3e9cf0d3ee8e4a44ae02c764c6dad0377e00157e550ee71351"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": null,
+      "documentRequirementSha256": null,
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateRevision": "d68fd4204c39dac705df8149ce170c5d5dca59c174ef59643dd2f6d205342ff5"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "48f6b50083df062cb5f45b86ed3755c2822842a3677db3e22d8db6036b3ce053"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "step1_riser_shelf",
+        "step2_rear_io_frame",
+        "step3_front_support",
+        "step4_side_clamps",
+        "guide_gpu_body",
+        "guide_gpu_fans",
+        "guide_gpu_io",
+        "guide_gpu_pcie",
+        "slide_left_arrow",
+        "press_down_arrow"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Rear-mount the approved compact GPU envelope behind the motherboard tray, including I/O bracket, PCIe riser path, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Rear-mount the user-specified 160 x 80 x 40 mm compact 1U PSU behind the motherboard tray with AC inlet access, airflow, retention, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "recognizable-gpu",
+      "requirement": "安装指南中的示意显卡应明显呈现两个风扇及分开的双槽后挡板，并明确不属于主机箱制造几何。",
+      "objectIds": [
+        "guide_gpu_body",
+        "guide_gpu_fans",
+        "guide_gpu_io",
+        "guide_gpu_pcie"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "side-insertion",
+      "requirement": "安装视图中侧板已拆除，不得遮挡显卡；水平向左箭头应清楚表示从右侧将显卡穿过前后支撑框。",
+      "objectIds": [
+        "guide_gpu_body",
+        "slide_left_arrow",
+        "step2_rear_io_frame",
+        "step3_front_support"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "top"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "riser-engagement",
+      "requirement": "底部PCIe延长卡托板四个固定孔及显卡外侧的向下箭头应可识别，表达横向到位后再向下插卡。",
+      "objectIds": [
+        "guide_gpu_pcie",
+        "press_down_arrow",
+        "step1_riser_shelf"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "right",
+        "top"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "final-retention",
+      "requirement": "后部I/O框的两个螺钉孔以及右侧分开放置的两只带孔压块应清楚可见。",
+      "objectIds": [
+        "step2_rear_io_frame",
+        "step4_side_clamps"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "right"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-3-9bf4219c-8d7f-4b1b-85c3-ae5eef017901/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "guide",
+        "label": "guide"
+      }
+    ],
+    "objects": [
+      {
+        "id": "step1_riser_shelf",
+        "label": "1 — Screw the PCIe riser to this shelf"
+      },
+      {
+        "id": "step2_rear_io_frame",
+        "label": "2 — Slide GPU rear bracket through this frame and use two screws"
+      },
+      {
+        "id": "step3_front_support",
+        "label": "3 — Far end passes through this support frame"
+      },
+      {
+        "id": "step4_side_clamps",
+        "label": "4 — Refit both right-side clamps"
+      },
+      {
+        "id": "guide_gpu_body",
+        "label": "Guide-only dual-fan GPU illustration; not manufacturing geometry"
+      },
+      {
+        "id": "guide_gpu_fans",
+        "label": "Guide-only two fan rings"
+      },
+      {
+        "id": "guide_gpu_io",
+        "label": "Guide-only split dual-slot flange"
+      },
+      {
+        "id": "guide_gpu_pcie",
+        "label": "Guide-only PCIe edge connector"
+      },
+      {
+        "id": "slide_left_arrow",
+        "label": "Slide card left through both frames"
+      },
+      {
+        "id": "press_down_arrow",
+        "label": "Press PCIe edge down into riser"
+      }
+    ]
+  }
+}

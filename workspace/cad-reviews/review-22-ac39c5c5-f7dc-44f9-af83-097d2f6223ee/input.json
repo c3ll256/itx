@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-22-ac39c5c5-f7dc-44f9-af83-097d2f6223ee",
+  "documentId": "main",
+  "revision": 22,
+  "revisionId": "revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c",
+  "targetSha256": "974470093d9d462286b6283c35c312ab26c370c577b2edb9a47797b9c49e38ba",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/main/brief.md",
+    "sha256": "efa24da1a95f1e98d6b8d077a866f0328adca584122e2b49c4f0b9bb076029c5"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/main/revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c/revision.json",
+    "sha256": "8522052a6b1368ab455af4ae587af8cc2d7acaa49ac119ea17f4712a52951d7d"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "36f70c67237821559b0348ab8d68c1b8d50733ecce58b44b92d894e210960b7a",
+    "stepSha256": "5fc31bdc97ed65389cb0040572f566d798edd7961130806f9c5462ae627d5eb1"
+  },
+  "stateRevision": "97a583d6f5527c7d57e4a2617467e1695d6432eb4f656f9098fe0362c022c350",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "main",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 22,
+      "revisionId": "revision-22-7c3673bd-9deb-48ed-bdb5-43be31fda23c",
+      "documentSha256": "dae6e10b14229c5b0d2fae6e2cfbfaa446a02869e2cb7dc2f4bab7c2a3bad76b",
+      "manifestSha256": "36f70c67237821559b0348ab8d68c1b8d50733ecce58b44b92d894e210960b7a",
+      "stepSha256": "5fc31bdc97ed65389cb0040572f566d798edd7961130806f9c5462ae627d5eb1"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/main/brief.md",
+      "sha256": "efa24da1a95f1e98d6b8d077a866f0328adca584122e2b49c4f0b9bb076029c5"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "07e8912e395ad48d67afb7cca835ee7e5a02d4f5965819077ccb7cb9afbec517",
+      "documentRequirementSha256": "5bdb7f8b7c6d0df8382e55ed19b14366641f6e25533868f809cb8e26591f2943",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "97a583d6f5527c7d57e4a2617467e1695d6432eb4f656f9098fe0362c022c350"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "48f6b50083df062cb5f45b86ed3755c2822842a3677db3e22d8db6036b3ce053"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "chassis_frame",
+        "left_vent_panel",
+        "right_vent_panel",
+        "power_button",
+        "front_vent_panel",
+        "motherboard_tray",
+        "one_u_psu_cradle",
+        "gpu_riser_shelf",
+        "gpu_rear_io_frame",
+        "gpu_front_support",
+        "gpu_side_clamps",
+        "case_feet"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Rear-mount the approved compact GPU envelope behind the motherboard tray, including I/O bracket, PCIe riser path, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Rear-mount the user-specified 160 x 80 x 40 mm compact 1U PSU behind the motherboard tray with AC inlet access, airflow, retention, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "gpu-service-view",
+      "requirement": "右侧洞洞板应作为真实可拆零件移到机箱外侧，形成明确的维修视图，而不是额外的占位板；从右后侧应能看到显卡安装区域。",
+      "objectIds": [
+        "right_vent_panel",
+        "chassis_frame",
+        "gpu_riser_shelf",
+        "gpu_rear_io_frame",
+        "gpu_front_support",
+        "gpu_side_clamps"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "right",
+        "back"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "gpu-four-step-mount",
+      "requirement": "显卡安装结构应明确包含四类真实结构：底部PCIe延长卡托板和两条承托轨、后部I/O框及两颗螺钉孔、前端支撑框、右侧两只可拆压块。",
+      "objectIds": [
+        "gpu_riser_shelf",
+        "gpu_rear_io_frame",
+        "gpu_front_support",
+        "gpu_side_clamps"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "right",
+        "top",
+        "back"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "gpu-install-path",
+      "requirement": "结构应支持清楚的安装顺序：拆右侧板，固定PCIe延长卡，从右侧将显卡穿过前后支撑框，向下插入延长卡，最后锁后挡板螺钉与侧压块；不得使用显卡方块placeholder来表达。",
+      "objectIds": [
+        "gpu_riser_shelf",
+        "gpu_rear_io_frame",
+        "gpu_front_support",
+        "gpu_side_clamps",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "right",
+        "iso_back",
+        "top"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "no-placeholders",
+      "requirement": "当前装配只包含实际机箱零件和安装结构，不包含主板、散热器、显卡、电源或线缆尺寸校验块。",
+      "objectIds": [
+        "chassis_frame",
+        "motherboard_tray",
+        "one_u_psu_cradle",
+        "gpu_riser_shelf",
+        "gpu_rear_io_frame",
+        "gpu_front_support",
+        "gpu_side_clamps"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "right"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-22-ac39c5c5-f7dc-44f9-af83-097d2f6223ee/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "enclosure",
+        "label": "enclosure"
+      }
+    ],
+    "objects": [
+      {
+        "id": "chassis_frame",
+        "label": "146 x 190 x 225 mm sandwich chassis"
+      },
+      {
+        "id": "left_vent_panel",
+        "label": "Installed cooler-side round-hole panel"
+      },
+      {
+        "id": "right_vent_panel",
+        "label": "Actual GPU-side panel removed 55 mm for service view"
+      },
+      {
+        "id": "power_button",
+        "label": "Front 12 mm power button"
+      },
+      {
+        "id": "front_vent_panel",
+        "label": "Full-height screw-removable front ventilation panel"
+      },
+      {
+        "id": "motherboard_tray",
+        "label": "Physical Mini-ITX tray and bosses"
+      },
+      {
+        "id": "one_u_psu_cradle",
+        "label": "Physical compact 1U PSU cradle"
+      },
+      {
+        "id": "gpu_riser_shelf",
+        "label": "Step 1: PCIe riser shelf and GPU lower rails"
+      },
+      {
+        "id": "gpu_rear_io_frame",
+        "label": "Step 2: rear I/O bracket frame with two screw holes"
+      },
+      {
+        "id": "gpu_front_support",
+        "label": "Step 3: front end support frame"
+      },
+      {
+        "id": "gpu_side_clamps",
+        "label": "Step 4: removable right-side retention clamps"
+      },
+      {
+        "id": "case_feet",
+        "label": "Four corner foot carriers"
+      }
+    ]
+  }
+}
