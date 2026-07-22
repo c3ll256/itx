@@ -23,7 +23,7 @@
   },
   "open_questions": [],
   "notes": "Draft assumes a compact GPU envelope of 180 x 115 x 40 mm. Final GPU and PSU models must be locked before detailed fit validation. Flex ATX/1U is the baseline if SFX cannot meet 4.0 L.",
-  "confirmed_by_user": false,
-  "confirmed_at": "",
+  "confirmed_by_user": true,
+  "confirmed_at": "2026-07-22T08:31:00Z",
   "prd_path": "product/prd.md"
 }
