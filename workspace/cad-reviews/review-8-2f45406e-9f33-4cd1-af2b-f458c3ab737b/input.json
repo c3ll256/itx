@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-8-2f45406e-9f33-4cd1-af2b-f458c3ab737b",
+  "documentId": "main",
+  "revision": 8,
+  "revisionId": "revision-8-7f171f4c-ad3d-4575-a287-99edd8e512ed",
+  "targetSha256": "91afdf54fbafa2c05c84b80c4430bcfea44e59cf2d363bc23726a1af4d85691a",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/main/brief.md",
+    "sha256": "4d0641336e9b1d589fa82dc8f955e9b3cc53d8ef8d022ef66ff45164a83c25d2"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/main/revision-8-7f171f4c-ad3d-4575-a287-99edd8e512ed/revision.json",
+    "sha256": "b9cfac65dd4b31f20389fb5644b868d12f8ea3d9f954cee920b3e7a705114100"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "28acc1fd0dd067af590238850ed2554cd95bd1a3039a620e45d07774afaeaef0",
+    "stepSha256": "3b89fda879fbcf56f24001a7607bef643a10e07471dfb2b6d82b38c9e1a9d7ab"
+  },
+  "stateRevision": "3b71fe1b26ae27f9e2dcb892512088abacf89abc8eb0a6acd44a7f4d4136b901",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "main",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 8,
+      "revisionId": "revision-8-7f171f4c-ad3d-4575-a287-99edd8e512ed",
+      "documentSha256": "66605916101e0d4519af4e4bdebf14c8a1e8c16025a25155abbfc8134605b9d4",
+      "manifestSha256": "28acc1fd0dd067af590238850ed2554cd95bd1a3039a620e45d07774afaeaef0",
+      "stepSha256": "3b89fda879fbcf56f24001a7607bef643a10e07471dfb2b6d82b38c9e1a9d7ab"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/main/brief.md",
+      "sha256": "4d0641336e9b1d589fa82dc8f955e9b3cc53d8ef8d022ef66ff45164a83c25d2"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "f3edb4ff016512f0509302eb6ca3b86fa142b0ad94f0ea15ca043f177de03d06",
+      "documentRequirementSha256": "5bdb7f8b7c6d0df8382e55ed19b14366641f6e25533868f809cb8e26591f2943",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "3b71fe1b26ae27f9e2dcb892512088abacf89abc8eb0a6acd44a7f4d4136b901"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "48f8abb4e634a750cb19d2984f8498fe6d96d5b4884d292247b09b18937ca272"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "chassis_frame",
+        "left_vent_panel",
+        "right_vent_panel",
+        "power_button",
+        "motherboard_tray",
+        "sfx_cradle",
+        "gpu_mount",
+        "cable_guide",
+        "case_feet"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Fit the approved compact GPU envelope, its I/O bracket, PCIe riser, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Fit a standard 125 x 100 x 63.5 mm SFX power supply with AC inlet access, airflow, retention, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "recognizable-enclosure",
+      "requirement": "模型应清晰呈现为完整的直立式Mini-ITX机箱，而不是相互重叠的硬件包络草图；应可见机架、两侧通风板、底脚和电源键。",
+      "objectIds": [
+        "chassis_frame",
+        "left_vent_panel",
+        "right_vent_panel",
+        "case_feet",
+        "power_button"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "front"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "sfx-dedicated-chamber",
+      "requirement": "SFX电源应有独立下置舱、通风托架、后部开口和线缆通道，不与上方主板/GPU安装区混为一体。",
+      "objectIds": [
+        "sfx_cradle",
+        "chassis_frame",
+        "cable_guide"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "back",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "motherboard-and-gpu-mounts",
+      "requirement": "应存在可辨识的垂直Mini-ITX安装脊柱/螺柱及独立GPU导轨和双槽后挡板。",
+      "objectIds": [
+        "motherboard_tray",
+        "gpu_mount"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "back",
+        "top"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "dual-side-airflow",
+      "requirement": "左右两侧均应具有大面积规则通风槽，并保留连续边框以便FDM打印和螺钉固定。",
+      "objectIds": [
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "left",
+        "right",
+        "iso"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "service-interfaces",
+      "requirement": "外观应明确显示电源键、后部SFX开口、主板I/O区和显卡双槽I/O区，并可通过拆卸侧板维护。",
+      "objectIds": [
+        "chassis_frame",
+        "power_button",
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "front",
+        "back",
+        "iso_back"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "manufacturable-direction",
+      "requirement": "检查模型是否已达到可继续制造细化的结构方向：连续实体、无明显悬浮碎片，主要承力框架、隔舱和安装件合理可辨。",
+      "objectIds": [
+        "chassis_frame",
+        "motherboard_tray",
+        "sfx_cradle",
+        "gpu_mount"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "bottom"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-8-2f45406e-9f33-4cd1-af2b-f458c3ab737b/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "enclosure",
+        "label": "enclosure"
+      }
+    ],
+    "objects": [
+      {
+        "id": "chassis_frame",
+        "label": "SFX sandwich chassis with isolated PSU chamber"
+      },
+      {
+        "id": "left_vent_panel",
+        "label": "Removable direct-intake panel"
+      },
+      {
+        "id": "right_vent_panel",
+        "label": "Removable direct-intake panel"
+      },
+      {
+        "id": "power_button",
+        "label": "12 mm front power button"
+      },
+      {
+        "id": "motherboard_tray",
+        "label": "Vertical Mini-ITX sandwich spine and reinforced bosses"
+      },
+      {
+        "id": "sfx_cradle",
+        "label": "Dedicated lower SFX cradle with ventilated shelf"
+      },
+      {
+        "id": "gpu_mount",
+        "label": "GPU riser rail and rear dual-slot bracket"
+      },
+      {
+        "id": "cable_guide",
+        "label": "PSU cable pass-through guide"
+      },
+      {
+        "id": "case_feet",
+        "label": "Four corner foot carriers"
+      }
+    ]
+  }
+}
