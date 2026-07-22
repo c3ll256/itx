@@ -1,6 +1,6 @@
 {
   "product_class": "mechanical",
-  "form_factor": "compact FDM-printed sandwich-layout Mini-ITX computer enclosure",
+  "form_factor": "sub-4-liter FDM-printed Mini-ITX computer enclosure",
   "manufacturing_method": "fdm",
   "details": {
     "target_external_volume_l_max": 4.0,
@@ -11,8 +11,7 @@
       "height": 115,
       "thickness": 40
     },
-    "psu": "compact 1U 160 x 80 x 40 mm",
-    "layout": "motherboard front; GPU and compact 1U PSU behind motherboard spine",
+    "psu": "SFX 125 x 100 x 63.5 mm",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels",
@@ -20,8 +19,8 @@
     "priority": "minimum volume"
   },
   "open_questions": [],
-  "notes": "User changed the confirmed layout to a rear-mounted GPU and rear-mounted compact 1U PSU sized 160 x 80 x 40 mm. GPU remains 180 x 115 x 40 mm. Four liters is a target, not permission for component collisions.",
+  "notes": "Confirmed revision uses SFX only, with a 125 x 100 x 63.5 mm concept envelope. GPU remains 180 x 115 x 40 mm. Exact purchased PSU and GPU models must be locked before final fit validation.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-07-22T11:10:00Z",
+  "confirmed_at": "2026-07-22T10:20:00Z",
   "prd_path": "product/prd.md"
 }
