@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-10-d6506172-c767-4488-86f2-b3cd5c1acf5b",
+  "documentId": "main",
+  "revision": 10,
+  "revisionId": "revision-10-5975dca8-8552-47c5-a411-dabadd395a7f",
+  "summary": "The enclosure is visually coherent and includes the principal chassis, ventilation, mounting, rear-layer, PSU, control, and foot structures. Exact component-envelope fits, cable bend clearances, and hidden electrical routing are not established by the available CAD views, so those interface checks remain not verified.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The assembly reads as a complete, proportionate small-form-factor enclosure; the frame, panels, internal supports, control, and feet form a coherent structure with no obvious floating part or gross visible collision.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-d98ed42d8e3595a377c17314/workbench_iso.png",
+        "view": "iso",
+        "description": "The isometric overview visibly shows the principal enclosure structures assembled into one coherent chassis."
+      }]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "A motherboard tray and mounting features are visible, but no standard 170 x 170 mm motherboard reference body or dimensioned mounting-pattern evidence is shown, and rear-I/O accessibility cannot be conclusively established.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-e9e619671a8aca4f1a0ca68e/workbench_iso.png",
+        "view": "iso",
+        "description": "The view shows an internal tray, but does not visually prove the exact Mini-ITX footprint, hole pattern, or installed rear-I/O access."
+      }]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The vented side and interior depth are visible, but the Thermalright AXP120-X67 envelope is not represented, so cooler fit and preserved intake clearance cannot be directly verified.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-e9e619671a8aca4f1a0ca68e/workbench_front.png",
+        "view": "front",
+        "description": "The front projection shows enclosure depth and side ventilation, but no cooler envelope against which clearance can be judged."
+      }]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "A dedicated rear GPU mount, bracket region, and riser guide are visible, but the approved GPU envelope, connector body, and power-cable bend volume are absent; complete fit is therefore not established.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-e9e619671a8aca4f1a0ca68e/workbench_iso.png",
+        "view": "iso",
+        "description": "The image visibly supports the presence of GPU mounting structure, but not clearance to an actual approved GPU and its cables."
+      }]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The rear upper PSU cradle and spatial offset from the GPU region are visible, but an exact 160 x 80 x 40 mm PSU reference, connector/cable bend volumes, and airflow validation are not shown.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-e9e619671a8aca4f1a0ca68e/workbench_iso.png",
+        "view": "iso",
+        "description": "The isometric view shows a distinct upper rear cradle, but does not directly prove exact PSU-envelope fit or operational cable and airflow clearances."
+      }]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "The button is visibly accessible from the exterior front face, but the required hidden internal path to the motherboard header is not visible in the available view.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-5dc30b1d1411e0a9b05fbcdf/workbench_front.png",
+        "view": "front",
+        "description": "The front view directly shows the externally accessible circular power button; it cannot show or prove the internal header-wire route."
+      }]
+    },
+    {
+      "checkId": "back-insert-layout",
+      "status": "pass",
+      "description": "The focused rear views show the motherboard spine/tray separated from a dedicated GPU shelf and rear bracket, with an identifiable guide forming a clear back-to-back layered layout.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-60fdf4a742239d745a93b666/workbench_iso_back.png",
+        "view": "iso_back",
+        "description": "The rear isometric view visibly distinguishes the motherboard tray, GPU mounting layer, rear bracket region, and cable/riser guide."
+      }]
+    },
+    {
+      "checkId": "compact-1u-rear-placement",
+      "status": "pass",
+      "description": "The compact PSU cradle is visibly located in the upper rear zone above and offset from the GPU mount, with separate retention structure and adjacent routing features.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-3910e233130b318abb5cea5a/workbench_iso_back.png",
+        "view": "iso_back",
+        "description": "The focused rear isometric view clearly shows the upper PSU cradle arranged above the lower GPU mounting region rather than overlapping it."
+      }]
+    },
+    {
+      "checkId": "recognizable-enclosure",
+      "status": "pass",
+      "description": "The model visibly reads as a developed ITX enclosure rather than a simple envelope: it includes a chassis frame, two ventilated side panels, front button, internal tray, GPU and PSU structures, and feet.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-559a34f97ea4100434ea417a/workbench_iso.png",
+        "view": "iso",
+        "description": "The isometric view visibly presents the complete enclosure vocabulary, including exterior panels and purposeful internal mounting structures."
+      }]
+    },
+    {
+      "checkId": "cooling-and-access",
+      "status": "pass",
+      "description": "Both side faces visibly provide extensive direct perforated intake area; the front control and front/rear access regions are discernible in the orthographic views.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-213382c3a08ad2567ae75117/workbench_left.png",
+        "view": "left",
+        "description": "The left elevation directly shows broad perforated intake coverage on the CPU-side panel."
+      },{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-213382c3a08ad2567ae75117/workbench_right.png",
+        "view": "right",
+        "description": "The right elevation directly shows broad perforated intake coverage on the GPU/PSU-side panel."
+      },{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-213382c3a08ad2567ae75117/workbench_front.png",
+        "view": "front",
+        "description": "The front view shows the externally reachable power control and recognizable maintenance-facing structure."
+      }]
+    },
+    {
+      "checkId": "honest-envelope",
+      "status": "pass",
+      "description": "The focused views visibly show distinct motherboard, GPU, and PSU zones without gross overlap. Supporting bounding-box facts give the chassis as 120 x 200 x 205 mm, corresponding to 4.92 L, while GPU and PSU mounting extents occupy separate lower and upper rear regions.",
+      "evidence": [{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-b3b5d167065458c27c34f779/workbench_iso.png",
+        "view": "iso",
+        "description": "The focused isometric image visibly shows the internal mount regions arranged as distinct volumes inside the complete chassis rather than superimposed envelopes."
+      },{
+        "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-10-5975dca8-8552-47c5-a411-dabadd395a7f/look-b3b5d167065458c27c34f779/workbench_right.png",
+        "view": "right",
+        "description": "The right-side view visibly supports vertical separation of the lower GPU region and upper compact-PSU region within the enclosure."
+      }]
+    }
+  ]
+}

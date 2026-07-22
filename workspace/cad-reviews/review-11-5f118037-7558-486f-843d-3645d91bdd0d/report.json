@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-11-5f118037-7558-486f-843d-3645d91bdd0d",
+  "documentId": "main",
+  "revision": 11,
+  "revisionId": "revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b",
+  "summary": "The enclosure is visually coherent and the principal GPU, PSU, button-routing, and enclosure-volume arrangements are represented. Cooler-to-side-panel clearance visibly contradicts the requirement, while rear-I/O, riser-path, AC-inlet, and detailed retention/airflow provisions are not sufficiently visible to verify.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The three overview views show a coherent upright enclosure with frame, two vented sides, internal tray and rear-zone supports, front control, and feet; no obvious floating major structure or gross collision is visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-c80a6bf452ae967d66199343/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric overview visibly shows the enclosure frame, vented side structures, internal mounting architecture, and feet as one coherent assembly."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The overview shows a motherboard envelope on an internal tray, but the supported views do not directly establish standard mounting-hole retention or accessible rear I/O.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-daea3a9aad21808ce7a80e38/workbench_iso.png",
+          "view": "iso",
+          "description": "A board-sized internal reference is visible, but its mounting details and rear-I/O access are not resolved in this view."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "fail",
+      "description": "The cooler envelope reaches through the CPU-side enclosure boundary rather than preserving visible side-panel intake clearance.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-daea3a9aad21808ce7a80e38/workbench_front.png",
+          "view": "front",
+          "description": "The cooler reference visibly projects to the CPU-side boundary, with no discernible gap to the side-panel plane."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "A rear GPU envelope is visible, but the front/isometric views do not directly verify its I/O bracket access, PCIe riser path, and power-cable bend space together.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-daea3a9aad21808ce7a80e38/workbench_iso.png",
+          "view": "iso",
+          "description": "The GPU-sized rear reference is visible, but the required bracket and complete riser/cable interfaces are obscured."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The compact PSU envelope is visibly placed in the upper rear zone and offset above the GPU, but AC inlet access, airflow openings, and retention details are not directly established by these views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-daea3a9aad21808ce7a80e38/workbench_iso.png",
+          "view": "iso",
+          "description": "The upper rear PSU reference and lower GPU reference are visibly separated, while inlet, airflow, and retention interfaces remain unresolved."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "pass",
+      "description": "The front view visibly shows an externally exposed button, and the isometric view shows its internal reserved route directed toward the motherboard region.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-daea3a9aad21808ce7a80e38/workbench_front.png",
+          "view": "front",
+          "description": "The circular power button is plainly accessible on the front exterior."
+        }
+      ]
+    },
+    {
+      "checkId": "complete-enclosure",
+      "status": "pass",
+      "description": "Front, rear, and isometric evidence visibly presents a complete removable-panel ITX enclosure with structural shell, bilateral ventilation, front button, feet, and internal supports.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-bbdeaa9d33ee4581e6a86e6a/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view clearly shows the structural enclosure, perforated side panel, front button, and lower feet."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-bbdeaa9d33ee4581e6a86e6a/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear isometric view confirms the opposite vented side and rear/internal mounting structure."
+        }
+      ]
+    },
+    {
+      "checkId": "motherboard-cooler-fit",
+      "status": "fail",
+      "description": "The motherboard and cooler references are visibly located on the CPU side of the central tray, but the cooler envelope does not remain wholly inside the side-panel boundary and therefore lacks the required non-overlap.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-031919f05601d16b2420e1f4/workbench_left.png",
+          "view": "left",
+          "description": "The focused side view shows the cooler reference reaching beyond the outer side-panel/frame boundary."
+        }
+      ]
+    },
+    {
+      "checkId": "back-insert-gpu",
+      "status": "pass",
+      "description": "Rear, right, and top views visibly show the 180 x 115 x 40 mm GPU reference low behind the motherboard tray, supported at the GPU mount, with a distinct reserved power-bend volume.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-a19bcc613618749941659cf4/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear isometric view visibly locates the GPU envelope on the lower rear-side support and shows the adjacent cable-clearance reference."
+        }
+      ]
+    },
+    {
+      "checkId": "rear-compact-1u",
+      "status": "pass",
+      "description": "The focused rear views visibly place the compact 1U PSU envelope in its own upper cradle above the GPU, with a separate harness-bend reservation and no visible volumetric overlap.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-f7c87922f0ef517bb6e6309b/workbench_right.png",
+          "view": "right",
+          "description": "The right view clearly shows the PSU reference above the GPU reference and the reserved cable space at the upper unit."
+        }
+      ]
+    },
+    {
+      "checkId": "button-routing",
+      "status": "pass",
+      "description": "The externally accessible front power button and the internal reserved route extending toward the motherboard tray are simultaneously identifiable.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-6bb7e4b6f0902aa822b835ee/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric focused view shows the front button and the highlighted internal route leading toward the motherboard region."
+        }
+      ]
+    },
+    {
+      "checkId": "honest-size",
+      "status": "pass",
+      "description": "The overview visibly shows the GPU below the compact 1U PSU without overlap. Supporting bounding-box facts give the chassis as 120 x 200 x 205 mm (4.92 L), with the GPU ending and PSU beginning at z=123 mm.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-11-df6391ef-4b3d-497d-9bc3-c676c293d31b/look-68429fd3fa14581131c4ee2e/workbench_right.png",
+          "view": "right",
+          "description": "The right view visibly shows the rear GPU and PSU references stacked in distinct lower and upper zones rather than overlapping."
+        }
+      ]
+    }
+  ]
+}

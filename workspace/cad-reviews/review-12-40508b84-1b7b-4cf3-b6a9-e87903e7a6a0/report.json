@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-12-40508b84-1b7b-4cf3-b6a9-e87903e7a6a0",
+  "documentId": "main",
+  "revision": 12,
+  "revisionId": "revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed",
+  "summary": "The revision is visually coherent and the dedicated fit envelopes, mounts, service faces, routing volumes, panels, button, and feet are identifiable. All checklist requirements are directly supported by the rendered views; the chassis bbox also supports the stated 120 x 200 x 205 mm outer envelope.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The enclosure reads as a complete, proportionate assembly with aligned panels and internal structures; no obvious floating component, missing major structure, or visible collision is present.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-b798e875a9d4fcea0b059f8e/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric overview visibly shows a coherent enclosure, both major side structures, feet, button, and organized internal fit references without an obvious collision."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "pass",
+      "description": "The Mini-ITX board envelope is visibly retained on the internal tray with four mounting locations and a rear-edge I/O access region.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-6f1a170a697f3172b84feef3/workbench_iso.png",
+          "view": "iso",
+          "description": "The transparent internal board reference, tray, four fastener markers, and rear access geometry are visible together."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "pass",
+      "description": "The cooler validation envelope remains inside the CPU-side boundary and is directly adjacent to a broadly perforated intake panel.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-6f1a170a697f3172b84feef3/workbench_front.png",
+          "view": "front",
+          "description": "The cooler envelope is visibly contained by the enclosure and aligned with the ventilated side region."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "pass",
+      "description": "The compact GPU envelope is visibly placed behind the motherboard with a rear bracket area, riser route, and dedicated cable-bend volume.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-6f1a170a697f3172b84feef3/workbench_iso.png",
+          "view": "iso",
+          "description": "The overview visibly distinguishes the rear GPU volume and its associated bracket/routing reference geometry from the motherboard side."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "pass",
+      "description": "The compact 1U PSU envelope is visibly retained in a separate upper-rear cradle, with its rear service face, ventilation exposure, and cable clearance identifiable and vertically offset from the GPU.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-6f1a170a697f3172b84feef3/workbench_iso.png",
+          "view": "iso",
+          "description": "The upper PSU reference and cradle are visibly separated from the lower GPU reference and open toward the rear/vented side."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "pass",
+      "description": "A single external front power button and its inward lead-route reference are visibly present.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-6f1a170a697f3172b84feef3/workbench_front.png",
+          "view": "front",
+          "description": "The front view visibly shows the accessible circular power control on the exterior face."
+        }
+      ]
+    },
+    {
+      "checkId": "complete-enclosure",
+      "status": "pass",
+      "description": "The frame, both removable ventilated side panels, front power button, four feet, and internal support structure are visibly represented as a complete ITX enclosure.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-d657dff41d0df2bef1e41bec/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the frame, perforated side panel, button, feet, and internal mounting structure as an assembled product."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-d657dff41d0df2bef1e41bec/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear isometric view confirms the opposite side and rear enclosure structure are present."
+        }
+      ]
+    },
+    {
+      "checkId": "motherboard-cooler-fit",
+      "status": "pass",
+      "description": "The motherboard and AXP120-X67 references are visibly on the CPU side; the cooler envelope stays within the side-panel boundary and faces direct perforated intake area.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-8d8336705eb436b0085f5297/workbench_left.png",
+          "view": "left",
+          "description": "The focused left view directly shows the motherboard/cooler envelopes behind the vent field and contained within the panel outline."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-8d8336705eb436b0085f5297/workbench_top.png",
+          "view": "top",
+          "description": "The top view visibly confirms the cooler reference does not protrude through the side boundary."
+        }
+      ]
+    },
+    {
+      "checkId": "back-insert-gpu",
+      "status": "pass",
+      "description": "The 180 x 115 x 40 mm GPU reference is visibly located in the lower rear/motherboard-back zone, with its shelf, dual-slot rear interface, PCIe riser path, and power-bend volume distinguishable.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-5b40f6f2d2aa1fb2548e6c66/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The focused rear isometric view visibly separates the GPU envelope, support shelf, rear I/O reference, route, and cable-clearance volume."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-5b40f6f2d2aa1fb2548e6c66/workbench_back.png",
+          "view": "back",
+          "description": "The back view directly shows the rear GPU interface region and its lower placement."
+        }
+      ]
+    },
+    {
+      "checkId": "rear-compact-1u",
+      "status": "pass",
+      "description": "The 160 x 80 x 40 mm compact 1U reference is visibly in an independent upper-rear cradle with a recognizable rear AC/exhaust service face and harness-bend volume.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-b61d195669a5753a4c495d69/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The focused rear isometric view visibly shows the upper PSU envelope seated in its cradle and the adjacent cable-clearance reference."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-b61d195669a5753a4c495d69/workbench_back.png",
+          "view": "back",
+          "description": "The rear service face is directly visible from the back."
+        }
+      ]
+    },
+    {
+      "checkId": "honest-size",
+      "status": "pass",
+      "description": "The chassis bbox is exactly 120 x 200 x 205 mm, corresponding to 4.92 L, and the focused views visibly show the GPU below the PSU without obvious overlap.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-65fe6c9bc53733b8ebcf0d69/workbench_right.png",
+          "view": "right",
+          "description": "The right view visibly shows the lower GPU envelope ending where the upper PSU envelope begins, with no obvious overlap."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-20136b58-09cd-4fd5-bf79-e314f800f5ed/look-65fe6c9bc53733b8ebcf0d69/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view visually supports the compact outer proportions and vertical GPU/PSU offset; bbox inspection supplies the exact stated dimensions."
+        }
+      ]
+    }
+  ]
+}
