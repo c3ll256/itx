@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-3-3a4a902e-b2f1-472e-be0c-d2538225f1df",
+  "documentId": "main",
+  "revision": 3,
+  "revisionId": "revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded",
+  "summary": "The revision establishes a compact sandwich-layout concept and the four principal component envelopes, but key production interfaces remain unresolved. Rear I/O, cooler intake clearance, GPU bracket/riser/cable space, PSU retention/inlet/airflow/cabling, and power-button routing are not visually established; the SFX integration view shows major missing manufacturing details.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The shell, central spine, motherboard, cooler, GPU, and SFX reference form a coherent compact sandwich-layout concept with no visibly floating reference body or missing primary structural shell in the reviewed views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-671e818bb298437e9f038806/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view visibly presents the complete shell, spine, and internal reference-envelope arrangement as one coherent assembly concept."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "A Mini-ITX board envelope is visible, but these views do not establish mounting-hole retention hardware or a defined accessible rear-I/O opening.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The board-sized internal reference is visible, but mounting features and a rear-I/O interface cannot be directly confirmed."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The cooler envelope is represented, but the reviewed images do not directly prove preserved side-panel intake clearance or a ventilated side-panel interface.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-45f57d49e3c687a905c10a2f/workbench_front.png",
+          "view": "front",
+          "description": "The cooler region can be seen in the stacked layout, but no measurable or visibly open intake gap to a side panel is established."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The compact GPU envelope is present, but the GPU I/O bracket, PCIe riser path, and power-cable bend volume are not visibly modeled well enough to verify the complete interface.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "A GPU-sized envelope is visible in the sandwich layout, while its bracket, riser, and cable-routing interfaces are not directly shown."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "A standard SFX-sized reference is visibly included, but retention, AC inlet access, airflow openings, and cable-routing/bend space are not established by the available views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-45f57d49e3c687a905c10a2f/workbench_front.png",
+          "view": "front",
+          "description": "The PSU envelope is visible inside the structural frame, but no complete mounting, inlet, ventilation, or cable interface is visible."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "fail",
+      "description": "No externally accessible power button or corresponding internal route to the motherboard header is visible on the concept shell.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The visible exterior shell faces contain no identifiable power-button feature or routing provision."
+        }
+      ]
+    },
+    {
+      "checkId": "sfx-only-reference",
+      "status": "not_verified",
+      "description": "The focused views clearly show an SFX reference envelope, but visual evidence alone cannot establish that no hidden Flex ATX/1U reference object remains anywhere in the revision.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-9997887d759f6f08e254e7fb/workbench_iso.png",
+          "view": "iso",
+          "description": "The focused isometric view directly shows the SFX reference envelope, but cannot prove the global absence of every alternative PSU reference."
+        }
+      ]
+    },
+    {
+      "checkId": "approved-component-envelopes",
+      "status": "pass",
+      "description": "The concept layout visibly expresses all four requested reference envelopes: Mini-ITX motherboard, AXP120-X67 cooler, compact GPU, and SFX PSU.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-be46b2a6903c98e8aaabc5be/workbench_iso.png",
+          "view": "iso",
+          "description": "The focused isometric view visibly presents the four component-envelope bodies together in the current sandwich layout."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-be46b2a6903c98e8aaabc5be/workbench_top.png",
+          "view": "top",
+          "description": "The top view confirms the distinct plan footprints and simultaneous placement of the component references."
+        }
+      ]
+    },
+    {
+      "checkId": "sub4l-concept-shell",
+      "status": "pass",
+      "description": "The concept shell remains within the 4.0 L bounding-envelope target: supporting geometry reports 185 x 178 x 120 mm, approximately 3.95 L. The reviewed views show dense adjacency around the SFX and other envelopes, so integration clearance remains a visible risk despite meeting the gross volume target.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-26251817bca98ab8cb380997/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the compact shell containing the major reference envelopes and visibly illustrates the tight SFX adjacency that remains an integration risk."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-26251817bca98ab8cb380997/workbench_top.png",
+          "view": "top",
+          "description": "The top view directly shows the tightly packed plan arrangement within the shell footprint."
+        }
+      ]
+    },
+    {
+      "checkId": "sfx-integration-gaps",
+      "status": "fail",
+      "description": "The SFX reference is only an envelope within a basic frame: dedicated retention features, an AC inlet cutout, defined intake/exhaust openings, and explicit cable-bend/routing volume are visibly absent from the rear/right-side concept views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-d32bf1b5554c65a50e1f7fa0/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear isometric view shows a plain PSU envelope and surrounding shell without identifiable SFX brackets, inlet geometry, ventilation pattern, or reserved cable path."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/look-d32bf1b5554c65a50e1f7fa0/workbench_back.png",
+          "view": "back",
+          "description": "The back view visibly lacks a defined AC inlet and PSU exhaust/access cutout, confirming unresolved rear integration."
+        }
+      ]
+    }
+  ]
+}

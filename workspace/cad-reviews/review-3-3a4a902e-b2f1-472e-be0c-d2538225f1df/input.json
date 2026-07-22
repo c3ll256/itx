@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-3-3a4a902e-b2f1-472e-be0c-d2538225f1df",
+  "documentId": "main",
+  "revision": 3,
+  "revisionId": "revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded",
+  "targetSha256": "dc0c6b05d2abd92b450e831046fa920e915f13cfb7c847b347e5ddec82128e55",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/main/brief.md",
+    "sha256": "4d0641336e9b1d589fa82dc8f955e9b3cc53d8ef8d022ef66ff45164a83c25d2"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/main/revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded/revision.json",
+    "sha256": "715d7fa5e30f24fee7a3cbeca3b27a0df65332844cdf402ba5e5b68ae72f2e50"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "aa5a1a373d600f11b62f652ad9377362c3e65960d13f6eea3f4518b85529133f",
+    "stepSha256": "adeaa386385be535d2c54ee4f1f20f4137e5e9fbf68fe07215fa4ccda8c0a41b"
+  },
+  "stateRevision": "5f7ff787cb1bbd55c6b7bc1ffdd607515559503fa157ec60d60d3ae21322bf12",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "main",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 3,
+      "revisionId": "revision-3-7543042e-84f2-4ae2-8ce7-266c4debaded",
+      "documentSha256": "f628bdb83de2caa3f92ade7beb375d8f287f1f67597ec6cda669985711636960",
+      "manifestSha256": "aa5a1a373d600f11b62f652ad9377362c3e65960d13f6eea3f4518b85529133f",
+      "stepSha256": "adeaa386385be535d2c54ee4f1f20f4137e5e9fbf68fe07215fa4ccda8c0a41b"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/main/brief.md",
+      "sha256": "4d0641336e9b1d589fa82dc8f955e9b3cc53d8ef8d022ef66ff45164a83c25d2"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "f3edb4ff016512f0509302eb6ca3b86fa142b0ad94f0ea15ca043f177de03d06",
+      "documentRequirementSha256": "5bdb7f8b7c6d0df8382e55ed19b14366641f6e25533868f809cb8e26591f2943",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "5f7ff787cb1bbd55c6b7bc1ffdd607515559503fa157ec60d60d3ae21322bf12"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "48f8abb4e634a750cb19d2984f8498fe6d96d5b4884d292247b09b18937ca272"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "enclosure_shell",
+        "center_spine",
+        "mini_itx_reference",
+        "axp120_x67_reference",
+        "gpu_reference",
+        "sfx_reference"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Fit the approved compact GPU envelope, its I/O bracket, PCIe riser, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Fit a standard 125 x 100 x 63.5 mm SFX power supply with AC inlet access, airflow, retention, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "sfx-only-reference",
+      "requirement": "布局中应显示标准SFX 125×100×63.5 mm电源参考包络，且不再包含Flex ATX/1U参考对象。",
+      "objectIds": [
+        "sfx_reference"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "approved-component-envelopes",
+      "requirement": "当前布局草模应同时清晰表达Mini-ITX主板、AXP120-X67、180×115×40 mm显卡和SFX电源的概念包络。",
+      "objectIds": [
+        "mini_itx_reference",
+        "axp120_x67_reference",
+        "gpu_reference",
+        "sfx_reference"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "sub4l-concept-shell",
+      "requirement": "现有概念外壳应继续保持不超过4.0L的外包络目标，同时审查SFX参考与其他包络的明显冲突风险。",
+      "objectIds": [
+        "enclosure_shell",
+        "sfx_reference",
+        "mini_itx_reference",
+        "gpu_reference"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "right",
+        "top"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "sfx-integration-gaps",
+      "requirement": "识别在成为可制造机箱前仍缺少的SFX固定、交流入口、进排风和线材弯折空间。",
+      "objectIds": [
+        "enclosure_shell",
+        "sfx_reference"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "back",
+        "right"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-3-3a4a902e-b2f1-472e-be0c-d2538225f1df/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "enclosure",
+        "label": "enclosure"
+      }
+    ],
+    "objects": [
+      {
+        "id": "enclosure_shell",
+        "label": "Sub-4L enclosure structural shell"
+      },
+      {
+        "id": "center_spine",
+        "label": "2.4 mm sandwich-layout structural spine"
+      },
+      {
+        "id": "mini_itx_reference",
+        "label": "Mini-ITX 170 x 170 x 1.6 mm fit reference"
+      },
+      {
+        "id": "axp120_x67_reference",
+        "label": "AXP120-X67 approved clearance envelope"
+      },
+      {
+        "id": "gpu_reference",
+        "label": "Approved 180 x 115 x 40 mm GPU concept envelope"
+      },
+      {
+        "id": "sfx_reference",
+        "label": "Standard SFX 125 x 100 x 63.5 mm fit reference"
+      }
+    ]
+  }
+}

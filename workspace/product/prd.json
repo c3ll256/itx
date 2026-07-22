@@ -11,10 +11,7 @@
       "height": 115,
       "thickness": 40
     },
-    "psu_layouts_to_compare": [
-      "Flex ATX / 1U",
-      "SFX"
-    ],
+    "psu": "SFX 125 x 100 x 63.5 mm",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels",
@@ -22,8 +19,8 @@
     "priority": "minimum volume"
   },
   "open_questions": [],
-  "notes": "Draft assumes a compact GPU envelope of 180 x 115 x 40 mm. Final GPU and PSU models must be locked before detailed fit validation. Flex ATX/1U is the baseline if SFX cannot meet 4.0 L.",
+  "notes": "Confirmed revision uses SFX only, with a 125 x 100 x 63.5 mm concept envelope. GPU remains 180 x 115 x 40 mm. Exact purchased PSU and GPU models must be locked before final fit validation.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-07-22T08:30:00Z",
+  "confirmed_at": "2026-07-22T10:20:00Z",
   "prd_path": "product/prd.md"
 }

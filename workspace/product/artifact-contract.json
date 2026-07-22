@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "manufacturing_package",
-  "summary": "FDM-printable sub-4-liter Mini-ITX enclosure with perforated side panels, AXP120-X67 cooler support, compact discrete-GPU support, and comparative Flex ATX/1U and SFX layouts.",
+  "summary": "FDM-printable sub-4-liter Mini-ITX enclosure with perforated side panels, AXP120-X67 cooler support, compact discrete-GPU support, and an SFX power supply.",
   "required_interfaces": [
     {
       "id": "mini_itx_mounting",
@@ -28,7 +28,7 @@
     {
       "id": "psu_fit",
       "kind": "internal_fit",
-      "description": "Evaluate Flex ATX/1U and SFX power-supply fit, AC inlet access, airflow, and cable routing.",
+      "description": "Fit a standard 125 x 100 x 63.5 mm SFX power supply with AC inlet access, airflow, retention, and cable routing.",
       "source": "user_requested",
       "required": true
     },
