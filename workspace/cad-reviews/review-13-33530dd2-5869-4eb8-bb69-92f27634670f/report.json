@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-13-33530dd2-5869-4eb8-bb69-92f27634670f",
+  "documentId": "main",
+  "revision": 13,
+  "revisionId": "revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa",
+  "summary": "The enclosure is visually coherent and substantially closed, with extensive venting and no obvious floating exterior parts. Internal fit, retention, routing, and clearance interfaces are not directly verifiable through the opaque assembled views; the front-panel corner fastening pattern is visibly absent, and external power-button alignment is not clearly established.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The assembled enclosure reads as a coherent upright case with aligned outer panels, roof, base, and feet; no obvious floating exterior part or gross collision is visible in the cited overview.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/look-d366a34a797f8954eb3c6d3a/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric overview visibly shows a proportionate, contiguous upright enclosure with seated panels and base structure."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The opaque assembled views do not directly show the 170 x 170 mm board mounting pattern, retention details, or rear-I/O accessibility.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The exterior is visible, but the motherboard mounting interface is concealed and cannot be visually established."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The views do not directly expose the installed AXP120-X67 envelope or measurable clearance between it and the intake panel.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "A vented exterior panel is visible, but the cooler and the gap behind that panel are hidden."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The exterior views cannot establish GPU envelope fit, I/O bracket retention, PCIe riser routing, or power-cable bend space behind the tray.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/look-e5ed07226598ddccd86f141b/workbench_front.png",
+          "view": "front",
+          "description": "The projected enclosure face does not provide a clear internal view of the complete GPU mounting and cable path."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The assembled views do not directly verify the specified 160 x 80 x 40 mm PSU envelope, retention, AC inlet access, airflow path, and cable routing together.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The enclosure exterior is shown, while the PSU cradle, inlet interface, and harness path remain concealed."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "A small circular feature is suggested near an upper panel edge, but the available view does not clearly establish an externally operable button and its continuous internal route to the motherboard header.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/look-e5ed07226598ddccd86f141b/workbench_front.png",
+          "view": "front",
+          "description": "The front projection does not clearly identify an exposed operable power-button face or prove the hidden lead route."
+        }
+      ]
+    },
+    {
+      "checkId": "front-closure",
+      "status": "pass",
+      "description": "The focused front-panel views show a solid perimeter frame filled by a regular array of narrow ventilation slots rather than a large open aperture.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/look-6f94effab321faf534dc9a38/workbench_right.png",
+          "view": "right",
+          "description": "The orthographic view visibly shows the panel bounded continuously on all sides and populated with regular horizontal intake slots."
+        }
+      ]
+    },
+    {
+      "checkId": "front-button",
+      "status": "not_verified",
+      "description": "The focused panel/button images do not clearly show a distinct 12 mm aligned opening with the button face exposed for external operation.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/look-95ed7c7a519885e2b83c27b6/workbench_iso.png",
+          "view": "iso",
+          "description": "The panel and nearby circular geometry are visible, but their alignment and external operability are ambiguous in this view."
+        }
+      ]
+    },
+    {
+      "checkId": "front-panel-fastening",
+      "status": "fail",
+      "description": "The front panel has a continuous slotted perimeter, but no four-corner screw-hole pattern is visible on the panel face; this contradicts the explicit four-corner fastening requirement.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/look-39dad6d5a9d3c1d8dac16f59/workbench_iso.png",
+          "view": "iso",
+          "description": "The focused panel visibly has a rectangular border and repeated slots, while its four corners lack discernible screw mounting holes."
+        }
+      ]
+    },
+    {
+      "checkId": "overall-enclosure",
+      "status": "pass",
+      "description": "The combined views show a complete upright enclosure with defined roof, base, front/rear boundaries, vented side faces, and supported feet; no obvious floating part or exterior interpenetration is visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/look-7366766354cba5a7e3177c3c/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view visibly presents a closed, six-boundary case form with a vented broad face and coherent adjoining structure."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-13-8af1d853-56cc-4c50-8e91-5a69799e0efa/look-7366766354cba5a7e3177c3c/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The reverse isometric view visibly confirms vent patterns on both adjoining upright panel faces and four supported feet on the base."
+        }
+      ]
+    }
+  ]
+}
