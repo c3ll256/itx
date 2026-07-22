@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-12-d70f13c5-f37b-4d0a-a42a-dd434d48e559",
+  "documentId": "main",
+  "revision": 12,
+  "revisionId": "revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81",
+  "summary": "The enclosure exterior is visually coherent and the corrected 146 x 190 x 205 mm chassis envelope is supported. Internal component fit, retention, cable paths, and side-panel clearances are not directly visible in the available rendered views, so those checks remain not verified.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The exterior assembly appears complete and consistently proportioned, with aligned side panels, top, frame, openings, and feet; no obvious floating exterior part or visible exterior collision is present.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-eb817a201f21de80190ebae1/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a coherent closed enclosure with aligned frame, top, vented side, rear openings, and feet, without an obvious exterior collision or detached part."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The closed exterior views do not directly show the 170 x 170 mm motherboard, its retention points, or rear-I/O accessibility, so fit and retention cannot be established visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-625710ec6bd302555b772d7c/workbench_iso.png",
+          "view": "iso",
+          "description": "The enclosure is shown closed; the Mini-ITX board, mounting bosses, and rear-I/O relationship are obscured."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The cooler envelope and its spacing to the intake panel are obscured by the closed enclosure, preventing direct verification of fit and intake clearance.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-625710ec6bd302555b772d7c/workbench_front.png",
+          "view": "front",
+          "description": "The front orthographic view shows enclosure surfaces but does not expose the installed AXP120-X67 envelope or a measurable visible air gap."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The rendered exterior does not directly expose the rear GPU, I/O bracket retention, PCIe riser passage, or cable-bend volume; the complete interface cannot be verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-625710ec6bd302555b772d7c/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric exterior view leaves the rear-installed GPU and its required riser and power-routing relationships hidden."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The closed views do not directly show the 1U PSU envelope, cradle retention, AC inlet accessibility, airflow gap, or harness route.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-625710ec6bd302555b772d7c/workbench_front.png",
+          "view": "front",
+          "description": "The front view shows rear-panel openings but not enough of the installed PSU or cradle to establish retention, inlet access, airflow, and routing."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "An exterior control feature may be present, but the available views do not directly establish both external button accessibility and a continuous internal route to the motherboard header.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-625710ec6bd302555b772d7c/workbench_iso.png",
+          "view": "iso",
+          "description": "The exterior is visible, but the internal power-button lead path to the motherboard header is not exposed."
+        }
+      ]
+    },
+    {
+      "checkId": "reported-interference",
+      "status": "not_verified",
+      "description": "No component visibly protrudes beyond the closed exterior silhouette, but the opaque side and top surfaces conceal the cooler, GPU, and PSU interfaces; absence of side-panel or frame interpenetration cannot be directly established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-f0ff0a32d344ca1887783a8d/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear isometric view shows a clean exterior silhouette but the relevant installed component envelopes remain concealed behind enclosure surfaces."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-f0ff0a32d344ca1887783a8d/workbench_top.png",
+          "view": "top",
+          "description": "The opaque top view does not reveal component-to-side-panel relationships needed to rule out hidden interpenetration."
+        }
+      ]
+    },
+    {
+      "checkId": "cooler-side-clearance",
+      "status": "not_verified",
+      "description": "The focused renders do not expose the AXP120-X67 boundary against the inner face of the left vent panel, so non-overlap and a visible intake gap cannot be confirmed.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-5a5621525e194d176bedf0d2/workbench_iso.png",
+          "view": "iso",
+          "description": "The cooler remains hidden by the enclosure/vent panel, and no direct visual air gap is observable."
+        }
+      ]
+    },
+    {
+      "checkId": "rear-side-clearance",
+      "status": "not_verified",
+      "description": "The focused right, top, and rear-isometric views retain opaque enclosure surfaces, so the GPU and PSU boundaries relative to the right panel and rear frame cannot be directly verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-85a60187b97887f6502a8975/workbench_right.png",
+          "view": "right",
+          "description": "The right-side exterior silhouette is intact, but the installed GPU and PSU remain obscured behind the side panel."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-85a60187b97887f6502a8975/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear-isometric exterior view does not reveal the hidden component-to-frame clearance boundaries."
+        }
+      ]
+    },
+    {
+      "checkId": "corrected-envelope",
+      "status": "pass",
+      "description": "The chassis is visibly a widened rectangular enclosure, and supporting bbox inspection reports 146 x 190 x 205 mm, corresponding to approximately 5.69 L rather than under 4 L.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-12-6a784a7f-7f5a-43a8-8e09-5fb68a0f3a81/look-eb817a201f21de80190ebae1/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric image directly shows the corrected widened chassis form; supporting geometry inspection gives a chassis-frame bbox from [-73,-95,0] to [73,95,205] mm, i.e. 146 x 190 x 205 mm."
+        }
+      ]
+    }
+  ]
+}
