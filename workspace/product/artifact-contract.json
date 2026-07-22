@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "artifact_level": "assembly",
+  "deliverable_intent": "manufacturing_package",
+  "summary": "FDM-printable sub-4-liter Mini-ITX enclosure with perforated side panels, AXP120-X67 cooler support, compact discrete-GPU support, and comparative Flex ATX/1U and SFX layouts.",
+  "required_interfaces": [
+    {
+      "id": "mini_itx_mounting",
+      "kind": "internal_fit",
+      "description": "Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "cooler_clearance",
+      "kind": "internal_fit",
+      "description": "Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "gpu_fit",
+      "kind": "internal_fit",
+      "description": "Fit the approved compact GPU envelope, its I/O bracket, PCIe riser, and power-cable bend space.",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "psu_fit",
+      "kind": "internal_fit",
+      "description": "Evaluate Flex ATX/1U and SFX power-supply fit, AC inlet access, airflow, and cable routing.",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "power_button_access",
+      "kind": "user_control",
+      "description": "Provide one externally accessible power button with an internal path to the motherboard header.",
+      "source": "user_requested",
+      "required": true
+    }
+  ],
+  "external_references": [],
+  "assembly_story": {
+    "installation": "Install heat-set inserts where specified, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before closing the ventilated panels.",
+    "maintenance": "Remove a service panel using standard screws to access the motherboard, GPU, PSU, and cabling.",
+    "user_access": [
+      "power button",
+      "motherboard rear I/O",
+      "GPU display outputs",
+      "PSU AC inlet",
+      "removable service panel"
+    ]
+  },
+  "cad": {
+    "requirement": "required",
+    "documents": [
+      {
+        "role": "enclosure",
+        "document_id": "main",
+        "description": "Printable Mini-ITX enclosure assembly and manufacturing parts",
+        "delivery_target": "manufacturing_handoff",
+        "required_formats": [
+          "step",
+          "stl"
+        ],
+        "interface_ids": [
+          "mini_itx_mounting",
+          "cooler_clearance",
+          "gpu_fit",
+          "psu_fit",
+          "power_button_access"
+        ],
+        "reference_ids": []
+      }
+    ]
+  },
+  "open_questions": []
+}

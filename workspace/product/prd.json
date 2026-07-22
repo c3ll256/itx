@@ -1,0 +1,29 @@
+{
+  "product_class": "mechanical",
+  "form_factor": "sub-4-liter FDM-printed Mini-ITX computer enclosure",
+  "manufacturing_method": "fdm",
+  "details": {
+    "target_external_volume_l_max": 4.0,
+    "motherboard": "Mini-ITX 170 x 170 mm",
+    "cpu_cooler": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm",
+    "gpu_concept_envelope_mm": {
+      "length": 180,
+      "height": 115,
+      "thickness": 40
+    },
+    "psu_layouts_to_compare": [
+      "Flex ATX / 1U",
+      "SFX"
+    ],
+    "storage": "M.2 only; no separate drive bays",
+    "case_fans": "none required by default",
+    "ventilation": "large perforated side panels",
+    "front_io": "power button only",
+    "priority": "minimum volume"
+  },
+  "open_questions": [],
+  "notes": "Draft assumes a compact GPU envelope of 180 x 115 x 40 mm. Final GPU and PSU models must be locked before detailed fit validation. Flex ATX/1U is the baseline if SFX cannot meet 4.0 L.",
+  "confirmed_by_user": false,
+  "confirmed_at": "",
+  "prd_path": "product/prd.md"
+}
