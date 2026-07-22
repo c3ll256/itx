@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-23-9338159f-2177-4923-a6fa-4fa28f6171e5",
+  "documentId": "main",
+  "revision": 23,
+  "revisionId": "revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd",
+  "summary": "Four enclosure presentation checks pass. Six overall/internal-interface checks are not verified because the available exterior views do not directly expose the relevant internal retention, clearance, or routing conditions. No visible defect warrants a fail.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "not_verified",
+      "description": "The visible exterior is coherent and proportionate, with no obvious external collision or floating part. The closed views do not expose all listed internal structures together, so completeness and collision-free placement of the full assembly cannot be established visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-cdc4e312bd03326862f4dd27/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a coherent enclosure with installed exterior panels and no obvious external floating geometry, but the internal assembly is hidden."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-cdc4e312bd03326862f4dd27/workbench_top.png",
+          "view": "top",
+          "description": "The top view shows a regular closed footprint, while providing no direct view of the internal tray, PSU cradle, or GPU supports."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "A rear access opening and the enclosure are visible, and inspection reports a roughly 174 x 174 mm tray span. The images do not show a 170 x 170 mm board seated on the tray, its mounting-hole retention, or alignment of its rear I/O, so the complete interface is not visually verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-8f3546639ab97e18f61180dc/workbench_iso.png",
+          "view": "iso",
+          "description": "The closed isometric view shows the enclosure and rear opening, but does not expose the motherboard tray mounting pattern or a fitted Mini-ITX board."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-1e511ce31f7bb49a06a88ac2/workbench_back.png",
+          "view": "back",
+          "description": "The back view shows external openings, but not a motherboard rear-I/O shield or board-to-opening alignment."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The perforated side intake is visible, and inspection supplies nominal tray-to-panel geometry. No mounted AXP120-X67 envelope or internal section is visible, so actual fit and preserved intake clearance cannot be directly established.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view clearly shows a perforated side intake panel, but the cooler envelope and its gap to that panel are hidden."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "Rear openings and a ventilated GPU-side panel are visible, and inspection identifies dedicated riser, rear-frame, front-support, and clamp geometry. The images do not show the approved GPU envelope installed or directly reveal PCIe-riser routing and power-cable bend space.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the rear opening and perforated side, but no installed GPU envelope or visible cable-routing volume."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-e3267793110cf7c093487389/workbench_right.png",
+          "view": "right",
+          "description": "The right view confirms a ventilated side panel, while the panel obscures the GPU supports, riser path, and power-cable bend region."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The rear lower opening is visible and inspection identifies a dedicated 1U PSU cradle volume. The closed images do not show the 160 x 80 x 40 mm PSU seated and retained, nor do they directly establish AC-inlet access, airflow, or cable routing.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a lower rear opening, but the PSU and cradle engagement, inlet alignment, and cable path are not visible."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "A single power button is visibly accessible on the ventilated front panel, and object inspection identifies it as the front 12 mm power button. The internal wiring path to the motherboard header is not visible, so the full interface is not verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-c35812882404e8024420a028/workbench_front.png",
+          "view": "front",
+          "description": "The front view directly shows the externally accessible circular button, but does not show any internal lead or routing to the motherboard header."
+        }
+      ]
+    },
+    {
+      "checkId": "main-case-restored",
+      "status": "pass",
+      "description": "The revision visibly presents a complete chassis rather than a GPU-installation illustration. The top, bottom, ventilated front, rear structure, both installed side panels, and four feet are all directly shown across the cited views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-d31cdeba4f1d1df1b395042c/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a complete box-form chassis with a continuous top, installed exterior panels, and feet."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-d31cdeba4f1d1df1b395042c/workbench_front.png",
+          "view": "front",
+          "description": "The front view shows the full-height ventilated front panel and power button."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-d31cdeba4f1d1df1b395042c/workbench_back.png",
+          "view": "back",
+          "description": "The back view shows the rear enclosure structure and intended interface openings."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-d1edb283d1edc082ac28f7d3/workbench_left.png",
+          "view": "left",
+          "description": "The left view directly shows the installed round-hole side panel within the chassis perimeter."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-d1edb283d1edc082ac28f7d3/workbench_right.png",
+          "view": "right",
+          "description": "The right view directly shows the opposite installed round-hole side panel."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-e6e928354666d68cc1535275/workbench_bottom.png",
+          "view": "bottom",
+          "description": "The bottom view directly shows the bottom plate and four corner foot carriers."
+        }
+      ]
+    },
+    {
+      "checkId": "both-side-panels-installed",
+      "status": "pass",
+      "description": "Both round-hole side panels are visibly seated within the chassis perimeter in their left and right orthographic views; neither is displaced into an exploded position.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-d1edb283d1edc082ac28f7d3/workbench_left.png",
+          "view": "left",
+          "description": "The left round-hole panel is flush and aligned inside the surrounding chassis frame."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-d1edb283d1edc082ac28f7d3/workbench_right.png",
+          "view": "right",
+          "description": "The right round-hole panel is likewise flush and aligned inside the chassis frame."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-d1edb283d1edc082ac28f7d3/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the side-panel edges integrated with the assembled enclosure rather than separated from it."
+        }
+      ]
+    },
+    {
+      "checkId": "front-closed",
+      "status": "pass",
+      "description": "The front is covered by a full-height ventilated panel with intentional slots and an installed power button; there is no restored large open front aperture.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-16806f60c727de2f0efc67b9/workbench_front.png",
+          "view": "front",
+          "description": "The front view directly shows the full-height slotted panel closing the front while retaining the circular power button."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-16806f60c727de2f0efc67b9/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the front panel seated against the surrounding chassis edges with no large open front hole."
+        }
+      ]
+    },
+    {
+      "checkId": "no-guide-geometry",
+      "status": "pass",
+      "description": "The cited views show only the chassis and fixed installation structures. No illustrative GPU body, motion arrow, annotation geometry, or detached explanatory exploded part is visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-23540065f67544b22d1f0fa6/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view contains only the assembled enclosure geometry and intended openings, with no guide GPU or arrows."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-23540065f67544b22d1f0fa6/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The reverse isometric view shows fixed shell and mounting structure without detached explanatory components or motion graphics."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-23-9f3613ca-d955-4ddf-9be7-565f147bc6bd/look-23540065f67544b22d1f0fa6/workbench_right.png",
+          "view": "right",
+          "description": "The right view shows only the installed ventilated side panel and enclosure edges, with no illustrative overlay geometry."
+        }
+      ]
+    }
+  ]
+}
