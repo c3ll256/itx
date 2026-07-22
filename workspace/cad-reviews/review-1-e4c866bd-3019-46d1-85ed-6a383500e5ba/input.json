@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-1-e4c866bd-3019-46d1-85ed-6a383500e5ba",
+  "documentId": "main",
+  "revision": 1,
+  "revisionId": "revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2",
+  "targetSha256": "ba2243aa045be9be2a4f43f2906a5bf1059f3696b696de0aa22932fdf20203c6",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/main/brief.md",
+    "sha256": "0f5d006001b36502ec1b135dfa35eb8ae05bb67a8551283639bdedce87c92c82"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/main/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/revision.json",
+    "sha256": "4dde6798e6e84c48ca41f8bbc98318738bb4800dffd6e1701fa6baac2b4f3628"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "d5ced18674c90d4ead68e1a391597bfe0e68a4d645887915e0cb223fcc489bbb",
+    "stepSha256": "c31ffe12718b2f060fa4ebefb103f4c721a31d227811daa91014fff7be6db5bb"
+  },
+  "stateRevision": "f807172245cfd62d274fc9564bf41401efb0190cd66c65369456b994fa96557c",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "main",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 1,
+      "revisionId": "revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2",
+      "documentSha256": "4de2ff4f11253d678b254ab9e694bfa3e70acdcad0b28be650f9015ec11297db",
+      "manifestSha256": "d5ced18674c90d4ead68e1a391597bfe0e68a4d645887915e0cb223fcc489bbb",
+      "stepSha256": "c31ffe12718b2f060fa4ebefb103f4c721a31d227811daa91014fff7be6db5bb"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/main/brief.md",
+      "sha256": "0f5d006001b36502ec1b135dfa35eb8ae05bb67a8551283639bdedce87c92c82"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "629d830f3da1e169f7183b479b649653460b0d4d619e0ac29b66c20022287e5c",
+      "documentRequirementSha256": "5bdb7f8b7c6d0df8382e55ed19b14366641f6e25533868f809cb8e26591f2943",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "f807172245cfd62d274fc9564bf41401efb0190cd66c65369456b994fa96557c"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "cf338a42b79af564e61530681e2dd3c6753e80705fed29465e203aa2c8aeb57d"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "enclosure_shell"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Fit the approved compact GPU envelope, its I/O bracket, PCIe riser, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Evaluate Flex ATX/1U and SFX power-supply fit, AC inlet access, airflow, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "sub4l-envelope",
+      "requirement": "外部包络为185×178×120 mm，即3.952 L，不超过4.0 L。",
+      "objectIds": [
+        "enclosure_shell"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "ventilated-sides",
+      "requirement": "两侧应具有明显的大面积通风开口，并保留连续结构边框。",
+      "objectIds": [
+        "enclosure_shell"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "back"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "fdm-shell-quality",
+      "requirement": "概念外壳应呈现连续、合理的FDM结构壁，壁厚目标2.4 mm，无明显破面或悬浮碎片。",
+      "objectIds": [
+        "enclosure_shell"
+      ],
+      "suggestedViews": [
+        "iso",
+        "top",
+        "bottom"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "service-access",
+      "requirement": "后部/侧部开放区域应为后续主板I/O、GPU I/O、电源和可拆卸维护面板开发提供明确空间。",
+      "objectIds": [
+        "enclosure_shell"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "back",
+        "left"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-1-e4c866bd-3019-46d1-85ed-6a383500e5ba/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "enclosure",
+        "label": "enclosure"
+      }
+    ],
+    "objects": [
+      {
+        "id": "enclosure_shell",
+        "label": "Sub-4L enclosure structural shell"
+      }
+    ]
+  }
+}

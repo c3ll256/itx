@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-1-e4c866bd-3019-46d1-85ed-6a383500e5ba",
+  "documentId": "main",
+  "revision": 1,
+  "revisionId": "revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2",
+  "summary": "The revision establishes a simple 185 x 178 x 120 mm shell envelope, but it does not visually establish the required PC-component interfaces, controls, dual-side ventilation, or developed service provisions. One dimensional check passes; two visible requirements fail; the remaining interface and manufacturing details are not verified.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "fail",
+      "description": "The shell is a coherent single body without visible floating fragments, but the assembly is visibly incomplete as an enclosure: it is essentially an open rectangular shell with no closure, internal retention structure, or developed interfaces.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-af95b4f002c8135cc1220aef/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view directly shows a simple open shell with continuous outer walls but no internal assembly structure or closure components."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "No motherboard reference envelope, standoffs, mounting-hole pattern, retention features, or identifiable rear-I/O opening is visible, so Mini-ITX fit and accessibility cannot be established.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric preview shows an empty shell and does not display Mini-ITX mounting or rear-I/O interface geometry."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The AXP120-X67 envelope and its relation to a mounted motherboard and side intake are not represented, so cooler fit and intake clearance cannot be visually established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-a0c3c21d0e419668a3f0fd75/workbench_front.png",
+          "view": "front",
+          "description": "The front view shows only the shell profile, with no cooler envelope or located side-intake clearance region."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "No GPU envelope, I/O bracket interface, PCIe riser location, or power-cable bend-space representation is visible; the required fit cannot be established.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The empty-shell isometric view contains no visible GPU, bracket, riser, or cable-routing interface geometry."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "Neither Flex ATX/1U nor SFX envelopes are shown, and there is no identifiable PSU retention, AC inlet, airflow, or cable-routing geometry; PSU fit cannot be established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-a0c3c21d0e419668a3f0fd75/workbench_front.png",
+          "view": "front",
+          "description": "The front view shows no PSU-specific opening, mount, airflow path, or cable-routing provision."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "fail",
+      "description": "No externally accessible power-button opening or button feature is visible on the modeled shell, and no internal routing feature is represented.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The visible exterior shell surfaces contain no power-button feature or opening."
+        }
+      ]
+    },
+    {
+      "checkId": "sub4l-envelope",
+      "status": "pass",
+      "description": "The cited views show the intended rectangular enclosure envelope, while supporting geometry inspection reports a 185 x 178 x 120 mm bounding box, corresponding to 3.9516 L and therefore not exceeding 4.0 L.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-a11164b40e96e2fc09087416/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric image visibly establishes the rectangular external envelope whose exact extents are supported by the inspected bounding box."
+        }
+      ]
+    },
+    {
+      "checkId": "ventilated-sides",
+      "status": "fail",
+      "description": "The two sides do not both have large ventilation openings: the back view shows one large framed opening, while the opposite visible side is a solid uninterrupted panel.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-b5d4431d9a40294c6cdb51ce/workbench_back.png",
+          "view": "back",
+          "description": "The back view directly shows a large rectangular opening retained by a continuous structural border."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-b5d4431d9a40294c6cdb51ce/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the contrasting opposite side as solid, contradicting the requirement for obvious large openings on both sides."
+        }
+      ]
+    },
+    {
+      "checkId": "fdm-shell-quality",
+      "status": "not_verified",
+      "description": "The shell appears continuous and free of visible floating fragments, but the images and available facts do not establish the 2.4 mm wall-thickness target or confirm print-ready FDM wall behavior throughout.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-26ec8de725acca4c4402ae0e/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a visually continuous shell without obvious detached fragments, but does not prove wall thickness."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-26ec8de725acca4c4402ae0e/workbench_bottom.png",
+          "view": "bottom",
+          "description": "The bottom view shows a continuous planar face but provides no direct wall-thickness or print-validation evidence."
+        }
+      ]
+    },
+    {
+      "checkId": "service-access",
+      "status": "not_verified",
+      "description": "A large framed rear opening provides general access space, but the views do not establish distinct provisions for motherboard I/O, GPU I/O, power, or attachment of a removable service panel.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-f2e55b81c7394f61ac6610bb/workbench_back.png",
+          "view": "back",
+          "description": "The back view directly shows one broad framed opening, but no differentiated I/O, power, or removable-panel attachment geometry."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-1-e6a0ec5c-1230-4ac1-bfe9-e18896aed8f2/look-f2e55b81c7394f61ac6610bb/workbench_left.png",
+          "view": "left",
+          "description": "The left view shows a solid panel without visible service-access or panel-fastening provisions."
+        }
+      ]
+    }
+  ]
+}
