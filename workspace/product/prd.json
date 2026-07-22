@@ -11,7 +11,8 @@
       "height": 115,
       "thickness": 40
     },
-    "psu": "SFX 125 x 100 x 63.5 mm",
+    "psu": "compact 1U/Flex 160 x 80 x 40 mm",
+    "layout": "sandwich: motherboard/cooler on front side; riser-mounted GPU and compact 1U PSU on rear side",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels",
@@ -19,8 +20,8 @@
     "priority": "minimum volume"
   },
   "open_questions": [],
-  "notes": "Confirmed revision uses SFX only, with a 125 x 100 x 63.5 mm concept envelope. GPU remains 180 x 115 x 40 mm. Exact purchased PSU and GPU models must be locked before final fit validation.",
+  "notes": "User changed the confirmed layout to a rear-mounted riser GPU and a compact 160 x 80 x 40 mm 1U PSU on the motherboard-tray rear side. GPU remains 180 x 115 x 40 mm.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-07-22T10:20:00Z",
+  "confirmed_at": "2026-07-22T11:10:00Z",
   "prd_path": "product/prd.md"
 }

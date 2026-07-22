@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-11-ea72fbef-6116-4811-880c-136b9d06212b",
+  "documentId": "main",
+  "revision": 11,
+  "revisionId": "revision-11-2c244877-686f-499b-a93c-82214aaf141c",
+  "summary": "The enclosure is visually coherent and several intended component envelopes and routes are shown, but the rendered views do not directly establish all fit, retention, access, airflow, clearance, and exact-envelope requirements; those checks remain not verified.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The assembly reads as a coherent upright enclosure with aligned frame, panels, tray, internal fit bodies, and feet; no obvious floating fragment or gross collision is visible in the cited overview.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-77bff96186a7f3a0cf6a3a6f/workbench_iso.png","view":"iso","description":"Focused isometric overview visibly shows a complete, proportionate vertical case assembly."}]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The views suggest a motherboard-side internal region, but do not directly prove the 170 x 170 mm mounting pattern, retention, or accessible rear I/O.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-4c2a7b0b900ce730f2bc7acd/workbench_front.png","view":"front","description":"Front view shows the enclosure but does not expose sufficient mounting-interface detail."}]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "A ventilated side is visible, but the image does not directly establish the AXP120-X67 envelope or a measurable intake gap to the side panel.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-4c2a7b0b900ce730f2bc7acd/workbench_iso.png","view":"iso","description":"Isometric view shows extensive side ventilation, while the cooler-to-panel clearance remains visually unresolved."}]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The images do not directly establish all rear GPU retention, I/O bracket engagement, riser connectivity, and power-cable bend clearance requirements.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-4c2a7b0b900ce730f2bc7acd/workbench_iso.png","view":"iso","description":"Overall isometric view does not expose enough rear-side interface detail to verify the complete GPU installation path."}]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The rendered evidence does not directly prove the specified 160 x 80 x 40 mm PSU fit together with retention, AC-inlet access, airflow, and cable routing.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-4c2a7b0b900ce730f2bc7acd/workbench_front.png","view":"front","description":"Front view cannot directly establish the rear PSU interfaces and retention details."}]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "An enclosure control feature is suggested, but the general views do not directly establish both external actuation and an uninterrupted internal path to the motherboard header.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-4c2a7b0b900ce730f2bc7acd/workbench_front.png","view":"front","description":"Front view provides insufficient detail to prove the complete external-to-internal button interface."}]
+    },
+    {
+      "checkId": "rear-layout",
+      "status": "pass",
+      "description": "The focused rear assembly view visibly distinguishes the motherboard/cooler side from the rear GPU and lower PSU arrangement around the tray.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-937481485e45eea6ef7246bf/workbench_iso_back.png","view":"iso_back","description":"Focused rear isometric view shows the intended stacked rear-side component layout relative to the central tray."}]
+    },
+    {
+      "checkId": "gpu-installation",
+      "status": "pass",
+      "description": "The focused rear views visibly show the installed GPU envelope associated with its rear mount, riser passage, and reserved power-bend volume.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-788ba102c6aff136f0b7dc8d/workbench_iso_back.png","view":"iso_back","description":"Rear isometric focus visibly groups the GPU body, mount, riser slot, and clearance envelope."}]
+    },
+    {
+      "checkId": "psu-installation",
+      "status": "pass",
+      "description": "The focused rear views visibly show the PSU seated in a separate lower cradle with adjacent harness-routing and cable-guide geometry.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-0870e52511e04ab46f7f7d46/workbench_iso_back.png","view":"iso_back","description":"Rear isometric focus shows the lower PSU envelope, its cradle, and neighboring cable-routing provisions."}]
+    },
+    {
+      "checkId": "complete-case",
+      "status": "pass",
+      "description": "The model visibly presents as a complete upright ITX case with structural frame, two vented sides, feet, control, tray, GPU mount, and PSU cradle, without obvious floating debris.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-8fd87ef1393f931d988dcf8e/workbench_iso.png","view":"iso","description":"Focused isometric assembly view shows the principal enclosure structures as a coherent case."}]
+    },
+    {
+      "checkId": "button-routing",
+      "status": "pass",
+      "description": "The focused views visibly show the front power-button object and a modeled internal route extending toward the motherboard-tray region.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-48b600bb084db6f060fc3531/workbench_iso.png","view":"iso","description":"Focused isometric view makes the button and its internal route toward the tray visible together."}]
+    },
+    {
+      "checkId": "honest-envelope",
+      "status": "not_verified",
+      "description": "The enclosure appears consistent with a roughly 4.67 L upright form and no sub-4 L claim is visible, but the exact 120 x 190 x 205 mm dimensions and calculated volume are not directly established by the images.",
+      "evidence": [{"imagePath":"<project>/cache/cad-workbench/documents/main/observations/revision-11-2c244877-686f-499b-a93c-82214aaf141c/look-ed892e64a84c68c196bab602/workbench_iso.png","view":"iso","description":"Focused chassis view shows the overall envelope but contains no dimensions with which to verify exact size or volume."}]
+    }
+  ]
+}
