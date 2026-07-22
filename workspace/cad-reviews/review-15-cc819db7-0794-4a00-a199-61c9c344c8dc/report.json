@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-15-cc819db7-0794-4a00-a199-61c9c344c8dc",
+  "documentId": "main",
+  "revision": 15,
+  "revisionId": "revision-15-9e41a160-0acd-4674-a58c-64118e8888a9",
+  "summary": "The exterior enclosure is generally recognizable and both side panels use dense staggered round-hole fields, but visible lines cross multiple hole rows and the provided exterior views do not establish the internal fit, retention, routing, or clearance interfaces. Revision requires corrective review of panel surface/intersection defects and additional inspectable internal evidence.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "not_verified",
+      "description": "The views show a coherent upright enclosure, but they do not expose all listed internal fit bodies, routes, mounts, and clearance volumes sufficiently to establish completeness or freedom from internal collisions.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-2ad265d6216b3bb666bb6024/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric image shows the enclosure's exterior form, while the closed panels obscure most internal assembly relationships required by this check."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The exterior views do not directly show the 170 x 170 mm motherboard seated and retained on its mounting pattern or demonstrate accessible rear I/O.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The closed enclosure prevents direct visual confirmation of motherboard mounting and rear-I/O accessibility."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The AXP120-X67 envelope and its spacing to the side-panel intake are not visible through the closed exterior, so fit and intake clearance cannot be established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-3847787caf99f156fa430b75/workbench_front.png",
+          "view": "front",
+          "description": "The front exterior view does not expose the cooler envelope or its side-panel gap."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The views do not directly expose the rear-mounted GPU envelope, I/O bracket engagement, PCIe riser path, or power-cable bend volume.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric exterior image leaves the GPU mounting and associated routing interfaces hidden."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The closed enclosure does not reveal the 160 x 80 x 40 mm PSU seated in its cradle, its retention, AC inlet accessibility, airflow, or cable route.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-3847787caf99f156fa430b75/workbench_front.png",
+          "view": "front",
+          "description": "The front view shows enclosure openings but does not provide a direct view of the PSU installation and interfaces."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "An external circular control feature is visible, but the image does not establish its internal lead path to the motherboard header.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The exterior control is visible near the upper front edge, while the required internal connection route remains hidden."
+        }
+      ]
+    },
+    {
+      "checkId": "round-hole-sides",
+      "status": "pass",
+      "description": "Both focused side views show dense, regular staggered arrays of circular holes bounded by continuous perimeter frames rather than long ventilation slots.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-e052a10dd5e0f4cd65048bf2/workbench_left.png",
+          "view": "left",
+          "description": "The left panel visibly uses a staggered circular-hole field with a continuous outer border."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-e052a10dd5e0f4cd65048bf2/workbench_right.png",
+          "view": "right",
+          "description": "The right panel visibly uses the same dense staggered circular-hole pattern and perimeter frame."
+        }
+      ]
+    },
+    {
+      "checkId": "clean-panel-surfaces",
+      "status": "fail",
+      "description": "The orthographic panel images show conspicuous horizontal lines crossing complete rows of holes, plus shorter vertical line segments through individual holes; these are visible surface/intersection defects contrary to the required clean continuous ribs.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-01af6fe9cc1c5522eb6db703/workbench_left.png",
+          "view": "left",
+          "description": "Horizontal seams visibly cross multiple hole rows, with additional vertical segments cutting through several holes."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-01af6fe9cc1c5522eb6db703/workbench_right.png",
+          "view": "right",
+          "description": "The opposite panel also shows linework traversing hole rows, contradicting a clean uninterrupted perforated surface."
+        }
+      ]
+    },
+    {
+      "checkId": "overall-enclosure",
+      "status": "fail",
+      "description": "The chassis, top, front/rear structures, feet, button, and side panels form a recognizable upright ITX enclosure, but the right orthographic view visibly contains lines passing through the perforation field, indicating an obvious external intersection/surface defect.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-6f75424c3ef35856151f7940/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the principal enclosure elements assembled into a consistent upright case."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-15-9e41a160-0acd-4674-a58c-64118e8888a9/look-6f75424c3ef35856151f7940/workbench_right.png",
+          "view": "right",
+          "description": "Multiple horizontal and vertical lines visibly cross circular holes on the exterior side panel, showing the defect that causes this check to fail."
+        }
+      ]
+    }
+  ]
+}

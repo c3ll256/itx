@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-17-ac1ad176-4b0a-4d5c-b8ef-e99bd1af2478",
+  "documentId": "main",
+  "revision": 17,
+  "revisionId": "revision-17-ece9f128-4c00-4c69-985d-b04b819926ba",
+  "summary": "The enclosure is broadly recognizable and proportionally coherent, but the review does not verify the required internal component envelopes and routing. Both side-panel reviews show conspicuous horizontal/vertical line intrusions through rows of round holes, so the exterior cleanliness and complete-enclosure checks fail.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The isometric assembly view shows a coherent upright enclosure with attached top, front structure, side panels, and feet; no gross floating exterior part or major collision is visible in this view.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-8b45f90f7adf153044825601/workbench_iso.png",
+          "view": "iso",
+          "description": "The complete enclosure reads as one proportionally coherent upright assembly without an obvious detached major part."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The exterior-oriented images do not show a 170 x 170 mm motherboard reference envelope, mounting-hole engagement, or a demonstrably accessible rear-I/O relationship, so fit and retention cannot be established visually.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The enclosure is visible, but no installed Mini-ITX reference board or mounting-interface proof is shown."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "No Thermalright AXP120-X67 reference envelope or sectioned internal view is visible, so cooler fit and side-panel intake clearance cannot be confirmed.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The closed enclosure view does not expose or represent the cooler envelope and its clearance to the intake panel."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The views contain no approved GPU reference envelope and do not directly expose bracket engagement, riser routing, or power-cable bend clearance; the complete interface therefore cannot be verified.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "No installed GPU envelope, riser, or cable bend-space reference is visible in the closed assembly."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The images do not show a 160 x 80 x 40 mm PSU reference body installed in its cradle, and AC-inlet access, airflow, retention, and cable routing are not all directly visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-546cb23b800d5fb3af01f5c1/workbench_front.png",
+          "view": "front",
+          "description": "The front projection shows enclosure openings but provides no direct visual proof of the specified PSU envelope or all required rear-side interfaces."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "An external button feature is visible low on the front, but the required internal path to the motherboard header is not exposed, so the full interface requirement is not verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-546cb23b800d5fb3af01f5c1/workbench_front.png",
+          "view": "front",
+          "description": "The front view visibly supports external button access, while showing no internal wiring path to the motherboard header."
+        }
+      ]
+    },
+    {
+      "checkId": "round-hole-sides",
+      "status": "fail",
+      "description": "The side panels use dense staggered round holes with continuous borders, but several rows visibly contain horizontal or vertical line intrusions across the hole interiors, contradicting the requirement for clean round-hole panels without slot-like interruptions.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-dc70eae845e70bcc7980773b/workbench_right.png",
+          "view": "right",
+          "description": "The right orthographic view clearly shows a long horizontal line crossing a middle row and another dark horizontal intrusion across the bottom row of round holes."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-dc70eae845e70bcc7980773b/workbench_left.png",
+          "view": "left",
+          "description": "The opposite panel also shows repeated line segments cutting through hole interiors, including vertical interruptions."
+        }
+      ]
+    },
+    {
+      "checkId": "clean-exterior",
+      "status": "fail",
+      "description": "The round-hole arrays and borders are generally regular, but auxiliary-looking horizontal and vertical edges visibly pass through multiple holes, creating the prohibited abnormal lines and breaking the clean exterior appearance.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-cbf4de67ae04645305cd245c/workbench_right.png",
+          "view": "right",
+          "description": "Horizontal lines visibly continue through rows of circular openings, most conspicuously near the middle and bottom of the panel."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-cbf4de67ae04645305cd245c/workbench_left.png",
+          "view": "left",
+          "description": "Multiple hole interiors contain aligned vertical line segments, so the array is not visually clean and consistent."
+        }
+      ]
+    },
+    {
+      "checkId": "overall-enclosure",
+      "status": "fail",
+      "description": "The front, top, feet, and side panels form a recognizable upright ITX enclosure, but the right-side view visibly shows chassis/auxiliary edges passing through rows of side-panel holes; this is an obvious exterior interpenetration/line-through defect.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-c30e628fbd3747c8f61a4ca9/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view establishes the complete upright enclosure silhouette and attached major exterior parts."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-17-ece9f128-4c00-4c69-985d-b04b819926ba/look-c30e628fbd3747c8f61a4ca9/workbench_right.png",
+          "view": "right",
+          "description": "The side view shows conspicuous aligned edges crossing circular openings, contradicting the requirement for no obvious exterior interpenetration."
+        }
+      ]
+    }
+  ]
+}

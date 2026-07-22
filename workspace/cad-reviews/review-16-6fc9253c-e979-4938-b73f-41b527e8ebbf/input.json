@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-16-6fc9253c-e979-4938-b73f-41b527e8ebbf",
+  "documentId": "main",
+  "revision": 16,
+  "revisionId": "revision-16-402a81f6-d40b-4671-811e-21096bec7cd2",
+  "targetSha256": "43cd0a8b0e9163584053babcb0d86898028a8ee8b72a9abb1d066f04c82f2e94",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/main/brief.md",
+    "sha256": "efa24da1a95f1e98d6b8d077a866f0328adca584122e2b49c4f0b9bb076029c5"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/main/revision-16-402a81f6-d40b-4671-811e-21096bec7cd2/revision.json",
+    "sha256": "79990135a1bddd87d7ae356cb68a13348b4cf2b78a14c87a13a5478e6d61b737"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "b5e9dc7c22473a627eef0c5cf41a0dbd81617aa8cb2963c701e2845aed5a128c",
+    "stepSha256": "3527080a2ab3520c7e6063c34374d808c9ba4248f0cd85d05b32f7cb2145244e"
+  },
+  "stateRevision": "f2b196acf9bbee7eb8d7360324d88f0aef341fc85f2c37ddc736d0908f05d735",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "main",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 16,
+      "revisionId": "revision-16-402a81f6-d40b-4671-811e-21096bec7cd2",
+      "documentSha256": "27f0b765df631971003e3960efe5d07630be8faa9a7ff31143f34f578541b5f8",
+      "manifestSha256": "b5e9dc7c22473a627eef0c5cf41a0dbd81617aa8cb2963c701e2845aed5a128c",
+      "stepSha256": "3527080a2ab3520c7e6063c34374d808c9ba4248f0cd85d05b32f7cb2145244e"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/main/brief.md",
+      "sha256": "efa24da1a95f1e98d6b8d077a866f0328adca584122e2b49c4f0b9bb076029c5"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "07e8912e395ad48d67afb7cca835ee7e5a02d4f5965819077ccb7cb9afbec517",
+      "documentRequirementSha256": "5bdb7f8b7c6d0df8382e55ed19b14366641f6e25533868f809cb8e26591f2943",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "f2b196acf9bbee7eb8d7360324d88f0aef341fc85f2c37ddc736d0908f05d735"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "48f6b50083df062cb5f45b86ed3755c2822842a3677db3e22d8db6036b3ce053"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "chassis_frame",
+        "left_vent_panel",
+        "right_vent_panel",
+        "power_button",
+        "front_vent_panel",
+        "motherboard_tray",
+        "one_u_psu_cradle",
+        "rear_gpu_mount",
+        "pcie_riser_slot",
+        "cable_guide",
+        "case_feet",
+        "installed_mini_itx",
+        "installed_axp120_x67",
+        "installed_rear_gpu",
+        "installed_one_u_psu",
+        "gpu_power_clearance",
+        "psu_harness_clearance",
+        "power_button_route"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Rear-mount the approved compact GPU envelope behind the motherboard tray, including I/O bracket, PCIe riser path, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Rear-mount the user-specified 160 x 80 x 40 mm compact 1U PSU behind the motherboard tray with AC inlet access, airflow, retention, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "round-hole-sides",
+      "requirement": "左右侧板应为密集、规则、交错排列的圆形洞洞板，不使用横向长槽，并保留连续外围边框。",
+      "objectIds": [
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "iso",
+        "left",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "clean-hole-display",
+      "requirement": "圆孔阵列在外观上应干净一致，不应再出现整行对齐的异常圆柱拓扑接缝；孔间打印筋和外围边框保持连续。",
+      "objectIds": [
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "left",
+        "right",
+        "iso"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "overall-enclosure",
+      "requirement": "正面封板、顶盖、背板、底脚及两块圆孔侧板应组成完整、视觉一致的立式ITX机箱，无明显外部穿模或漂浮件。",
+      "objectIds": [
+        "chassis_frame",
+        "front_vent_panel",
+        "left_vent_panel",
+        "right_vent_panel",
+        "case_feet",
+        "power_button"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-16-6fc9253c-e979-4938-b73f-41b527e8ebbf/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "enclosure",
+        "label": "enclosure"
+      }
+    ],
+    "objects": [
+      {
+        "id": "chassis_frame",
+        "label": "Widened sandwich chassis without side-panel interpenetration"
+      },
+      {
+        "id": "left_vent_panel",
+        "label": "Clean removable staggered round-hole intake panel"
+      },
+      {
+        "id": "right_vent_panel",
+        "label": "Clean removable staggered round-hole intake panel"
+      },
+      {
+        "id": "power_button",
+        "label": "Front 12 mm power button"
+      },
+      {
+        "id": "front_vent_panel",
+        "label": "Screw-removable closed front ventilation panel"
+      },
+      {
+        "id": "motherboard_tray",
+        "label": "Front-side Mini-ITX tray with reinforced bosses"
+      },
+      {
+        "id": "one_u_psu_cradle",
+        "label": "Rear-side 160 x 80 x 40 mm compact 1U PSU cradle"
+      },
+      {
+        "id": "rear_gpu_mount",
+        "label": "Rear-side riser GPU mount above PSU"
+      },
+      {
+        "id": "pcie_riser_slot",
+        "label": "PCIe riser passage through center tray"
+      },
+      {
+        "id": "cable_guide",
+        "label": "PSU cable passage to motherboard side"
+      },
+      {
+        "id": "case_feet",
+        "label": "Four corner foot carriers"
+      },
+      {
+        "id": "installed_mini_itx",
+        "label": "Installed Mini-ITX fit body"
+      },
+      {
+        "id": "installed_axp120_x67",
+        "label": "Installed AXP120-X67 fit body"
+      },
+      {
+        "id": "installed_rear_gpu",
+        "label": "Rear-installed 180 x 115 x 40 mm GPU fit body"
+      },
+      {
+        "id": "installed_one_u_psu",
+        "label": "Rear-installed 160 x 80 x 40 mm 1U PSU fit body"
+      },
+      {
+        "id": "gpu_power_clearance",
+        "label": "Reserved GPU power cable bend volume"
+      },
+      {
+        "id": "psu_harness_clearance",
+        "label": "Reserved PSU harness passage"
+      },
+      {
+        "id": "power_button_route",
+        "label": "Internal power-button lead route"
+      }
+    ]
+  }
+}

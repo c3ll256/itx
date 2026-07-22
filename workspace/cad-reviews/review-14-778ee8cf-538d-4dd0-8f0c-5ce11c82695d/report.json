@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-14-778ee8cf-538d-4dd0-8f0c-5ce11c82695d",
+  "documentId": "main",
+  "revision": 14,
+  "revisionId": "revision-14-b73d60c3-022d-4770-9449-19f486cd5a68",
+  "summary": "The enclosure is visually coherent and the two side panels use dense staggered round-hole fields with continuous borders. However, the available renders do not directly establish the detailed motherboard, cooler, GPU, PSU, and power-button routing interfaces, and the side-panel orthographic view shows several horizontal seam lines crossing hole rows, so panel integrity is not accepted.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The focused isometric, front, and top views show a complete, proportionate tower enclosure with aligned shell panels and installed fit bodies; no obvious floating exterior part or gross collision is visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-46ef993501d9594386ccbb18/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric overview visibly shows the principal enclosure and fit objects arranged as one coherent assembly without an obvious detached component."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The overview indicates an internal motherboard fit body, but the render does not directly expose all mounting points or demonstrate accessible rear I/O, so the full interface cannot be verified visually.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The enclosure overview provides context, but its closed-shell presentation does not visibly establish retention at the Mini-ITX mounting pattern or rear-I/O accessibility."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The focused render shows the cooler envelope in the assembly, but the side-panel intake gap is not directly discernible enough to prove preserved clearance.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-86aa6dd702c2f954af215430/workbench_iso.png",
+          "view": "iso",
+          "description": "The AXP120-X67 fit body is visible in enclosure context, but the image does not resolve a measurable or unambiguous gap to the intake panel."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The rear GPU, mount, riser slot, and reserved bend volume are represented, but the views do not directly prove I/O bracket access, an unobstructed riser path, and usable cable-bend space together.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-ba4b2af5b66502abcabec2c0/workbench_iso.png",
+          "view": "iso",
+          "description": "The focused GPU-side context is visible, but occlusion prevents direct confirmation of every required access and routing feature."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The PSU fit body and cradle are shown, but the available views do not directly establish AC-inlet access, airflow, retention, and unobstructed harness routing as a complete interface.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-da0795886187d8fc9b044834/workbench_iso.png",
+          "view": "iso",
+          "description": "The PSU installation region is visible, while the inlet, retention details, and full cable route remain insufficiently exposed."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "An exterior button location is visible, but the render does not continuously expose and prove the internal lead path to the motherboard header.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-b3d89e886193ab928b92db6f/workbench_front.png",
+          "view": "front",
+          "description": "The front view supports external button accessibility, but it cannot show termination of the internal route at the motherboard header."
+        }
+      ]
+    },
+    {
+      "checkId": "round-hole-sides",
+      "status": "pass",
+      "description": "Both side panels visibly use dense, regular circular perforations in staggered rows rather than horizontal slots, and each array remains inside a continuous perimeter frame.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-11b3ceec2245dfdf0da669ae/workbench_left.png",
+          "view": "left",
+          "description": "The left orthographic view directly shows a dense staggered circular-hole field bounded on all sides by a frame."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-11b3ceec2245dfdf0da669ae/workbench_right.png",
+          "view": "right",
+          "description": "The right orthographic view directly shows the matching round-hole pattern and continuous perimeter border."
+        }
+      ]
+    },
+    {
+      "checkId": "panel-printability",
+      "status": "fail",
+      "description": "Although the circular holes retain visible webs and stay inside the outer frame, several horizontal seam/intersection lines visibly cross complete hole rows in the side orthographic render; this is a concrete surface-integrity defect that prevents accepting the panel as free of broken faces or unintended intersections.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-fa966b79efab17ad9dcab5ec/workbench_right.png",
+          "view": "right",
+          "description": "Multiple horizontal lines visibly pass through circular holes across the panel, contradicting the requirement for a clean uninterrupted perforated face."
+        }
+      ]
+    },
+    {
+      "checkId": "overall-enclosure",
+      "status": "pass",
+      "description": "The front, top, rear, feet, button, and both perforated side panels visibly form a consistent upright ITX enclosure; no obvious external interpenetration is visible in the multi-angle exterior views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-56154ad47b1958d5a6244517/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric exterior view shows a closed, aligned tower shell with top, front/rear structure, side panel, and feet reading as one enclosure."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-14-b73d60c3-022d-4770-9449-19f486cd5a68/look-56154ad47b1958d5a6244517/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear isometric view shows the opposite side panel, base, feet, and rear structure meeting coherently without an obvious exterior collision."
+        }
+      ]
+    }
+  ]
+}
