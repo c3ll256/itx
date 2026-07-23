@@ -15,7 +15,8 @@
     "layout": "sandwich: motherboard/cooler on front side; riser-mounted GPU and compact 1U PSU on rear side",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
-    "ventilation": "large perforated side panels",
+    "ventilation": "large perforated side panels; no front ventilation",
+    "front_panel": "solid removable panel with power-button opening and fasteners only",
     "front_io": "power button only",
     "priority": "minimum volume"
   },

@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-34-22deb454-03da-4dc3-aac3-9627daf32a45",
+  "documentId": "main",
+  "revision": 34,
+  "revisionId": "revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70",
+  "summary": "The enclosure exterior, solid front panel, rear service openings, internal riser-clamp placement, and overall coherence pass visual review. Mini-ITX, cooler, GPU, PSU, and power-button header-path interfaces remain not verified because the committed views do not show the required reference component envelopes or internal routing evidence.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The committed assembly is visually coherent and complete in the reviewed exterior views, with a continuous cap, aligned side and end panels, an integrated base, and no obvious collisions, floating exterior parts, or missing primary enclosure structure.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-d17a840588417c35f8ffecd7/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the cap, service end, vented side, frame, fasteners, and base assembled into one coherent enclosure without an obvious visible collision or floating exterior component."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-d17a840588417c35f8ffecd7/workbench_top.png",
+          "view": "top",
+          "description": "The top view shows a continuous, correctly seated rectangular cap with aligned perimeter edges and corner fastening."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The rear service geometry is visible, but the images contain no 170 x 170 mm Mini-ITX reference board, mounting-pattern overlay, or exposed retention details sufficient to prove standard-board fit, retention, and rear-I/O alignment.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-331fe68c02470a8c2b82337b/workbench_iso.png",
+          "view": "iso",
+          "description": "The assembled enclosure and rear service areas are visible, but the opaque panels conceal the motherboard mounting interface and no reference motherboard is shown."
+        },
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/validated/previews/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic service-end view shows opening regions but does not visually establish the 170 x 170 mm hole pattern, board retention, or exact rear-I/O fit."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The required Thermalright AXP120-X67 envelope and a visible clearance gauge are absent, so cooler fit and preserved intake clearance to the side panel cannot be established from the committed views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-331fe68c02470a8c2b82337b/workbench_iso.png",
+          "view": "iso",
+          "description": "The enclosure is closed and the cooler envelope is not displayed; the image therefore cannot show cooler-to-side-panel intake clearance."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "Rear GPU service geometry is visible, but no approved compact GPU envelope, installed I/O bracket, PCIe riser body/path, or power-cable bend envelope is shown, so the complete GPU-fit interface is not visually established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-331fe68c02470a8c2b82337b/workbench_iso.png",
+          "view": "iso",
+          "description": "The image shows the assembled service end and enclosure proportions but no installed or reference GPU, riser cable, or power-cable bend volume."
+        },
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/validated/previews/workbench_front.png",
+          "view": "front",
+          "description": "The service-end view indicates distinct rear regions, but it does not prove bracket engagement, GPU envelope clearance, riser routing, or cable bend space."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "A separate rear PSU service region is present, but the views do not show a 160 x 80 x 40 mm reference PSU seated in its cradle or visually prove AC inlet engagement, airflow, retention, and cable-routing clearance.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-331fe68c02470a8c2b82337b/workbench_iso.png",
+          "view": "iso",
+          "description": "The closed assembly exposes service-end geometry but not an installed PSU envelope, its retention interfaces, airflow path, or internal cable routing."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "The single power-button cap is visibly accessible from outside, but no internal wire channel or route to the motherboard header is visible; therefore the full external-control interface is not verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-1a63a25e9992aabe2e72e086/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The solid end panel visibly presents one external circular button cap near its upper edge, while the closed enclosure leaves the required internal header path unseen."
+        }
+      ]
+    },
+    {
+      "checkId": "solid-front-panel",
+      "status": "pass",
+      "description": "The reviewed front panel is a continuous solid removable panel with no vent slots or perforation field; it visibly retains one power-button position and six panel-fastening screws.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-a1759f458d66be8c7de3c4bf/workbench_back.png",
+          "view": "back",
+          "description": "The orthographic view directly shows an uninterrupted solid rectangular panel, one larger circular power-button feature near the top, and six smaller fastening positions arranged in three pairs."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-a1759f458d66be8c7de3c4bf/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The isometric view confirms the panel is a separate seated exterior piece and shows no front ventilation slots or round-hole array."
+        }
+      ]
+    },
+    {
+      "checkId": "rear-service-preserved",
+      "status": "pass",
+      "description": "The rear service face remains open and visibly divided into distinct motherboard-I/O, GPU, and compact-PSU access regions rather than being replaced by the solid front-panel treatment.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-08b5f7d2f5b8d679cc67b876/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric service-end view visibly shows multiple separate aperture regions, including a tall left region and separate upper and lower right-hand service regions."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-08b5f7d2f5b8d679cc67b876/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic view confirms that the service face retains three spatially distinct access zones within its fastened perimeter."
+        }
+      ]
+    },
+    {
+      "checkId": "riser-clamp-internal",
+      "status": "pass",
+      "description": "The focused exterior views show the riser clamp bars and their four screws contained behind the enclosure surfaces; they do not visibly penetrate the solid front panel, either side panel, or the top cap.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-743c16c44f2c175b55496dd4/workbench_iso.png",
+          "view": "iso",
+          "description": "The service-end, vented side, and continuous top cap are visibly uninterrupted by riser-clamp bars or clamp screws."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-743c16c44f2c175b55496dd4/workbench_right.png",
+          "view": "right",
+          "description": "The orthographic side view shows the clamp structure remaining behind the perforated side-panel plane, with no visible component protruding through that panel."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-743c16c44f2c175b55496dd4/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The opposite isometric view shows the solid front and adjacent side remaining externally clear of the internal clamp hardware."
+        }
+      ]
+    },
+    {
+      "checkId": "exterior-coherence",
+      "status": "pass",
+      "description": "The solid front, separate rear service face, round-hole side panel, continuous top cap, and base form a visually complete enclosure with aligned seams and no obvious exterior interpenetration, floating component, or missing primary panel.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-07a8d92e907ba7567588a131/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the rear service face, perforated side, continuous cap, frame, and base meeting coherently along aligned edges."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-07a8d92e907ba7567588a131/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The opposite isometric view shows the solid front panel, second perforated side, and footed base assembled without an obvious exterior collision or missing panel."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-34-e7b22b23-8d15-4f67-8a22-fbc1c53bee70/look-07a8d92e907ba7567588a131/workbench_back.png",
+          "view": "back",
+          "description": "The solid-panel orthographic view confirms a complete front closure with a regular six-fastener perimeter and one button feature."
+        }
+      ]
+    }
+  ]
+}
