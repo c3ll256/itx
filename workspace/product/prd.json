@@ -19,7 +19,7 @@
     "front_panel": "solid removable magnetic panel with power-button opening only",
     "panel_fit": "front, rear, left and right panels extend flush between the top cap and base with no exposed inner-frame gaps",
     "perimeter_panel_retention": "tool-less magnetic retention for front, rear, left and right panels; no perimeter-panel screws",
-    "magnet_spec_provisional": "D8 x 3 mm N42 axial NdFeB magnet with D10 x 1 mm low-carbon-steel target; front/rear 4 stations each, sides 6 stations each",
+    "magnet_spec": "user-specified rectangular countersunk magnet, 20 x 10 x 4 mm, single M4 hole; four stations on each of front, rear, left and right panels; 16 stations total",
     "rear_panel_mounting": "magnet stations and locating features must not intrude into motherboard, GPU or PSU service apertures",
     "front_io": "power button only",
     "priority": "minimum volume"

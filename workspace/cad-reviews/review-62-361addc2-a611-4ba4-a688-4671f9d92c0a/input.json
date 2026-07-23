@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-62-361addc2-a611-4ba4-a688-4671f9d92c0a",
+  "documentId": "main",
+  "revision": 62,
+  "revisionId": "revision-62-900599f0-2407-438f-b8fc-eed1951c7522",
+  "targetSha256": "f5d8355d7d2ac0810335f43a0187b1b3bfc7743a7f8e3eda54589811fc3de896",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/main/brief.md",
+    "sha256": "2b898105889214f84e47eadaf4c6115dcb1a775664b967bb7222041ec576393e"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/main/revision-62-900599f0-2407-438f-b8fc-eed1951c7522/revision.json",
+    "sha256": "8245bf80996368bd53d49c2aba6371570a94e6dafc62cd8ba32d3f2d40fed0eb"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "f391729796b1f9269014ca4b7fdc47e1614a3afd1d4d221d98c256c8a03be040",
+    "stepSha256": "4b892c7ee6fdfc676054cce3a081f775f285c6173a2c69332ac10bbd95e0d9f2"
+  },
+  "stateRevision": "99fdd4d6edb1b07c06fc8969a5c25a7f82cec1dd927f72c92533511de52f8c93",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "main",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 62,
+      "revisionId": "revision-62-900599f0-2407-438f-b8fc-eed1951c7522",
+      "documentSha256": "ce3315b6d1704d38e1792018b4ab45164e5e9d84e3807b493cc3469b33b925e9",
+      "manifestSha256": "f391729796b1f9269014ca4b7fdc47e1614a3afd1d4d221d98c256c8a03be040",
+      "stepSha256": "4b892c7ee6fdfc676054cce3a081f775f285c6173a2c69332ac10bbd95e0d9f2"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/main/brief.md",
+      "sha256": "2b898105889214f84e47eadaf4c6115dcb1a775664b967bb7222041ec576393e"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "07e8912e395ad48d67afb7cca835ee7e5a02d4f5965819077ccb7cb9afbec517",
+      "documentRequirementSha256": "5bdb7f8b7c6d0df8382e55ed19b14366641f6e25533868f809cb8e26591f2943",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "99fdd4d6edb1b07c06fc8969a5c25a7f82cec1dd927f72c92533511de52f8c93"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "be513dce5e2ed8e58ba8f7b831d3448be2a4b97542ab6eb29d9910115b16efdb"
+  },
+  "checks": [
+    {
+      "id": "four-stations-per-panel",
+      "requirement": "前、后、左、右每块外围面板必须严格具有4个矩形磁吸站，共16站；不得保留左右侧板中部额外磁吸站或旧圆形磁吸站。",
+      "objectIds": [
+        "base_and_frame",
+        "front_vent_panel",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "user-magnet-interface",
+      "requirement": "每个框架磁铁载体应对应用户图片所示20×10×4 mm方形带孔强磁，具有约20.4×10.4×4.2 mm矩形嵌槽和中央M4安装通道；不得用圆形胶粘磁铁穴替代。",
+      "objectIds": [
+        "base_and_frame"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "front",
+        "right",
+        "bottom"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "clean-side-magnet-zones",
+      "requirement": "左右洞洞板的四个矩形磁吸位置应位于干净的实体加强区，圆孔不得切入矩形吸片槽或留下半圆残边、破面和孤立碎片。",
+      "objectIds": [
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "left",
+        "right",
+        "iso"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "rectangular-target-recesses",
+      "requirement": "四块面板内侧应各具有4个矩形钢吸片槽；旧Ø10圆形吸片穴应完全移除，槽不得贯穿面板外表面。",
+      "objectIds": [
+        "front_vent_panel",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "front",
+        "back",
+        "left",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "screw-free-panel-exteriors",
+      "requirement": "四块外围面板外表面继续保持免工具无螺钉；磁铁中央M4只用于机箱内部固定磁铁，不得成为面板外露固定螺钉。顶盖四颗结构螺钉允许保留。",
+      "objectIds": [
+        "front_vent_panel",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel",
+        "top_M3_screws",
+        "base_and_frame"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "front",
+        "back"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "service-and-vent-preserved",
+      "requirement": "后面板主板I/O、双槽显卡和1U电源开口保持畅通；左右侧板主要圆孔通风区保持连续，四个矩形磁吸加强区不得明显阻断核心进风区域。",
+      "objectIds": [
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel",
+        "base_and_frame"
+      ],
+      "suggestedViews": [
+        "front",
+        "left",
+        "right",
+        "iso"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "old-round-system-removed",
+      "requirement": "旧20站Ø8圆磁铁穴、圆形钢片穴、独立磁铁后盖和每侧6站结构应从当前对象与可见几何中移除。",
+      "objectIds": [
+        "base_and_frame",
+        "front_vent_panel",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "overall-enclosure",
+      "requirement": "修改后整机应保持齐边顶盖、实体正面、后部服务面和双侧洞洞板，无明显外部穿模、缺失面板或磁铁载体穿出外表面。",
+      "objectIds": [
+        "base_and_frame",
+        "top_cap",
+        "front_vent_panel",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel",
+        "case_feet"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-62-361addc2-a611-4ba4-a688-4671f9d92c0a/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "enclosure",
+        "label": "enclosure"
+      }
+    ],
+    "objects": [
+      {
+        "id": "base_and_frame",
+        "label": "Frame with top structural insert pockets only"
+      },
+      {
+        "id": "top_cap",
+        "label": "Continuous top cap with concealed tray groove"
+      },
+      {
+        "id": "rear_io_panel",
+        "label": "Rear panel with four rectangular steel-target recesses"
+      },
+      {
+        "id": "left_vent_panel",
+        "label": "Left panel with clean skipped-hole zones at four rectangular magnets"
+      },
+      {
+        "id": "right_vent_panel",
+        "label": "Right panel with clean skipped-hole zones at four rectangular magnets"
+      },
+      {
+        "id": "front_vent_panel",
+        "label": "Solid front panel with four rectangular steel-target recesses"
+      },
+      {
+        "id": "power_button",
+        "label": "Externally operable 12 mm power button"
+      },
+      {
+        "id": "motherboard_tray",
+        "label": "Tray with four calibrated motherboard insert pockets"
+      },
+      {
+        "id": "one_u_psu_cradle",
+        "label": "Rear-slide 1U PSU cradle with front stop and four underside tabs"
+      },
+      {
+        "id": "gpu_riser_shelf",
+        "label": "Adjustable riser shelf with two 46 mm slots and GPU support rails"
+      },
+      {
+        "id": "gpu_rear_io_frame",
+        "label": "Rear GPU I/O frame with two bracket screw holes"
+      },
+      {
+        "id": "gpu_front_support",
+        "label": "Front GPU nose-support frame"
+      },
+      {
+        "id": "gpu_side_clamps",
+        "label": "Two removable M3 GPU retention clamps"
+      },
+      {
+        "id": "case_feet",
+        "label": "Four replaceable foot carriers"
+      },
+      {
+        "id": "top_M3_heatset_inserts",
+        "label": "Four structural top-cap M3 inserts"
+      },
+      {
+        "id": "board_M3_heatset_inserts",
+        "label": "Four structural motherboard-standoff M3 inserts"
+      },
+      {
+        "id": "riser_clamp_bars",
+        "label": "Two removable universal PCIe receiver clamp bars"
+      },
+      {
+        "id": "riser_clamp_M3_screws",
+        "label": "Four real ISO 4762 M3x12 riser-clamp screws"
+      },
+      {
+        "id": "top_M3_screws",
+        "label": "Four real ISO 4762 M3x8 top-cap screws"
+      }
+    ]
+  }
+}
