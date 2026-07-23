@@ -42,8 +42,8 @@
   ],
   "external_references": [],
   "assembly_story": {
-    "installation": "Install heat-set inserts where specified, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before closing the ventilated panels.",
-    "maintenance": "Remove a service panel using standard screws to access the motherboard, GPU, PSU, and cabling.",
+    "installation": "Install structural heat-set inserts where specified, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
+    "maintenance": "Pull off the magnetically retained front, rear, left, or right service panel without tools; locating lips carry panel shear while magnets provide normal retention.",
     "user_access": [
       "power button",
       "motherboard rear I/O",

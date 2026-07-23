@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-59-ff1f6209-f371-46ab-a700-7890d6c43603",
+  "documentId": "main",
+  "revision": 59,
+  "revisionId": "revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969",
+  "summary": "The enclosure is visually coherent and its externally visible panel, vent, service-opening, finger-relief, and fastener details are satisfactory. Six checks pass with direct image support; eight internal-fit or concealed magnetic-interface checks remain not verified because the committed views do not directly expose the required envelopes, paths, pocket counts, or load-location interfaces. No visible defect was identified.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The assembled enclosure appears complete and consistently proportioned, with a continuous top, four seated perimeter panels, feet, internal support structure, and aligned rear service regions; no obvious collision, detached part, or missing major structure is visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-b6e63cfc6b2035640b53f79a/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a coherent assembled tower with aligned top, frame, rear panel, side panel, and base, without an obvious floating or intersecting component."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-b6e63cfc6b2035640b53f79a/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic service-face view shows the enclosure outline, rear opening groups, top edge, and feet aligned within a complete frame."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-b6e63cfc6b2035640b53f79a/workbench_top.png",
+          "view": "top",
+          "description": "The top view shows a continuous rectangular cap with four corner structural fasteners and no visible discontinuity or offset."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "A motherboard tray and a dedicated rear I/O region are visible, but no 170 x 170 mm reference motherboard, mounting-hole overlay, or directly readable dimensional evidence is present in the images, so standard Mini-ITX fit and retention cannot be established visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-4de87d63f850258597bf0bfc/workbench_iso.png",
+          "view": "iso",
+          "description": "The image shows the enclosure and internal mounting architecture, but it does not show a reference Mini-ITX board seated on the tray."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-4de87d63f850258597bf0bfc/workbench_front.png",
+          "view": "front",
+          "description": "The service-face view shows a large motherboard I/O region, but does not prove the 170 x 170 mm board envelope or mounting pattern."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The side panel visibly provides a broad perforated intake field, but the installed Thermalright AXP120-X67 envelope and its offset from the panel are not shown, so cooler fit and intake clearance cannot be verified from these assembled exterior views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-4de87d63f850258597bf0bfc/workbench_iso.png",
+          "view": "iso",
+          "description": "The perforated side intake is directly visible, but the cooler envelope and its clearance to that panel are concealed."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-4de87d63f850258597bf0bfc/workbench_front.png",
+          "view": "front",
+          "description": "This assembled view does not expose a cooler body or a measurable cooler-to-panel gap."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The rear GPU I/O region and dedicated internal support architecture are visible, but no approved compact-GPU reference envelope, routed PCIe riser, or power lead is shown. Exact GPU fit, riser path, and cable-bend space therefore remain unverified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-9fde10107a968d602c5fb3bf/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the rear GPU service region and internal support features, but no GPU or cable envelope is installed for a direct fit check."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-9fde10107a968d602c5fb3bf/workbench_front.png",
+          "view": "front",
+          "description": "The upper-right service opening is visible, while riser routing and power-cable bend clearance remain concealed or absent."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "A rear PSU service opening and a retained cradle structure are visible, but no 160 x 80 x 40 mm PSU reference body, inlet connector, airflow path, or routed cables are shown together. Full fit, retention, access, airflow, and routing cannot be established visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-ad451f3a55bb23eb967456f9/workbench_iso.png",
+          "view": "iso",
+          "description": "The image shows the rear lower PSU region and enclosure architecture, but not a seated PSU reference body or cable route."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-ad451f3a55bb23eb967456f9/workbench_front.png",
+          "view": "front",
+          "description": "The lower-right rear service opening is unobstructed in the view, but exact PSU fit, inlet placement, and airflow are not directly demonstrated."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "The exterior front button is directly visible and appears reachable, but the assembled views do not expose an internal wire or channel continuing to the motherboard header. The complete external-access-plus-internal-path requirement is therefore not fully verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-0760887ca33150957ff605f5/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "A single circular power button is plainly visible high on the solid front panel and is externally accessible."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-0760887ca33150957ff605f5/workbench_back.png",
+          "view": "back",
+          "description": "The orthographic solid-front view confirms the button location, but does not reveal its internal connection path."
+        }
+      ]
+    },
+    {
+      "checkId": "four-magnetic-panels",
+      "status": "not_verified",
+      "description": "All four perimeter panels appear seated without visible panel screws, screw holes, countersinks, or panel heat-set hardware; only four top structural screws are visible. However, the concealed magnetic retention interfaces are not directly exposed, so tool-free magnetic attachment itself cannot be conclusively verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-a7af0b4d425efd5e5e809c64/workbench_iso.png",
+          "view": "iso",
+          "description": "The rear and one side panel are flush and show no perimeter-panel fasteners, while top structural screws remain visible."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-a7af0b4d425efd5e5e809c64/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The solid front and opposite perforated side also show clean, screw-free exterior panel faces, but the hidden magnets are not visible."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-a7af0b4d425efd5e5e809c64/workbench_front.png",
+          "view": "front",
+          "description": "The service panel has no visible panel screws, countersinks, or legacy panel fastener holes."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-a7af0b4d425efd5e5e809c64/workbench_back.png",
+          "view": "back",
+          "description": "The solid front face is free of panel screws and screw holes, apart from the separate power-button feature."
+        }
+      ]
+    },
+    {
+      "checkId": "magnet-station-count",
+      "status": "not_verified",
+      "description": "The exterior views show the required front, rear, and two side panel regions and do not show obvious interference with the main service openings or side perforation fields. The enclosed pocket faces and steel-target recesses are not exposed clearly enough to count 4 + 4 + 6 + 6 stations or confirm all twenty closed-skin pockets.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-4e47d547b5ebc49b6558b70b/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The solid front and side perforation field are visible, but the concealed inner magnet and steel-target recess patterns cannot be counted."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-4e47d547b5ebc49b6558b70b/workbench_front.png",
+          "view": "front",
+          "description": "The three rear service regions remain visually distinct, while the exact rear magnet-station count is not directly readable."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-4e47d547b5ebc49b6558b70b/workbench_left.png",
+          "view": "left",
+          "description": "The left-side circular vent array is unobstructed, but six separate inner target pockets cannot be identified from the exterior projection."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-4e47d547b5ebc49b6558b70b/workbench_right.png",
+          "view": "right",
+          "description": "The right-side vent array is visible without an obvious station intruding into it, but the concealed six-station recess pattern is not countable."
+        }
+      ]
+    },
+    {
+      "checkId": "magnet-pockets-not-through",
+      "status": "pass",
+      "description": "The four exterior elevations show no extra circular penetrations or protruding magnets attributable to the concealed magnet or steel-target pockets. The solid front remains continuous except for its button and bottom finger relief, and each side exterior contains only the intended vent holes and bottom relief.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-187df73dc556f4ad697cd796/workbench_back.png",
+          "view": "back",
+          "description": "The solid front exterior is continuous except for the circular power button and centered bottom finger notch; no magnet pocket breaks through."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-187df73dc556f4ad697cd796/workbench_left.png",
+          "view": "left",
+          "description": "The left exterior shows only the regular vent-hole field and bottom finger notch, with no extra magnet-pocket holes or protrusions."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-187df73dc556f4ad697cd796/workbench_right.png",
+          "view": "right",
+          "description": "The right exterior likewise preserves the vent-hole pattern and bottom notch without visible magnet penetrations."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-187df73dc556f4ad697cd796/workbench_front.png",
+          "view": "front",
+          "description": "The rear service panel shows its intended service openings and bottom relief, with no protruding magnets or unrelated circular through-holes."
+        }
+      ]
+    },
+    {
+      "checkId": "shear-location",
+      "status": "not_verified",
+      "description": "The views show flush panel seams and continuous printed perimeter rails at the base and upper edges without obvious external protrusion. They do not directly expose the full mating geometry behind all four panels or prove that shear load is transferred only through printed lips or hard stops rather than through the magnets.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-242d3b98caa5ddc968ea4afe/workbench_iso.png",
+          "view": "iso",
+          "description": "The exterior panel seams and perimeter rails appear flush and do not visibly project beyond the enclosure, but the concealed contact faces are not shown."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-242d3b98caa5ddc968ea4afe/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The oblique underside/interior-facing view shows a continuous printed base perimeter, but not enough of every panel interface to establish the complete shear load path."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-242d3b98caa5ddc968ea4afe/workbench_bottom.png",
+          "view": "bottom",
+          "description": "The bottom projection shows the base perimeter and feet, without a visibly protruding locating feature; concealed panel-stop engagement remains unobservable."
+        }
+      ]
+    },
+    {
+      "checkId": "tool-less-removal",
+      "status": "pass",
+      "description": "A centered semicircular bottom finger relief is visible on each of the front, rear, left, and right perimeter panels. The notches are confined to panel lower edges and do not visibly sever the top cap, base perimeter, or primary vent border.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-8de8d5b1f70c8d474325b312/workbench_iso.png",
+          "view": "iso",
+          "description": "The oblique rear/right view shows bottom finger reliefs on the visible service panel and perforated side while their surrounding borders remain continuous."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-8de8d5b1f70c8d474325b312/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The opposite oblique view shows corresponding lower finger reliefs on the solid front and other perforated side, with intact panel frames."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-8de8d5b1f70c8d474325b312/workbench_front.png",
+          "view": "front",
+          "description": "The service panel has a clear centered bottom semicircular removal notch that does not interrupt a service-opening frame."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-8de8d5b1f70c8d474325b312/workbench_back.png",
+          "view": "back",
+          "description": "The solid front panel has a matching centered bottom finger relief with the surrounding face and base edge intact."
+        }
+      ]
+    },
+    {
+      "checkId": "service-openings-preserved",
+      "status": "pass",
+      "description": "The rear service panel visibly preserves three distinct unobstructed regions: a large motherboard I/O opening, an upper dual-slot GPU opening, and a lower 1U PSU opening. No visible magnetic station or perimeter locating lip crosses into the clear opening areas.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-f35899fb49aa27ac72d03eb7/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic rear/service-face view clearly separates the large left motherboard opening, upper-right GPU opening, and lower-right PSU opening, with their main apertures preserved."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-f35899fb49aa27ac72d03eb7/workbench_iso.png",
+          "view": "iso",
+          "description": "The oblique view confirms that the three service regions remain open through the rear panel and are bounded by printed frames rather than crossed by panel-retention features."
+        }
+      ]
+    },
+    {
+      "checkId": "no-legacy-panel-hardware",
+      "status": "pass",
+      "description": "No front, rear, left, or right panel M3 screws, panel countersinks, external heat-set inserts, or square nut bosses are visible. The only external threaded fasteners shown are the four permitted top-cap screws; visible internal threaded features remain confined to structural locations.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-b7f2e997d9a44b7659d38dae/workbench_iso.png",
+          "view": "iso",
+          "description": "The rear and perforated side panel exteriors contain no panel screws or legacy fastener bosses, while top structural fasteners are visible at the permitted locations."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-b7f2e997d9a44b7659d38dae/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The solid front and opposite side are also free of panel fasteners and square nut-seat features."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-b7f2e997d9a44b7659d38dae/workbench_front.png",
+          "view": "front",
+          "description": "The service panel face has no visible perimeter-panel M3 hardware or countersunk screw holes."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-b7f2e997d9a44b7659d38dae/workbench_right.png",
+          "view": "right",
+          "description": "The side elevation contains the regular vent array and bottom notch only, without legacy side-panel fasteners."
+        }
+      ]
+    },
+    {
+      "checkId": "overall-magnetic-enclosure",
+      "status": "pass",
+      "description": "The completed enclosure visibly retains a continuous top cap, solid front, dedicated rear service face, two perforated side panels, aligned perimeter seams, and four feet. No obvious panel intersection, missing exterior panel, floating cap, or residual perimeter fastener is visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-0c6df6874cbcbb78028b2d55/workbench_iso.png",
+          "view": "iso",
+          "description": "The rear/right isometric view shows a continuous top, aligned rear service face and perforated side, clean corner seams, and no floating exterior hardware."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-0c6df6874cbcbb78028b2d55/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The opposite oblique view shows the solid front, perforated side, base, and feet as a coherent aligned enclosure without an obvious missing panel."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-0c6df6874cbcbb78028b2d55/workbench_front.png",
+          "view": "front",
+          "description": "The rear elevation presents a complete service face within an intact rectangular perimeter and without residual external panel screws."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-59-2723c4ed-2ee4-4451-8ff6-36fdca947969/look-0c6df6874cbcbb78028b2d55/workbench_right.png",
+          "view": "right",
+          "description": "The side elevation shows a full perforated panel seated flush inside a continuous border with a centered finger relief and aligned feet."
+        }
+      ]
+    }
+  ]
+}

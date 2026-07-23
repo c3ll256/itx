@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-part-research",
+  "input_fingerprint": "a9f7127f6cc2f43aa4a6ec5b64fa3428a8d55d79b0d8bd25529196186dc8fe55",
+  "findings": [
+    "Frozen-product context: this is a sub-4 L FDM Mini-ITX enclosure whose frame carries structural loads; the removable panels are a solid front, a rear service panel, and two large-perforation intake sides. PETG, ABS, or ASA is preferred over PLA, and panel bosses must not obstruct motherboard, GPU, PSU, or rear-I/O service apertures.",
+    "There is a frozen-input conflict to resolve before authoritative CAD: product/prd.md calls for front-panel fixing screws, and product/artifact-contract.json describes removing a service panel with standard screws, whereas this research request calls for tool-less magnetic retention of all four perimeter panels.",
+    "Recommended commodity magnet identity is an unthreaded, uncountersunk, axially magnetized neodymium disc, 8.00 mm diameter x 3.00 mm thick, grade N42, Ni-Cu-Ni coated, with a supplier-declared maximum operating temperature of at least 80 degrees C. Use one magnet in the structural frame against one unmagnetized low-carbon-steel target disc, 10.00 mm diameter x 1.00 mm thick, in the removable panel. This magnet-to-steel strategy makes panel orientation independent of magnetic polarity, avoids repulsive assembly errors, halves the magnet count versus magnet-to-magnet pairs, and moderates removal force.",
+    "Recommended quantity is 4 retention stations on the solid front panel, 4 on the rear service panel, and 6 on each perforated side panel, for 20 frame magnets and 20 steel targets total; procure at least 2 spare magnets and targets. Put stations near supported perimeter corners, add one station at the midpoint of each long edge on each flexible perforated side, and use printed locating lips/hard stops to react panel shear so magnets provide normal retention only.",
+    "Provide a finger notch, pull tab, or pry relief on every panel. Keep each station out of airflow perforations and service apertures, and maintain alignment between the 8 mm magnet and 10 mm target within 0.5 mm nominal; the oversized target gives tolerance without requiring a second magnet.",
+    "Recommended adhesive-pocket dimensions for an 8.00 x 3.00 mm magnet are 8.30 mm diameter x 3.15 mm deep in calibrated PETG and 8.40 mm diameter x 3.20 mm deep in calibrated ASA, inserted from the frame interior against a continuous 0.60 mm printed skin facing the panel. Recommended 10.00 x 1.00 mm steel-target pockets are 10.30 mm diameter x 1.10 mm deep in PETG and 10.40 mm diameter x 1.15 mm deep in ASA; finish the bonded target 0.05-0.10 mm below the panel's inner face. These are starting dimensions for 0.4 mm-nozzle FDM and require a same-orientation fit coupon because hole compensation, shrink, magnet tolerance, and coating thickness vary by machine and supplier.",
+    "Use a toughened two-part epoxy with a thin, fully wetted bond line after lightly abrading and degreasing the nickel coating and steel target. The frame pocket should retain the magnet with both the 0.60 mm face skin and a bonded or mechanically keyed rear cover after cure. Do not rely on cyanoacrylate, hot-melt glue, or adhesive alone: CA is brittle, hot melt creeps at enclosure temperature, and PETG has difficult surface adhesion. Do not heat-stake or hammer the magnet.",
+    "A direct press fit is not recommended because sintered NdFeB is brittle and diametric interference can chip the conductive nickel coating or split an ASA boss. If a prototype press fit is evaluated, coupon-test only 0.00-0.05 mm diametric interference in PETG and 0.00 mm nominal interference in ASA, include a lead-in chamfer and at least 2.0 mm of radial printed wall, and still add a positive rear cover; supplier dimensional tolerance can consume this entire range.",
+    "No verified pull-force value is available without a locked supplier datasheet and a test of the actual 0.60-0.70 mm polymer/recess gap and 1 mm steel target. Use an engineering acceptance window of 4-7 N normal breakaway force per assembled station, measured on a printed coupon. That gives approximately 16-28 N total for each four-station front/rear panel and 24-42 N for each six-station side panel, practical for hand removal with the required finger relief. Tune stand-off or station count before changing magnet size; published direct-contact ratings against thick polished steel are not representative.",
+    "Static fields from these small perimeter magnets are not expected to harm semiconductors or the specified M.2 storage, but loose nickel-coated magnets are electrically conductive and can short a motherboard, GPU, or PSU. Use dual mechanical containment, keep stations away from open electronics and cable paths, target at least 25 mm clearance from fan hubs/Hall sensors and 50 mm from magnetic media, and do not place an HDD adjacent to a retention station. Reject chipped or corroding magnets; keep them below the supplier temperature limit and observe pacemaker, pinching, ingestion, and child-safety precautions.",
+    "The verified local CAD catalog fingerprint 7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e returned no neodymium disc-magnet candidate for the requested function. Results from the broader search were generic fasteners and plates, not magnets; therefore there is no exact or partial catalog component approved for substitution and candidates is intentionally empty."
+  ],
+  "recommendations": [
+    "For the main agent's proposed hardware choice, use the commodity specification D8 x 3 mm N42 Ni-Cu-Ni axial neodymium disc plus D10 x 1 mm low-carbon-steel target, magnet in a skinned and rear-capped frame pocket and steel target bonded into the panel; do not model a catalog component until the uncataloged-part choice or a supplier part number is approved.",
+    "Adopt 4 stations on the front, 4 on the rear, and 6 on each side, with printed locating rails/stops carrying all shear. Validate one corner coupon and one full perforated side before freezing pockets; require 4-7 N measured breakaway per station and verify that each panel can be removed without flex damage.",
+    "Lock an actual supplier datasheet covering 8.00 x 3.00 mm dimensions and tolerances, N42 grade, axial magnetization, Ni-Cu-Ni coating, pull-test method, and at least 80 degrees C maximum operating temperature before procurement or authoritative part-plan selection. Obtain supplier STEP geometry or use a separately approved uncataloged hardware representation; do not substitute D10 x 3, another grade, a countersunk magnet, or magnet-to-magnet pairing silently.",
+    "Reconcile the frozen screw-retention language with tool-less magnetic retention. If magnets supersede panel screws, retain standard screws and heat-set inserts only for structural frame joints and any independently required safety/service lock, not as hidden panel load paths."
+  ],
+  "unresolved_decisions": [
+    {
+      "factId": "panel-retention-contract-conflict",
+      "question": "Does tool-less magnetic retention supersede the frozen requirements for front-panel fixing screws and screw removal of the service panel for all four perimeter panels?",
+      "impact": "The authoritative product and CAD interfaces otherwise disagree on panel retention, so panel pockets, service procedure, and hardware quantities cannot be frozen consistently."
+    },
+    {
+      "factId": "uncataloged-d8x3-supplier-lock",
+      "question": "Approve the uncataloged D8 x 3 mm N42 Ni-Cu-Ni axial disc magnet and D10 x 1 mm low-carbon-steel target specification, or provide a purchasable supplier part number and exact CAD/datasheet for a different identity.",
+      "impact": "No exact verified local catalog component exists, so the authoritative part plan must preserve this item as unresolved until an uncataloged-part choice or exact supplier identity is approved; pull force and pocket tolerance also remain supplier-dependent."
+    }
+  ],
+  "warnings": [
+    "No optional external supplier datasheet or empirical pull-test evidence was available in the supplied frozen inputs; purchasability, grade authenticity, temperature rating, dimensional tolerance, and pull-force figures must be confirmed against the selected vendor and a printed coupon.",
+    "The recommended 4-7 N per-station pull is an acceptance target, not a catalog-rated fact. Magnetic force changes sharply with gap, target alloy/thickness, target flatness, coating, and lateral misalignment.",
+    "Standard N42 magnets are often limited to about 80 degrees C, but the selected supplier's declared limit controls. Do not place a station where PSU/GPU exhaust or a heat sink can raise the magnet to its limit."
+  ],
+  "evidence": [
+    {
+      "source": "workspace:product/artifact-contract.json",
+      "sha256": "48f6b50083df062cb5f45b86ed3755c2822842a3677db3e22d8db6036b3ce053"
+    },
+    {
+      "source": "workspace:product/prd.json",
+      "sha256": "5c8bb7c819dab91acbcce24d482d70cafdd6c00991762ce89bd42698a14af292"
+    },
+    {
+      "source": "workspace:product/prd.md",
+      "sha256": "0d5700278ae352984055055304bb4f3a28fbdf85ee7c6970f6be0d0616007046"
+    },
+    {
+      "source": "cad-catalog:7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e",
+      "sha256": "7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e"
+    }
+  ],
+  "candidates": [],
+  "rejected_candidates": [
+    {
+      "item_id": "panel_retention_magnets",
+      "component_id": "bd-warehouse:bd_warehouse.fastener.PlainWasher",
+      "catalog_fingerprint": "7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e",
+      "reason": "This catalog component is a standards-selectable plain washer, not a neodymium permanent magnet. Its record provides no NdFeB material, N42 grade, axial magnetization, Ni-Cu-Ni coating, 8 x 3 mm solid-disc geometry, temperature rating, or magnetic pull interface; it also does not establish the exact 10 x 1 mm low-carbon-steel target identity."
+    },
+    {
+      "item_id": "panel_retention_magnets",
+      "component_id": "bd-warehouse:bd_warehouse.fastener.ChamferedWasher",
+      "catalog_fingerprint": "7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e",
+      "reason": "This is an ISO 7090 chamfered washer and cannot represent the requested permanent magnet. The catalog record has no neodymium material/grade, magnetization axis, coating, 8.00 mm diameter x 3.00 mm thickness parameters, thermal rating, or magnetic performance evidence."
+    },
+    {
+      "item_id": "panel_retention_magnets",
+      "component_id": "bd-vslot:bd_vslot.plates.BuildPlate",
+      "catalog_fingerprint": "7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e",
+      "reason": "This is a generic perforated build plate with thickness and hole-grid parameters, not a disc magnet or a verified low-carbon-steel strike disc. Its material, 8 x 3 mm magnet identity, 10 x 1 mm target identity, magnetic properties, coating, mounting interface, and temperature limits do not match the requested retention hardware."
+    }
+  ]
+}

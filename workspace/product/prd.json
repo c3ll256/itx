@@ -16,9 +16,11 @@
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels; no front ventilation",
-    "front_panel": "solid removable panel with power-button opening and fasteners only",
+    "front_panel": "solid removable magnetic panel with power-button opening only",
     "panel_fit": "front, rear, left and right panels extend flush between the top cap and base with no exposed inner-frame gaps",
-    "rear_panel_mounting": "fasteners and insert bosses must not intrude into motherboard, GPU or PSU service apertures",
+    "perimeter_panel_retention": "tool-less magnetic retention for front, rear, left and right panels; no perimeter-panel screws",
+    "magnet_spec_provisional": "D8 x 3 mm N42 axial NdFeB magnet with D10 x 1 mm low-carbon-steel target; front/rear 4 stations each, sides 6 stations each",
+    "rear_panel_mounting": "magnet stations and locating features must not intrude into motherboard, GPU or PSU service apertures",
     "front_io": "power button only",
     "priority": "minimum volume"
   },
