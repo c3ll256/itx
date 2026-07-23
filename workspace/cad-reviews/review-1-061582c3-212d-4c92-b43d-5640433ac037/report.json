@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-1-061582c3-212d-4c92-b43d-5640433ac037",
+  "documentId": "case-assembly-guide",
+  "revision": 1,
+  "revisionId": "revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d",
+  "summary": "The exploded assembly guide is visually coherent, uses recognizable enclosure structure, and clearly communicates the principal assembly directions. The five hardware-interface checks remain not verified because the committed guide does not display the required hardware envelopes, assembled clearances, connectors, or cable paths.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The isometric and top views show a coherent exploded enclosure: the base remains central, the tray and internal supports are identifiable, and the shell pieces are separated around the assembly without a visible unintended collision or missing major structural category.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-7e9e4847ae23e4a7c30a7e29/workbench_iso.png",
+          "view": "iso",
+          "description": "The exploded isometric view visibly presents the base/frame, internal structures, panels, top cap, and directional arrows as a proportionate and understandable assembly composition."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-7e9e4847ae23e4a7c30a7e29/workbench_top.png",
+          "view": "top",
+          "description": "The top view confirms that the principal parts are arranged around a central enclosure footprint rather than visibly colliding in the exploded layout."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The guide shows a motherboard-tray structure, but no 170 x 170 mm Mini-ITX reference board, mounting-pattern validation, or assembled rear-I/O access condition is visible, so fit and accessibility cannot be established from these views.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric image visibly contains an exploded tray but no motherboard or dimensional fit reference with which to prove the required standard mounting and rear-I/O access."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-319398b9faa47c40a3334b89/workbench_front.png",
+          "view": "front",
+          "description": "The front projection does not expose a populated Mini-ITX mounting pattern or a rear-I/O interface condition."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "No Thermalright AXP120-X67 envelope is present, and the panels are shown exploded rather than at their assembled clearance positions; therefore cooler fit and side-intake clearance are not visually established.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The exploded isometric view shows the tray and detached side panels but no cooler geometry or assembled gap that could prove the required intake clearance."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "A GPU-support structure is visible, but the approved GPU envelope, I/O bracket engagement, PCIe-riser route, and power-cable bend volume are not modeled in the displayed guide, so the complete interface cannot be verified.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The image visibly shows a rear-side support component but no GPU, riser cable, I/O bracket interface, or power lead whose fit and routing could be assessed."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-319398b9faa47c40a3334b89/workbench_front.png",
+          "view": "front",
+          "description": "The front view does not reveal the rear GPU connector and cable-clearance conditions required by the check."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The exploded guide includes a 1U-PSU cradle, but it does not display the specified 160 x 80 x 40 mm PSU envelope, AC inlet engagement, assembled airflow path, retention details, or cable routing, so full PSU fit is not established.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "A cradle-like structural part is visibly present behind the central tray, but no PSU hardware or service-clearance geometry is shown."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-319398b9faa47c40a3334b89/workbench_front.png",
+          "view": "front",
+          "description": "The front projection does not show an AC inlet, retention engagement, airflow opening, or routed PSU cables."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "A circular panel opening is visible, but the committed guide does not show a power-button component or an internal wire/path to the motherboard header, so external operability and internal connectivity cannot be verified.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view visibly shows a round opening on a detached side panel, but no installed control or internal header path is present."
+        }
+      ]
+    },
+    {
+      "checkId": "real-parts-exploded-view",
+      "status": "pass",
+      "description": "爆炸图中的对象均读作真实机箱结构类别：底座骨架、1U 电源托架、中央主板托盘、显卡支撑、顶盖及四周板件；未见用硬件包络方块替代这些结构件的情况。",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-58075707bf802b90e53d62e1/workbench_iso.png",
+          "view": "iso",
+          "description": "等轴视图清楚显示框架、托架、托盘、支撑件、带通风孔的板件和顶盖，外形均为可辨识的机箱结构件。"
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-58075707bf802b90e53d62e1/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "背向等轴视图补充显示后侧内部托架与支撑结构，并确认其并非简单硬件包络块。"
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-132173b393ae0fc5330dde6e/workbench_iso.png",
+          "view": "iso",
+          "description": "针对右侧板的视图显示其薄壁板件与通风开孔特征，补全四周真实面板类别的视觉证据。"
+        }
+      ]
+    },
+    {
+      "checkId": "assembly-order-visible",
+      "status": "pass",
+      "description": "爆炸布局及三支方向箭头清楚表达了托盘向下落入、电源托架由后向前滑入、显卡支撑向中央托盘靠拢；顶盖位于上方且周围板件外置，能读出最后合拢外壳的顺序。",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-ad0b9f6a1563ff3619c136a6/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "背向等轴视图清楚显示中央向下箭头及横向装配箭头，并保留底座作为中心参照。"
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-ad0b9f6a1563ff3619c136a6/workbench_right.png",
+          "view": "right",
+          "description": "右视图明确展示托盘从上方落下以及后侧和侧向零件相对中央结构的移动关系。"
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-ad0b9f6a1563ff3619c136a6/workbench_top.png",
+          "view": "top",
+          "description": "顶视图补充确认电源托架与显卡支撑分别从后方和侧方朝中央区域移动的方向关系。"
+        }
+      ]
+    },
+    {
+      "checkId": "parts-not-confused-with-main",
+      "status": "pass",
+      "description": "该文档在等轴视图中明确读作装配爆炸图：主要零件围绕中央底座留有明显间距，顶盖悬置于上方，侧板和前后板外移，未见会被误判为封闭整机的堆叠或无法辨认的穿模。",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-a4400b494d519dade8926591/workbench_iso.png",
+          "view": "iso",
+          "description": "等轴视图直接显示各结构件之间的爆炸间距，以及面板围绕中央骨架分布的装配说明布局。"
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-a4400b494d519dade8926591/workbench_right.png",
+          "view": "right",
+          "description": "右视图显示内部件和外壳件在深度及高度方向分层布置，没有呈现为封闭整机。"
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/case-assembly-guide/observations/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/look-522f59ce1f719504975068e9/workbench_iso.png",
+          "view": "iso",
+          "description": "顶盖专门视图显示其明显位于机壳上方、尚未闭合，强化了爆炸装配图而非成品导出的语义。"
+        }
+      ]
+    }
+  ]
+}

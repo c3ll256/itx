@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-1-061582c3-212d-4c92-b43d-5640433ac037",
+  "documentId": "case-assembly-guide",
+  "revision": 1,
+  "revisionId": "revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d",
+  "targetSha256": "4b0f795c637bbab68f7016c9cfee8d1c08cb93748d314b5c8c845468af560cec",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/case-assembly-guide/brief.md",
+    "sha256": "62089f9a3b6638c0198297d8d1e654825efa534b2c23b82d997263940b3b2dec"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/case-assembly-guide/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/revision.json",
+    "sha256": "6400fe4d08281bdc18116e122b6a39d014d0fab32927f982ea87092c0d26ccb8"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "52e1cf044a8ddee0f0fe6962b9232a1b772e4b1b24991e8f616355997e56e013",
+    "stepSha256": "4d03b67f36b34f5e10477d3136c102e88e6003205c5868faf7b3a7cbad37ca7a"
+  },
+  "stateRevision": "426e2559f02524996fcc5695e68b5ac01f38633347925c38fe70a2f16a8f4ef7",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "case-assembly-guide",
+    "role": "case-assembly-guide",
+    "geometry": {
+      "revision": 1,
+      "revisionId": "revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d",
+      "documentSha256": "85eb35caeb80c2382bcad58f1c91b907a374eb2eae78894f7f9af8b8c57017dc",
+      "manifestSha256": "52e1cf044a8ddee0f0fe6962b9232a1b772e4b1b24991e8f616355997e56e013",
+      "stepSha256": "4d03b67f36b34f5e10477d3136c102e88e6003205c5868faf7b3a7cbad37ca7a"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/case-assembly-guide/brief.md",
+      "sha256": "62089f9a3b6638c0198297d8d1e654825efa534b2c23b82d997263940b3b2dec"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": null,
+      "documentRequirementSha256": null,
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateRevision": "426e2559f02524996fcc5695e68b5ac01f38633347925c38fe70a2f16a8f4ef7"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "48f6b50083df062cb5f45b86ed3755c2822842a3677db3e22d8db6036b3ce053"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "step1_base_frame",
+        "step2_psu_cradle",
+        "step3_motherboard_tray",
+        "step4_gpu_support",
+        "step5_top_cap",
+        "step5_left_panel",
+        "step5_right_panel",
+        "step5_front_panel",
+        "step5_rear_panel",
+        "tray_down_arrow",
+        "psu_forward_arrow",
+        "gpu_left_arrow"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Rear-mount the approved compact GPU envelope behind the motherboard tray, including I/O bracket, PCIe riser path, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Rear-mount the user-specified 160 x 80 x 40 mm compact 1U PSU behind the motherboard tray with AC inlet access, airflow, retention, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "real-parts-exploded-view",
+      "requirement": "装配说明图只能使用真实机箱结构件类别：底座骨架、顶盖、前后板、左右板、主板托盘、1U电源托架和显卡支撑结构；不得用硬件包络方块替代。",
+      "objectIds": [
+        "step1_base_frame",
+        "step2_psu_cradle",
+        "step3_motherboard_tray",
+        "step4_gpu_support",
+        "step5_top_cap",
+        "step5_front_panel",
+        "step5_rear_panel",
+        "step5_left_panel",
+        "step5_right_panel"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "assembly-order-visible",
+      "requirement": "爆炸排列应清楚表达：底座留在中心，电源托架从后方滑入，中央托盘从上方落入，显卡支架从右侧靠向托盘，最后外壳面板和顶盖合拢。",
+      "objectIds": [
+        "step1_base_frame",
+        "step2_psu_cradle",
+        "step3_motherboard_tray",
+        "step4_gpu_support",
+        "step5_top_cap",
+        "psu_forward_arrow",
+        "tray_down_arrow",
+        "gpu_left_arrow"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "right",
+        "top"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "parts-not-confused-with-main",
+      "requirement": "该文档应读作装配说明爆炸图，而不是封闭整机或制造导出；零件有明确间距，不应出现无法判断的穿模或堆叠。",
+      "objectIds": [
+        "step1_base_frame",
+        "step2_psu_cradle",
+        "step3_motherboard_tray",
+        "step4_gpu_support",
+        "step5_front_panel",
+        "step5_rear_panel",
+        "step5_left_panel",
+        "step5_right_panel",
+        "step5_top_cap"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "right",
+        "top"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-1-061582c3-212d-4c92-b43d-5640433ac037/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "guide",
+        "label": "guide"
+      }
+    ],
+    "objects": [
+      {
+        "id": "step1_base_frame",
+        "label": "1 — Place printable base/frame"
+      },
+      {
+        "id": "step2_psu_cradle",
+        "label": "2 — Slide 1U PSU cradle forward from rear and screw from below"
+      },
+      {
+        "id": "step3_motherboard_tray",
+        "label": "3 — Lower central tray tongues into base slot"
+      },
+      {
+        "id": "step4_gpu_support",
+        "label": "4 — Bolt riser/GPU support to tray and frame"
+      },
+      {
+        "id": "step5_top_cap",
+        "label": "5 — Lower top cap last"
+      },
+      {
+        "id": "step5_left_panel",
+        "label": "5 — Fit left panel inward"
+      },
+      {
+        "id": "step5_right_panel",
+        "label": "5 — Fit right panel inward"
+      },
+      {
+        "id": "step5_front_panel",
+        "label": "5 — Fit front panel inward"
+      },
+      {
+        "id": "step5_rear_panel",
+        "label": "5 — Fit rear panel inward"
+      },
+      {
+        "id": "tray_down_arrow",
+        "label": "Lower tray vertically into locating slots"
+      },
+      {
+        "id": "psu_forward_arrow",
+        "label": "Slide PSU cradle from rear toward front"
+      },
+      {
+        "id": "gpu_left_arrow",
+        "label": "Move GPU support toward central tray"
+      }
+    ]
+  }
+}
