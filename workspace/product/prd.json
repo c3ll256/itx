@@ -17,6 +17,8 @@
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels; no front ventilation",
     "front_panel": "solid removable panel with power-button opening and fasteners only",
+    "panel_fit": "front, rear, left and right panels extend flush between the top cap and base with no exposed inner-frame gaps",
+    "rear_panel_mounting": "fasteners and insert bosses must not intrude into motherboard, GPU or PSU service apertures",
     "front_io": "power button only",
     "priority": "minimum volume"
   },
