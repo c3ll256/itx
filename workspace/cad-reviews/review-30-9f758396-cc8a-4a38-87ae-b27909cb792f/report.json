@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-30-9f758396-cc8a-4a38-87ae-b27909cb792f",
+  "documentId": "main",
+  "revision": 30,
+  "revisionId": "revision-30-b14b1fa9-5499-447c-b56e-be359363aa40",
+  "summary": "The visible external enclosure is coherent and its serviceable panels, fastener patterns, continuous top, round-hole side panels, and manufacturing-only object set are supported by the review images. Eight interface or internal-structure checks remain not_verified because the closed-shell views do not expose exact retention geometry, component envelopes, cable paths, dimensional PSU compatibility, or all internal printable connections; no concrete visible defect was found.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The enclosure presents as a complete, consistently proportioned assembly with aligned exterior panels and no obvious visible collisions, detached parts, or missing exterior structure.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-f10a77cd771ca47b9eb82725/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a coherent closed enclosure with aligned top, side, rear, and base geometry and no visibly floating exterior part."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-f10a77cd771ca47b9eb82725/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic end view shows the service panel seated squarely within the frame and the assembly standing symmetrically on its feet."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-f10a77cd771ca47b9eb82725/workbench_top.png",
+          "view": "top",
+          "description": "The top view shows a centered rectangular body and aligned cap without an obvious overlap or missing exterior region."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The rear service opening and an internal tray object are present, but the closed assembly does not visually expose the complete 170 x 170 mm board seating area, the Mini-ITX hole pattern, retention, or the board-to-I/O alignment.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the closed enclosure and rear service face, while the motherboard tray and mounting points remain hidden behind the panels."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-1dba578cd20ae5521e0f5712/workbench_front.png",
+          "view": "front",
+          "description": "The end view shows a distinct rear I/O aperture, but it cannot establish the concealed standard board footprint or standoff alignment."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "A perforated intake side is visible, but the AXP120-X67 envelope and its gap to the side panel are not exposed, so cooler fit and intake clearance cannot be established.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The image visibly confirms a ventilated side panel, but the closed shell prevents direct observation of the cooler volume and side-panel clearance."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The rear panel includes a GPU-related service aperture, but the approved GPU envelope, bracket retention, PCIe riser path, and power-cable bend space are concealed and cannot be verified from these views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-1dba578cd20ae5521e0f5712/workbench_front.png",
+          "view": "front",
+          "description": "The rear service face visibly contains separate apertures, but no installed GPU envelope, riser routing, retention detail, or cable-bend clearance is visible."
+        },
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric exterior view does not expose the GPU shelf, rails, front support, or power-cable path behind the motherboard tray."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "A dedicated rear PSU service aperture and a cradle object are present, but the images do not establish fit of the 160 x 80 x 40 mm envelope or expose airflow, retention, and cable-routing clearances.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-1dba578cd20ae5521e0f5712/workbench_front.png",
+          "view": "front",
+          "description": "The end view visibly shows a separate lower service opening, but has no dimensional reference or view of the enclosed PSU retention and cable space."
+        },
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "The closed-shell isometric view leaves the PSU cradle, inlet relationship, and airflow path concealed."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "An exterior circular control is partially visible near the far front edge, but the supported views do not expose its complete mounting or any internal path to the motherboard header.",
+      "evidence": [
+        {
+          "imagePath": "workspace/cad-workbench/documents/main/revisions/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/validated/previews/workbench_iso.png",
+          "view": "iso",
+          "description": "A small external circular control can be seen at the far enclosure edge, while its interior wiring or header path is hidden by the shell."
+        }
+      ]
+    },
+    {
+      "checkId": "serviceable-shell",
+      "status": "pass",
+      "description": "The base/frame, continuous top cap, ventilated front, service rear, and both side panels read as separate parts with visible perimeter seams and fasteners rather than a sealed one-piece shell.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-c16bb30481bf8b3ecd27f24f/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view visibly separates the top cap, perforated side panel, rear service panel, and lower frame with continuous seams."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-c16bb30481bf8b3ecd27f24f/workbench_back.png",
+          "view": "back",
+          "description": "This end view shows the removable ventilated front panel bounded by a perimeter seam and six fastening points."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-c16bb30481bf8b3ecd27f24f/workbench_right.png",
+          "view": "right",
+          "description": "The side view shows a separate perforated side panel with a continuous outer border, perimeter seam, and six fasteners."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-c16bb30481bf8b3ecd27f24f/workbench_front.png",
+          "view": "front",
+          "description": "The opposite end view shows the rear service panel as a distinct six-fastener part within the shell frame."
+        }
+      ]
+    },
+    {
+      "checkId": "real-fastener-pattern",
+      "status": "pass",
+      "description": "The cited views show four top screws and six perimeter screws on each front, rear, left, and right panel. The heads sit on continuous borders or corners, with no visible floating, breakthrough, or placement within ventilation openings.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-b80e82b4882bd93ee9c9378c/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows four socket-head screws seated at the top-cap corners and panel screws positioned on solid border material."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-b80e82b4882bd93ee9c9378c/workbench_front.png",
+          "view": "front",
+          "description": "Six screw heads are visibly seated on the solid perimeter of the rear service panel, clear of its service apertures."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-b80e82b4882bd93ee9c9378c/workbench_back.png",
+          "view": "back",
+          "description": "Six screw heads are visibly seated around the ventilated front-panel border rather than in its slot field."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-b80e82b4882bd93ee9c9378c/workbench_right.png",
+          "view": "right",
+          "description": "The right panel has six seated border screws, all outside the round-hole array."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-164bbb2c9e9cbeb5749c914a/workbench_left.png",
+          "view": "left",
+          "description": "The left panel likewise has six seated screws on its continuous border and clear of the round ventilation holes."
+        }
+      ]
+    },
+    {
+      "checkId": "continuous-top-cap",
+      "status": "pass",
+      "description": "The top exterior is visibly continuous and closed, with only four corner screw heads; no long through-slot from the concealed tray groove appears on the top surface.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-3bdd047740bb3a49d719fbe9/workbench_top.png",
+          "view": "top",
+          "description": "The direct top view shows one uninterrupted cap surface and exactly four corner screws, with no visible central or longitudinal opening."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-3bdd047740bb3a49d719fbe9/workbench_iso.png",
+          "view": "iso",
+          "description": "The oblique view confirms that the top face remains closed across its full visible extent."
+        }
+      ]
+    },
+    {
+      "checkId": "round-hole-side-panels",
+      "status": "pass",
+      "description": "Both side panels visibly use staggered round-hole arrays within continuous solid borders, and each has six border screws without long-slot substitution or obvious broken edges.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-164bbb2c9e9cbeb5749c914a/workbench_left.png",
+          "view": "left",
+          "description": "The left side shows offset rows of circular holes, an intact rectangular border, and six screws on solid border material."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-164bbb2c9e9cbeb5749c914a/workbench_right.png",
+          "view": "right",
+          "description": "The right side shows the matching staggered circular-hole pattern, continuous border, and six correctly placed screws."
+        }
+      ]
+    },
+    {
+      "checkId": "front-and-rear-service",
+      "status": "not_verified",
+      "description": "The front ventilation panel, external button, six front screws, separate rear service apertures, and six rear screws are visible. However, the images provide no dimensional reference to establish that the PSU service opening specifically accommodates the stated 160 x 80 x 40 mm unit, so the full requirement is not verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-6d2c977e13160734f5e56710/workbench_back.png",
+          "view": "back",
+          "description": "This end view visibly shows a removable slotted intake panel, an externally accessible circular button, and six perimeter screws."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-6d2c977e13160734f5e56710/workbench_front.png",
+          "view": "front",
+          "description": "The opposite service face visibly has separate motherboard-I/O, GPU, and PSU regions and six screws, but the image cannot prove the PSU aperture's dimensional compatibility."
+        }
+      ]
+    },
+    {
+      "checkId": "internal-module-connections",
+      "status": "not_verified",
+      "description": "The closed top, bottom, front, and rear panels obscure the tray tongues, PSU stop and underside ears, GPU shelf and rails, front/rear supports, and removable clamps. Their attachment and freedom from floating conditions cannot be directly judged.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-eb5aedb2a1b5a5f763324eea/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The oblique rear-side view remains blocked by the installed exterior panels and does not expose the internal tray, PSU cradle, or GPU retention connections."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-eb5aedb2a1b5a5f763324eea/workbench_top.png",
+          "view": "top",
+          "description": "The continuous top cap fully hides the requested top tongue and internal support relationships."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-eb5aedb2a1b5a5f763324eea/workbench_bottom.png",
+          "view": "bottom",
+          "description": "The underside view shows the base and feet but does not reveal enough of the enclosed PSU ears or GPU structures to establish their attachment."
+        }
+      ]
+    },
+    {
+      "checkId": "fdm-structure",
+      "status": "not_verified",
+      "description": "The visible shell, top, base, feet, and panel borders appear continuous and show no obvious exterior breakthrough, but the internal bosses, rails, tray, and cradles remain concealed; their printable thickness, continuity, and absence of floating features cannot be established from these images.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-3b278be89c42230a05eecdf4/workbench_iso.png",
+          "view": "iso",
+          "description": "The visible exterior surfaces and panel borders appear coherent, while the requested internal printable structures are hidden behind the assembled shell."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-3b278be89c42230a05eecdf4/workbench_bottom.png",
+          "view": "bottom",
+          "description": "The underside shows a continuous base region and four attached feet, but it does not expose all internal bosses, mounting rails, and brackets."
+        }
+      ]
+    },
+    {
+      "checkId": "no-placeholders",
+      "status": "pass",
+      "description": "The document object inventory contains only enclosure structure, panels, mounts, internal brackets, a button, feet, and standard fasteners; the cited views show no motherboard, cooler, GPU, PSU, cable-envelope block, arrow, or instruction-placeholder geometry.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-27140f44e80e75d7040250e0/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows only finished enclosure parts and fasteners, with no visible component-envelope blocks, arrows, or instruction aids."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-27140f44e80e75d7040250e0/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The opposite isometric view likewise shows only the manufactured case assembly and real service features."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-30-b14b1fa9-5499-447c-b56e-be359363aa40/look-27140f44e80e75d7040250e0/workbench_right.png",
+          "view": "right",
+          "description": "The side view contains the perforated panel, frame, top, feet, and screws without any visible placeholder annotation geometry."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-33-5e92cbdb-baf0-4812-a554-001d4c05d38b",
+  "documentId": "main",
+  "revision": 33,
+  "revisionId": "revision-33-7529158c-174f-4dcd-a8b2-52aa3a8855e3",
+  "targetSha256": "e5b286869eef3601553fcfcf140b9cf8f6a4a936f8e31bb33b41b28a34ba613b",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/main/brief.md",
+    "sha256": "efa24da1a95f1e98d6b8d077a866f0328adca584122e2b49c4f0b9bb076029c5"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/main/revision-33-7529158c-174f-4dcd-a8b2-52aa3a8855e3/revision.json",
+    "sha256": "c4b50eacd096978455e006cdf64ff80ff97e28e1f678b1e52e9d10adee3baa95"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "f8adb5613363213ae5645fc6d5f63e05381fab99b9222f3d17b11fbdc9e7e100",
+    "stepSha256": "093f9f0eff17c39d29d409d75b2ed6716de2d0ee92da5e9967d52a8462eb8cea"
+  },
+  "stateRevision": "b22539904ef850f117a8e436d561d77371b0fc83fa0f648632fffe3a82ebfccb",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "main",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 33,
+      "revisionId": "revision-33-7529158c-174f-4dcd-a8b2-52aa3a8855e3",
+      "documentSha256": "e957e8b96456f8a1965c3c59f3f953a6e299a27ddafd8f4c6afae8c783676963",
+      "manifestSha256": "f8adb5613363213ae5645fc6d5f63e05381fab99b9222f3d17b11fbdc9e7e100",
+      "stepSha256": "093f9f0eff17c39d29d409d75b2ed6716de2d0ee92da5e9967d52a8462eb8cea"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/main/brief.md",
+      "sha256": "efa24da1a95f1e98d6b8d077a866f0328adca584122e2b49c4f0b9bb076029c5"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "07e8912e395ad48d67afb7cca835ee7e5a02d4f5965819077ccb7cb9afbec517",
+      "documentRequirementSha256": "5bdb7f8b7c6d0df8382e55ed19b14366641f6e25533868f809cb8e26591f2943",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "b22539904ef850f117a8e436d561d77371b0fc83fa0f648632fffe3a82ebfccb"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "48f6b50083df062cb5f45b86ed3755c2822842a3677db3e22d8db6036b3ce053"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "base_and_frame",
+        "top_cap",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel",
+        "rear_panel_mounts",
+        "front_vent_panel",
+        "front_panel_mounts",
+        "power_button",
+        "motherboard_tray",
+        "one_u_psu_cradle",
+        "gpu_riser_shelf",
+        "gpu_rear_io_frame",
+        "gpu_front_support",
+        "gpu_side_clamps",
+        "case_feet",
+        "top_M3_heatset_inserts",
+        "side_M3_heatset_inserts",
+        "front_M3_heatset_inserts",
+        "rear_M3_heatset_inserts",
+        "board_M3_heatset_inserts",
+        "riser_clamp_bars",
+        "riser_clamp_M3_screws",
+        "top_M3_screws",
+        "front_M3_screws",
+        "rear_M3_screws",
+        "left_M3_screws",
+        "right_M3_screws"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Rear-mount the approved compact GPU envelope behind the motherboard tray, including I/O bracket, PCIe riser path, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Rear-mount the user-specified 160 x 80 x 40 mm compact 1U PSU behind the motherboard tray with AC inlet access, airflow, retention, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "complete-serviceable-case",
+      "requirement": "主机箱应是完整装配状态，由底座骨架、连续顶盖、可拆前后板和可拆左右圆孔侧板组成；所有分件缝清晰，无爆炸图零件混入。",
+      "objectIds": [
+        "base_and_frame",
+        "top_cap",
+        "front_vent_panel",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel",
+        "case_feet"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "back",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "standard-panel-hardware",
+      "requirement": "顶盖4颗、前后板各6颗、左右侧板各6颗真实ISO 4762 M3×8螺钉应落在实体边框和对应安装座上，不得进入通风孔或明显漂浮。",
+      "objectIds": [
+        "top_M3_screws",
+        "front_M3_screws",
+        "rear_M3_screws",
+        "left_M3_screws",
+        "right_M3_screws",
+        "front_panel_mounts",
+        "rear_panel_mounts",
+        "base_and_frame"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "back",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "real-heatset-inserts",
+      "requirement": "CAD对象中应包含32个真实McMaster-Carr M3-0.5 Standard热熔螺母：顶盖4、侧板12、前板6、后板6、主板托盘4；安装方向应与对应螺钉轴一致且不应明显伸出外壳。",
+      "objectIds": [
+        "top_M3_heatset_inserts",
+        "side_M3_heatset_inserts",
+        "front_M3_heatset_inserts",
+        "rear_M3_heatset_inserts",
+        "board_M3_heatset_inserts"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "top",
+        "bottom"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "continuous-top-and-panels",
+      "requirement": "顶盖外表面连续，仅有四角螺钉；左右侧板为交错圆孔阵列且边框完整；正面通风板封闭并保留外部电源键。",
+      "objectIds": [
+        "top_cap",
+        "left_vent_panel",
+        "right_vent_panel",
+        "front_vent_panel",
+        "power_button"
+      ],
+      "suggestedViews": [
+        "top",
+        "left",
+        "right",
+        "front"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "installable-internal-modules",
+      "requirement": "中央托盘应有上下定位舌；1U电源托架应有前止挡和四个底部耳；显卡结构应有延长卡托板、双承托轨、前后框及两只压块，结构不能明显悬空。",
+      "objectIds": [
+        "motherboard_tray",
+        "one_u_psu_cradle",
+        "gpu_riser_shelf",
+        "gpu_rear_io_frame",
+        "gpu_front_support",
+        "gpu_side_clamps",
+        "base_and_frame",
+        "top_cap"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "back",
+        "top",
+        "bottom"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "adjustable-riser-retention",
+      "requirement": "PCIe延长卡托板应使用两条46 mm可调槽、两根独立压条和四颗真实M3×12螺钉，避免依赖未证实的延长卡PCB孔位；压条和螺钉不得明显漂浮或穿出机箱。",
+      "objectIds": [
+        "gpu_riser_shelf",
+        "riser_clamp_bars",
+        "riser_clamp_M3_screws"
+      ],
+      "suggestedViews": [
+        "iso_back",
+        "right",
+        "top",
+        "back"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "no-placeholders",
+      "requirement": "主机箱制造文档不得包含主板、散热器、显卡、电源、线缆包络块、动作箭头或安装示意件；只保留真实打印件、按钮、底脚、标准螺钉和标准热熔螺母。",
+      "objectIds": [
+        "base_and_frame",
+        "top_cap",
+        "front_vent_panel",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel",
+        "motherboard_tray",
+        "one_u_psu_cradle",
+        "gpu_riser_shelf",
+        "gpu_rear_io_frame",
+        "gpu_front_support",
+        "gpu_side_clamps"
+      ],
+      "suggestedViews": [
+        "iso",
+        "iso_back",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    },
+    {
+      "id": "honest-envelope",
+      "requirement": "当前外包络为146×190×225 mm，约6.24 L；审查不得将其误称为4 L以内机箱。",
+      "objectIds": [
+        "base_and_frame",
+        "top_cap",
+        "front_vent_panel",
+        "rear_io_panel",
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "right"
+      ],
+      "source": "caller"
+    }
+  ],
+  "reportPath": "cad-reviews/review-33-5e92cbdb-baf0-4812-a554-001d4c05d38b/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "enclosure",
+        "label": "enclosure"
+      }
+    ],
+    "objects": [
+      {
+        "id": "base_and_frame",
+        "label": "Base/frame with calibrated 4.50 mm M3 heat-set pockets"
+      },
+      {
+        "id": "top_cap",
+        "label": "Top cap with concealed underside tray groove and four corner screws"
+      },
+      {
+        "id": "rear_io_panel",
+        "label": "Rear service panel with motherboard, GPU and 1U PSU apertures"
+      },
+      {
+        "id": "left_vent_panel",
+        "label": "Removable left round-hole panel with six M3 holes"
+      },
+      {
+        "id": "right_vent_panel",
+        "label": "Removable right round-hole panel with six M3 holes"
+      },
+      {
+        "id": "rear_panel_mounts",
+        "label": "Rear-panel bosses with calibrated M3 insert pockets"
+      },
+      {
+        "id": "front_vent_panel",
+        "label": "Removable front intake panel with six visible M3 counterbores"
+      },
+      {
+        "id": "front_panel_mounts",
+        "label": "Front-panel bosses with calibrated M3 insert pockets"
+      },
+      {
+        "id": "power_button",
+        "label": "Externally operable 12 mm power button cap"
+      },
+      {
+        "id": "motherboard_tray",
+        "label": "Tray and standoffs with calibrated M3 insert pockets"
+      },
+      {
+        "id": "one_u_psu_cradle",
+        "label": "Rear-slide 1U PSU cradle with front stop and four underside tabs"
+      },
+      {
+        "id": "gpu_riser_shelf",
+        "label": "Adjustable riser shelf with two 46 mm slots and GPU support rails"
+      },
+      {
+        "id": "gpu_rear_io_frame",
+        "label": "Rear GPU I/O frame with two bracket screw holes"
+      },
+      {
+        "id": "gpu_front_support",
+        "label": "Front GPU nose-support frame"
+      },
+      {
+        "id": "gpu_side_clamps",
+        "label": "Two removable M3 GPU retention clamps"
+      },
+      {
+        "id": "case_feet",
+        "label": "Four replaceable foot carriers"
+      },
+      {
+        "id": "top_M3_heatset_inserts",
+        "label": "Four real McMaster-Carr M3 Standard top-post inserts"
+      },
+      {
+        "id": "side_M3_heatset_inserts",
+        "label": "Twelve real McMaster-Carr M3 Standard side-panel inserts"
+      },
+      {
+        "id": "front_M3_heatset_inserts",
+        "label": "Six real McMaster-Carr M3 Standard front-panel inserts"
+      },
+      {
+        "id": "rear_M3_heatset_inserts",
+        "label": "Six real McMaster-Carr M3 Standard rear-panel inserts"
+      },
+      {
+        "id": "board_M3_heatset_inserts",
+        "label": "Four real McMaster-Carr M3 Standard motherboard-standoff inserts"
+      },
+      {
+        "id": "riser_clamp_bars",
+        "label": "Two removable universal PCIe receiver clamp bars"
+      },
+      {
+        "id": "riser_clamp_M3_screws",
+        "label": "Four real ISO 4762 M3x12 riser-clamp screws"
+      },
+      {
+        "id": "top_M3_screws",
+        "label": "Four real ISO 4762 M3x8 top-cap screws"
+      },
+      {
+        "id": "front_M3_screws",
+        "label": "Six real ISO 4762 M3x8 front-panel screws"
+      },
+      {
+        "id": "rear_M3_screws",
+        "label": "Six real ISO 4762 M3x8 rear-panel screws"
+      },
+      {
+        "id": "left_M3_screws",
+        "label": "Six real ISO 4762 M3x8 left-panel screws"
+      },
+      {
+        "id": "right_M3_screws",
+        "label": "Six real ISO 4762 M3x8 right-panel screws"
+      }
+    ]
+  }
+}

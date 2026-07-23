@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "component-research",
+  "input_fingerprint": "a479dc698d2289d544851b9f3caf417f242a14fd2d4a5172252aaf322f2308ac",
+  "findings": [
+    "The frozen artifact contract requires a rear-mounted GPU interface that includes the PCIe-riser path and an installation sequence in which the riser is mounted before the GPU.",
+    "The frozen PRD constrains the conceptual GPU envelope to 180 x 115 x 40 mm and requires a back-to-back sandwich layout with explicit allowance for PCIe-riser bending and service access.",
+    "A nominal 200 mm cable is at the upper end of the requested 180-200 mm range, but final length cannot be approved until the motherboard-slot, tray-crossing, and GPU-receiver locations are fixed in CAD.",
+    "The provisional exact product identity is Cooler Master Riser Cable PCIe 4.0 x16 - 200mm, model MCA-U000C-KPCI40-200; no directly read external source was available in this correction pass, so purchasability and all product-specific mechanical claims remain unverified.",
+    "Receiver-PCB length, width, thickness, connector/cable exit orientation, mounting-hole coordinates, mounting-hole diameters, and manufacturer bend-radius guidance are unresolved; no enclosure mounting interface may be derived from guessed values."
+  ],
+  "recommendations": [
+    "Carry Cooler Master MCA-U000C-KPCI40-200 only as the provisional 200 mm procurement target, not as an approved CAD interface, until an official product page or current supplier listing verifies the exact model and availability.",
+    "Require an official mechanical drawing, a dimensioned physical sample, or user-supplied caliper measurements for the receiver PCB and its mounting holes before creating bosses, slots, or keepouts.",
+    "Route the riser in CAD only after locating both PCIe endpoints; preserve a broad, untwisted service loop and replace that qualitative allowance with the manufacturer's minimum bend radius when documented.",
+    "Do not infer connector orientation from product photographs alone; verify GPU insertion direction, cable exit side, and motherboard-to-GPU fold direction against the exact purchased revision."
+  ],
+  "unresolved_decisions": [
+    {
+      "factId": "pcie-riser-mechanical-acceptance",
+      "question": "Will the user approve Cooler Master MCA-U000C-KPCI40-200 after exact supplier and mechanical evidence is obtained, or require a different riser with a published receiver drawing?",
+      "impact": "This determines cable routing, receiver retention, mounting-boss geometry, keepouts, assembly order, and whether the 4.0 L enclosure target remains feasible."
+    },
+    {
+      "factId": "pcie-riser-receiver-retention",
+      "question": "Should the final receiver be retained through verified PCB mounting holes or by a non-hole clamp/rail after the purchased sample is measured?",
+      "impact": "The choice changes printed-part geometry and load transfer; hole-based retention cannot be designed while hole spacing and diameter are unknown."
+    }
+  ],
+  "warnings": [
+    "External supplier/manufacturer evidence was not read before the correction instruction to stop expanding research; current stock, price, supplier URL, exact connector orientation, receiver dimensions, mounting-hole geometry, and bend-radius guidance are therefore not established.",
+    "The provisional model identity must not be promoted to an authoritative BOM or enclosure constraint from this report alone.",
+    "The PRD's 180 mm GPU is only a conceptual envelope; final riser fit also depends on the selected GPU's PCB edge position, bracket geometry, and power-cable clearance."
+  ],
+  "evidence": [
+    {
+      "source": "workspace:product/artifact-contract.json",
+      "sha256": "48f6b50083df062cb5f45b86ed3755c2822842a3677db3e22d8db6036b3ce053",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "source": "workspace:product/prd.md",
+      "sha256": "3a403ede34b8183139f8aeb82550ebb93f420ec875e12461b7729f75146fbfd6",
+      "pages": [
+        1
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "id": "pcie_riser",
+      "manufacturer": "Cooler Master",
+      "model": "MCA-U000C-KPCI40-200",
+      "product_name": "Riser Cable PCIe 4.0 x16 - 200mm",
+      "interface": "PCIe 4.0 x16",
+      "nominal_cable_length_mm": 200,
+      "selection_status": "provisional_unresolved",
+      "procurement_status": "external_supplier_evidence_required",
+      "connector_orientation": null,
+      "receiver_pcb_dimensions_mm": null,
+      "mounting_hole_spacing_mm": null,
+      "mounting_hole_diameter_mm": null,
+      "minimum_bend_radius_mm": null,
+      "selection_reason": "The nominal 200 mm variant matches the requested length band, but suitability for the sandwich enclosure cannot be approved without exact procurement and mechanical evidence.",
+      "required_evidence": [
+        "Current manufacturer or authorized-supplier product URL for the exact model",
+        "Official receiver-PCB dimension and mounting-hole drawing, or measurements from the purchased revision",
+        "Verified connector and cable-exit orientation",
+        "Manufacturer cable bend-radius and fold/twist restrictions",
+        "Current stock and price evidence"
+      ],
+      "supply_risk": "No current supplier evidence or mechanically complete alternative was established in this correction pass."
+    }
+  ],
+  "rejected_candidates": []
+}
