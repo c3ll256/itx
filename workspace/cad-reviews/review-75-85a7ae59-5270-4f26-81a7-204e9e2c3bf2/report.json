@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-75-85a7ae59-5270-4f26-81a7-204e9e2c3bf2",
+  "documentId": "main",
+  "revision": 75,
+  "revisionId": "revision-75-72d9a6ac-64a0-4859-8cd2-e6e380bb6ed7",
+  "summary": "The enclosure is visually coherent as an overall assembly, but the required Mini-ITX, cooler, GPU, PSU, and complete power-button wiring interfaces are not fully verifiable because the mating hardware and cable/envelope representations are not shown in the available revision-bound views.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The enclosure reads as a complete, consistently proportioned tower assembly with aligned top, side, front, rear, and base structure; the reviewed views show no obvious floating parts, gross collisions, or visibly missing primary enclosure structure.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-75-72d9a6ac-64a0-4859-8cd2-e6e380bb6ed7/look-bc5471eb726ebf2e8f03bed8/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a coherent closed enclosure with the cap, frame, panels, feet, ventilation, fasteners, and service openings visibly aligned and without an obvious gross collision or detached component."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-75-72d9a6ac-64a0-4859-8cd2-e6e380bb6ed7/look-bc5471eb726ebf2e8f03bed8/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic front view confirms consistent vertical alignment, a continuous outer frame, supported openings, and feet seated beneath the enclosure."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The views show enclosure openings and internal support geometry, but no standard 170 x 170 mm Mini-ITX motherboard or explicit dimensional mounting-pattern overlay is visible, so board fit, retention, and rear-I/O alignment cannot be established from image evidence.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-75-72d9a6ac-64a0-4859-8cd2-e6e380bb6ed7/look-e26a09d0f335c2f48e602b8c/workbench_iso.png",
+          "view": "iso",
+          "description": "The focused isometric view exposes the enclosure and rear service regions, but no motherboard envelope is present to visually demonstrate fit or rear-I/O registration."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "A large perforated side intake is visible, but the Thermalright AXP120-X67 envelope and an installed motherboard are absent, so cooler fit and clearance to the side panel cannot be visually established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-75-72d9a6ac-64a0-4859-8cd2-e6e380bb6ed7/look-7df2680e284295fb515b4c72/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view directly shows the perforated side-panel intake, but it contains no cooler envelope from which intake spacing or interference could be judged."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "GPU-oriented supports, rear openings, and retention features are visible, but no approved compact GPU envelope, PCIe riser cable, or power-cable bend envelope is modeled in the cited views; complete fit and routing therefore remain unverified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-75-72d9a6ac-64a0-4859-8cd2-e6e380bb6ed7/look-4c080fb16ba19c0557540544/workbench_iso.png",
+          "view": "iso",
+          "description": "The focused isometric view shows the rear service openings and GPU support region, but no GPU or cable envelopes are present to prove bracket engagement, riser routing, and power-cable bend clearance."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The enclosure includes a designated 1U PSU cradle and rear service region, but no 160 x 80 x 40 mm PSU envelope, inlet component, airflow path, or cable bundle is visible; fit, access, retention, and routing cannot all be verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-75-72d9a6ac-64a0-4859-8cd2-e6e380bb6ed7/look-e26a09d0f335c2f48e602b8c/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the enclosure's rear service openings and internal support region, but the specified PSU and its inlet, airflow, and cable envelopes are absent."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "A single externally accessible front power button is visibly provided, but the internal wiring path to the motherboard header is not visible in the available views, so the full interface requirement is not verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-75-72d9a6ac-64a0-4859-8cd2-e6e380bb6ed7/look-4a652f7ff54712ecfdc7f970/workbench_front.png",
+          "view": "front",
+          "description": "The front orthographic view clearly shows one externally reachable round button centered near the enclosure's lower front edge; it does not expose an internal wire route to the motherboard header."
+        }
+      ]
+    }
+  ]
+}
