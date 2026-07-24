@@ -19,13 +19,13 @@
     "front_panel": "solid removable magnetic panel with power-button opening only",
     "panel_fit": "front, rear, left and right panels extend flush between the top cap and base with no exposed inner-frame gaps",
     "perimeter_panel_retention": "tool-less magnetic retention for front, rear, left and right panels; no perimeter-panel screws",
-    "magnet_spec": "15 x 10 x 4 mm rectangular adhesive magnet; 15.2 x 10.2 x 4.1 mm direct notch shaved into corner posts; no separate carrier or screw passage; four stations per perimeter panel, 16 total; end-panel and side-panel magnets use staggered heights",
+    "magnet_spec": "15 x 10 x 4 mm rectangular center-screw magnet; 15.4 x 10.4 x 4.2 mm starting FDM pocket; four stations per perimeter panel, 16 total; rear magnets oriented vertically on the narrow left/right rails clear of all service apertures",
     "rear_panel_mounting": "magnet stations and locating features must not intrude into motherboard, GPU or PSU service apertures",
     "front_io": "power button only",
     "priority": "minimum volume"
   },
   "open_questions": [],
-  "notes": "User provided images of a dual-fan, dual-slot GPU. The current mechanical evaluation retains the 180 x 115 x 40 mm concept envelope because the images do not provide a verifiable complete dimensional drawing. Final print release requires physical GPU measurements.",
+  "notes": "User changed the confirmed layout to a rear-mounted riser GPU and a compact 160 x 80 x 40 mm 1U PSU on the motherboard-tray rear side. GPU remains 180 x 115 x 40 mm.",
   "confirmed_by_user": true,
   "confirmed_at": "2026-07-22T11:10:00Z",
   "prd_path": "product/prd.md"
