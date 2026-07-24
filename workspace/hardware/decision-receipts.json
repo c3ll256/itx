@@ -94,6 +94,45 @@
       "fact_revision": 1,
       "status": "active",
       "context_hash": "b81e6effa2409e3d70573d4bc55ab9adeee0edc9e863d7c9228f1474ef859705"
+    },
+    {
+      "receipt_id": "e1e78e24-2f91-428a-a0c1-91238622ebcc",
+      "fact_id": "itx.smaller_panel_magnet",
+      "question_id": "smaller_panel_magnet",
+      "answer": "15 x 10 x 4 的能直接嵌入么",
+      "asked_at": "2026-07-23T14:17:48.259Z",
+      "answered_at": "2026-07-23T14:19:45.943Z",
+      "session_id": "749f1e08-f529-49ab-9323-413b4a7913e9",
+      "run_id": "e500efd2-eea3-4189-a245-10e7b9c639d2",
+      "component_refs": [
+        "base_and_frame",
+        "rear_io_panel",
+        "front_vent_panel",
+        "left_vent_panel",
+        "right_vent_panel"
+      ],
+      "attachment_refs": [],
+      "fact_revision": 1,
+      "status": "active",
+      "context_hash": "4e59430b0e62842011179c89133e603de637cdd87c3402741630413d9596a7fb"
+    },
+    {
+      "receipt_id": "43d30133-9e3f-457c-a8a9-5e5ea8153d46",
+      "fact_id": "itx.smaller_panel_magnet_mount",
+      "question_id": "smaller_magnet_fastener",
+      "answer": "center_screw",
+      "asked_at": "2026-07-23T14:17:48.259Z",
+      "answered_at": "2026-07-23T14:19:45.943Z",
+      "session_id": "749f1e08-f529-49ab-9323-413b4a7913e9",
+      "run_id": "e500efd2-eea3-4189-a245-10e7b9c639d2",
+      "component_refs": [
+        "base_and_frame",
+        "rear_io_panel"
+      ],
+      "attachment_refs": [],
+      "fact_revision": 1,
+      "status": "active",
+      "context_hash": "4e59430b0e62842011179c89133e603de637cdd87c3402741630413d9596a7fb"
     }
   ]
 }

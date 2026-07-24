@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-70-fe48d39f-2d83-4a93-9d63-2ba677649df4",
+  "documentId": "main",
+  "revision": 70,
+  "revisionId": "revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a",
+  "summary": "The rear service layout and top fasteners are visually coherent, but the side panels show conspicuous clustered through-holes in the intended compact magnet zones. Several internal dimensional and clearance requirements cannot be established from the supported exterior views.",
+  "checks": [
+    {
+      "checkId": "rear-openings-unobstructed",
+      "status": "pass",
+      "description": "The rear orthographic and rear-isometric evidence shows three distinct service regions with open interiors; the narrow surrounding frame does not visibly cross the apertures.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-30fee6dee42918332ac74ddb/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "Rear-isometric view visibly shows the motherboard-I/O, GPU, and lower PSU service openings without frame members spanning their open areas."
+        }
+      ]
+    },
+    {
+      "checkId": "rear-post-panel-clearance",
+      "status": "not_verified",
+      "description": "The assembled exterior views do not expose the interfaces between all four posts and the inner faces of the front, rear, and side panels, so visible assembly clearance and absence of hidden overlap cannot be established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-58ec13ec0a3c0f16bff80f6f/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The rear-isometric assembled view shows the panel seams, but the post-to-inner-panel gaps are occluded."
+        }
+      ]
+    },
+    {
+      "checkId": "compact-magnet-geometry",
+      "status": "not_verified",
+      "description": "The views do not directly expose and measure every carrier pocket, so the specified 15.4×10.4×4.2 mm recess, 15×10×4 mm magnet fit, central channel, and exclusion of the old 20×10 mm footprint cannot be verified visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-fd058d2c8c8199f59d0de7be/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The frame carriers are only partially visible at enclosure scale and provide no direct dimensional proof of the pocket geometry."
+        }
+      ]
+    },
+    {
+      "checkId": "four-stations-per-panel",
+      "status": "fail",
+      "description": "The right-side exterior visibly contains multiple clustered dark through-openings within the perforation field rather than four clean, discrete compact stations, contradicting the requirement to eliminate residual or extra magnet-zone features.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-249347cda8f35632f77ecec9/workbench_right.png",
+          "view": "right",
+          "description": "The right orthographic view shows three conspicuous horizontal clusters of dark through-holes in the central vent field, not four clean compact stations."
+        }
+      ]
+    },
+    {
+      "checkId": "side-panel-clean-zones",
+      "status": "fail",
+      "description": "Both side-panel evidence views show ventilation holes remaining open through the intended rectangular magnet-zone areas, so those areas are not clean solid zones.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-ee670dc36ee46d422a64a46d/workbench_right.png",
+          "view": "right",
+          "description": "Dark circular openings visibly persist in horizontal rectangular clusters across the right panel's magnet-zone region."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-ee670dc36ee46d422a64a46d/workbench_left.png",
+          "view": "left",
+          "description": "The left orthographic view likewise shows clustered open perforations rather than uninterrupted solid magnet zones."
+        }
+      ]
+    },
+    {
+      "checkId": "exterior-magnet-concealment",
+      "status": "fail",
+      "description": "The side exteriors visibly expose clustered extra through-openings associated with the magnet-zone geometry, contradicting the requirement that magnet recess and fixing features remain concealed on the interior.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-a940b9b8dd9d2592501f718b/workbench_right.png",
+          "view": "right",
+          "description": "The right exterior has visibly dark, grouped through-openings interrupting the otherwise regular perforation field."
+        }
+      ]
+    },
+    {
+      "checkId": "top-fastener-alignment",
+      "status": "pass",
+      "description": "The top and isometric evidence shows four top screws seated at consistent inset corner locations without any visibly floating outside the cap or post envelope.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-c85831bf544b95d8a37b836c/workbench_top.png",
+          "view": "top",
+          "description": "The top orthographic view directly shows four screw heads regularly positioned at the inset corners of the continuous top cap."
+        }
+      ]
+    },
+    {
+      "checkId": "overall-revised-enclosure",
+      "status": "fail",
+      "description": "Although the enclosure has a continuous top, present panels, and a recognizable rear service face, the right side shows obvious clustered through-hole artifacts in its vent field; therefore the overall revised enclosure is not visually clean and flush as required.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-9aca22555c1182c2f84f43fc/workbench_right.png",
+          "view": "right",
+          "description": "The complete right-side view visibly shows several anomalous dark hole clusters across the panel despite otherwise continuous enclosure assembly."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-70-500f7446-f5b1-4f6c-ac42-dc369fd2346a/look-9aca22555c1182c2f84f43fc/workbench_iso.png",
+          "view": "iso",
+          "description": "The overall isometric view confirms the top, front/rear structure, side panel, and feet are present, while also retaining visible side-panel artifacts."
+        }
+      ]
+    }
+  ]
+}

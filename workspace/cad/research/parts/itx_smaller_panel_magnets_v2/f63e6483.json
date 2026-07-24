@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-part-research",
+  "input_fingerprint": "630369ad79d52d44bd1a0255ed5246dce132b19e4481fc22e8c4bf2a770ec253",
+  "findings": [
+    "The authoritative requirement currently specifies sixteen rectangular countersunk magnets, four per removable front, rear, left, and right panel; the pictured baseline is 20 x 10 x 4 mm with one M4 countersunk hole.",
+    "The replacement request narrows the desired identity to a purchasable rectangular or square neodymium magnet smaller than 20 x 10 x 4 mm, preferably no more than 10-12 mm wide and mounted with M3, for narrow perimeter rails that must remain outside motherboard-I/O, GPU, and PSU service openings.",
+    "The frozen CAD image shows magnet carriers projecting inward from narrow vertical perimeter rails, confirming that reduced carrier projection is material to preserving the rear service aperture.",
+    "No magnet component matching the requested material, dimensions, countersunk M3 interface, magnetization, and purchasable identity was present in the installed CAD catalog. The magnet-specific catalog search returned no candidates.",
+    "The broader catalog search returned generic fasteners rather than magnets. These do not establish any magnet body dimensions, countersink dimensions, neodymium grade, magnetization direction, coating, pull force, supplier, or datasheet.",
+    "Accordingly, exact purchasable dimensions, countersink diameter and angle, magnetization, mounting method details, and minimum printed carrier dimensions remain unverified; procurement is unresolved and no catalog component can be selected as an exact or partial magnet substitute.",
+    "A bounded mechanical strategy can preserve CAD progress without asserting a part: reserve a parametric pocket only after a supplier drawing is selected, with pocket length, width, thickness, countersink/head relief, screw axis, and polarity driven directly by that drawing; place the complete carrier envelope outside all service-aperture keep-outs and retain locating lips/hard stops so magnets carry only normal load.",
+    "The minimum printed carrier dimensions cannot be fixed from the available evidence. They must be derived from the selected magnet envelope plus declared print clearance, minimum wall around the pocket and screw path, and the chosen M3 insert/nut or through-fastener geometry, then checked against the actual rear-rail width and service-opening keep-outs."
+  ],
+  "recommendations": [
+    "Do not add a magnet to cad/part-plan.json yet. Preserve item smaller_panel_magnet as unresolved because the catalog contains no semantically compatible constructible magnet and no supplier/datasheet evidence was available in the frozen inputs.",
+    "Ask the user to approve one real supplier SKU and drawing meeting these procurement bounds: rectangular or square neodymium body smaller than 20 x 10 x 4 mm, maximum body width 12 mm, single countersunk mounting hole explicitly specified for an M3 flat-head screw, stated magnetization direction/pole faces, coating, tolerances, and mounting guidance. Prefer a width near 10 mm only if the drawing and rear-rail check support it.",
+    "After a SKU is approved, set the carrier pocket from the maximum-tolerance magnet dimensions rather than nominal dimensions, add documented FDM clearance, and derive carrier outer dimensions from the project's printable-wall rule and the selected M3 fastening stack. Validate all four rear stations against motherboard-I/O, GPU-output, PSU-inlet/airflow, and maintenance keep-outs before replication to the other panels.",
+    "Use a nonmagnetic M3 flat-head fastener only if the supplier drawing explicitly permits screw mounting and its countersink angle/head diameter match; otherwise obtain supplier-approved mounting instructions rather than assuming an M3 countersink from the nominal hole label."
+  ],
+  "unresolved_decisions": [
+    {
+      "factId": "smaller-panel-magnet-sku",
+      "question": "Which exact supplier SKU and datasheet should be approved for the smaller screw-mounted neodymium panel magnet?",
+      "impact": "Without a selected drawing, body tolerances, countersink geometry, magnetization, coating, pull force, mounting method, pocket size, carrier size, and purchase availability cannot be validated."
+    },
+    {
+      "factId": "smaller-panel-magnet-carrier-stack",
+      "question": "After the magnet SKU is selected, should the M3 fastener terminate in a heat-set insert, captive nut, or accessible through-fastener arrangement?",
+      "impact": "This choice determines carrier depth, wall requirements, tool access, and whether the carrier can remain clear of rear service openings."
+    }
+  ],
+  "warnings": [
+    "No directly relevant supplier listing or datasheet was included in the frozen evidence, and the available runtime did not provide a web/PDF research tool; procurement claims therefore remain intentionally unresolved.",
+    "The 10-12 mm width and M3 preferences are search bounds, not approval to scale the pictured 20 x 10 x 4 mm M4 magnet or to hand-model a lookalike.",
+    "Magnet grade, magnetization direction, pole-face orientation, coating, countersink handedness, countersink angle, pull force, and temperature rating must not be inferred from appearance."
+  ],
+  "evidence": [
+    {
+      "source": "workspace:product/artifact-contract.json",
+      "sha256": "be513dce5e2ed8e58ba8f7b831d3448be2a4b97542ab6eb29d9910115b16efdb"
+    },
+    {
+      "source": "workspace:product/prd.json",
+      "sha256": "4b63eceb6cc99a0a1959a16770c7c47c962d9aeb10fa5e8650e00788c9571631"
+    },
+    {
+      "source": "workspace:product/prd.md",
+      "sha256": "790a14b147ba6821e2d955a04fca956f09cc0d2925ebb5f7e2758a4074621ddc"
+    },
+    {
+      "source": "workspace:references/uploads/20260723T135747742Z-1-cleanshot-2026-07-23-at-21-57-36-2x.png",
+      "sha256": "4f523bd7d80886128ce08e023bc2075b94fecb1b66183ef2ad7200793823be7a"
+    },
+    {
+      "source": "workspace:references/uploads/20260723T140700067Z-1-cleanshot-2026-07-23-at-22-05-12-2x.png",
+      "sha256": "461018ea997773546f01e388427377f468a5fa0b0a235920b69d5bfa45b0e22e"
+    },
+    {
+      "source": "cad-catalog:7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e",
+      "sha256": "7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e"
+    }
+  ],
+  "candidates": [],
+  "rejected_candidates": [
+    {
+      "item_id": "smaller_panel_magnet",
+      "component_id": "bd-warehouse:bd_warehouse.fastener.CounterSunkScrew",
+      "catalog_fingerprint": "7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e",
+      "reason": "This catalog component is a generic countersunk screw, not a rectangular or square neodymium magnet; it provides no magnet body, magnetic material, magnetization, countersunk magnet hole, supplier SKU, or magnet datasheet and therefore cannot satisfy the requested identity."
+    }
+  ]
+}
