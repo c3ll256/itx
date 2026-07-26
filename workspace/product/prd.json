@@ -6,6 +6,7 @@
     "target_external_volume_l_max": 4.0,
     "motherboard": "Mini-ITX 170 x 170 mm",
     "cpu_cooler": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm",
+    "gpu_style": "user-image compact single-fan dual-slot card; fan faces perforated side panel and dual-slot bracket faces rear service panel",
     "gpu_concept_envelope_mm": {
       "length": 180,
       "height": 115,
@@ -19,7 +20,7 @@
     "front_panel": "solid removable magnetic panel with power-button opening only",
     "panel_fit": "front, rear, left and right panels extend flush between the top cap and base with no exposed inner-frame gaps",
     "perimeter_panel_retention": "tool-less magnetic retention for front, rear, left and right panels; no perimeter-panel screws",
-    "magnet_spec": "15 x 10 x 4 mm rectangular center-screw magnet; 15.4 x 10.4 x 4.2 mm starting FDM pocket; four stations per perimeter panel, 16 total; rear magnets oriented vertically on the narrow left/right rails clear of all service apertures",
+    "magnet_spec": "15 x 10 x 4 mm rectangular magnet epoxy-bonded into 15.4 x 10.4 x 4.2 mm shallow flats cut directly into the four corner posts; no separate carrier, no full enclosure pocket and no center-screw passage; four stations per perimeter panel, 16 total; adjacent panel heights staggered and rear positions clear all service apertures",
     "rear_panel_mounting": "magnet stations and locating features must not intrude into motherboard, GPU or PSU service apertures",
     "front_io": "power button only",
     "priority": "minimum volume"
