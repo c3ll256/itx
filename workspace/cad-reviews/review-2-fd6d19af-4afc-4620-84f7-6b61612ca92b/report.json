@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-2-fd6d19af-4afc-4620-84f7-6b61612ca92b",
+  "documentId": "enclosure-handoff",
+  "revision": 2,
+  "revisionId": "revision-2-b176b188-6f62-4b45-b24c-36911f8be580",
+  "summary": "The exterior assembly is visually coherent, but the required internal component interfaces and power-button routing are not verifiable from the committed exterior views.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The visible enclosure shell, top, feet, ventilation, and framed apertures form a coherent assembly with no obvious collision, floating part, or missing exterior structure.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/enclosure-handoff/observations/revision-2-b176b188-6f62-4b45-b24c-36911f8be580/look-510b55a35c8b4a6d0656a5df/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view visibly shows an aligned, continuous exterior enclosure with seated feet and no obvious detached or colliding exterior part."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The views do not expose a 170 x 170 mm Mini-ITX mounting pattern, board retention features, a board envelope, or its rear-I/O relationship.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/enclosure-handoff/observations/revision-2-b176b188-6f62-4b45-b24c-36911f8be580/look-955fa5a143b1d84a5de41ecb/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric exterior view does not visibly show the motherboard tray, Mini-ITX standoffs, a board envelope, or rear-I/O engagement."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "Side ventilation is visible, but the AXP120-X67 envelope and its gap to the panel are not shown, so fit and intake clearance cannot be established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/enclosure-handoff/observations/revision-2-b176b188-6f62-4b45-b24c-36911f8be580/look-955fa5a143b1d84a5de41ecb/workbench_iso.png",
+          "view": "iso",
+          "description": "The image visibly shows a perforated side panel but no cooler envelope or clearance gap."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The committed views do not identify the compact-GPU envelope, I/O-bracket retention, PCIe-riser path, or power-cable bend space.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/enclosure-handoff/observations/revision-2-b176b188-6f62-4b45-b24c-36911f8be580/look-955fa5a143b1d84a5de41ecb/workbench_front.png",
+          "view": "front",
+          "description": "The front view shows exterior apertures but no identifiable GPU, bracket engagement, riser route, or cable-clearance volume."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The 160 x 80 x 40 mm PSU envelope, retention, AC inlet access, airflow path, and cable routing are not visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/enclosure-handoff/observations/revision-2-b176b188-6f62-4b45-b24c-36911f8be580/look-955fa5a143b1d84a5de41ecb/workbench_front.png",
+          "view": "front",
+          "description": "The exterior orthographic view does not expose the behind-tray PSU volume or identify PSU retention, inlet, airflow, or routing features."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "No installed external power button is identifiable, and an internal route to the motherboard header is not exposed.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/enclosure-handoff/observations/revision-2-b176b188-6f62-4b45-b24c-36911f8be580/look-955fa5a143b1d84a5de41ecb/workbench_iso.png",
+          "view": "iso",
+          "description": "The exterior view contains holes and apertures, but none is visibly identifiable as an installed power-button actuator and no internal lead path is shown."
+        }
+      ]
+    }
+  ]
+}

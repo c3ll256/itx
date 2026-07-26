@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-92-2511830a-e78c-4acc-a429-c97c81909cad",
+  "documentId": "main",
+  "revision": 92,
+  "revisionId": "revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad",
+  "summary": "The enclosure assembly is visually coherent and free of obvious assembly defects. The five functional interface checks are not fully verified because the applicable hardware envelopes, installed control, and cable paths are not visible in the committed revision views.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The enclosure reads as a complete, consistently proportioned assembly; the frame, cap, exterior panels, internal support structure, and feet appear aligned, with no obvious visible collisions, detached parts, or missing major structure across the reviewed views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-e6c22e0b02be27272818ff29/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a coherent upright enclosure with seated top, side, rear/front panel structure, base, and feet; no part is visibly floating or interpenetrating."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-e6c22e0b02be27272818ff29/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic front view shows the enclosure edges and openings aligned without an obvious structural discontinuity."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-e6c22e0b02be27272818ff29/workbench_top.png",
+          "view": "top",
+          "description": "The top view shows the cap and enclosure perimeter consistently seated and proportioned."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-5265c0d8bf6f513b11a11ec6/workbench_iso.png",
+          "view": "iso",
+          "description": "The supplemental view focused on the GPU supports, clamp bars, and feet shows those structures incorporated into the same assembly without a visible detached component."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The tray and rear service panel are present, but the views do not show a 170 x 170 mm motherboard reference, a fully readable standard mounting pattern, or direct motherboard-I/O alignment. Fit, retention, and accessible rear I/O therefore cannot be established visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-9d6c324fe6453c848a8487b1/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The focused isometric-back view exposes the tray/rear-panel context, but no Mini-ITX reference board is present to demonstrate the required fit and I/O relationship."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-90e745ba705faf37ffb9a203/workbench_right.png",
+          "view": "right",
+          "description": "The side view does not reveal an installed motherboard or an unobstructed mounting interface from which standard-board retention can be confirmed."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The side ventilation is visible, but no Thermalright AXP120-X67 envelope is modeled and no visible gap from that envelope to the side panel is available. Cooler fit and preserved intake clearance cannot be verified from these views.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-9b2891e3934589c77e6db5ff/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view clearly shows a perforated side panel, but the cooler and its clearance envelope are absent."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-9b2891e3934589c77e6db5ff/workbench_front.png",
+          "view": "front",
+          "description": "The front view does not expose the cooler-to-panel spacing needed to establish intake clearance."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "GPU support and rear-I/O-frame geometry is present, but the approved GPU envelope, I/O bracket engagement, PCIe riser, power connector, and cable-bend volumes are not shown. The complete rear-mounted GPU fit cannot be verified visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-5265c0d8bf6f513b11a11ec6/workbench_iso.png",
+          "view": "iso",
+          "description": "The focused isometric view shows the GPU support structures in the enclosure, but no GPU or riser/cable reference is installed to prove fit."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-9b2891e3934589c77e6db5ff/workbench_front.png",
+          "view": "front",
+          "description": "External openings are visible, but GPU bracket seating, riser routing, and power-cable bend space are not directly observable."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "The rear-panel/base/cradle context is present, but no 160 x 80 x 40 mm PSU reference, AC inlet component, airflow volume, or cable route is visible. Fit, retention, inlet access, airflow, and routing cannot all be established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-7d38335431bc32cb7d501a1e/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The focused isometric-back view shows the enclosure and rear service-panel context, but not an installed dimensional PSU reference or its cabling."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-7d38335431bc32cb7d501a1e/workbench_back.png",
+          "view": "back",
+          "description": "The orthographic view does not expose the PSU body, inlet engagement, airflow path, or cable-routing clearance."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "A single externally accessible circular switch opening is visible near the top of the solid front panel, but no installed power-button component or route to the motherboard header is shown. The full user-control interface is therefore not verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-3b4f7ad6a348fc98c8cdfae4/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The focused isometric-back view shows the circular opening through the physical front panel and its access to the enclosure interior, but no button body or lead is present."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-92-f5483f3c-b18e-420d-a936-f742a6cbc0ad/look-3b4f7ad6a348fc98c8cdfae4/workbench_back.png",
+          "view": "back",
+          "description": "The orthographic view clearly shows the single circular panel opening, while the actual actuator and motherboard-header connection remain absent from view."
+        }
+      ]
+    }
+  ]
+}

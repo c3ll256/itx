@@ -1,48 +1,55 @@
 {
   "version": 2,
   "artifact_level": "assembly",
-  "deliverable_intent": "manufacturing_package",
+  "deliverable_intent": "visual_draft",
   "summary": "FDM-printable compact Mini-ITX sandwich enclosure with motherboard/cooler on the front side and a riser-mounted GPU plus 160 x 80 x 40 mm 1U PSU on the rear side.",
   "required_interfaces": [
+    {
+      "id": "screw_layout_review",
+      "kind": "mounting_interface",
+      "description": "Visually and structurally verify the fully rebuilt top, Mini-ITX, PSU, riser, GPU and magnet screw-hole patterns declared by the current CAD brief.",
+      "source": "user_requested",
+      "required": true
+    },
     {
       "id": "mini_itx_mounting",
       "kind": "internal_fit",
       "description": "Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
       "source": "user_requested",
-      "required": true
+      "required": false
     },
     {
       "id": "cooler_clearance",
       "kind": "internal_fit",
       "description": "Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
       "source": "user_requested",
-      "required": true
+      "required": false
     },
     {
       "id": "gpu_fit",
       "kind": "internal_fit",
       "description": "Rear-mount the approved compact GPU envelope behind the motherboard tray, including I/O bracket, PCIe riser path, and power-cable bend space.",
       "source": "user_requested",
-      "required": true
+      "required": false
     },
     {
       "id": "psu_fit",
       "kind": "internal_fit",
       "description": "Rear-mount the user-specified 160 x 80 x 40 mm compact 1U PSU behind the motherboard tray with AC inlet access, airflow, retention, and cable routing.",
       "source": "user_requested",
-      "required": true
+      "required": false
     },
     {
       "id": "power_button_access",
       "kind": "user_control",
       "description": "Provide one externally accessible power button with an internal path to the motherboard header.",
       "source": "user_requested",
-      "required": true
+      "required": false
     }
   ],
   "external_references": [],
   "assembly_story": {
-    "installation": "Install structural heat-set inserts where specified, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
+    "installation": "Install structural heat-set inserts where specified, fasten the sixteen countersunk magnets to the corner-post flats with centered M3 x 8 screws, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
     "maintenance": "Pull off the magnetically retained front, rear, left, or right service panel without tools; locating lips carry panel shear while magnets provide normal retention.",
     "user_access": [
       "power button",
@@ -57,19 +64,14 @@
     "documents": [
       {
         "role": "enclosure",
-        "document_id": "main",
+        "document_id": "enclosure-final",
         "description": "Printable Mini-ITX enclosure assembly and manufacturing parts",
-        "delivery_target": "manufacturing_handoff",
+        "delivery_target": "visual_review",
         "required_formats": [
-          "step",
-          "stl"
+          "step"
         ],
         "interface_ids": [
-          "mini_itx_mounting",
-          "cooler_clearance",
-          "gpu_fit",
-          "psu_fit",
-          "power_button_access"
+          "screw_layout_review"
         ],
         "reference_ids": []
       }

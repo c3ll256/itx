@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review",
+  "reviewId": "review-1-8dac0060-1c04-4a36-916b-e43e01f3a37b",
+  "documentId": "enclosure-handoff",
+  "revision": 1,
+  "revisionId": "revision-1-46328a19-3401-47c7-862b-451801d484cd",
+  "targetSha256": "4524ed07d336ea1157d3706108f5c84584b4062741f261ea9e531ff8e1d4afc1",
+  "brief": {
+    "path": "workspace/cad-workbench/documents/enclosure-handoff/brief.md",
+    "sha256": "9979cad2bfe5ff9f5c47b7a0713dc57a5b1805fc290aeb2324026887953fa854"
+  },
+  "revisionSnapshot": {
+    "path": "snapshots/cad-workbench/documents/enclosure-handoff/revision-1-46328a19-3401-47c7-862b-451801d484cd/revision.json",
+    "sha256": "7895e75802bc2ffc1e5b3f65c1a924fe72741c82ef451869296aea9f947a709d"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "b392f838fc98454157d1fb8bf1b67c81d26ac9fc366b350b85dfd8e29bf29826",
+    "stepSha256": "b1690406bc2199855b556f86973b3f000a786f85ae8602a9a221b5feba067f9e"
+  },
+  "stateRevision": "401372043d3513fc55e25d2e8d215ae9256b1ec67981a13564234c7934c4ea84",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "enclosure-handoff",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 1,
+      "revisionId": "revision-1-46328a19-3401-47c7-862b-451801d484cd",
+      "documentSha256": "5e5c53b23a2e593596d53ff8c184b98eab83c054bcb8326a99cc7868b1e87480",
+      "manifestSha256": "b392f838fc98454157d1fb8bf1b67c81d26ac9fc366b350b85dfd8e29bf29826",
+      "stepSha256": "b1690406bc2199855b556f86973b3f000a786f85ae8602a9a221b5feba067f9e"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/enclosure-handoff/brief.md",
+      "sha256": "9979cad2bfe5ff9f5c47b7a0713dc57a5b1805fc290aeb2324026887953fa854"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "ec14ef1f0932c96eb6c0c4e805727ffdac66a53f3e4d04a9e5315ac42ba900f8",
+      "documentRequirementSha256": "fdc9f6104ef6cfe6165b5c9969acb10a6fb873f2f1cff678a40f3944263321c7",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "401372043d3513fc55e25d2e8d215ae9256b1ec67981a13564234c7934c4ea84"
+  },
+  "artifactContract": {
+    "path": "workspace/product/artifact-contract.json",
+    "sha256": "7f8e506fa213f7b25b2f81473b57d91a864c66beb07e8f980cf7367237c378da"
+  },
+  "checks": [
+    {
+      "id": "overall_assembly",
+      "requirement": "Verify the overall assembly is visually coherent, complete, correctly proportioned, and free of obvious collisions, floating parts, or missing structure.",
+      "objectIds": [
+        "enclosure_assembly"
+      ],
+      "suggestedViews": [
+        "iso",
+        "front",
+        "top"
+      ],
+      "source": "host"
+    },
+    {
+      "id": "interface:mini_itx_mounting",
+      "requirement": "Verify required interface “mini_itx_mounting” (internal_fit): Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:cooler_clearance",
+      "requirement": "Verify required interface “cooler_clearance” (internal_fit): Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:gpu_fit",
+      "requirement": "Verify required interface “gpu_fit” (internal_fit): Rear-mount the approved compact GPU envelope behind the motherboard tray, including I/O bracket, PCIe riser path, and power-cable bend space.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:psu_fit",
+      "requirement": "Verify required interface “psu_fit” (internal_fit): Rear-mount the user-specified 160 x 80 x 40 mm compact 1U PSU behind the motherboard tray with AC inlet access, airflow, retention, and cable routing.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    },
+    {
+      "id": "interface:power_button_access",
+      "requirement": "Verify required interface “power_button_access” (user_control): Provide one externally accessible power button with an internal path to the motherboard header.",
+      "objectIds": [],
+      "suggestedViews": [
+        "iso",
+        "front"
+      ],
+      "source": "artifact-contract"
+    }
+  ],
+  "reportPath": "cad-reviews/review-1-8dac0060-1c04-4a36-916b-e43e01f3a37b/report.json",
+  "labels": {
+    "targets": [
+      {
+        "id": "imports",
+        "label": "imports"
+      }
+    ],
+    "objects": [
+      {
+        "id": "enclosure_assembly",
+        "label": "Reviewed screw-layout assembly"
+      }
+    ]
+  }
+}

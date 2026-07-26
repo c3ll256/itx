@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "kind": "cad-review-report",
+  "reviewId": "review-84-e2177501-5c61-4846-a15a-9c885faa9fdf",
+  "documentId": "main",
+  "revision": 84,
+  "revisionId": "revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6",
+  "summary": "The enclosure is visually coherent with no obvious exposed collisions or floating parts. The five functional interface checks remain not verified because the reference hardware envelopes and required internal clearance or cable paths are not directly shown.",
+  "checks": [
+    {
+      "checkId": "overall_assembly",
+      "status": "pass",
+      "description": "The isometric, front, and top views show a coherent closed enclosure with aligned frame, panels, top cap, feet, and exposed fasteners; no obvious external collision, floating body, gross proportion error, or missing shell structure is visible.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-3f1cb9ff031ea12ef4ab6496/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows a continuous tower enclosure with the vented side, service panel, top cap, and base seated together without an obvious floating or intersecting exterior part."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-3f1cb9ff031ea12ef4ab6496/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic front view shows the panel and service apertures aligned within the rectangular frame, with no visible gross overlap or missing outer structure."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-3f1cb9ff031ea12ef4ab6496/workbench_top.png",
+          "view": "top",
+          "description": "The top view shows a centered top cap and orderly fastener placement with no visible cap displacement or plan-view collision."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:mini_itx_mounting",
+      "status": "not_verified",
+      "description": "The views show the enclosure and rear service apertures, but they do not show an installed 170 x 170 mm reference motherboard, its retention-hole engagement, or the board I/O aligned to the opening; fit, retention, and rear-I/O access therefore cannot be established visually.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-c675833dec8de3112b1c4443/workbench_iso.png",
+          "view": "iso",
+          "description": "The focused isometric view shows the closed enclosure and its service side, but no Mini-ITX reference board or visible mounting engagement is present."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-c675833dec8de3112b1c4443/workbench_front.png",
+          "view": "front",
+          "description": "Rear-facing apertures are visible, but the motherboard and the relationship between its I/O connector block and those apertures are not visible."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:cooler_clearance",
+      "status": "not_verified",
+      "description": "The vented side structure is visible, but no Thermalright AXP120-X67 reference envelope or directly visible cooler-to-panel gap is shown, so cooler fit and preserved side-intake clearance cannot be verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-5822f82544101881cc6fd395/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric image clearly shows the perforated side panel, but the required cooler envelope and its clearance to that panel are not visible."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-5822f82544101881cc6fd395/workbench_front.png",
+          "view": "front",
+          "description": "The orthographic image does not expose a cooler or a measurable visual gap between a cooler and the intake panel."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:gpu_fit",
+      "status": "not_verified",
+      "description": "The rear GPU service region is present, but the approved compact GPU envelope, I/O-bracket engagement, PCIe riser routing, and power-cable bend condition are not directly visible; the complete GPU-fit interface cannot be established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-9cf9a8b808f50baa738d8025/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view shows the enclosure and rear service openings but no installed GPU body, riser cable, or power lead whose clearances could be judged."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-9cf9a8b808f50baa738d8025/workbench_front.png",
+          "view": "front",
+          "description": "The rear-facing view shows an aperture in the GPU support region, but not the bracket engagement or cable-bend space required by the check."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:psu_fit",
+      "status": "not_verified",
+      "description": "A lower rear service opening and internal cradle region are visible, but no 160 x 80 x 40 mm PSU reference body, retained installation, airflow gap, or routed cables are shown; the full PSU-fit requirement is not visually established.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-2140dea55e43183a46436c84/workbench_iso.png",
+          "view": "iso",
+          "description": "The isometric view exposes the rear opening and part of the empty support region, but no PSU or retained cable-routing condition is visible."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-2140dea55e43183a46436c84/workbench_front.png",
+          "view": "front",
+          "description": "The rear-facing image shows service apertures, but it does not show AC-inlet alignment, PSU retention, airflow clearance, or cable routing with the specified unit installed."
+        }
+      ]
+    },
+    {
+      "checkId": "interface:power_button_access",
+      "status": "not_verified",
+      "description": "The opposite-face views show a circular button exposed on the exterior near the top of the solid panel, supporting external reachability. No internal wire or routing path from that button to the motherboard header is visible, so the complete interface remains not verified.",
+      "evidence": [
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-5e9a322470e5839bca50476b/workbench_iso_back.png",
+          "view": "iso_back",
+          "description": "The isometric opposite-face view shows the circular button exposed at the exterior of the solid panel, but no internal connection path is visible."
+        },
+        {
+          "imagePath": "<project>/cache/cad-workbench/documents/main/observations/revision-84-4e345020-bc86-44ac-8b42-b920764fe5b6/look-5e9a322470e5839bca50476b/workbench_back.png",
+          "view": "back",
+          "description": "The orthographic opposite-face view confirms the button is externally presented near the top center; the enclosed interior prevents verification of routing to the motherboard header."
+        }
+      ]
+    }
+  ]
+}
