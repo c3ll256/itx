@@ -13,7 +13,7 @@
       "thickness": 40
     },
     "psu": "compact 1U/Flex 160 x 80 x 40 mm",
-    "layout": "Mini-ITX enclosure with directly supported dual-slot GPU and compact 1U PSU; no PCIe riser assembly or riser mounting hardware",
+    "layout": "Mini-ITX enclosure with a conventional rear-panel dual-slot GPU bracket position and compact 1U PSU; no printed GPU support parts, PCIe riser assembly, or riser mounting hardware",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels; no front ventilation",
@@ -26,8 +26,8 @@
     "priority": "minimum volume"
   },
   "open_questions": [],
-  "notes": "User removed the GPU riser requirement. The CAD retains direct dual-slot GPU supports (rear bracket frame, tail saddle and side clamps) and the compact 160 x 80 x 40 mm 1U PSU. GPU concept envelope remains 180 x 115 x 40 mm.",
+  "notes": "User requires only a conventional dual-slot GPU mounting position in the rear panel. All printed GPU shelf, tail saddle, rear subframe, side receivers and side clamps are removed. The compact 160 x 80 x 40 mm 1U PSU remains; GPU concept envelope remains 180 x 115 x 40 mm.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-07-29T10:02:30Z",
+  "confirmed_at": "2026-07-29T10:06:30Z",
   "prd_path": "product/prd.md"
 }
