@@ -49,7 +49,7 @@
   ],
   "external_references": [],
   "assembly_story": {
-"installation": "Fasten the four independent corner columns to the base from below with the kit-selected M3 socket-cap screws, install the sixteen 10 x 10 x 3 mm countersunk magnets directly into the column pockets with centered M3 screws, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
+"installation": "Place each foot directly under its corner-column axis, then fasten each independent column from below with one kit-selected M3 socket-cap screw passing through the foot and 3 mm base into the column; install the sixteen 10 x 10 x 3 mm countersunk magnets directly into the column pockets with centered M3 screws, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
     "maintenance": "Pull off the magnetically retained front, rear, left, or right service panel without tools; locating lips carry panel shear while magnets provide normal retention.",
     "user_access": [
       "power button",
