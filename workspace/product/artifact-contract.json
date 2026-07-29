@@ -2,12 +2,12 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "visual_draft",
-  "summary": "FDM-printable compact Mini-ITX sandwich enclosure with motherboard/cooler on the front side and a riser-mounted GPU plus 160 x 80 x 40 mm 1U PSU on the rear side.",
+  "summary": "FDM-printable compact Mini-ITX enclosure with motherboard/cooler, a directly supported dual-slot GPU without a PCIe riser assembly, and a 160 x 80 x 40 mm 1U PSU.",
   "required_interfaces": [
     {
       "id": "screw_layout_review",
       "kind": "mounting_interface",
-      "description": "Visually and structurally verify the fully rebuilt top, Mini-ITX, PSU, riser, GPU and magnet screw-hole patterns declared by the current CAD brief.",
+      "description": "Visually and structurally verify the fully rebuilt top, Mini-ITX, PSU, direct GPU-support and magnet screw-hole patterns declared by the current CAD brief.",
       "source": "user_requested",
       "required": true
     },
@@ -28,7 +28,7 @@
     {
       "id": "gpu_fit",
       "kind": "internal_fit",
-      "description": "Rear-mount the approved compact GPU envelope behind the motherboard tray, including I/O bracket, PCIe riser path, and power-cable bend space.",
+      "description": "Retain the approved compact dual-slot GPU envelope with its rear I/O bracket, tail support, side retention and power-cable bend space; no PCIe riser assembly or riser mounting hardware is included.",
       "source": "user_requested",
       "required": false
     },
@@ -49,7 +49,7 @@
   ],
   "external_references": [],
   "assembly_story": {
-"installation": "Place each foot directly under its corner-column axis, then fasten each independent column from below with one kit-selected M3 socket-cap screw passing through the foot and 3 mm base into the column; install the sixteen 10 x 10 x 3 mm countersunk magnets directly into the column pockets with centered M3 screws, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
+"installation": "Place each foot directly under its corner-column axis, then fasten each independent column from below with one kit-selected M3 socket-cap screw passing through the foot and 3 mm base into the column; install the sixteen 10 x 10 x 3 mm countersunk magnets directly into the column pockets with centered M3 screws, mount the motherboard and directly supported dual-slot GPU without a PCIe riser assembly, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
     "maintenance": "Pull off the magnetically retained front, rear, left, or right service panel without tools; locating lips carry panel shear while magnets provide normal retention.",
     "user_access": [
       "power button",
