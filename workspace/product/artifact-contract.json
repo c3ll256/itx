@@ -49,7 +49,7 @@
   ],
   "external_references": [],
   "assembly_story": {
-    "installation": "Install structural heat-set inserts where specified, fasten the sixteen countersunk magnets to the corner-post flats with centered M3 x 8 screws, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
+"installation": "Fasten the four independent corner columns to the base from below with the kit-selected M3 socket-cap screws, install the sixteen 10 x 10 x 3 mm countersunk magnets directly into the column pockets with centered M3 screws, mount motherboard, PCIe riser and GPU, then install the selected PSU and route cables before fitting the four magnetically retained perimeter panels.",
     "maintenance": "Pull off the magnetically retained front, rear, left, or right service panel without tools; locating lips carry panel shear while magnets provide normal retention.",
     "user_access": [
       "power button",
@@ -64,8 +64,8 @@
     "documents": [
       {
         "role": "enclosure",
-        "document_id": "enclosure-final",
-        "description": "Printable Mini-ITX enclosure assembly and manufacturing parts",
+"document_id": "enclosure-integrated",
+        "description": "Complete printable Mini-ITX enclosure assembly with four independently printable, underside-screwed corner columns",
         "delivery_target": "visual_review",
         "required_formats": [
           "step"
