@@ -134,8 +134,8 @@
       "id": "top_screws",
       "role": "enclosure_m3x8_fastener",
       "name": "ISO 4762 M3 x 8 socket-head screw",
-      "description": "Four screws fasten the top cap to the columns, four fasten the rear panel to the rear columns, and two fasten the independent lower motherboard mounts through the base.",
-      "quantity": 10,
+      "description": "Four screws fasten the top cap to the columns, four fasten the rear panel to the rear columns, two fasten the independent lower motherboard mounts through the base, and two fasten the independent upper motherboard mounts through the top cap.",
+      "quantity": 12,
       "supplier": "external_fastener",
       "part_number": "ISO4762-M3X8",
       "part_identity": "d045b94a9ad4d198",
@@ -144,8 +144,8 @@
       "stock": "not_checked",
       "source": "engineering_selection",
       "assembly": {"method": "manual", "population": "mounted"},
-      "selection_reason": "Matches the revision 50 kit-owned top-cap and screw-fixed rear-panel interfaces; no heat-set insert is modeled.",
-      "cad_relevance": {"thread": "M3x0.5", "length_mm": 8, "uses": {"top_cap": 4, "rear_panel": 4, "lower_motherboard_mount_to_base": 2}}
+      "selection_reason": "Matches the revision 54 kit-owned top-cap, screw-fixed rear-panel, and four independent motherboard-mount-to-plate interfaces; no heat-set insert is modeled.",
+      "cad_relevance": {"thread": "M3x0.5", "length_mm": 8, "uses": {"top_cap": 4, "rear_panel": 4, "lower_motherboard_mount_to_base": 2, "upper_motherboard_mount_to_top_cap": 2}}
     },
     {
       "id": "motherboard_gpu_screws",
