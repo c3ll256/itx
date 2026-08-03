@@ -144,8 +144,8 @@
       "stock": "not_checked",
       "source": "engineering_selection",
       "assembly": {"method": "manual", "population": "mounted"},
-      "selection_reason": "Matches the revision 54 kit-owned top-cap, screw-fixed rear-panel, and four independent motherboard-mount-to-plate interfaces; no heat-set insert is modeled.",
-      "cad_relevance": {"thread": "M3x0.5", "length_mm": 8, "uses": {"top_cap": 4, "rear_panel": 4, "lower_motherboard_mount_to_base": 2, "upper_motherboard_mount_to_top_cap": 2}}
+      "selection_reason": "Revision 67 uses four kit-owned M3x8 top-cap joints: each screw passes through the complete 5 mm two-layer cap and engages 3 mm in its corner column. The same row also covers the screw-fixed rear panel and four independent motherboard-mount-to-plate interfaces; no heat-set insert is modeled.",
+      "cad_relevance": {"thread": "M3x0.5", "length_mm": 8, "uses": {"top_cap": 4, "rear_panel": 4, "lower_motherboard_mount_to_base": 2, "upper_motherboard_mount_to_top_cap": 2}, "top_cap_interface": {"clearance_through_mm": 5, "column_engagement_mm": 3, "corner_count": 4, "cad_revision": 67}}
     },
     {
       "id": "motherboard_gpu_screws",
