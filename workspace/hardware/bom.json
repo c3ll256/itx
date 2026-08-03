@@ -177,8 +177,8 @@
       "stock": "not_checked",
       "source": "engineering_selection",
       "assembly": {"method": "manual", "population": "mounted"},
-      "selection_reason": "Passes through each 4 mm foot and the 3 mm base, then engages its separate printed column.",
-      "cad_relevance": {"thread": "M3x0.5", "length_mm": 12, "uses": {"foot_base_column": 4}}
+      "selection_reason": "Revision 68 uses four kit-owned M3x12 joints. Each screw enters from the foot underside, passes through the complete 4 mm detachable foot and 3 mm base, then engages its separate printed column; the foot clearance cuts are topologically cleaned so both foot faces remain open.",
+      "cad_relevance": {"thread": "M3x0.5", "length_mm": 12, "uses": {"foot_base_column": 4}, "foot_base_interface": {"insertion_direction": "bottom_to_top", "foot_clearance_through_mm": 4, "base_clearance_through_mm": 3, "column_receiver": "threaded_blind", "corner_count": 4, "cad_revision": 68}}
     },
     {
       "id": "power_button",
