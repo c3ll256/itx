@@ -151,7 +151,7 @@
       "id": "motherboard_gpu_screws",
       "role": "short_m3_socket_fastener",
       "name": "ISO 4762 M3 x 4 socket-head screw",
-      "description": "Four short screws fasten the Mini-ITX board to the uniform 4 mm-deep printed arms and two retain the standard dual-slot GPU bracket.",
+      "description": "Four short screws fasten the Mini-ITX board to the uniform printed arms; two more pass through the GPU bracket ears and engage the Revision 64 Z-axis through-threaded rear-panel flange.",
       "quantity": 6,
       "supplier": "external_fastener",
       "part_number": "ISO4762-M3X4",
@@ -161,8 +161,8 @@
       "stock": "not_checked",
       "source": "engineering_selection:printed-screw-joint-v1",
       "assembly": {"method": "manual", "population": "mounted"},
-      "selection_reason": "Revision 50 uses 1.6 mm motherboard thickness plus 2.4 mm light-duty self-forming engagement, resolving exactly to M3x4; the 1.5 mm GPU bracket interface also resolves to M3x4.",
-      "cad_relevance": {"thread": "M3x0.5", "length_mm": 4, "uses": {"motherboard": 4, "gpu_bracket": 2}}
+      "selection_reason": "Revision 50 uses 1.6 mm motherboard thickness plus 2.4 mm light-duty self-forming engagement, resolving exactly to M3x4. Revision 64 uses a standard 0.8 mm GPU bracket ear over a 3.2 mm printed flange; printed-screw-joint-v1 termination=through resolves the same M3x4 length without a blind floor.",
+      "cad_relevance": {"thread": "M3x0.5", "length_mm": 4, "uses": {"motherboard": 4, "gpu_bracket": 2}, "gpu_interface": {"axis": "Z", "termination": "through", "bracket_ear_thickness_mm": 0.8, "printed_flange_thickness_mm": 3.2, "cad_revision": 64}}
     },
     {
       "id": "base_column_screws",
