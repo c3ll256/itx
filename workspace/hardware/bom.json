@@ -184,7 +184,7 @@
       "id": "power_button",
       "role": "front_panel_control",
       "name": "12 mm panel-mount momentary power button",
-      "description": "Normally-open momentary switch for the motherboard power header; front-panel opening is 12.2 mm diameter.",
+      "description": "Normally-open momentary switch for the motherboard power header; Revision 70 places its 12.2 mm opening at the exterior-view lower-right of the front panel.",
       "quantity": 1,
       "supplier": "external_retail",
       "part_number": "SW-PANEL-MOMENTARY-12MM-NO",
@@ -195,7 +195,7 @@
       "assembly": {"method": "through_hole", "population": "mounted"},
       "supply_risk": "Thread length and rear terminal envelope must fit the 2.4 mm panel and internal cable path.",
       "selection_reason": "Matches the confirmed power-button-only front interface.",
-      "cad_relevance": {"panel_cutout_diameter_mm": 12.2, "footprint_on_face_mm": {"radius": 8}}
+      "cad_relevance": {"panel_cutout_diameter_mm": 12.2, "footprint_on_face_mm": {"radius": 8}, "front_panel_location": {"view": "exterior", "region": "lower_right", "model_x_mm": -50, "model_z_mm": 25, "panel_thickness_mm": 2.4, "cad_revision": 70}}
     }
   ],
   "alternatives": [],
