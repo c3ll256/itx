@@ -3,7 +3,7 @@
   "form_factor": "sub-4-liter FDM-printed Mini-ITX computer enclosure",
   "manufacturing_method": "fdm",
   "details": {
-    "target_external_volume_l_max": 4.0,
+    "target_external_volume_l_max": null,
     "motherboard": "Mini-ITX 170 x 170 mm",
     "cpu_cooler": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm",
     "gpu_style": "user-image compact single-fan dual-slot card; fan faces perforated side panel and dual-slot bracket faces rear service panel",
@@ -12,8 +12,8 @@
       "height": 115,
       "thickness": 40
     },
-    "psu": "compact 1U/Flex 160 x 80 x 40 mm, mounted directly to the screw-fixed rear panel; no internal cradle; model-specific holes are a post-selection fabrication adaptation excluded from this visual draft",
-    "layout": "Mini-ITX enclosure with a conventional rear-panel dual-slot GPU bracket position and compact 1U PSU; no printed GPU support parts, PCIe riser assembly, or riser mounting hardware",
+    "psu": "standard SFX power supply, envelope 125 x 100 x 63.5 mm, mounted horizontally along the case bottom with its long axis across the case width; rear panel provides the standard SFX 4-hole mounting flange (M4 screws) and AC inlet aperture; bottom load-bearing support rails carry the PSU front end; no additional internal cradle",
+    "layout": "Mini-ITX enclosure with a conventional rear-panel dual-slot GPU bracket position and a bottom-mounted standard SFX PSU; no printed GPU support parts, PCIe riser assembly, or riser mounting hardware",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels; no front ventilation",
@@ -22,12 +22,12 @@
     "perimeter_panel_retention": "tool-less magnetic retention for front, left and right panels only; rear panel uses four M3 socket-cap screws into the two rear columns",
     "magnet_spec": "10 x 10 x 3 mm square countersunk magnet in a 10.2 x 10.2 x 3.2 mm pocket cut directly into each corner post, retained by one centered M3 countersunk screw; no separate carrier or external frame; four stations each for front, left and right panels, 12 total; no rear-panel magnets",
     "rear_panel_mounting": "four M3 socket-cap screws, upper and lower on each rear column; rear magnet pockets removed; screws and all mounting features clear motherboard, dual-slot GPU and PSU service apertures",
-    "psu_mounting": "no internal PSU cradle; PSU mounts directly to the rear panel; this visual draft provides the service aperture and mounting face, while model-specific holes are added by the fabricator after PSU selection and are not a current acceptance item",
+    "psu_mounting": "SFX PSU mounted horizontally at the case bottom via the rear-panel standard SFX flange (4 x M4, standard hole pattern) plus bottom support rails under the PSU front; AC inlet and fan face the rear panel; no separate printed cradle",
     "front_io": "power button only",
     "priority": "minimum volume"
   },
   "open_questions": [],
-  "notes": "User requires only a conventional dual-slot GPU mounting position in the rear panel. All printed GPU supports and the PSU cradle are removed. The rear panel is fixed to the rear columns with four M3 screws and carries the PSU directly. Model-specific PSU holes are explicitly outside the current visual-draft acceptance scope and are added during fabrication after PSU selection. GPU concept envelope remains 180 x 115 x 40 mm.",
+  "notes": "User requires only a conventional dual-slot GPU mounting position in the rear panel. All printed GPU supports are removed. PSU changed from compact 1U/Flex to standard SFX (125 x 100 x 63.5 mm) mounted horizontally at the case bottom: rear panel carries the standard SFX 4-hole M4 mounting flange and AC inlet aperture, and bottom support rails carry the PSU front end. The <=4.0 L volume target is relaxed per user decision; actual volume is reported from the final layout. GPU concept envelope remains 180 x 115 x 40 mm.",
   "confirmed_by_user": true,
   "confirmed_at": "2026-07-29T10:44:30Z",
   "prd_path": "product/prd.md"

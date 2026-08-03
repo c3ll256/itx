@@ -61,20 +61,20 @@
     {
       "id": "psu",
       "role": "power_supply",
-      "name": "Compact 1U/Flex PSU within 160 x 80 x 40 mm envelope",
-      "description": "User-supplied compact PSU; cradle, airflow and rear service opening are governed by the stated envelope.",
+      "name": "Standard SFX power supply, 125 x 100 x 63.5 mm envelope",
+      "description": "User-supplied standard SFX PSU mounted horizontally at the case bottom; rear panel provides the standard SFX 4-hole M4 mounting flange and AC inlet aperture, bottom rails support the PSU front end.",
       "quantity": 1,
       "supplier": "user_selected_external",
-      "part_number": "PSU-1U-160X80X40-MAX",
-      "part_identity": "f816220c526e4d1f",
+      "part_number": "PSU-SFX-125X100X63.5-STD",
+      "part_identity": "169e0f63cba2f44b",
       "procurement_status": "external_procurement_required",
       "stock": "user_to_confirm",
       "source": "active_user_decision:itx.final_psu",
       "assembly": {"method": "module_mount", "population": "mounted"},
       "required_user_evidence": ["Advisory procurement reminder: record final PSU manufacturer/model and AC-inlet orientation before purchase."],
-      "supply_risk": "Exact AC inlet and cable exit are user-owned; selected PSU must remain inside the approved envelope.",
-      "selection_reason": "Active receipt 012cc53f-e6fc-4396-b90d-5a993de976f3 delegates exact PSU selection while preserving the confirmed envelope.",
-      "cad_relevance": {"envelope_mm": {"length": 160, "width": 80, "height": 40}}
+      "supply_risk": "Exact AC inlet and cable exit are user-owned; selected PSU must remain a standard SFX unit within 125 x 100 x 63.5 mm (SFX-L 130 mm length is not accepted without a layout revision).",
+      "selection_reason": "User requested standard SFX support at the case bottom (2026-08-03 query) superseding the earlier compact 1U/Flex envelope; exact model selection remains user-owned by active receipt 012cc53f-e6fc-4396-b90d-5a993de976f3.",
+      "cad_relevance": {"envelope_mm": {"length": 125, "width": 100, "height": 63.5}, "mounting": "standard SFX rear flange, 4 x M4, hole pattern per SFX12V spec; AC inlet and fan face rear panel"}
     },
     {
       "id": "pcie_riser",
