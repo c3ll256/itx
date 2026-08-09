@@ -1,62 +1,69 @@
 {
   "version": 2,
   "artifact_level": "assembly",
-  "deliverable_intent": "visual_draft",
-  "summary": "FDM-printable compact Mini-ITX enclosure with motherboard/cooler, a conventional rear-panel dual-slot GPU bracket position, and a 160 x 80 x 40 mm 1U PSU that mounts directly to the screw-fixed rear panel without an internal cradle.",
+  "deliverable_intent": "manufacturing_package",
+  "summary": "FDM-printable six-piece Mini-ITX enclosure, 152 x 256 x 252 mm, for a standard Mini-ITX board, AXP120-X67 cooler, inverted dual-slot GPU with 200 mm riser and far-end support, and a rear-inserted standard SFX PSU.",
   "required_interfaces": [
     {
-      "id": "screw_layout_review",
+      "id": "mini_itx_direct_mount",
       "kind": "mounting_interface",
-      "description": "Visually and structurally verify the top, Mini-ITX, conventional rear dual-slot GPU bracket, screw-fixed rear panel, direct rear-panel PSU interface and remaining magnet screw-hole patterns declared by the current CAD brief.",
+      "description": "Retain a standard 170 x 170 mm Mini-ITX motherboard on four enclosure-integrated printed support bosses that preserve approximately 6.35 mm PCB backside clearance. Four M3 screws must enter kit-generated self-forming holes directly in the printed supports; no heat-set inserts, independent metal standoffs or separate printed standoffs are allowed.",
       "source": "user_requested",
       "required": true
     },
     {
-      "id": "mini_itx_mounting",
+      "id": "mini_itx_installation_path",
       "kind": "internal_fit",
-      "description": "Fit and retain a standard 170 x 170 mm Mini-ITX motherboard with accessible rear I/O.",
+      "description": "With the service side removed, permit side insertion, seating at the support plane, rearward engagement of the standard I/O aperture, access to all four screw axes and removal without trapping the motherboard.",
       "source": "user_requested",
-      "required": false
+      "required": true
     },
     {
       "id": "cooler_clearance",
       "kind": "internal_fit",
       "description": "Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
       "source": "user_requested",
-      "required": false
+      "required": true
     },
     {
-      "id": "gpu_fit",
+      "id": "gpu_riser_fit",
       "kind": "internal_fit",
-      "description": "Provide only a conventional two-slot GPU bracket position in the rear panel: two 18 x 120 mm expansion-slot apertures at 20.32 mm pitch and one M3 bracket retention point per slot. No printed GPU shelf, tail support, rear subframe, side receiver, side clamp, PCIe riser assembly or riser mounting hardware is included.",
+      "description": "Fit an inverted compact dual-slot GPU, rear 110 mm opening, lower PCIe support beam with approximately 1 mm pass-through gap, 2.4 mm three-sided half-frame and removable far-end U support while preserving service access.",
       "source": "user_requested",
-      "required": false
+      "required": true
     },
     {
-      "id": "psu_fit",
+      "id": "sfx_fit",
       "kind": "internal_fit",
-      "description": "Mount the 160 x 80 x 40 mm compact 1U PSU directly to the screw-fixed rear panel without a printed cradle, preserving AC inlet access, airflow and cable routing. Model-specific PSU holes are intentionally excluded from this visual-draft deliverable and are drilled or added after PSU selection.",
+      "description": "Permit rear straight-line insertion of a 125 x 100 x 63.5 mm SFX PSU with assembly clearance, four 4.2 mm mounting holes at 113 x 51.5 mm spacing and unobstructed driver channels.",
       "source": "user_requested",
-      "required": false
+      "required": true
+    },
+    {
+      "id": "panel_retention",
+      "kind": "mounting_interface",
+      "description": "Use embedded 15 x 10 x 4 mm magnets with centered screw retention for the designated removable panels, while keeping the rear panel screw-fastened and all retention features outside hardware service envelopes.",
+      "source": "user_requested",
+      "required": true
     },
     {
       "id": "power_button_access",
       "kind": "user_control",
-      "description": "Provide one externally accessible power button with an internal path to the motherboard header.",
+      "description": "Provide one externally accessible power button with an internal cable path to the motherboard header.",
       "source": "user_requested",
-      "required": false
+      "required": true
     }
   ],
   "external_references": [],
   "assembly_story": {
-"installation": "Place each foot directly under its corner-column axis, then fasten each independent column from below with one kit-selected M3 socket-cap screw passing through the foot and 3 mm base into the column; install the twelve 10 x 10 x 3 mm countersunk magnets for the front, left and right panels directly into the column pockets with centered M3 screws; mount the motherboard, secure the dual-slot GPU bracket at the conventional rear-panel slot position, add the chosen PSU's mounting pattern to the rear panel during final fabrication, mount the PSU directly to the rear panel, and fasten the rear panel to the two rear columns with four kit-selected M3 socket-cap screws.",
-    "maintenance": "Pull off the magnetically retained front, left, or right service panel without tools. Remove four M3 screws to service the rear panel; the rear panel is not magnet-retained.",
+    "installation": "Remove the service side panel; insert the Mini-ITX motherboard from the side while forward of the rear panel, bring it onto the four integrated 6.35 mm support bosses, slide the rear I/O into the aperture and install four M3 screws directly into the printed self-forming holes. Then install the PCIe riser, inverted dual-slot GPU and removable far-end support, push the SFX PSU straight in from the rear and complete the six-panel enclosure assembly.",
+    "maintenance": "Remove the appropriate magnetic side/front panel for routine access. The motherboard screws are intended for normal service rather than high-cycle repeated disassembly; avoid over-tightening. Remove the screw-fastened rear panel only when rear service access is required.",
     "user_access": [
       "power button",
       "motherboard rear I/O",
       "GPU display outputs",
-      "PSU AC inlet",
-      "removable service panel"
+      "SFX AC inlet and rear mounting screws",
+      "removable side and front service panels"
     ]
   },
   "cad": {
@@ -64,14 +71,20 @@
     "documents": [
       {
         "role": "enclosure",
-"document_id": "enclosure-integrated",
-        "description": "Complete printable Mini-ITX enclosure assembly with four independently printable, underside-screwed corner columns",
-        "delivery_target": "visual_review",
+        "document_id": "enclosure-integrated",
+        "description": "Complete printable Mini-ITX enclosure assembly with integrated motherboard support bosses, SFX rear insertion, inverted dual-slot GPU support and six enclosure panels",
+        "delivery_target": "manufacturing_handoff",
         "required_formats": [
           "step"
         ],
         "interface_ids": [
-          "screw_layout_review"
+          "mini_itx_direct_mount",
+          "mini_itx_installation_path",
+          "cooler_clearance",
+          "gpu_riser_fit",
+          "sfx_fit",
+          "panel_retention",
+          "power_button_access"
         ],
         "reference_ids": []
       }

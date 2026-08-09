@@ -1,34 +1,47 @@
 {
   "product_class": "mechanical",
-  "form_factor": "sub-4-liter FDM-printed Mini-ITX computer enclosure",
+  "form_factor": "9.81-liter FDM-printed Mini-ITX computer enclosure",
   "manufacturing_method": "fdm",
   "details": {
-    "target_external_volume_l_max": 4.0,
-    "motherboard": "Mini-ITX 170 x 170 mm",
+    "external_envelope_mm": {
+      "width": 152,
+      "depth": 256,
+      "height": 252,
+      "nominal_volume_l": 9.805824
+    },
+    "motherboard": "standard Mini-ITX 170 x 170 mm; exact model selected later by user",
+    "motherboard_mounting": {
+      "support_type": "four enclosure-integrated printed support bosses",
+      "pcb_backside_clearance_mm": 6.35,
+      "fastener": "four M3 screws into printed self-forming holes",
+      "printed_joint_source": "printed-screw-joint-v1",
+      "heat_set_inserts": false,
+      "independent_metal_standoffs": false,
+      "independent_printed_standoffs": false,
+      "final_model_specific_check": "verify hole coordinates, rear I/O and backside component keepouts against the selected motherboard mechanical drawing"
+    },
     "cpu_cooler": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm",
-    "gpu_style": "user-image compact single-fan dual-slot card; fan faces perforated side panel and dual-slot bracket faces rear service panel",
+    "gpu": "compact single-fan dual-slot card, inverted with PCIe fingers upward; power connector clearance handled by user",
     "gpu_concept_envelope_mm": {
       "length": 180,
       "height": 115,
       "thickness": 40
     },
-    "psu": "compact 1U/Flex 160 x 80 x 40 mm, mounted directly to the screw-fixed rear panel; no internal cradle; model-specific holes are a post-selection fabrication adaptation excluded from this visual draft",
-    "layout": "Mini-ITX enclosure with a conventional rear-panel dual-slot GPU bracket position and compact 1U PSU; no printed GPU support parts, PCIe riser assembly, or riser mounting hardware",
+    "pcie_riser": "approximately 200 mm",
+    "gpu_support": "removable far-end U support with assembly clearance and soft-pad allowance",
+    "psu": "standard SFX 125 x 100 x 63.5 mm, rear straight-in installation",
+    "sfx_rear_interface": "four 4.2 mm holes at 113 x 51.5 mm spacing with unobstructed driver access",
+    "layout": "six-piece 152 x 256 x 252 mm enclosure with standard rear Mini-ITX I/O, inverted dual-slot GPU, lower PCIe support beam and standard SFX PSU",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
-    "ventilation": "large perforated side panels; no front ventilation",
-    "front_panel": "solid removable magnetic panel with power-button opening only",
-    "panel_fit": "front, rear, left and right panels extend flush between the top cap and base with no exposed inner-frame gaps",
-    "perimeter_panel_retention": "tool-less magnetic retention for front, left and right panels only; rear panel uses four M3 socket-cap screws into the two rear columns",
-    "magnet_spec": "10 x 10 x 3 mm square countersunk magnet in a 10.2 x 10.2 x 3.2 mm pocket cut directly into each corner post, retained by one centered M3 countersunk screw; no separate carrier or external frame; four stations each for front, left and right panels, 12 total; no rear-panel magnets",
-    "rear_panel_mounting": "four M3 socket-cap screws, upper and lower on each rear column; rear magnet pockets removed; screws and all mounting features clear motherboard, dual-slot GPU and PSU service apertures",
-    "psu_mounting": "no internal PSU cradle; PSU mounts directly to the rear panel; this visual draft provides the service aperture and mounting face, while model-specific holes are added by the fabricator after PSU selection and are not a current acceptance item",
+    "ventilation": "large perforated side panels; solid front panel",
     "front_io": "power button only",
-    "priority": "minimum volume"
+    "panel_magnets": "15 x 10 x 4 mm embedded magnets retained by a centered screw",
+    "priority": "verified hardware installation and maintainability within the fixed enclosure envelope"
   },
   "open_questions": [],
-  "notes": "User requires only a conventional dual-slot GPU mounting position in the rear panel. All printed GPU supports and the PSU cradle are removed. The rear panel is fixed to the rear columns with four M3 screws and carries the PSU directly. Model-specific PSU holes are explicitly outside the current visual-draft acceptance scope and are added during fabrication after PSU selection. GPU concept envelope remains 180 x 115 x 40 mm.",
+  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/far-end-support design. The motherboard mounts directly to four integrated printed supports using kit-generated M3 self-forming holes, without heat-set inserts or independent standoffs. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-07-29T10:44:30Z",
+  "confirmed_at": "2026-08-09T07:30:04Z",
   "prd_path": "product/prd.md"
 }
