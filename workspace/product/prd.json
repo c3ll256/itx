@@ -3,11 +3,17 @@
   "form_factor": "9.81-liter FDM-printed Mini-ITX computer enclosure",
   "manufacturing_method": "fdm",
   "details": {
-    "external_envelope_mm": {
+"body_envelope_mm": {
       "width": 152,
       "depth": 256,
       "height": 252,
       "nominal_volume_l": 9.805824
+    },
+    "installed_envelope_mm": {
+      "width": 152,
+      "depth": 256,
+      "height": 256,
+      "foot_projection_below_body_mm": 4
     },
     "motherboard": "standard Mini-ITX 170 x 170 mm; exact model selected later by user",
     "motherboard_mounting": {
