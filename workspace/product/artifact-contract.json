@@ -7,7 +7,7 @@
     {
       "id": "mini_itx_direct_mount",
       "kind": "mounting_interface",
-      "description": "Retain a standard 170 x 170 mm Mini-ITX motherboard on four enclosure-integrated printed support bosses that preserve approximately 6.35 mm PCB backside clearance. Four M3 screws must enter kit-generated self-forming holes directly in the printed supports; no heat-set inserts, independent metal standoffs or separate printed standoffs are allowed.",
+      "description": "Retain a standard 170 x 170 mm Mini-ITX motherboard on four approximately 6.35 mm tall cylindrical printed standoffs. Each standoff must be integral to its mounting position and use a kit-generated M3 self-forming hole, so no brass standoff, heat-set insert or separate standoff is required. Three standoffs are fused to enclosure host parts; the lower-front standoff is fused to a detachable printed mount arm that is retained by one underside M3 screw and must remain a separate solid from the base.",
       "source": "user_requested",
       "required": true
     },
@@ -56,7 +56,7 @@
   ],
   "external_references": [],
   "assembly_story": {
-    "installation": "Remove the service side panel; insert the Mini-ITX motherboard from the side while forward of the rear panel, bring it onto the four integrated 6.35 mm support bosses, slide the rear I/O into the aperture and install four M3 screws directly into the printed self-forming holes. Then install the PCIe riser, inverted dual-slot GPU and removable far-end support, push the SFX PSU straight in from the rear and complete the six-panel enclosure assembly.",
+    "installation": "Install the detachable lower-front motherboard mount arm on the base with its underside M3 screw. Remove the service side panel; insert the Mini-ITX motherboard from the side while forward of the rear panel, bring it onto the four integral 6.35 mm cylindrical printed standoffs, slide the rear I/O into the aperture and install four M3 screws directly into the printed self-forming holes. Then install the PCIe riser, inverted dual-slot GPU and removable far-end support, push the SFX PSU straight in from the rear and complete the six-panel enclosure assembly.",
     "maintenance": "Remove the appropriate magnetic side/front panel for routine access. The motherboard screws are intended for normal service rather than high-cycle repeated disassembly; avoid over-tightening. Remove the screw-fastened rear panel only when rear service access is required.",
     "user_access": [
       "power button",
@@ -72,7 +72,7 @@
       {
         "role": "enclosure",
         "document_id": "enclosure-integrated",
-        "description": "Complete printable Mini-ITX enclosure assembly with integrated motherboard support bosses, SFX rear insertion, inverted dual-slot GPU support and six enclosure panels",
+        "description": "Complete printable Mini-ITX enclosure assembly with four integral cylindrical motherboard standoffs, a detachable lower-front motherboard mount arm, SFX rear insertion, inverted dual-slot GPU support and six enclosure panels",
         "delivery_target": "manufacturing_handoff",
         "required_formats": [
           "step"

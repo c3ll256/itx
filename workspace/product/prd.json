@@ -17,9 +17,11 @@
     },
     "motherboard": "standard Mini-ITX 170 x 170 mm; exact model selected later by user",
     "motherboard_mounting": {
-      "support_type": "four enclosure-integrated printed support bosses",
+      "support_type": "four integral cylindrical printed standoffs: three fused to enclosure hosts and one fused to a detachable lower-front mount arm",
       "pcb_backside_clearance_mm": 6.35,
       "fastener": "four M3 screws into printed self-forming holes",
+      "detachable_lower_front_mount_arm": true,
+      "lower_front_mount_fastener": "one underside M3 screw through the base into the detachable printed arm",
       "printed_joint_source": "printed-screw-joint-v1",
       "heat_set_inserts": false,
       "independent_metal_standoffs": false,
@@ -46,8 +48,8 @@
     "priority": "verified hardware installation and maintainability within the fixed enclosure envelope"
   },
   "open_questions": [],
-  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/far-end-support design. The motherboard mounts directly to four integrated printed supports using kit-generated M3 self-forming holes, without heat-set inserts or independent standoffs. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
+  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/far-end-support design. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-08-09T07:30:04Z",
+  "confirmed_at": "2026-08-09T20:52:00Z",
   "prd_path": "product/prd.md"
 }
