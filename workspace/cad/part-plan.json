@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "status": "resolved_for_reference_geometry",
+  "catalogFingerprint": "7b37f82b4c14c2268f0837cffcfcc95e78d65368c4c9b6374739272e6df1f70e",
+  "items": [
+    {
+      "id": "mini_itx_motherboard_reference",
+      "role": "mechanical_reference",
+      "requestedIdentity": "Standard Mini-ITX motherboard, exact commercial model intentionally selected later by the user",
+      "selection": {
+        "kind": "custom_parametric_reference",
+        "catalogComponentId": null,
+        "classification": "exact_for_standard_board_outline_and_mounting_interface",
+        "reason": "No exact bundled board STEP, step.parts model, or verified CAD catalog component was available. A related development board or module would be an invalid substitution. The reference therefore uses the confirmed project Mini-ITX mechanical interface and is not presented as a specific retail motherboard."
+      },
+      "drivingEvidence": [
+        "product/prd.json#/details/motherboard",
+        "product/prd.json#/details/motherboard_mounting",
+        "product/artifact-contract.json#/required_interfaces/0",
+        "hardware/bom.json motherboard item",
+        "active_user_decision:itx.final_motherboard",
+        "enclosure-integrated revision 267 internals cell"
+      ],
+      "parameters": {
+        "board_width_mm": 170.0,
+        "board_height_mm": 170.0,
+        "board_thickness_mm": 1.6,
+        "rear_edge_y_mm": -126.0,
+        "bottom_edge_z_mm": 71.5,
+        "board_plane_x_mm": 10.55,
+        "mounting_pattern": "Mini-ITX asymmetric four-hole pattern already driving the enclosure standoffs",
+        "rear_io_envelope_mm": [44.45, 158.75]
+      },
+      "limitations": [
+        "Reference-only geometry; not a purchasable motherboard identity.",
+        "Connector and component blocks are representative mechanical envelopes, not a promise of the final motherboard's exact connector population.",
+        "The final selected motherboard drawing must still be checked before purchase and final printing."
+      ]
+    }
+  ],
+  "unresolved": []
+}
