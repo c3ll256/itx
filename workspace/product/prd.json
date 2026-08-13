@@ -3,7 +3,7 @@
   "form_factor": "9.81-liter FDM-printed Mini-ITX computer enclosure",
   "manufacturing_method": "fdm",
   "details": {
-"body_envelope_mm": {
+    "body_envelope_mm": {
       "width": 152,
       "depth": 256,
       "height": 252,
@@ -48,6 +48,52 @@
     "priority": "verified hardware installation and maintainability within the fixed enclosure envelope"
   },
   "open_questions": [],
+  "requirement_conflicts": [
+    {
+      "id": "sfx_rear_mount_spacing_mismatch",
+      "prd_path": "/details/sfx_rear_interface",
+      "prd_statement": "four 4.2 mm holes at 113 x 51.5 mm spacing with unobstructed driver access",
+      "observed_state": "enclosure-integrated revision 269 generates the four SFX rear holes at 119 x 52.5 mm spacing because the hole centers are x=±59.5 mm and z=8.5/61.0 mm",
+      "source": "cad-workbench/enclosure-integrated@revision-269-6bade7bd-f5bf-4d62-aca5-26959bd93d72",
+      "detected_at": "2026-08-13T09:20:00Z",
+      "resolution": "design_reverted",
+      "resolution_reason": "保留已确认的 113 x 51.5 mm SFX 后板接口要求，并把 CAD 后板孔位修回该要求。",
+      "question_id": "sfx_rear_mount_spacing_mismatch",
+      "resolved_at": "2026-08-13T09:36:27.993Z"
+    },
+    {
+      "id": "gpu_cpu_cooler_envelope_conflict",
+      "prd_path": "/details/cpu_cooler",
+      "prd_statement": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm; compact dual-slot GPU within 180 x 115 x 40 mm; both must fit the fixed enclosure layout",
+      "observed_state": "enclosure-integrated revision 272 places the GPU shroud at x=-51..-11 mm across the CPU y/z region while the required 67 mm cooler projects from the motherboard component side to about x=-56.45 mm, producing about 40 mm of hard overlap",
+      "source": "cad-workbench/enclosure-integrated@revision-272-f487f588-859c-495e-8fe7-cee64ef8d5c6; review-272-8f41bc61-629c-485a-a0b3-3b94f0de3277",
+      "detected_at": "2026-08-13T10:28:00Z",
+      "resolution": "design_reverted",
+      "resolution_reason": "用户指出主板方向错误；保留 AXP120-X67 与双槽 GPU 要求，翻转主板元件面并修正安装平面布局。",
+      "question_id": "gpu_cpu_cooler_envelope_conflict",
+      "resolved_at": "2026-08-13T10:37:45.333Z"
+    }
+  ],
+  "change_log": [
+    {
+      "id": "sfx_rear_mount_spacing_mismatch",
+      "prd_path": "/details/sfx_rear_interface",
+      "from": "CAD rear-hole spacing 119 x 52.5 mm",
+      "to": "CAD rear-hole spacing 113 x 51.5 mm; confirmed PRD statement unchanged",
+      "reason": "User chose to keep the confirmed SFX interface requirement and repair the downstream CAD.",
+      "question_id": "sfx_rear_mount_spacing_mismatch",
+      "confirmed_at": "2026-08-13T09:36:27.993Z"
+    },
+    {
+      "id": "gpu_cpu_cooler_envelope_conflict",
+      "prd_path": "/details/cpu_cooler",
+      "from": "motherboard component side toward -X, overlapping the dual-slot GPU",
+      "to": "motherboard PCB at x=4.2 mm with components and AXP120-X67 envelope toward +X; GPU remains on -X",
+      "reason": "User identified the motherboard orientation error; CAD revision 278 corrected the standoff datum and reference board orientation while keeping both hardware requirements.",
+      "question_id": "gpu_cpu_cooler_envelope_conflict",
+      "confirmed_at": "2026-08-13T10:37:45.333Z"
+    }
+  ],
   "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/far-end-support design. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
   "confirmed_by_user": true,
   "confirmed_at": "2026-08-09T20:52:00Z",

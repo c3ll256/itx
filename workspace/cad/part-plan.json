@@ -11,7 +11,7 @@
         "kind": "custom_parametric_reference",
         "catalogComponentId": null,
         "classification": "exact_for_standard_board_outline_and_mounting_interface",
-        "reason": "No exact bundled board STEP, step.parts model, or verified CAD catalog component was available. A related development board or module would be an invalid substitution. The reference therefore uses the confirmed project Mini-ITX mechanical interface and is not presented as a specific retail motherboard."
+        "reason": "No exact bundled board STEP, step.parts model, or verified CAD catalog component was available. A related development board or module would be an invalid substitution."
       },
       "drivingEvidence": [
         "product/prd.json#/details/motherboard",
@@ -27,14 +27,79 @@
         "board_thickness_mm": 1.6,
         "rear_edge_y_mm": -126.0,
         "bottom_edge_z_mm": 71.5,
-        "board_plane_x_mm": 10.55,
+"board_plane_x_mm": 4.2,
+        "component_side": "+X / right perforated side panel",
+        "cpu_cooler_envelope_mm": [123.5, 120.0, 67.0],
         "mounting_pattern": "Mini-ITX asymmetric four-hole pattern already driving the enclosure standoffs",
         "rear_io_envelope_mm": [44.45, 158.75]
       },
       "limitations": [
         "Reference-only geometry; not a purchasable motherboard identity.",
-        "Connector and component blocks are representative mechanical envelopes, not a promise of the final motherboard's exact connector population.",
+        "Connector and component blocks are representative mechanical envelopes.",
         "The final selected motherboard drawing must still be checked before purchase and final printing."
+      ]
+    },
+    {
+      "id": "sfx_psu_reference",
+      "role": "mechanical_reference",
+      "requestedIdentity": "Standard SFX power supply, exact commercial model intentionally not fixed by the user",
+      "selection": {
+        "kind": "custom_parametric_reference",
+        "catalogComponentId": null,
+        "classification": "exact_for_standard_sfx_envelope_and_current_rear_mount_interface",
+        "reason": "No credible exact SFX PSU STEP or catalog component was found. The reference follows the confirmed standard SFX envelope and the enclosure's current four-hole rear interface."
+      },
+      "drivingEvidence": [
+        "product/prd.json#/details/psu",
+        "product/artifact-contract.json#/required_interfaces/4",
+        "hardware/bom.json PSU item",
+        "active_user_decision:itx.final_psu",
+        "enclosure-integrated revision 269 sfx_psu_support and sfx_rear_mounting cells"
+      ],
+      "parameters": {
+        "width_mm": 125.0,
+        "depth_mm": 100.0,
+        "height_mm": 63.5,
+        "rear_clearance_mm": 0.8,
+        "rear_mount_hole_diameter_mm": 4.2,
+"rear_mount_spacing_mm": [113.0, 51.5]
+      },
+      "limitations": [
+        "Reference-only geometry; AC inlet, switch, fan grille and modular sockets are representative.",
+        "Final PSU connector population and cable bend radii depend on the selected retail PSU."
+      ]
+    },
+    {
+      "id": "dual_slot_gpu_reference",
+      "role": "mechanical_reference",
+      "requestedIdentity": "Compact dual-slot graphics card within the confirmed 180 x 115 x 40 mm envelope",
+      "selection": {
+        "kind": "custom_parametric_reference",
+        "catalogComponentId": null,
+        "classification": "exact_for_confirmed_envelope_and_current_dual_slot_rear_interface",
+        "reason": "No credible exact GPU STEP or catalog component was found and the retail model is intentionally user-selected. The reference follows the confirmed maximum envelope and the actual dual-slot rear opening."
+      },
+      "drivingEvidence": [
+        "product/prd.json#/details/gpu",
+        "product/prd.json#/details/gpu_concept_envelope_mm",
+        "product/artifact-contract.json#/required_interfaces/3",
+        "hardware/bom.json GPU item",
+        "active_user_decision:itx.final_gpu",
+        "enclosure-integrated revision 269 standard_gpu_slots cell"
+      ],
+      "parameters": {
+        "length_mm": 180.0,
+        "height_mm": 115.0,
+        "thickness_mm": 40.0,
+        "rear_slot_center_x_mm": -31.0,
+        "rear_face_y_mm": -126.0,
+"bottom_z_mm": 97.0,
+        "fan_side": "-X / left perforated side panel"
+      },
+      "limitations": [
+        "Reference-only geometry; fan, heatsink, display ports and power connector zone are representative.",
+        "Power connector identity and final cable solution remain user-owned per the active decision receipt.",
+        "The final selected GPU drawing must still be checked before purchase and final printing."
       ]
     }
   ],
