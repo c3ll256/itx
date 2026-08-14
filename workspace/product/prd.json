@@ -72,6 +72,14 @@
       "resolution_reason": "用户指出主板方向错误；保留 AXP120-X67 与双槽 GPU 要求，翻转主板元件面并修正安装平面布局。",
       "question_id": "gpu_cpu_cooler_envelope_conflict",
       "resolved_at": "2026-08-13T10:37:45.333Z"
+    },
+    {
+      "id": "gpu_far_end_support_integration",
+      "prd_path": "/details/gpu_support",
+      "prd_statement": "removable far-end U support with assembly clearance and soft-pad allowance",
+      "observed_state": "The user deleted the separate GPU far-end support and requested that the support be integrated into the removable front panel instead of remaining a standalone component; enclosure-integrated revision 286 currently has no far-end support.",
+      "source": "user request 2026-08-14; cad-workbench/enclosure-integrated@revision-286-0794c46e-cd8e-4c31-bf31-4c2d7bf6d2c9",
+      "detected_at": "2026-08-14T10:11:30Z"
     }
   ],
   "change_log": [
