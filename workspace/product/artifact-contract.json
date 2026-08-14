@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "manufacturing_package",
-  "summary": "FDM-printable six-piece Mini-ITX enclosure, 152 x 256 x 252 mm, for a standard Mini-ITX board, AXP120-X67 cooler, inverted dual-slot GPU with 200 mm riser and far-end support, and a rear-inserted standard SFX PSU.",
+  "summary": "FDM-printable six-piece Mini-ITX enclosure, 152 x 256 x 252 mm, for a standard Mini-ITX board, AXP120-X67 cooler, inverted dual-slot GPU with 200 mm riser and a front-panel-integrated far-end cradle, and a rear-inserted standard SFX PSU.",
   "required_interfaces": [
     {
       "id": "mini_itx_direct_mount",
@@ -28,7 +28,7 @@
     {
       "id": "gpu_riser_fit",
       "kind": "internal_fit",
-      "description": "Fit an inverted compact dual-slot GPU, rear 110 mm opening, lower PCIe support beam with approximately 1 mm pass-through gap, 2.4 mm three-sided half-frame and removable far-end U support while preserving service access.",
+      "description": "Fit an inverted compact dual-slot GPU, rear 110 mm opening and lower PCIe support beam with approximately 1 mm pass-through gap. Fuse the far-end U-shaped cradle into the removable front panel rather than publishing a separate support part; preserve soft-pad allowance, assembly clearance and a front-panel withdrawal path along the GPU length.",
       "source": "user_requested",
       "required": true
     },
@@ -49,17 +49,17 @@
     {
       "id": "power_button_access",
       "kind": "user_control",
-      "description": "Provide one externally accessible power button with an internal cable path to the motherboard header.",
+      "description": "Provide one externally accessible 12.2 mm diameter power-button mounting aperture. The current CAD deliverable intentionally excludes the purchased switch body, button cap, actuator and internal cable path.",
       "source": "user_requested",
       "required": true
     }
   ],
   "external_references": [],
   "assembly_story": {
-    "installation": "Install the detachable lower-front motherboard mount arm on the base with its underside M3 screw. Remove the service side panel; insert the Mini-ITX motherboard from the side while forward of the rear panel, bring it onto the four integral 6.35 mm cylindrical printed standoffs, slide the rear I/O into the aperture and install four M3 screws directly into the printed self-forming holes. Then install the PCIe riser, inverted dual-slot GPU and removable far-end support, push the SFX PSU straight in from the rear and complete the six-panel enclosure assembly.",
-    "maintenance": "Remove the appropriate magnetic side/front panel for routine access. The motherboard screws are intended for normal service rather than high-cycle repeated disassembly; avoid over-tightening. Remove the screw-fastened rear panel only when rear service access is required.",
+    "installation": "Install the detachable lower-front motherboard mount arm on the base with its underside M3 screw. Remove the service side panel; insert the Mini-ITX motherboard from the side while forward of the rear panel, bring it onto the four integral 6.35 mm cylindrical printed standoffs, slide the rear I/O into the aperture and install four M3 screws directly into the printed self-forming holes. Then install the PCIe riser and inverted dual-slot GPU. Fit the removable front panel so its integral U-shaped cradle slides along the GPU length and supports the far end through the intended soft pad. Push the SFX PSU straight in from the rear and complete the six-panel enclosure assembly.",
+    "maintenance": "Remove the front panel along the GPU longitudinal axis so the integral cradle slides free with the panel; no separate GPU-support part is handled. Remove the appropriate magnetic side panel for routine access. The motherboard screws are intended for normal service rather than high-cycle repeated disassembly; avoid over-tightening. Remove the screw-fastened rear panel only when rear service access is required.",
     "user_access": [
-      "power button",
+      "power-button mounting aperture",
       "motherboard rear I/O",
       "GPU display outputs",
       "SFX AC inlet and rear mounting screws",
@@ -72,7 +72,7 @@
       {
         "role": "enclosure",
         "document_id": "enclosure-integrated",
-        "description": "Complete printable Mini-ITX enclosure assembly with four integral cylindrical motherboard standoffs, a detachable lower-front motherboard mount arm, SFX rear insertion, inverted dual-slot GPU support and six enclosure panels",
+        "description": "Complete printable Mini-ITX enclosure assembly with four integral cylindrical motherboard standoffs, a detachable lower-front motherboard mount arm, SFX rear insertion, inverted dual-slot GPU support integrated into the removable front panel, a power-button mounting aperture and six enclosure panels",
         "delivery_target": "manufacturing_handoff",
         "required_formats": [
           "step"

@@ -36,14 +36,14 @@
       "thickness": 40
     },
     "pcie_riser": "approximately 200 mm",
-    "gpu_support": "removable far-end U support with assembly clearance and soft-pad allowance",
+    "gpu_support": "U-shaped far-end cradle fused into the removable front panel; the cradle leaves assembly clearance and soft-pad allowance, exits with the front panel, and is not a separate part",
     "psu": "standard SFX 125 x 100 x 63.5 mm, rear straight-in installation",
     "sfx_rear_interface": "four 4.2 mm holes at 113 x 51.5 mm spacing with unobstructed driver access",
     "layout": "six-piece 152 x 256 x 252 mm enclosure with standard rear Mini-ITX I/O, inverted dual-slot GPU, lower PCIe support beam and standard SFX PSU",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels; solid front panel",
-    "front_io": "power button only",
+    "front_io": "one 12.2 mm diameter power-button mounting aperture only; button body, cap, actuator and cable path are outside the current CAD deliverable",
     "panel_magnets": "15 x 10 x 4 mm embedded magnets retained by a centered screw",
     "priority": "verified hardware installation and maintainability within the fixed enclosure envelope"
   },
@@ -72,6 +72,30 @@
       "resolution_reason": "用户指出主板方向错误；保留 AXP120-X67 与双槽 GPU 要求，翻转主板元件面并修正安装平面布局。",
       "question_id": "gpu_cpu_cooler_envelope_conflict",
       "resolved_at": "2026-08-13T10:37:45.333Z"
+    },
+    {
+      "id": "gpu_support_front_panel_integration",
+      "prd_path": "/details/gpu_support",
+      "prd_statement": "removable far-end U support with assembly clearance and soft-pad allowance",
+      "observed_state": "The user removed the separate far-end support and explicitly requires the U-shaped GPU cradle to be fused into the removable front panel instead of published as another part.",
+      "source": "user_input@2026-08-14T10:44:46Z",
+      "detected_at": "2026-08-14T10:44:46Z",
+      "resolution": "requirement_updated",
+      "resolution_reason": "显卡远端支撑改为前面板内侧的一体结构；拆下前面板时支撑随面板退出，不再增加独立零件。",
+      "question_id": "gpu_support_front_panel_integration",
+      "resolved_at": "2026-08-14T10:44:46Z"
+    },
+    {
+      "id": "power_button_hole_only",
+      "prd_path": "/details/front_io",
+      "prd_statement": "power button only",
+      "observed_state": "The user explicitly requires the CAD deliverable to retain only the existing power-button mounting hole and not model the button, cap, actuator or cable path.",
+      "source": "user_input@2026-08-14T10:44:46Z",
+      "detected_at": "2026-08-14T10:44:46Z",
+      "resolution": "requirement_updated",
+      "resolution_reason": "当前 CAD 交付只要求保留电源按钮安装孔；按钮本体与执行结构暂不纳入模型。",
+      "question_id": "power_button_hole_only",
+      "resolved_at": "2026-08-14T10:44:46Z"
     }
   ],
   "change_log": [
@@ -92,10 +116,34 @@
       "reason": "User identified the motherboard orientation error; CAD revision 278 corrected the standoff datum and reference board orientation while keeping both hardware requirements.",
       "question_id": "gpu_cpu_cooler_envelope_conflict",
       "confirmed_at": "2026-08-13T10:37:45.333Z"
+    },
+    {
+      "id": "gpu_support_front_panel_integration",
+      "prd_path": "/details/gpu_support",
+      "from": "removable far-end U support as a separate support item",
+      "to": "U-shaped far-end cradle fused into the removable front panel; no separate support part",
+      "reason": "User explicitly requested that the previously deleted support return only as front-panel-integrated geometry.",
+      "question_id": "gpu_support_front_panel_integration",
+      "confirmed_at": "2026-08-14T10:44:46Z",
+"digest_after": "sha256:13b628346639846098d59fbc569752f06734bca181c3f629ea3a42c988dfb52b"
+    },
+    {
+      "id": "power_button_hole_only",
+      "prd_path": "/details/front_io",
+      "from": "externally operable modeled power button",
+      "to": "12.2 mm mounting aperture only; button and actuator omitted from CAD",
+      "reason": "User explicitly asked to leave the hole and defer the button hardware.",
+      "question_id": "power_button_hole_only",
+      "confirmed_at": "2026-08-14T10:44:46Z",
+"digest_after": "sha256:13b628346639846098d59fbc569752f06734bca181c3f629ea3a42c988dfb52b"
     }
   ],
-  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/far-end-support design. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
+  "notes": "The previous sub-4-liter/Flex-PSU/no-riser concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser design. The GPU far-end U cradle is integral to the removable front panel and must not be published as another part. The front power interface is intentionally limited to a 12.2 mm mounting aperture; switch hardware and actuation are deferred. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-08-09T20:52:00Z",
-  "prd_path": "product/prd.md"
+  "confirmed_at": "2026-08-14T10:44:46Z",
+  "prd_path": "product/prd.md",
+  "requirement_baseline": {
+    "digest": "sha256:13b628346639846098d59fbc569752f06734bca181c3f629ea3a42c988dfb52b",
+    "stamped_at": "2026-08-14T10:44:46Z"
+  }
 }
