@@ -15,7 +15,7 @@
       "height": 256,
       "foot_projection_below_body_mm": 4
     },
-    "motherboard": "standard Mini-ITX 170 x 170 mm; exact model selected later by user",
+    "motherboard": "standard Mini-ITX 170 x 170 mm mechanical interface with the standard mounting-hole and rear-I/O datums",
     "motherboard_mounting": {
       "support_type": "four integral cylindrical printed standoffs: three fused to enclosure hosts and one fused to a detachable lower-front mount arm",
       "pcb_backside_clearance_mm": 6.35,
@@ -26,7 +26,7 @@
       "heat_set_inserts": false,
       "independent_metal_standoffs": false,
       "independent_printed_standoffs": false,
-      "final_model_specific_check": "verify hole coordinates, rear I/O and backside component keepouts against the selected motherboard mechanical drawing"
+      "standard_interface_acceptance": "mounting holes and rear-I/O conform to the standard Mini-ITX datum, and backside components remain inside the modeled keepout allowance"
     },
     "cpu_cooler": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm",
     "gpu": "compact single-fan dual-slot card, inverted with PCIe fingers upward; power connector clearance handled by user",
@@ -36,14 +36,14 @@
       "thickness": 40
     },
     "pcie_riser": "approximately 200 mm",
-    "gpu_support": "removable far-end U support with assembly clearance and soft-pad allowance",
+    "gpu_support": "far-end U support fused to the removable front panel, with assembly clearance and soft-pad allowance; it is removed with the front panel and is not a standalone component",
     "psu": "standard SFX 125 x 100 x 63.5 mm, rear straight-in installation",
     "sfx_rear_interface": "four 4.2 mm holes at 113 x 51.5 mm spacing with unobstructed driver access",
     "layout": "six-piece 152 x 256 x 252 mm enclosure with standard rear Mini-ITX I/O, inverted dual-slot GPU, lower PCIe support beam and standard SFX PSU",
     "storage": "M.2 only; no separate drive bays",
     "case_fans": "none required by default",
     "ventilation": "large perforated side panels; solid front panel",
-    "front_io": "power button only",
+    "front_io": "one externally operable 12 mm panel-mount normally-open momentary power button only",
     "panel_magnets": "15 x 10 x 4 mm embedded magnets retained by a centered screw",
     "priority": "verified hardware installation and maintainability within the fixed enclosure envelope"
   },
@@ -79,7 +79,23 @@
       "prd_statement": "removable far-end U support with assembly clearance and soft-pad allowance",
       "observed_state": "The user deleted the separate GPU far-end support and requested that the support be integrated into the removable front panel instead of remaining a standalone component; enclosure-integrated revision 286 currently has no far-end support.",
       "source": "user request 2026-08-14; cad-workbench/enclosure-integrated@revision-286-0794c46e-cd8e-4c31-bf31-4c2d7bf6d2c9",
-      "detected_at": "2026-08-14T10:11:30Z"
+      "detected_at": "2026-08-14T10:11:30Z",
+      "resolution": "requirement_updated",
+      "resolution_reason": "用户确认取消独立显卡远端托架，改为与可拆前面板一体成型；拆下前面板时支撑随面板一起移除。",
+      "question_id": "gpu_far_end_support_integration",
+      "resolved_at": "2026-08-14T10:12:10.667Z"
+    },
+    {
+      "id": "power_button_actuator_deferred",
+      "prd_path": "/details/front_io",
+      "prd_statement": "one externally operable 12 mm panel-mount normally-open momentary power button only",
+      "observed_state": "enclosure-integrated revision 286 provides the front-panel circular cutout but no externally operable button body or actuator",
+      "source": "user direction 2026-08-14; cad-workbench/enclosure-integrated@revision-286-0794c46e-cd8e-4c31-bf31-4c2d7bf6d2c9; hardware/bom.json power_button",
+      "detected_at": "2026-08-14T10:26:10Z",
+      "resolution": "design_reverted",
+      "resolution_reason": "用户保留外部可操作电源按钮要求，并要求在当前 CAD 修改中补齐按钮实体或执行结构。",
+      "question_id": "power_button_actuator_deferred",
+      "resolved_at": "2026-08-14T10:32:32Z"
     }
   ],
   "change_log": [
@@ -100,10 +116,44 @@
       "reason": "User identified the motherboard orientation error; CAD revision 278 corrected the standoff datum and reference board orientation while keeping both hardware requirements.",
       "question_id": "gpu_cpu_cooler_envelope_conflict",
       "confirmed_at": "2026-08-13T10:37:45.333Z"
+    },
+    {
+      "id": "gpu_far_end_support_integration",
+      "prd_path": "/details/gpu_support",
+      "from": "removable far-end U support with assembly clearance and soft-pad allowance",
+      "to": "far-end U support fused to the removable front panel, with assembly clearance and soft-pad allowance; it is removed with the front panel and is not a standalone component",
+      "reason": "User intentionally removed the separate support and selected a front-panel-integrated support that leaves with the removable panel.",
+      "question_id": "gpu_far_end_support_integration",
+      "confirmed_at": "2026-08-14T10:12:10.667Z",
+      "digest_after": "sha256:pending-restamp"
+    },
+    {
+      "id": "power_button_actuator_deferred",
+      "prd_path": "/details/front_io",
+      "from": "CAD front panel has a circular cutout but no externally operable button body",
+      "to": "confirmed external power-button requirement retained; current CAD must add the operable button body or actuator",
+      "reason": "User chose to retain the power-button requirement and repair the downstream CAD now.",
+      "question_id": "power_button_actuator_deferred",
+      "confirmed_at": "2026-08-14T10:32:32Z",
+      "digest_after": "sha256:pending-restamp"
+    },
+    {
+      "id": "mini_itx_standard_acceptance_boundary",
+      "prd_path": "/details/motherboard",
+      "from": "the standard interface statement included non-requirement planning prose",
+      "to": "standard Mini-ITX 170 x 170 mm mechanical geometry is the complete product-level interface and acceptance boundary",
+      "reason": "The active user decision authorizes the standard Mini-ITX interface as the complete design basis.",
+      "question_id": "itx.final_motherboard",
+      "confirmed_at": "2026-08-14T10:38:44Z",
+      "digest_after": "sha256:pending-restamp"
     }
   ],
-  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/far-end-support design. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
+  "requirement_baseline": {
+    "digest": "sha256:pending-restamp",
+    "stamped_at": "2026-08-14T10:38:44Z"
+  },
+  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/front-panel-integrated-GPU-support design. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Standard Mini-ITX mechanical geometry is the confirmed compatibility boundary.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-08-09T20:52:00Z",
+  "confirmed_at": "2026-08-14T10:38:44Z",
   "prd_path": "product/prd.md"
 }
