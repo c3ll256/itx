@@ -2,7 +2,6 @@
   "product_class": "mechanical",
   "form_factor": "9.81-liter FDM-printed Mini-ITX computer enclosure",
   "manufacturing_method": "fdm",
-  "material": "PETG baseline; ASA or ABS acceptable as equal-or-better thermal substitutes; ordinary PLA is not accepted",
   "details": {
     "body_envelope_mm": {
       "width": 152,
@@ -16,7 +15,7 @@
       "height": 256,
       "foot_projection_below_body_mm": 4
     },
-    "motherboard": "standard Mini-ITX 170 x 170 mm reference interface",
+    "motherboard": "standard Mini-ITX 170 x 170 mm; exact model selected later by user",
     "motherboard_mounting": {
       "support_type": "four integral cylindrical printed standoffs: three fused to enclosure hosts and one fused to a detachable lower-front mount arm",
       "pcb_backside_clearance_mm": 6.35,
@@ -27,18 +26,18 @@
       "heat_set_inserts": false,
       "independent_metal_standoffs": false,
       "independent_printed_standoffs": false,
-      "compatibility_scope": "standard Mini-ITX board outline, four-hole mounting pattern, ATX-family rear I/O aperture and generic backside keepout allowance"
+      "final_model_specific_check": "verify hole coordinates, rear I/O and backside component keepouts against the selected motherboard mechanical drawing"
     },
     "cpu_cooler": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm",
-    "gpu": "compact single-fan dual-slot reference envelope, inverted with PCIe fingers upward; GPU power-cable routing is excluded from enclosure acceptance",
+    "gpu": "compact single-fan dual-slot card, inverted with PCIe fingers upward; power connector clearance handled by user",
     "gpu_concept_envelope_mm": {
       "length": 180,
       "height": 115,
       "thickness": 40
     },
-    "pcie_riser": "200 mm flexible PCIe riser reference",
-    "gpu_support": "far-end U cradle fused to the removable front panel: 40.8 mm clear inside width for the 40 mm dual-slot reference, 18 mm fore-aft contact depth, support surface 0.8 mm below the 97 mm GPU reference bottom for a soft pad, and unobstructed withdrawal with the front panel; no standalone support component or support fastener",
-    "psu": "standard SFX 125 x 100 x 63.5 mm reference envelope, rear straight-in installation",
+    "pcie_riser": "approximately 200 mm",
+    "gpu_support": "removable far-end U support with assembly clearance and soft-pad allowance",
+    "psu": "standard SFX 125 x 100 x 63.5 mm, rear straight-in installation",
     "sfx_rear_interface": "four 4.2 mm holes at 113 x 51.5 mm spacing with unobstructed driver access",
     "layout": "six-piece 152 x 256 x 252 mm enclosure with standard rear Mini-ITX I/O, inverted dual-slot GPU, lower PCIe support beam and standard SFX PSU",
     "storage": "M.2 only; no separate drive bays",
@@ -78,21 +77,9 @@
       "id": "gpu_far_end_support_integration",
       "prd_path": "/details/gpu_support",
       "prd_statement": "removable far-end U support with assembly clearance and soft-pad allowance",
-      "observed_state": "The standalone GPU far-end support architecture was intentionally retired, and the requested replacement architecture fuses the U cradle to the removable front panel so it withdraws with that panel.",
+      "observed_state": "The user deleted the separate GPU far-end support and requested that the support be integrated into the removable front panel instead of remaining a standalone component; enclosure-integrated revision 286 currently has no far-end support.",
       "source": "user request 2026-08-14; cad-workbench/enclosure-integrated@revision-286-0794c46e-cd8e-4c31-bf31-4c2d7bf6d2c9",
-      "detected_at": "2026-08-14T10:11:30Z",
-      "resolution": "requirement_updated",
-      "resolution_reason": "用户确认取消独立显卡远端托架，改为与可拆前面板一体成型；拆下前面板时支撑随面板一起移除。",
-      "question_id": "gpu_far_end_support_integration",
-      "resolved_at": "2026-08-14T10:12:10.667Z"
-    },
-    {
-      "id": "power_button_actuator_deferred",
-      "prd_path": "/details/front_io",
-      "prd_statement": "power button only",
-      "observed_state": "enclosure-integrated revision 286 provides the front-panel circular cutout but no externally operable button cap or actuator; the user instructed that the power button should not be handled in the current CAD change.",
-      "source": "user request 2026-08-14; cad-workbench/enclosure-integrated@revision-286-0794c46e-cd8e-4c31-bf31-4c2d7bf6d2c9; review evidence from export-0ef00e12cd167e22d4bf3d183e15364e",
-      "detected_at": "2026-08-14T10:26:10Z"
+      "detected_at": "2026-08-14T10:11:30Z"
     }
   ],
   "change_log": [
@@ -113,24 +100,10 @@
       "reason": "User identified the motherboard orientation error; CAD revision 278 corrected the standoff datum and reference board orientation while keeping both hardware requirements.",
       "question_id": "gpu_cpu_cooler_envelope_conflict",
       "confirmed_at": "2026-08-13T10:37:45.333Z"
-    },
-    {
-      "id": "gpu_far_end_support_integration",
-      "prd_path": "/details/gpu_support",
-      "from": "removable far-end U support with assembly clearance and soft-pad allowance",
-      "to": "far-end U cradle fused to the removable front panel: 40.8 mm clear inside width for the 40 mm dual-slot reference, 18 mm fore-aft contact depth, support surface 0.8 mm below the 97 mm GPU reference bottom for a soft pad, and unobstructed withdrawal with the front panel; no standalone support component or support fastener",
-      "reason": "User intentionally deleted the separate support and selected a front-panel-integrated support that leaves with the removable panel.",
-      "question_id": "gpu_far_end_support_integration",
-      "confirmed_at": "2026-08-14T10:12:10.667Z",
-      "digest_after": "sha256:6ec8b9b6217a8d99007e3ba61b70cbbafaf41d331eaca2a588d416c6bbd02724"
     }
   ],
-  "requirement_baseline": {
-    "digest": "sha256:6ec8b9b6217a8d99007e3ba61b70cbbafaf41d331eaca2a588d416c6bbd02724",
-    "stamped_at": "2026-08-14T10:12:10.667Z"
-  },
-  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser design with the GPU far-end U support fused to the removable front panel. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Acceptance uses the standard Mini-ITX and SFX interfaces plus the declared GPU, cooler and riser reference envelopes.",
+  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/far-end-support design. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-08-14T10:12:10.667Z",
+  "confirmed_at": "2026-08-09T20:52:00Z",
   "prd_path": "product/prd.md"
 }
