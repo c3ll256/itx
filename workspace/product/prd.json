@@ -36,7 +36,7 @@
       "thickness": 40
     },
     "pcie_riser": "approximately 200 mm",
-    "gpu_support": "removable far-end U support with assembly clearance and soft-pad allowance",
+    "gpu_support": "far-end U support fused to the removable front panel, with assembly clearance and soft-pad allowance; it is removed with the front panel and is not a standalone component",
     "psu": "standard SFX 125 x 100 x 63.5 mm, rear straight-in installation",
     "sfx_rear_interface": "four 4.2 mm holes at 113 x 51.5 mm spacing with unobstructed driver access",
     "layout": "six-piece 152 x 256 x 252 mm enclosure with standard rear Mini-ITX I/O, inverted dual-slot GPU, lower PCIe support beam and standard SFX PSU",
@@ -79,7 +79,11 @@
       "prd_statement": "removable far-end U support with assembly clearance and soft-pad allowance",
       "observed_state": "The user deleted the separate GPU far-end support and requested that the support be integrated into the removable front panel instead of remaining a standalone component; enclosure-integrated revision 286 currently has no far-end support.",
       "source": "user request 2026-08-14; cad-workbench/enclosure-integrated@revision-286-0794c46e-cd8e-4c31-bf31-4c2d7bf6d2c9",
-      "detected_at": "2026-08-14T10:11:30Z"
+      "detected_at": "2026-08-14T10:11:30Z",
+      "resolution": "requirement_updated",
+      "resolution_reason": "用户确认取消独立显卡远端托架，改为与可拆前面板一体成型；拆下前面板时支撑随面板一起移除。",
+      "question_id": "gpu_far_end_support_integration",
+      "resolved_at": "2026-08-14T10:12:10.667Z"
     }
   ],
   "change_log": [
@@ -100,10 +104,19 @@
       "reason": "User identified the motherboard orientation error; CAD revision 278 corrected the standoff datum and reference board orientation while keeping both hardware requirements.",
       "question_id": "gpu_cpu_cooler_envelope_conflict",
       "confirmed_at": "2026-08-13T10:37:45.333Z"
+    },
+    {
+      "id": "gpu_far_end_support_integration",
+      "prd_path": "/details/gpu_support",
+      "from": "removable standalone far-end U support",
+      "to": "far-end U support fused to the removable front panel; no standalone support component",
+      "reason": "User intentionally deleted the separate support and selected a front-panel-integrated support that leaves with the removable panel.",
+      "question_id": "gpu_far_end_support_integration",
+      "confirmed_at": "2026-08-14T10:12:10.667Z"
     }
   ],
-  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser/far-end-support design. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
+  "notes": "The previous sub-4-liter/Flex-PSU/no-riser/no-GPU-support concept is retired. Current requirements follow the 152 x 256 x 252 mm SFX/riser design with the GPU far-end U support fused to the removable front panel. The motherboard mounts directly to four kit-generated integral cylindrical printed standoffs without brass standoffs or heat-set inserts. The lower-front standoff is integral to a detachable printed mount arm retained from beneath the base by one M3 screw; that arm must not be fused to the base. Exact motherboard mechanical compatibility closes after the user selects a board and its drawing is checked.",
   "confirmed_by_user": true,
-  "confirmed_at": "2026-08-09T20:52:00Z",
+  "confirmed_at": "2026-08-14T10:12:10.667Z",
   "prd_path": "product/prd.md"
 }
