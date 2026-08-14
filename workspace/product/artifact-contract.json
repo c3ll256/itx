@@ -28,7 +28,7 @@
     {
       "id": "gpu_riser_fit",
       "kind": "internal_fit",
-      "description": "Fit an inverted compact dual-slot GPU, rear 110 mm opening, lower PCIe support beam with approximately 1 mm pass-through gap, 2.4 mm three-sided half-frame and a far-end U support fused to the removable front panel. Removing the front panel must withdraw the support and preserve GPU service access.",
+      "description": "Fit an inverted compact dual-slot GPU, rear 110 mm opening, lower PCIe support beam with approximately 1 mm pass-through gap and 2.4 mm three-sided half-frame. Fuse a far-end U cradle to the removable front panel with 40.8 mm clear inside width, 18 mm contact depth and a support surface 0.8 mm below the 97 mm GPU reference bottom for a soft pad. Removing the front panel must withdraw the cradle without trapping the GPU.",
       "source": "user_requested",
       "required": true
     },
