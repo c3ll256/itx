@@ -2,12 +2,12 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "manufacturing_package",
-  "summary": "FDM-printable six-piece Mini-ITX enclosure, 152 x 256 x 252 mm, for a standard Mini-ITX board, AXP120-X67 cooler, inverted dual-slot GPU with 200 mm riser and a front-panel-integrated far-end cradle, and a rear-inserted standard SFX PSU.",
+  "summary": "FDM-printable six-piece Mini-ITX enclosure, 152 x 260 x 252 mm, for ASUS ROG STRIX Z390-I GAMING, Thermalright AXP120-X67, inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V, a 200 mm riser, front-panel-integrated far-end GPU cradle, and a rear-inserted standard SFX PSU.",
   "required_interfaces": [
     {
       "id": "mini_itx_direct_mount",
       "kind": "mounting_interface",
-      "description": "Retain a standard 170 x 170 mm Mini-ITX motherboard on four approximately 6.35 mm tall cylindrical printed standoffs. Each standoff must be integral to its mounting position and use a kit-generated M3 self-forming hole, so no brass standoff, heat-set insert or separate standoff is required. Three standoffs are fused to enclosure host parts; the lower-front standoff is fused to a detachable printed mount arm that is retained by one underside M3 screw and must remain a separate solid from the base.",
+      "description": "Retain ASUS ROG STRIX Z390-I GAMING 170 x 170 mm on the standard four approximately 6.35 mm integral printed standoffs, preserving rear I/O and backside M.2 clearance.",
       "source": "user_requested",
       "required": true
     },
@@ -28,7 +28,7 @@
     {
       "id": "gpu_riser_fit",
       "kind": "internal_fit",
-      "description": "Fit an inverted compact dual-slot GPU, rear 110 mm opening and lower PCIe support beam with approximately 1 mm pass-through gap. Fuse the far-end U-shaped cradle into the removable front panel rather than publishing a separate support part; preserve soft-pad allowance, assembly clearance and a front-panel withdrawal path along the GPU length.",
+      "description": "Fit the inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V official 253.4 x 132.5 x 41 mm dual-fan, dual-slot envelope, a 120 mm rear opening and lower PCIe support beam. The front-panel-integrated far-end cradle must provide at least 1 mm clearance per side and leave the inverted 8-pin connector/cable corridor open.",
       "source": "user_requested",
       "required": true
     },
