@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "documentId": "enclosure-integrated",
-  "revision": 313,
-  "revisionId": "revision-313-66d95b18-955a-42bf-9ee8-e4474850c044",
+  "revision": 324,
+  "revisionId": "revision-324-9f5be420-9f4c-4e46-846a-5e12b188c012",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
   "targets": [
@@ -14,448 +14,448 @@
           "id": "shell_columns",
           "target": "enclosure",
           "order": 0,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/000-shell_columns.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/000-shell_columns.py",
           "sha256": "b0a9b3f7c4f977cba6f8e7921c6720c5ffe8efb9037303874543b66485e7908a"
         },
         {
           "id": "split_case_feet",
           "target": "enclosure",
           "order": 1,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/001-split_case_feet.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/001-split_case_feet.py",
           "sha256": "cecbcaaa92cf36be14aaf22c04bc8097f932b3ebf045e8ac79137648ff9b6442"
         },
         {
           "id": "foot_through_cleanup",
           "target": "enclosure",
           "order": 2,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/002-foot_through_cleanup.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/002-foot_through_cleanup.py",
           "sha256": "064091a9f81e01347be780d30b3fba2c4eda3cdb451464a99eb1ca3213338f5a"
         },
         {
           "id": "internals",
           "target": "enclosure",
           "order": 3,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/003-internals.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/003-internals.py",
           "sha256": "3a0d28f818a78253e5c1961b00df834e5243757c6666a2001ca11e08ea963475"
         },
         {
           "id": "tray_base_slot",
           "target": "enclosure",
           "order": 4,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/004-tray_base_slot.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/004-tray_base_slot.py",
           "sha256": "406858da98d57b0e5429cae59c430f0742513deec1dba6661b4f49722edd8676"
         },
         {
           "id": "edge_softening",
           "target": "enclosure",
           "order": 5,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/005-edge_softening.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/005-edge_softening.py",
           "sha256": "bf247a664a193133719ea216d05f16733d0dfb892da9259a7970385909e58448"
         },
         {
           "id": "power_button_tray_clearance",
           "target": "enclosure",
           "order": 6,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/006-power_button_tray_clearance.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/006-power_button_tray_clearance.py",
           "sha256": "32adb71219ddf3610c9ca01f337ac01a199986b082efce777f3010c4a9531292"
         },
         {
           "id": "rear_io_column_clearance",
           "target": "enclosure",
           "order": 7,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/007-rear_io_column_clearance.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/007-rear_io_column_clearance.py",
           "sha256": "782a0d33ccba196ab469870884063825bdd44274b4c1dd9e21596adc2dee8bc3"
         },
         {
           "id": "standard_gpu_slots",
           "target": "enclosure",
           "order": 8,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/008-standard_gpu_slots.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/008-standard_gpu_slots.py",
           "sha256": "6f364a21245a4bc4d15c049bba385f9377a7441817d6a7ca9f9b9d81df8bb1e0"
         },
         {
           "id": "sfx_psu_support",
           "target": "enclosure",
           "order": 9,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/009-sfx_psu_support.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/009-sfx_psu_support.py",
           "sha256": "3a23495ccb5dbac570e69e002e1afef4a480ccd4b318030d948aab48317a970d"
         },
         {
           "id": "sfx_rear_mounting",
           "target": "enclosure",
           "order": 10,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/010-sfx_rear_mounting.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/010-sfx_rear_mounting.py",
           "sha256": "efd4811d190f255fa3404c035151b05d3a8c164eb60f4f446ef080bc24244d37"
         },
         {
           "id": "rear_panel_fastening",
           "target": "enclosure",
           "order": 11,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/011-rear_panel_fastening.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/011-rear_panel_fastening.py",
           "sha256": "ccc7b3180798d7f94705cf0cc693a36694c39735e06587611414b20d372e491c"
         },
         {
           "id": "tray_top_rear_locators",
           "target": "enclosure",
           "order": 12,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/012-tray_top_rear_locators.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/012-tray_top_rear_locators.py",
           "sha256": "19f93e730a178925722028763493abab63522f9ed089283f47e12d81266b9bdb"
         },
         {
           "id": "tray_hidden_mounts",
           "target": "enclosure",
           "order": 13,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/013-tray_hidden_mounts.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/013-tray_hidden_mounts.py",
           "sha256": "e96d3de5e843e40562d001e76fbfb8c99ef2ac0f1dd58946cfb77d22c3f5b724"
         },
         {
           "id": "tray_base_screw",
           "target": "enclosure",
           "order": 14,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/014-tray_base_screw.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/014-tray_base_screw.py",
           "sha256": "6f0c996914a2bb64ea983792f4cf8721a44f312f647ee0a8548a82ffe5913221"
         },
         {
           "id": "flush_column_envelopes",
           "target": "enclosure",
           "order": 15,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/015-flush_column_envelopes.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/015-flush_column_envelopes.py",
           "sha256": "608ea429dff2617f55c6c62a79d71d2800e3297c629b52a05f1f8341220d2000"
         },
         {
           "id": "front_power_button_position",
           "target": "enclosure",
           "order": 16,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/016-front_power_button_position.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/016-front_power_button_position.py",
           "sha256": "5c8e153315faebb16c363837fcb1a2c9a2ce34f9ffe49cdad137e1bd6abc71f8"
         },
         {
           "id": "remove_top_cap_thickening",
           "target": "enclosure",
           "order": 17,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/017-remove_top_cap_thickening.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/017-remove_top_cap_thickening.py",
           "sha256": "20ad210441f8a80473931f35876a3c2382078c26fd7d49f59c41c29110d051ca"
         },
         {
           "id": "screw_kit_v1_audit",
           "target": "enclosure",
           "order": 18,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/018-screw_kit_v1_audit.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/018-screw_kit_v1_audit.py",
           "sha256": "af3840aa3ccf31db7466d3b207be7f11ca0452c3b1e69ac3b095ea83dfc58c80"
         },
         {
           "id": "gpu_envelope_fit_audit",
           "target": "enclosure",
           "order": 19,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/019-gpu_envelope_fit_audit.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/019-gpu_envelope_fit_audit.py",
           "sha256": "228246e1040456f658df4fb5c5331aa34b1fa2a7da52c3cdc3a3e87bb186f346"
         },
         {
           "id": "p1s_split_modules",
           "target": "enclosure",
           "order": 20,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/020-p1s_split_modules.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/020-p1s_split_modules.py",
           "sha256": "8fec8a2e85e46c7a79a620af6de8dd27ad2b15fa85d4890a83609ce1a840ff9a"
         },
         {
           "id": "sfx_column_delete_final",
           "target": "enclosure",
           "order": 21,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/021-sfx_column_delete_final.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/021-sfx_column_delete_final.py",
           "sha256": "7db209cbea2d2db0f71e8dbaeedf3feb9de5226582fa92c7c39ecbdb922d0ed6"
         },
         {
           "id": "left_rear_integrated_support",
           "target": "enclosure",
           "order": 22,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/022-left_rear_integrated_support.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/022-left_rear_integrated_support.py",
           "sha256": "b89aaf3c9e9bcb97d49574366cb7a01a402360674a9d8d23d3de0ddd55f8d316"
         },
         {
           "id": "rear_right_base_contact",
           "target": "enclosure",
           "order": 23,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/023-rear_right_base_contact.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/023-rear_right_base_contact.py",
           "sha256": "d583b1be205c98a7b3bc852c5e27d14356d221faf51f93a2bc78caf5dd036bc2"
         },
         {
           "id": "final_top_and_left_magnet_alignment",
           "target": "enclosure",
           "order": 24,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/024-final_top_and_left_magnet_alignment.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/024-final_top_and_left_magnet_alignment.py",
           "sha256": "8ce22062b8c53d8b22067b0ead43da8e89d55b59bb19778dd71e3502d532fd4f"
         },
         {
           "id": "flat_sfx_floor",
           "target": "enclosure",
           "order": 25,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/025-flat_sfx_floor.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/025-flat_sfx_floor.py",
           "sha256": "e3785d9e7fad2ceef2c71bcc65535a337ea7f2d710e075ea468043bbd2131f8d"
         },
         {
           "id": "rear_panel_final_hole_restore",
           "target": "enclosure",
           "order": 26,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/026-rear_panel_final_hole_restore.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/026-rear_panel_final_hole_restore.py",
           "sha256": "e9999f88865a9833e82ed0026aa99bc91f97651645ae007efe5767a84b978b2e"
         },
         {
           "id": "side_panel_steel_slots_and_finger_pull",
           "target": "enclosure",
           "order": 27,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/027-side_panel_steel_slots_and_finger_pull.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/027-side_panel_steel_slots_and_finger_pull.py",
           "sha256": "85d1cc236803169a056e597421ed7c8b6ac2d4d8c74a1df6e73b4d8404a6a859"
         },
         {
           "id": "integrated_base_feet_final",
           "target": "enclosure",
           "order": 28,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/028-integrated_base_feet_final.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/028-integrated_base_feet_final.py",
           "sha256": "bbb62c8f4208fb47ccae65c1304cd2ddc466bb41a288173f97c97dabad1cb2a9"
         },
         {
           "id": "final_coaxial_integrated_base",
           "target": "enclosure",
           "order": 29,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/029-final_coaxial_integrated_base.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/029-final_coaxial_integrated_base.py",
           "sha256": "8658062b4ecf44c5e94df7095c034931106782e4a6d4cdb3998ad3de7bd07545"
         },
         {
           "id": "final_rear_right_top_joint",
           "target": "enclosure",
           "order": 30,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/030-final_rear_right_top_joint.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/030-final_rear_right_top_joint.py",
           "sha256": "bfbee84349571da25cd02a4b64328ff4f48529009310b17f5873828b990c5094"
         },
         {
           "id": "rear_right_arm_step_cleanup",
           "target": "enclosure",
           "order": 31,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/031-rear_right_arm_step_cleanup.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/031-rear_right_arm_step_cleanup.py",
           "sha256": "16dbfe302c3a59be8f770afcb50481a2545e14129aa8e252ff70f5892867adef"
         },
         {
           "id": "four_piece_frame_trial",
           "target": "enclosure",
           "order": 32,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/032-four_piece_frame_trial.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/032-four_piece_frame_trial.py",
           "sha256": "c182c78e31acd7dfbba6a9f25314a8f3b29b6a00f232c91bced1ed73d7df254d"
         },
         {
           "id": "frame_variable_sync",
           "target": "enclosure",
           "order": 33,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/033-frame_variable_sync.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/033-frame_variable_sync.py",
           "sha256": "f4372de4be5654b83d6d700506f29d2dde9e46de146543d24b1fb0c2c1f83298"
         },
         {
           "id": "remove_vertical_returns",
           "target": "enclosure",
           "order": 34,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/034-remove_vertical_returns.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/034-remove_vertical_returns.py",
           "sha256": "f03297a19c625ee55662761046e11f3f96a76205bc232228a894831df71e98d1"
         },
         {
           "id": "rear_panel_mb_tab",
           "target": "enclosure",
           "order": 35,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/035-rear_panel_mb_tab.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/035-rear_panel_mb_tab.py",
           "sha256": "609daf304ffd2584f07ee3383dcc4e20c6ceea8b30134c328a257afcc01b7918"
         },
         {
           "id": "close_legacy_panel_holes",
           "target": "enclosure",
           "order": 36,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/036-close_legacy_panel_holes.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/036-close_legacy_panel_holes.py",
           "sha256": "465493669f5e470a75e4bfa7bc87a267e5b3c5a2294e01d340bac284b9d1c8cb"
         },
         {
           "id": "slim_interface_rebuild",
           "target": "enclosure",
           "order": 37,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/037-slim_interface_rebuild.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/037-slim_interface_rebuild.py",
           "sha256": "abda2a0956fd0a267ef9b35dadaed73645c1a7c55a2e8930d480d1e8ff577252"
         },
         {
           "id": "panel_interface_audit",
           "target": "enclosure",
           "order": 38,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/038-panel_interface_audit.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/038-panel_interface_audit.py",
           "sha256": "1c660e254b6362ee6623cc7023632ce9065eea56e31efc899e5ee90901890ed0"
         },
         {
           "id": "chamfer_end_panels",
           "target": "enclosure",
           "order": 39,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/039-chamfer_end_panels.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/039-chamfer_end_panels.py",
           "sha256": "cc0e8add4f5589b40ed74656cbafd885b4592b178e93db53d1a009277952c1e2"
         },
         {
           "id": "chamfer_side_panel_perimeters",
           "target": "enclosure",
           "order": 40,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/040-chamfer_side_panel_perimeters.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/040-chamfer_side_panel_perimeters.py",
           "sha256": "0d4d6334e1b494475359087d24a6e60314aec8ea59cb37bdfe5379569a819efa"
         },
         {
           "id": "chamfer_top_panel",
           "target": "enclosure",
           "order": 41,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/041-chamfer_top_panel.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/041-chamfer_top_panel.py",
           "sha256": "62e38f17b43eae1392a94b05467092f1127defff88ce7e788fe7639328f85297"
         },
         {
           "id": "chamfer_base_panel",
           "target": "enclosure",
           "order": 42,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/042-chamfer_base_panel.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/042-chamfer_base_panel.py",
           "sha256": "195336feb0c488c80c71beb025e4c441845e098914e4d0aa1289e729a87cf50f"
         },
         {
           "id": "post_chamfer_interface_audit",
           "target": "enclosure",
           "order": 43,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/043-post_chamfer_interface_audit.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/043-post_chamfer_interface_audit.py",
           "sha256": "2c518a6a2cfe8f50c9a683ab6b815678c14466d82449a6966bdf3f18a61e65bb"
         },
         {
           "id": "rear_panel_surface_cleanup",
           "target": "enclosure",
           "order": 44,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/044-rear_panel_surface_cleanup.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/044-rear_panel_surface_cleanup.py",
           "sha256": "d58a66ebda87fe2bc699c290bf2671c3ca92fb4179082591e4ff9f3b74db86f3"
         },
         {
           "id": "rear_print_surface_flatten",
           "target": "enclosure",
           "order": 45,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/045-rear_print_surface_flatten.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/045-rear_print_surface_flatten.py",
           "sha256": "54d2a08b3b09246d9dc15b32d6882a511ec7c2863b45945820671ab5afdaa068"
         },
         {
           "id": "single_corner_holes_top_base",
           "target": "enclosure",
           "order": 46,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/046-single_corner_holes_top_base.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/046-single_corner_holes_top_base.py",
           "sha256": "e5253e03fdb1e48e3304427df0a618935def16d489d19294310f07c0f7e75dd6"
         },
         {
           "id": "separate_lower_mb_mount",
           "target": "enclosure",
           "order": 47,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/047-separate_lower_mb_mount.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/047-separate_lower_mb_mount.py",
           "sha256": "d3a09bec9f246922730a531d6511068832b3da95c92aa9734da0272f984fd040"
         },
         {
           "id": "separate_pcie_bracket",
           "target": "enclosure",
           "order": 48,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/048-separate_pcie_bracket.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/048-separate_pcie_bracket.py",
           "sha256": "c3f61d4d30f0a569805cfdbc9680c86fd49368c64d5e08f40c2ed65d2adc431c"
         },
         {
           "id": "sfx_rear_insertion_clearance",
           "target": "enclosure",
           "order": 49,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/049-sfx_rear_insertion_clearance.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/049-sfx_rear_insertion_clearance.py",
           "sha256": "b0813671d12c10824a5c94b533fee2295b563e91f7837620b346fab573bfcfaf"
         },
         {
           "id": "sfx_four_hole_final_access",
           "target": "enclosure",
           "order": 50,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/050-sfx_four_hole_final_access.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/050-sfx_four_hole_final_access.py",
           "sha256": "d3afe407492901a20169d60ffa9bf19a7250f9ec4334bcf293d88f7fe6ebb93b"
         },
         {
           "id": "corner_foot_head_recesses",
           "target": "enclosure",
           "order": 51,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/051-corner_foot_head_recesses.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/051-corner_foot_head_recesses.py",
           "sha256": "72773eee9efc082bac906069cffa18820848564bc6e219f7fc5a79a5c5a0d2b2"
         },
         {
           "id": "rear_panel_final_outline_trim",
           "target": "enclosure",
           "order": 52,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/052-rear_panel_final_outline_trim.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/052-rear_panel_final_outline_trim.py",
           "sha256": "c724dd5a9473639c729ac9237270885b90cac8c17c612fef62afcc2e05d69132"
         },
         {
           "id": "panel_magnets_15mm_final",
           "target": "enclosure",
           "order": 53,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/053-panel_magnets_15mm_final.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/053-panel_magnets_15mm_final.py",
           "sha256": "4451001cdcf91b8e5289612592e43b4a4bbbcde0a0ce6d5173e4ed36172de04a"
         },
         {
           "id": "remove_annotated_base_upright",
           "target": "enclosure",
           "order": 54,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/054-remove_annotated_base_upright.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/054-remove_annotated_base_upright.py",
           "sha256": "424494a6097f388d49e2c2a79a92b05ba585f844857b642cc93dafea72d198ff"
         },
         {
           "id": "flush_sfx_mount_holes",
           "target": "enclosure",
           "order": 55,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/055-flush_sfx_mount_holes.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/055-flush_sfx_mount_holes.py",
           "sha256": "98d02eeaa74156fa9d390d37750c04d1c7e4fab037487a724b3ed17885993a56"
         },
         {
           "id": "connection_step_cleanup",
           "target": "enclosure",
           "order": 56,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/056-connection_step_cleanup.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/056-connection_step_cleanup.py",
           "sha256": "920b31aee22defdadf30fdf1aa1a2db0af94ce8828bb7e237409d0949bab9639"
         },
         {
           "id": "rear_magnet_single_platform_cleanup",
           "target": "enclosure",
           "order": 57,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/057-rear_magnet_single_platform_cleanup.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/057-rear_magnet_single_platform_cleanup.py",
           "sha256": "4b48f353b50debe11d15a2d5aef99fff5a7ad68a1e26e06f95797715256b0373"
         },
         {
           "id": "sfx_mount_spacing_113x51p5",
           "target": "enclosure",
           "order": 58,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/058-sfx_mount_spacing_113x51p5.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/058-sfx_mount_spacing_113x51p5.py",
           "sha256": "bf0b57fc15877f9be5be6bf3d90860b6feeff74dd024e0ed8f46f9455c4022d5"
         },
         {
           "id": "io_shield_clip_land",
           "target": "enclosure",
           "order": 59,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/059-io_shield_clip_land.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/059-io_shield_clip_land.py",
           "sha256": "c8a940c7a032607bb8dd0ed2fd28e4048f03ea41a02578769b17062ace34e747"
         },
         {
           "id": "front_panel_integrated_gpu_cradle",
           "target": "enclosure",
           "order": 60,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/060-front_panel_integrated_gpu_cradle.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/060-front_panel_integrated_gpu_cradle.py",
           "sha256": "69f22fd9ef36790bf8d71866f65b3a61736e0c189a23037167baa0e520f31b37"
         },
         {
           "id": "axp120_direct_intake",
           "target": "enclosure",
           "order": 61,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/061-axp120_direct_intake.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/061-axp120_direct_intake.py",
           "sha256": "63421037b8a26493572f240603e45ed45b54a822170f03ddc39e9e78d07531cf"
         },
         {
           "id": "p1s_front_edge_margin",
           "target": "enclosure",
           "order": 62,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/062-p1s_front_edge_margin.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/062-p1s_front_edge_margin.py",
           "sha256": "a32f9c5755638b8683741a0de8a25ad882f7230294870d2484be4c64be2e9453"
         },
         {
           "id": "enclosure",
           "target": "enclosure",
           "order": 63,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/enclosure/063-enclosure.py",
+          "path": "design/enclosure-integrated/source/parts/enclosure/063-enclosure.py",
           "sha256": "e035fc85ccb324f15ff1c1926c61be6f40227d8e0ec10a4279e2441b7935e664"
         }
       ],
@@ -469,14 +469,14 @@
           "id": "mini_itx_reference",
           "target": "mini_itx_reference",
           "order": 0,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/mini_itx_reference/000-mini_itx_reference.py",
+          "path": "design/enclosure-integrated/source/parts/mini_itx_reference/000-mini_itx_reference.py",
           "sha256": "53c539999a6705bfc08f32ac1dfc938fe1615541fcb67a49f4fa39671f3a19e1"
         },
         {
           "id": "rog_strix_backside_m2",
           "target": "mini_itx_reference",
           "order": 1,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/mini_itx_reference/001-rog_strix_backside_m2.py",
+          "path": "design/enclosure-integrated/source/parts/mini_itx_reference/001-rog_strix_backside_m2.py",
           "sha256": "425f922f24c3f9fbaf3a9d2e12bdce892c61bf63dd6e11caa6904f619d8b1a0f"
         }
       ],
@@ -490,7 +490,7 @@
           "id": "sfx_psu_reference",
           "target": "sfx_psu_reference",
           "order": 0,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/sfx_psu_reference/000-sfx_psu_reference.py",
+          "path": "design/enclosure-integrated/source/parts/sfx_psu_reference/000-sfx_psu_reference.py",
           "sha256": "0050b7b50b5b0a91cce8aee9c57b0be17d3fa181c1a7a6e3692c3b291fc846d0"
         }
       ],
@@ -504,14 +504,14 @@
           "id": "dual_slot_gpu_reference",
           "target": "dual_slot_gpu_reference",
           "order": 0,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/dual_slot_gpu_reference/000-dual_slot_gpu_reference.py",
+          "path": "design/enclosure-integrated/source/parts/dual_slot_gpu_reference/000-dual_slot_gpu_reference.py",
           "sha256": "d9d6f8aba4af1dcfa1aa7a9f176991cacbb40dfc58d4a968b41d4024b23bfc7e"
         },
         {
           "id": "physical_orientation_audit",
           "target": "dual_slot_gpu_reference",
           "order": 1,
-          "path": "workspace/cad-workbench/documents/enclosure-integrated/sources/dual_slot_gpu_reference/001-physical_orientation_audit.py",
+          "path": "design/enclosure-integrated/source/parts/dual_slot_gpu_reference/001-physical_orientation_audit.py",
           "sha256": "becac967312b332174eaf1c500c21e3323e7b74d3a45d503bdf5dd29b65577d3"
         }
       ],
@@ -524,7 +524,7 @@
       "target": "enclosure",
       "label": "Base with print margin",
       "kind": "generated",
-      "shapeHash": "cd4b6cf6a313f39d54510e174bef6e8a2616909f769092d2db9d90981c36c0ca",
+      "shapeHash": "312b9b92c031c3f7f519c33a621fb24f269e7561eb6906853430d2dc8518c61b",
       "transform": {
         "positionMm": [
           0,
@@ -550,7 +550,7 @@
       "target": "enclosure",
       "label": "Top with print margin",
       "kind": "generated",
-      "shapeHash": "83ff0f46a79280ac5ad9018a583d3f06ec877215cbe3e25ea6976cf5f62d9c81",
+      "shapeHash": "e97f7bc61d21de3d64272ed8b4dc7aab75235add0b6405f6cf993b3dc30af593",
       "transform": {
         "positionMm": [
           0,
@@ -602,7 +602,7 @@
       "target": "enclosure",
       "label": "Rear with open SFX edge",
       "kind": "generated",
-      "shapeHash": "a4290486f8e22a8bd144a14b1c0f3e949fbc1f9dab9f94c83726998847a765ca",
+      "shapeHash": "d50bfdf755026eb8063fc5276f128aa4fde46f26265d2da1e8f17d13fa094aa7",
       "transform": {
         "positionMm": [
           0,
@@ -654,7 +654,7 @@
       "target": "enclosure",
       "label": "Right panel AXP intake",
       "kind": "generated",
-      "shapeHash": "97a811ac2073523a53f56e75110b23afff1fca78b7428c831f647bee6a5856e3",
+      "shapeHash": "cfd5e259374a1874328f5b3406d3c1d99bb1c88208dde5ec22856e44cbc33449",
       "transform": {
         "positionMm": [
           0,
@@ -680,7 +680,7 @@
       "target": "enclosure",
       "label": "Detachable MB mount",
       "kind": "generated",
-      "shapeHash": "8859218744060784e05b8d17d271f266b5c7b1b957d767fdc4a28019036c3ae6",
+      "shapeHash": "c9586296d3308fc01dcd3b3d6a8e0ad4cf2003e5b1e20a9454e3540101373186",
       "transform": {
         "positionMm": [
           0,
@@ -732,7 +732,7 @@
       "target": "enclosure",
       "label": "GPU bracket screws",
       "kind": "generated",
-      "shapeHash": "5dcd1dbfb00587884751c86c207d68f206bc09684a29cf21a38368ea969a8fb0",
+      "shapeHash": "af18c1ac48051c108495c3a74ca942e9619a04c1f1132136425d759c301bbe75",
       "transform": {
         "positionMm": [
           0,
@@ -758,7 +758,7 @@
       "target": "enclosure",
       "label": "PCIe rear screws",
       "kind": "generated",
-      "shapeHash": "dd9fd58f6f4f8e464797d2a954c2ed4486ae487d8f64da4b503393cd7ca98f33",
+      "shapeHash": "0e405c777e95fe146ed605c8de79b0cb2bd007a3722ea3a9133ed20be7baf5ad",
       "transform": {
         "positionMm": [
           0,
@@ -784,7 +784,7 @@
       "target": "mini_itx_reference",
       "label": "Mini-ITX PCB reference",
       "kind": "generated",
-      "shapeHash": "fc0b4f883523807c8e4128901588105889446f802f5558c066b64c4c62ef8296",
+      "shapeHash": "737a11f0c59a81b71c7f8022cac3d7973aa7d271c351c388a9f13fbe2acc5a63",
       "transform": {
         "positionMm": [
           0,
@@ -810,7 +810,7 @@
       "target": "mini_itx_reference",
       "label": "Four mounting rings",
       "kind": "generated",
-      "shapeHash": "4e3ae3427e97ed19458155ee3359ee412ae567b03f1369a85c99214c8993a388",
+      "shapeHash": "862908e47e18099b86e7cf08dbd852edb5c553c0fd3fcfa77aebf3e6e536888e",
       "transform": {
         "positionMm": [
           0,
@@ -836,7 +836,7 @@
       "target": "mini_itx_reference",
       "label": "Rear I-O envelope",
       "kind": "generated",
-      "shapeHash": "5dd7e4059446ec23d7cd92cec0cba1ab8c27ec12b657779dab8e02e2efd14a6c",
+      "shapeHash": "4b01065086d59f0ab89f78aee011dece23d5d3e612215d65d89e95bf008097c3",
       "transform": {
         "positionMm": [
           0,
@@ -862,7 +862,7 @@
       "target": "mini_itx_reference",
       "label": "CPU socket envelope",
       "kind": "generated",
-      "shapeHash": "085adeb082af14a8a8391b27afacc7b7106d6157d93911f5ed311b8a6804140e",
+      "shapeHash": "c18420c4e34bfe5aba37a46de09ffbb1157cafa92c0409bc583a684b72a502d3",
       "transform": {
         "positionMm": [
           0,
@@ -888,7 +888,7 @@
       "target": "mini_itx_reference",
       "label": "Dual DIMM slots",
       "kind": "generated",
-      "shapeHash": "6cd01d7e2c21c2daa9a2e5d93ea6450f62e1ff61a8d6979f935e4df279b956a9",
+      "shapeHash": "613c6c70d54909fe1b5a329fbe14cda49755ba6d23859facea720f1b43c6d794",
       "transform": {
         "positionMm": [
           0,
@@ -914,7 +914,7 @@
       "target": "mini_itx_reference",
       "label": "PCIe x16 slot",
       "kind": "generated",
-      "shapeHash": "e394949c2702ecf4f8e8cbacff88ee1cb61c66e0d01bb9540c903e47ed8eaeac",
+      "shapeHash": "d5ffb0d0a83fc9d2a3253da95366d3769c1ed321fd7e597f8cf200e43d602561",
       "transform": {
         "positionMm": [
           0,
@@ -940,7 +940,7 @@
       "target": "mini_itx_reference",
       "label": "24-pin ATX header",
       "kind": "generated",
-      "shapeHash": "ff17352ae8bf2ffc80c6a47870f5bf78ac6386542893a18ed92c0a29ba54272f",
+      "shapeHash": "85860211097ed2216df533e46fb7031b22fa82c702d00f5270598c9a6a894e2e",
       "transform": {
         "positionMm": [
           0,
@@ -966,7 +966,7 @@
       "target": "mini_itx_reference",
       "label": "CPU power header",
       "kind": "generated",
-      "shapeHash": "ddaa9395b432174bb14199c07aff50ed1a96aac9a4ff99f06c61af9a5a30d787",
+      "shapeHash": "269e94ff5cd00fadcc5c769402f38690f9f09f5a31d868b1d858cf23180a65c8",
       "transform": {
         "positionMm": [
           0,
@@ -992,7 +992,7 @@
       "target": "mini_itx_reference",
       "label": "Chipset heatsink",
       "kind": "generated",
-      "shapeHash": "d1f9453f3e3282cd3140a5c5d5bd05258445847286de0bb2d7b14ec9212b0fab",
+      "shapeHash": "da99c8fe47da77e31a74b91f23e5c879a831cd913003c646e73cedae92d83933",
       "transform": {
         "positionMm": [
           0,
@@ -1018,7 +1018,7 @@
       "target": "mini_itx_reference",
       "label": "AXP120-X67 envelope",
       "kind": "generated",
-      "shapeHash": "183ca9342eb3905361aebef32171719598d56a9e8d449e451f290e28f2cd6ef9",
+      "shapeHash": "da204e005fddbcbe2dfe32ae5cd00eba0fc48c6fd7dd8f95ba0dff01fbbe7928",
       "transform": {
         "positionMm": [
           0,
@@ -1044,7 +1044,7 @@
       "target": "mini_itx_reference",
       "label": "AXP120-X67 fan",
       "kind": "generated",
-      "shapeHash": "7e011b73e793c2fb7a278fa7a1eca31dd3c9c40a4cb26ce3c45176bef1ec5699",
+      "shapeHash": "bda987b3b227ca14771953aa4ebe62a98e654cd6291be905f4e77ec22b45ab79",
       "transform": {
         "positionMm": [
           0,
@@ -1070,7 +1070,7 @@
       "target": "mini_itx_reference",
       "label": "ROG backside M.2 keepout",
       "kind": "generated",
-      "shapeHash": "7fcd6ebb034defd503d1a9864296d9e087ae5666746169429222b138daaaa986",
+      "shapeHash": "7a21ea23bdaff906aa01542bf9d565534b81277cd7e2528620097fd15acbbfa4",
       "transform": {
         "positionMm": [
           0,
@@ -1122,7 +1122,7 @@
       "target": "sfx_psu_reference",
       "label": "SFX fan grille",
       "kind": "generated",
-      "shapeHash": "94b187626fa4d424f9999c45de7cf3df1cc5e79e79546d3002ed9693579ca522",
+      "shapeHash": "0a0277bede625f53fecab4d8154bc8f876e7311412746114cce4c377fcca1380",
       "transform": {
         "positionMm": [
           0,
@@ -1148,7 +1148,7 @@
       "target": "sfx_psu_reference",
       "label": "AC inlet reference",
       "kind": "generated",
-      "shapeHash": "c8ceeba72655312f0a1dd1e353fcd7c1a87ce0d196499a19389508b91c0c75d6",
+      "shapeHash": "39ff8466bbc5201c7d7e04d862e840420121d7a5c9929bf2cb8e717092a1bbf0",
       "transform": {
         "positionMm": [
           0,
@@ -1174,7 +1174,7 @@
       "target": "sfx_psu_reference",
       "label": "PSU switch reference",
       "kind": "generated",
-      "shapeHash": "fc876d747c7f42e340fa899e0761ce23d4584500ef6ba6c2444689af974d3298",
+      "shapeHash": "2635c687f19248c091d95cda2d6d0ebfdd52c01dbca2c65021f47e7d066b4551",
       "transform": {
         "positionMm": [
           0,
@@ -1200,7 +1200,7 @@
       "target": "sfx_psu_reference",
       "label": "Modular cable bank",
       "kind": "generated",
-      "shapeHash": "aca61a6f79702dab0358a7b5232628e8e8611c1ab3b9eb49a2f4347accf5b81a",
+      "shapeHash": "4a0cb15dcab34071aa32cabc835f57869f1563d17a30fecda5f61d7c12946497",
       "transform": {
         "positionMm": [
           0,
@@ -1226,7 +1226,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Colorful GPU body",
       "kind": "generated",
-      "shapeHash": "9b319ed3c67f7808199832f16b90127114f84e65d544bae3de7a0997522a66d2",
+      "shapeHash": "51fe440998a0be58218f013626fcea99f9c3436c2c36b636e0f697c8d395a7fe",
       "transform": {
         "positionMm": [
           0,
@@ -1252,7 +1252,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Colorful GPU PCB",
       "kind": "generated",
-      "shapeHash": "624b720adbf6f48b2135365a52488a263f6422a7bd309002784db608f157172c",
+      "shapeHash": "306b5f9034bd74c318df2397b1520f0292139e0162faf851c582421b75d0c3df",
       "transform": {
         "positionMm": [
           0,
@@ -1304,7 +1304,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Flipped HDMI and DP",
       "kind": "generated",
-      "shapeHash": "7534b57320b6d08ae10864c86ebc9c0dae26b7c5122ea7d2d2e8b12b33a7dc64",
+      "shapeHash": "9723ecea59e363c81e6b03bfa13f8159061663770d8f1f42106b307b538a2766",
       "transform": {
         "positionMm": [
           0,
@@ -1330,7 +1330,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Flipped rear vents",
       "kind": "generated",
-      "shapeHash": "67a5d723a47cf839f4f181a2f08f0984290e98789cef884cb87abbb6afde036e",
+      "shapeHash": "90e704cb2a7cd642dc9889adf620e85317690638f88e02ad6dba08dc4e6b14d3",
       "transform": {
         "positionMm": [
           0,
@@ -1356,7 +1356,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Outward dual fans",
       "kind": "generated",
-      "shapeHash": "5481e2456510cabaafc2671cdab4af5838bf62da10e515133269be84471aa23b",
+      "shapeHash": "9397c38451cd541ffed3f30c1d4a12549b4bef5e462496d1469d3e0aa748f197",
       "transform": {
         "positionMm": [
           0,
@@ -1382,7 +1382,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Colorful heatsink fins",
       "kind": "generated",
-      "shapeHash": "0257736e704a3802bcf243fa7913718ca0da8f4329ef5e801cafd1c8fcdae551",
+      "shapeHash": "7f3ddc3de2711ab7020255d40ac73a5dc619fbbfb3e6018b40a902f3e05fba45",
       "transform": {
         "positionMm": [
           0,
@@ -1408,7 +1408,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Upward PCIe fingers",
       "kind": "generated",
-      "shapeHash": "a12b6a713340144d8b392a85e8e9111afd5b923c14f984e53c4cb96c71fe1612",
+      "shapeHash": "302b1a5557905c58830c0723c86ada182bb093996c50b55eb7fd76922dd9e309",
       "transform": {
         "positionMm": [
           0,
@@ -1434,7 +1434,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Lower inverted 8-pin zone",
       "kind": "generated",
-      "shapeHash": "d47415670918bf6a8cac7c33bdafafda6185309a881c50f05b21187a840b8e53",
+      "shapeHash": "bac7646d86171de37a1342c272644f9d64cdb16dd7d53bd3b2dd36ef80b3afbb",
       "transform": {
         "positionMm": [
           0,
@@ -1457,7 +1457,7 @@
     }
   ],
   "assets": [],
-  "updatedAt": "2026-08-16T13:12:53.570Z",
+  "updatedAt": "2026-08-17T13:42:29.609Z",
   "parameters": {
     "enclosure": {
       "case_width": 152,
@@ -1580,7 +1580,7 @@
       "p1s_single_piece_limit": 256,
       "panel_edge_radius": 0.7,
       "shell_edge_radius": 1.2,
-      "mitx_board_rear_edge_y": -126,
+      "mitx_board_rear_edge_y": -122.19,
       "mitx_rear_upper_from_rear": 33.02,
       "mitx_front_upper_from_rear": 165.1,
       "mitx_rear_lower_from_rear": 10.16,
@@ -2228,7 +2228,7 @@
       "front_gpu_cradle_root_depth_y": 30,
       "front_gpu_cradle_root_height_z": 15,
       "front_gpu_cradle_root_overlap_z": 0.6,
-      "axp_intake_center_y": -42,
+      "axp_intake_center_y": -38.19,
       "axp_intake_center_z": 169,
       "axp_intake_reference_fan_plane_x": 72.8,
       "axp_intake_fan_diameter": 120,
@@ -2275,7 +2275,7 @@
       "mitx_pcb_height_z": 170,
       "mitx_pcb_mount_hole_diameter": 3.96,
       "mitx_pcb_plane_x": 4.2,
-      "mitx_pcb_rear_edge_y": -126,
+      "mitx_pcb_rear_edge_y": -122.19,
       "mitx_pcb_bottom_z": 71.5,
       "mitx_pcb_rear_lower_from_rear": 10.16,
       "mitx_pcb_front_lower_from_rear": 165.1,
@@ -2296,39 +2296,39 @@
       "mitx_cpu_socket_depth_x": 5,
       "mitx_cpu_socket_width_y": 45,
       "mitx_cpu_socket_height_z": 45,
-      "mitx_cpu_socket_center_y": -42,
+      "mitx_cpu_socket_center_y": -38.19,
       "mitx_cpu_socket_center_z": 169,
       "mitx_dimm_bank_depth_x": 8,
       "mitx_dimm_bank_slot_width_y": 5.5,
       "mitx_dimm_bank_slot_height_z": 133,
       "mitx_dimm_bank_pitch_y": 8,
-      "mitx_dimm_bank_first_center_y": 24,
+      "mitx_dimm_bank_first_center_y": 27.81,
       "mitx_dimm_bank_bottom_z": 91,
       "mitx_pcie_slot_depth_x": 11,
       "mitx_pcie_slot_length_y": 89,
       "mitx_pcie_slot_height_z": 11,
-      "mitx_pcie_slot_rear_y": -104,
+      "mitx_pcie_slot_rear_y": -100.19,
       "mitx_pcie_slot_bottom_z": 79,
       "mitx_atx_power_depth_x": 12,
       "mitx_atx_power_width_y": 10,
       "mitx_atx_power_height_z": 52,
-      "mitx_atx_power_center_y": 39,
+      "mitx_atx_power_center_y": 42.81,
       "mitx_atx_power_bottom_z": 136,
       "mitx_eps_power_depth_x": 12,
       "mitx_eps_power_width_y": 20,
       "mitx_eps_power_height_z": 10,
-      "mitx_eps_power_rear_y": -118,
+      "mitx_eps_power_rear_y": -114.19,
       "mitx_eps_power_bottom_z": 224,
       "mitx_chipset_depth_x": 8,
       "mitx_chipset_width_y": 36,
       "mitx_chipset_height_z": 36,
-      "mitx_chipset_center_y": -15,
+      "mitx_chipset_center_y": -11.19,
       "mitx_chipset_center_z": 111,
       "mitx_axp120x67_depth_x": 67,
       "mitx_axp120x67_width_y": 123.5,
       "mitx_axp120x67_height_z": 120,
       "mitx_axp120x67_base_x": 5.8,
-      "mitx_axp120x67_center_y": -42,
+      "mitx_axp120x67_center_y": -38.19,
       "mitx_axp120x67_center_z": 169,
       "mitx_axp120x67_fan_diameter": 120,
       "mitx_axp120x67_fan_hub_diameter": 32,
@@ -2338,7 +2338,7 @@
       "rog_m2_bottom_depth_x": 4,
       "rog_m2_bottom_width_y": 28,
       "rog_m2_bottom_height_z": 85,
-      "rog_m2_bottom_center_y": -30,
+      "rog_m2_bottom_center_y": -26.19,
       "rog_m2_bottom_center_z": 145,
       "rog_m2_bottom_clearance_to_support_x": 2.35
     },
