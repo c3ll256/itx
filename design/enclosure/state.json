@@ -5,10 +5,9 @@
   "revisionId": "root",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
-  "briefPath": "workspace/cad-workbench/documents/enclosure/brief.md",
   "targets": [],
   "objects": [],
   "assets": [],
-  "assertions": [],
-  "updatedAt": "2026-07-26T16:17:56.748Z"
+  "updatedAt": "2026-07-26T16:17:56.748Z",
+  "parameters": {}
 }
