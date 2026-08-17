@@ -5,7 +5,6 @@
   "revisionId": "revision-2-b176b188-6f62-4b45-b24c-36911f8be580",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
-  "briefPath": "workspace/cad-workbench/documents/enclosure-handoff/brief.md",
   "targets": [
     {
       "id": "imports",
@@ -61,10 +60,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-handoff/revisions/revision-2-b176b188-6f62-4b45-b24c-36911f8be580/validated/previews/workbench_iso_back.png"
+      "datums": []
     },
     {
       "id": "audit_marker",
@@ -90,10 +86,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-handoff/revisions/revision-2-b176b188-6f62-4b45-b24c-36911f8be580/validated/previews/workbench_iso_back.png"
+      "datums": []
     }
   ],
   "assets": [
@@ -111,6 +104,9 @@
       }
     }
   ],
-  "assertions": [],
-  "updatedAt": "2026-07-26T18:29:15.758Z"
+  "updatedAt": "2026-07-26T18:29:15.758Z",
+  "parameters": {
+    "imports": {},
+    "audit": {}
+  }
 }

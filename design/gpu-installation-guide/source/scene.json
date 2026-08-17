@@ -5,7 +5,6 @@
   "revisionId": "revision-3-c6d2dc08-205a-4908-9a64-08f075baf920",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
-  "briefPath": "workspace/cad-workbench/documents/gpu-installation-guide/brief.md",
   "targets": [
     {
       "id": "guide",
@@ -47,10 +46,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step2_rear_io_frame",
@@ -76,10 +72,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step3_front_support",
@@ -105,10 +98,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step4_side_clamps",
@@ -134,10 +124,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "guide_gpu_body",
@@ -163,10 +150,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "guide_gpu_fans",
@@ -192,10 +176,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "guide_gpu_io",
@@ -221,10 +202,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "guide_gpu_pcie",
@@ -250,10 +228,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "slide_left_arrow",
@@ -279,10 +254,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "press_down_arrow",
@@ -308,13 +280,12 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+      "datums": []
     }
   ],
   "assets": [],
-  "assertions": [],
-  "updatedAt": "2026-07-22T20:16:39.912Z"
+  "updatedAt": "2026-07-22T20:16:39.912Z",
+  "parameters": {
+    "guide": {}
+  }
 }

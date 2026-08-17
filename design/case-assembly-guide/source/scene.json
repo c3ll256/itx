@@ -5,7 +5,6 @@
   "revisionId": "revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
-  "briefPath": "workspace/cad-workbench/documents/case-assembly-guide/brief.md",
   "targets": [
     {
       "id": "guide",
@@ -47,10 +46,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step2_psu_cradle",
@@ -76,10 +72,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step3_motherboard_tray",
@@ -105,10 +98,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step4_gpu_support",
@@ -134,10 +124,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step5_top_cap",
@@ -163,10 +150,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step5_left_panel",
@@ -192,10 +176,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step5_right_panel",
@@ -221,10 +202,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step5_front_panel",
@@ -250,10 +228,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "step5_rear_panel",
@@ -279,10 +254,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "tray_down_arrow",
@@ -308,10 +280,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "psu_forward_arrow",
@@ -337,10 +306,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "gpu_left_arrow",
@@ -366,13 +332,12 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/case-assembly-guide/revisions/revision-1-47308c62-7fc6-4ac8-9755-bdc9c7a35a3d/validated/previews/workbench_iso.png"
+      "datums": []
     }
   ],
   "assets": [],
-  "assertions": [],
-  "updatedAt": "2026-07-23T08:29:07.818Z"
+  "updatedAt": "2026-07-23T08:29:07.818Z",
+  "parameters": {
+    "guide": {}
+  }
 }

@@ -5,7 +5,6 @@
   "revisionId": "revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
-  "briefPath": "workspace/cad-workbench/documents/enclosure-column-kit/brief.md",
   "targets": [
     {
       "id": "column_kit",
@@ -47,10 +46,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "column_fl",
@@ -76,10 +72,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "column_rl",
@@ -105,10 +98,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "column_fr",
@@ -134,10 +124,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+      "datums": []
     },
     {
       "id": "column_rr",
@@ -163,13 +150,12 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+      "datums": []
     }
   ],
   "assets": [],
-  "assertions": [],
-  "updatedAt": "2026-07-29T09:01:56.228Z"
+  "updatedAt": "2026-07-29T09:01:56.228Z",
+  "parameters": {
+    "column_kit": {}
+  }
 }

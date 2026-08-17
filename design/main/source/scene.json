@@ -5,7 +5,6 @@
   "revisionId": "revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
-  "briefPath": "workspace/cad-workbench/documents/main/brief.md",
   "targets": [
     {
       "id": "enclosure",
@@ -173,10 +172,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "top_cap",
@@ -202,10 +198,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "rear_io_panel",
@@ -231,10 +224,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "left_vent_panel",
@@ -260,10 +250,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "right_vent_panel",
@@ -289,10 +276,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "front_vent_panel",
@@ -318,10 +302,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "motherboard_tray",
@@ -347,10 +328,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "one_u_psu_cradle",
@@ -376,10 +354,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "gpu_riser_shelf",
@@ -405,10 +380,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "gpu_rear_io_frame",
@@ -434,10 +406,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "gpu_front_support",
@@ -463,10 +432,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "gpu_side_clamps",
@@ -492,10 +458,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "case_feet",
@@ -521,10 +484,7 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     },
     {
       "id": "riser_clamp_bars",
@@ -550,13 +510,12 @@
           1
         ]
       },
-      "visible": true,
-      "locked": false,
-      "datums": [],
-      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/main/revisions/revision-93-ea794926-15d0-4187-93ae-473a2fd41fb3/validated/previews/workbench_top.png"
+      "datums": []
     }
   ],
   "assets": [],
-  "assertions": [],
-  "updatedAt": "2026-07-26T18:16:20.171Z"
+  "updatedAt": "2026-07-26T18:16:20.171Z",
+  "parameters": {
+    "enclosure": {}
+  }
 }
