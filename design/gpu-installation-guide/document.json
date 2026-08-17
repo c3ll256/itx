@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "documentId": "gpu-installation-guide",
+  "revision": 3,
+  "revisionId": "revision-3-c6d2dc08-205a-4908-9a64-08f075baf920",
+  "units": "mm",
+  "coordinateFrame": "replicator-world-z-up",
+  "briefPath": "workspace/cad-workbench/documents/gpu-installation-guide/brief.md",
+  "targets": [
+    {
+      "id": "guide",
+      "label": "guide",
+      "cells": [
+        {
+          "id": "installation_diagram",
+          "target": "guide",
+          "order": 0,
+          "path": "workspace/cad-workbench/documents/gpu-installation-guide/sources/guide/000-installation_diagram.py",
+          "sha256": "8c0e8549fee2bf2f77c29e173dd68e62fa8d918766640d25f9ae69d186b2b749"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "step1_riser_shelf",
+      "target": "guide",
+      "label": "1 — Screw the PCIe riser to this shelf",
+      "kind": "generated",
+      "shapeHash": "310d46130908b88fc42b294ceb2339b46464f4adbed4208284d2de4197920480",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "step2_rear_io_frame",
+      "target": "guide",
+      "label": "2 — Slide GPU rear bracket through this frame and use two screws",
+      "kind": "generated",
+      "shapeHash": "d4ad39ea90469e57382d4bb9bdd1328afa7a7999efe14acf9313a1bce3d3bdc1",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "step3_front_support",
+      "target": "guide",
+      "label": "3 — Far end passes through this support frame",
+      "kind": "generated",
+      "shapeHash": "5e6ec6c0aa133405c90450a84748ee2e7da9e5a404aefeb6b03b6e8ee6c3d7bd",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "step4_side_clamps",
+      "target": "guide",
+      "label": "4 — Refit both right-side clamps",
+      "kind": "generated",
+      "shapeHash": "5af137c5e484ed15cd9edcc9ed3156704a5a64dcb4658871446591776df640d7",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "guide_gpu_body",
+      "target": "guide",
+      "label": "Guide-only dual-fan GPU illustration; not manufacturing geometry",
+      "kind": "generated",
+      "shapeHash": "6ae40a3aca4083ca76b98756ce1374c918e25882bfa5da3d768423d36583188f",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "guide_gpu_fans",
+      "target": "guide",
+      "label": "Guide-only two fan rings",
+      "kind": "generated",
+      "shapeHash": "dac68a3c078f216fbf7ebb96330074409f84002bad4c7346f6e9d1f52c8b8dc8",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "guide_gpu_io",
+      "target": "guide",
+      "label": "Guide-only split dual-slot flange",
+      "kind": "generated",
+      "shapeHash": "f7f321dccda1c4f30e7c0c2dad138745704dd6e8f02392915f67e12c5d90f2a3",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "guide_gpu_pcie",
+      "target": "guide",
+      "label": "Guide-only PCIe edge connector",
+      "kind": "generated",
+      "shapeHash": "4b3756ff9d2d97c93820ccd95aed21d39f55f4e86cc16928df3747f287b5bdb7",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "slide_left_arrow",
+      "target": "guide",
+      "label": "Slide card left through both frames",
+      "kind": "generated",
+      "shapeHash": "f6d8d495f22f2bf3c0557d919ab1c1d7cb1d173d7e4eb9cc99da475ac3b91724",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "press_down_arrow",
+      "target": "guide",
+      "label": "Press PCIe edge down into riser",
+      "kind": "generated",
+      "shapeHash": "5a8ff008de14d71ac973e0de91a82d6e258182bae3684ee04aef4c9e489fba43",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/gpu-installation-guide/revisions/revision-3-c6d2dc08-205a-4908-9a64-08f075baf920/validated/previews/workbench_iso.png"
+    }
+  ],
+  "assets": [],
+  "assertions": [],
+  "updatedAt": "2026-07-22T20:16:39.912Z"
+}

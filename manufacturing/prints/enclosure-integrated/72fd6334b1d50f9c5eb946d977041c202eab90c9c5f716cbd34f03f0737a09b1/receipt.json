@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "printId": "72fd6334b1d50f9c5eb946d977041c202eab90c9c5f716cbd34f03f0737a09b1",
+  "generatedAt": "2026-08-03T06:08:35.916Z",
+  "jobId": "default",
+  "documentId": "enclosure-integrated",
+  "revision": 68,
+  "revisionId": "revision-68-b41512e1-ddef-46f2-b941-39481071e2e1",
+  "sourceShapeHashes": {
+    "base": "c93f1878843d0eaaf15315595e3b1e23dfa3501e29743e07d7a69ae327b501a1",
+    "case_feet": "84a3d58e53134f91bd8d35e00e5fcfff28874df74de1b09059550b23c33fa657",
+    "column_fl": "c57a1318ca3be7e349d576ae6acb4d73dca063cef93410aeb7ea580dbff6d7f4",
+    "column_fr": "d008052e8c5a313e7ef44cbd0b92e8c738a3af6d1a9cf8709078738166d3cbf1",
+    "column_rl": "2a9533fbc4b1819944dfa84b943f5d67300c7e5564f082922f66b86786d08096",
+    "column_rr": "e26c1125d3399710d4382f747a679261d4a1f412daf7b82fa89bd592ddce346d",
+    "front_panel": "cbae9fcd956d88145c2c022057be33c29e67e72920dfc5abeea022ab006e7bb6",
+    "left_panel": "def6a07694527ca19ed0f8418ae5bf4a60e96d275949ce99c2145ebc9dbd57b7",
+    "mb_mount_lower_front": "da5e7863403861d0038498358b39dd4fec3fb8f2b5127c16e10216cb836dd760",
+    "mb_mount_lower_rear": "006af5e5b793cf89a61610b554b18d927a1a0bad7f8e249effd72347c0704e5b",
+    "mb_mount_upper_front": "570796d2e47c86f17175ce1a7c38f36baada07d1f0b1d4b473ff48a8b2154c9a",
+    "mb_mount_upper_rear": "3adc25dcec001e467b92b279a6077936a288107b7ef226a7018de8eaec0738cc",
+    "rear_panel": "a73b4a63d2f5264dac60732e6df6e1d8700cba4232d2c17a4fac4e108872b63c",
+    "right_panel": "3bd3b56d872b59808e5f4e1e2586160d90c528273d7e64cfc77f560cf4ee864e",
+    "top_cap": "97a90c8ddf261d3bb957704562d43b068d1639d9a6c5b1f900197b30478d8736"
+  },
+  "sourceStepHashes": {
+    "base": "80de4964255b0b67160833c3980f7414300cd9c4c891a73544fd9f837e7c0143",
+    "case_feet": "140b63a5f33ab19777a3eee3afd88ec36bd440c7ca3a0bfb21bda9178dceec5c",
+    "column_fl": "4b5b806a3a54530526e03d338726ebc226ebb09cc45933a763ff78160737a963",
+    "column_fr": "b9a5984627920fa3b90d301c4444d2d5d25cc10ef5caf7ca3c6ada75c73a2c3e",
+    "column_rl": "ab07cdc5ca88751700584e5fc95bca4d8336b40353b0af0568b10becd1eeacf4",
+    "column_rr": "a92bc4a24871bd550acaa16e4c0ad6b814a46dce4b69e196da52628f9aa9bb6b",
+    "front_panel": "9b2e55f24573a7adc7eba2c454bd092ec4b3e4c7d1afb1655e71265601a9303c",
+    "left_panel": "2670e39a71da0ee12fd4ef5416318be91c5a5f527b687229ccd2358f8331e03a",
+    "mb_mount_lower_front": "2a4bc981eaa3c2cca8e1a5d9d602f3d659882562a064ac4748770c865c40245c",
+    "mb_mount_lower_rear": "bf21cbf583e22a70e49a8c746afe0cb2d7937492eb2ec75caabe23734e752a39",
+    "mb_mount_upper_front": "c07ecc56a7f54e4f4fa4c905a661977b534295ee12ea82f668b94c4a3df1db60",
+    "mb_mount_upper_rear": "c64d8fcd4f1f1dfd6f3c95cb65c9eea9deae7c84ec6aa360b5b9f379ac7bc3f5",
+    "rear_panel": "49e50bf41dbe8157ceb39b201f184c0168cfa05b91b51c8a9c2bf27cf3f126ca",
+    "right_panel": "fd77f704a1cbbd62d8a9cbc2dbf722b829bf561d0ecbe2e5ce299f9a41b348ba",
+    "top_cap": "0e2c3e2dcdf3d8a36f4a558abf40b96caea0cacfda590233ffbccbb6551427cd"
+  },
+  "runtime": {
+    "manifestHash": "6f32c39b4879b87125efe76a5af86d1199cd262713ae595f50b7e052a30b861b",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyRevision": "50d78db682edfc69f5188d838e410ae79c107f3c5c698718cbceee1196299eed"
+  },
+  "algorithmVersion": 1,
+  "intentPath": "workspace/cad-workbench/documents/enclosure-integrated/print-jobs/default/job.json",
+  "plan": {
+    "path": "artifacts/cad-workbench/documents/enclosure-integrated/prints/72fd6334b1d50f9c5eb946d977041c202eab90c9c5f716cbd34f03f0737a09b1/print-plan.json",
+    "sha256": "814c09c88267e533a722564f1eddc8c0467ed79ddf52ffef8435e2d2416e657c",
+    "sizeBytes": 10075
+  },
+  "plates": [
+    {
+      "path": "artifacts/cad-workbench/documents/enclosure-integrated/prints/72fd6334b1d50f9c5eb946d977041c202eab90c9c5f716cbd34f03f0737a09b1/plates/plate-001.3mf",
+      "sha256": "643491378a4da8bc5336c5832d0819dc946af911c509d110560807d3b51d08c6",
+      "sizeBytes": 3005491,
+      "plateIndex": 1
+    },
+    {
+      "path": "artifacts/cad-workbench/documents/enclosure-integrated/prints/72fd6334b1d50f9c5eb946d977041c202eab90c9c5f716cbd34f03f0737a09b1/plates/plate-002.3mf",
+      "sha256": "24a9f70d98a776f1119c50d9748c8548eae2d5faee6c9b15e20c8087baefe3be",
+      "sizeBytes": 43450,
+      "plateIndex": 2
+    },
+    {
+      "path": "artifacts/cad-workbench/documents/enclosure-integrated/prints/72fd6334b1d50f9c5eb946d977041c202eab90c9c5f716cbd34f03f0737a09b1/plates/plate-003.3mf",
+      "sha256": "b325dce2c9e9432659e7eaf42b0334675a2329b085c1aa1c756a547b67e12cc9",
+      "sizeBytes": 66470,
+      "plateIndex": 3
+    }
+  ],
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "362b3b580ef2418bcda710c677beea6a",
+    "projectId": "2f2e2513-3845-4074-81ff-eb4f90089df0",
+    "receiptPath": "artifacts/cad-workbench/documents/enclosure-integrated/prints/72fd6334b1d50f9c5eb946d977041c202eab90c9c5f716cbd34f03f0737a09b1/receipt.json",
+    "payloadSha256": "1b5894e860a980c4c8810f37950e4ac6e3e131ddaa8827fdb852267dd2db4750",
+    "mac": "66bb5cc43e5f20221cf47c352d2ecebe98aa2808b8ffb54f89c3c55d3d6a9455"
+  }
+}

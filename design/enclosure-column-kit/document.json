@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "documentId": "enclosure-column-kit",
+  "revision": 1,
+  "revisionId": "revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6",
+  "units": "mm",
+  "coordinateFrame": "replicator-world-z-up",
+  "briefPath": "workspace/cad-workbench/documents/enclosure-column-kit/brief.md",
+  "targets": [
+    {
+      "id": "column_kit",
+      "label": "column_kit",
+      "cells": [
+        {
+          "id": "parts",
+          "target": "column_kit",
+          "order": 0,
+          "path": "workspace/cad-workbench/documents/enclosure-column-kit/sources/column_kit/000-parts.py",
+          "sha256": "07c6d51252d66ba461627df8c240ee91707d9ca36099476c0962be1a202a1639"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "column_base",
+      "target": "column_kit",
+      "label": "Column mounting base",
+      "kind": "generated",
+      "shapeHash": "332714797a874ad0b1cb29771882e49f0cd307f2b42a4e9f45b29723a1ee6b0b",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "column_fl",
+      "target": "column_kit",
+      "label": "Front left column",
+      "kind": "generated",
+      "shapeHash": "f4748e886a3a03cd1d515ebbbd6e29b5507bc215a3fed591c5999f5928caca64",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "column_rl",
+      "target": "column_kit",
+      "label": "Rear left column",
+      "kind": "generated",
+      "shapeHash": "f26ad11ceb59935e2f2ecfb76e336d1555a0fc09f789936f389f22b63ae38118",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "column_fr",
+      "target": "column_kit",
+      "label": "Front right column",
+      "kind": "generated",
+      "shapeHash": "a3fc86511504a728fd7a5b860b1e511450b7a2278ea9000163753a96400c03af",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+    },
+    {
+      "id": "column_rr",
+      "target": "column_kit",
+      "label": "Rear right column",
+      "kind": "generated",
+      "shapeHash": "b26bee9a3968b1b3fbc1080eef651bbd8d1626b8567ac524febb92fcf99f86c0",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "visible": true,
+      "locked": false,
+      "datums": [],
+      "previewPath": "/Users/c3ll256/Desktop/itx/workspace/cad-workbench/documents/enclosure-column-kit/revisions/revision-1-d703668a-68b3-4d9f-92f0-10343bbac8b6/validated/previews/workbench_iso.png"
+    }
+  ],
+  "assets": [],
+  "assertions": [],
+  "updatedAt": "2026-07-29T09:01:56.228Z"
+}

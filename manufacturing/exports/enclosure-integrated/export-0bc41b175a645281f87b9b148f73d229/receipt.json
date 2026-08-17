@@ -1,0 +1,128 @@
+{
+  "documentId": "enclosure-integrated",
+  "revision": 169,
+  "revisionId": "revision-169-a209daf0-22a1-4ca6-b979-e82b23232254",
+  "schemaVersion": 2,
+  "exportId": "export-0bc41b175a645281f87b9b148f73d229",
+  "generatedAt": "2026-08-05T11:37:10.754Z",
+  "documentSha256": "50d8ab3b832c45a710da119ec5d15d6b95f9c2e10eff799098d04bc989310464",
+  "role": "enclosure",
+  "stateRevision": "fd314438900b430a0ff58a2391d23e6b0e199f101dc26a807c15ba6f84053fd2",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "enclosure-integrated",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 169,
+      "revisionId": "revision-169-a209daf0-22a1-4ca6-b979-e82b23232254",
+      "documentSha256": "23f380ee61a48af64ec553984020187e18a308b431b22cdca2149fe2e5ca3069",
+      "manifestSha256": "99dc6c62c4220b01fb8ff0294acdf8a06285557ab8f217f74b89e95a84fa7b6e",
+      "stepSha256": "692a687dd33d033f0b00ff544a1bb5543857983cba30f1670ed8f8e8e31105e9"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/enclosure-integrated/brief.md",
+      "sha256": "16184aa8b33b0900d775891ae01040bf4a145511d4e434762c8d3879b30e4abb"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "144b9035487b7fcfccfbfda6181f0096688bbf1d5b6a0d7b001c98e4b5b46039",
+      "documentRequirementSha256": "71bad8d93a22aeef77447005ad05d90eaaf94c84192ab7df52f732cacb528283",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "visual_review",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateRevision": "fd314438900b430a0ff58a2391d23e6b0e199f101dc26a807c15ba6f84053fd2"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "99dc6c62c4220b01fb8ff0294acdf8a06285557ab8f217f74b89e95a84fa7b6e",
+    "stepSha256": "692a687dd33d033f0b00ff544a1bb5543857983cba30f1670ed8f8e8e31105e9"
+  },
+  "exportAlgorithm": {
+    "version": 1,
+    "bootstrapSha256": "f9a42549162dbc45bb8d34fc8cd3fcee856f1f6958b1c5feb8575796bab18d25"
+  },
+  "sourceHashes": {
+    "enclosure/edge_softening": "bf247a664a193133719ea216d05f16733d0dfb892da9259a7970385909e58448",
+    "enclosure/final_coaxial_integrated_base": "8658062b4ecf44c5e94df7095c034931106782e4a6d4cdb3998ad3de7bd07545",
+    "enclosure/final_rear_right_top_joint": "bfbee84349571da25cd02a4b64328ff4f48529009310b17f5873828b990c5094",
+    "enclosure/final_top_and_left_magnet_alignment": "8ce22062b8c53d8b22067b0ead43da8e89d55b59bb19778dd71e3502d532fd4f",
+    "enclosure/flat_sfx_floor": "e3785d9e7fad2ceef2c71bcc65535a337ea7f2d710e075ea468043bbd2131f8d",
+    "enclosure/flush_column_envelopes": "608ea429dff2617f55c6c62a79d71d2800e3297c629b52a05f1f8341220d2000",
+    "enclosure/foot_through_cleanup": "064091a9f81e01347be780d30b3fba2c4eda3cdb451464a99eb1ca3213338f5a",
+    "enclosure/four_piece_frame_trial": "7a2e49c8802ba4911ca33f8332f88397e2e20d31ded437d22f2c4f7eb68571b3",
+    "enclosure/front_power_button_position": "5c8e153315faebb16c363837fcb1a2c9a2ce34f9ffe49cdad137e1bd6abc71f8",
+    "enclosure/gpu_envelope_fit_audit": "3e6576001fbeb21b2c28f49b0ee9bd90af4cf4a7e8dad1b9168f96899dc21c79",
+    "enclosure/integrated_base_feet_final": "bbb62c8f4208fb47ccae65c1304cd2ddc466bb41a288173f97c97dabad1cb2a9",
+    "enclosure/internals": "a99516f833642bda531a962089505ed20107f15ec06806d328c4663a2eb16de4",
+    "enclosure/left_rear_integrated_support": "b89aaf3c9e9bcb97d49574366cb7a01a402360674a9d8d23d3de0ddd55f8d316",
+    "enclosure/p1s_split_modules": "599ccba301623c4fd50af1f69c0949cb192a5717ccf899787fdde51d8c127812",
+    "enclosure/power_button_tray_clearance": "32adb71219ddf3610c9ca01f337ac01a199986b082efce777f3010c4a9531292",
+    "enclosure/rear_io_column_clearance": "08cba44f416d3af4de67c7fd9a58213856c09747ff7af5d4e297de13edffb252",
+    "enclosure/rear_panel_fastening": "aca83021d1268360a7df53efd3bae344f931ed25ae5a17bb87a75840cbb89a70",
+    "enclosure/rear_panel_final_hole_restore": "a703063acf404f9f7820b3e32b9354316fb88b3e2f62290bf96471e5e182b84e",
+    "enclosure/rear_panel_mb_tab": "0ca4b962087d3f3791e5b2b65d1282c1d2705526e5c8bc7b40dd3365c7f8541d",
+    "enclosure/rear_right_arm_step_cleanup": "16dbfe302c3a59be8f770afcb50481a2545e14129aa8e252ff70f5892867adef",
+    "enclosure/rear_right_base_contact": "d583b1be205c98a7b3bc852c5e27d14356d221faf51f93a2bc78caf5dd036bc2",
+    "enclosure/remove_top_cap_thickening": "20ad210441f8a80473931f35876a3c2382078c26fd7d49f59c41c29110d051ca",
+    "enclosure/remove_vertical_returns": "f03297a19c625ee55662761046e11f3f96a76205bc232228a894831df71e98d1",
+    "enclosure/screw_kit_v1_audit": "0f08ac35490874b409607889b64a4c2824ebfb5e410f32576de0b2eeac7030e0",
+    "enclosure/sfx_column_delete_final": "7db209cbea2d2db0f71e8dbaeedf3feb9de5226582fa92c7c39ecbdb922d0ed6",
+    "enclosure/sfx_psu_support": "3a23495ccb5dbac570e69e002e1afef4a480ccd4b318030d948aab48317a970d",
+    "enclosure/sfx_rear_mounting": "efd4811d190f255fa3404c035151b05d3a8c164eb60f4f446ef080bc24244d37",
+    "enclosure/shell_columns": "b0a9b3f7c4f977cba6f8e7921c6720c5ffe8efb9037303874543b66485e7908a",
+    "enclosure/side_panel_steel_slots_and_finger_pull": "5bab84eb88e59e4434e642b4a43153cdecc79db8fdf5c290c0c87591273c3d53",
+    "enclosure/split_case_feet": "cecbcaaa92cf36be14aaf22c04bc8097f932b3ebf045e8ac79137648ff9b6442",
+    "enclosure/standard_gpu_slots": "bbbd304d1f455d8e83759133b69e686f27e6587ad8a3582d7b6f5830f98dc469",
+    "enclosure/tray_base_screw": "6f0c996914a2bb64ea983792f4cf8721a44f312f647ee0a8548a82ffe5913221",
+    "enclosure/tray_base_slot": "406858da98d57b0e5429cae59c430f0742513deec1dba6661b4f49722edd8676",
+    "enclosure/tray_hidden_mounts": "e96d3de5e843e40562d001e76fbfb8c99ef2ac0f1dd58946cfb77d22c3f5b724",
+    "enclosure/tray_top_rear_locators": "19f93e730a178925722028763493abab63522f9ed089283f47e12d81266b9bdb"
+  },
+  "assetHashes": {},
+  "shapeHashes": {
+    "base": "0dd77132c38bbc70edf69a68c5b89fc4dc0a578b4e3c75c6bdf9febafb55b1be",
+    "front_panel": "8d92de59ea8b4f428eea855de83933cd18aac83558c2980d2375b0702b07aab7",
+    "left_panel": "fd53d5120b9a51589672f2d3cafdf435a106bd8f431e648fa8dba3494e9edcea",
+    "mb_mount_lower_front": "6dae2ffe5e81467d60181d3dde1e1c61c9e0b70ebaa4ab3a3ffcdeabf3ef3307",
+    "mb_mount_upper_front": "8bb9d376a67972356fd9a8d1b8f3f9394a5b6acc8a13d4aa2a511d7493e6dac0",
+    "mb_mount_upper_rear": "184a37da84555b1c23250c1d27e728fa83636e4a33a9b885b39910dc3f4350af",
+    "rear_panel": "0a6ce8d3a06dcf1ab9bffff9bcb6c73b6c9fc32236954bd0fe3566c63aefda5a",
+    "right_panel": "e487e3b8d9b91a4e516d4df5984f10d7df22037a86e147ec69ff425699ef14a6",
+    "top_cap": "bd7a522d62acdd5b247758028ddb48ea3da9a37714a9099ca474b73d6d361fbb"
+  },
+  "runtime": {
+    "manifestHash": "6f32c39b4879b87125efe76a5af86d1199cd262713ae595f50b7e052a30b861b",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyRevision": "50d78db682edfc69f5188d838e410ae79c107f3c5c698718cbceee1196299eed"
+  },
+  "assertions": [],
+  "artifacts": [
+    {
+      "path": "artifacts/cad-workbench/documents/enclosure-integrated/exports/export-0bc41b175a645281f87b9b148f73d229/model.step",
+      "role": "model/step",
+      "sha256": "692a687dd33d033f0b00ff544a1bb5543857983cba30f1670ed8f8e8e31105e9",
+      "sizeBytes": 2700676
+    }
+  ],
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "362b3b580ef2418bcda710c677beea6a",
+    "projectId": "2f2e2513-3845-4074-81ff-eb4f90089df0",
+    "receiptPath": "artifacts/cad-workbench/documents/enclosure-integrated/exports/export-0bc41b175a645281f87b9b148f73d229/receipt.json",
+    "payloadSha256": "2ed8298135bc833e852044b2f64bc74cf44b2051e05a9b66b2da8e0d011ad997",
+    "mac": "34a45e495f664acee2cefc8e384d3b6144d6487ffe3caa28aeac0e72fd9ce0a2"
+  },
+  "status": "reviewed",
+  "review": {
+    "reviewId": "review-169-47934039-51e4-4cc9-83a8-929e05c21f1d",
+    "path": "workspace/cad-workbench/documents/enclosure-integrated/reviews/review-169-47934039-51e4-4cc9-83a8-929e05c21f1d/receipt.json",
+    "sha256": "7c06ac5df384e2228fdbd692709a3e30be0acadac3453bff2fdc74d60a7150f9"
+  }
+}

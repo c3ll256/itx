@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "printId": "72fd6334b1d50f9c5eb946d977041c202eab90c9c5f716cbd34f03f0737a09b1",
+  "generatedAt": "2026-08-03T06:08:35.916Z",
+  "intent": {
+    "schemaVersion": 1,
+    "jobId": "default",
+    "documentId": "enclosure-integrated",
+    "revision": 68,
+    "revisionId": "revision-68-b41512e1-ddef-46f2-b941-39481071e2e1",
+    "plate": {
+      "widthMm": 256,
+      "depthMm": 256,
+      "maxHeightMm": 256,
+      "edgeMarginMm": 5,
+      "partSpacingMm": 4
+    },
+    "items": [
+      {
+        "objectId": "base",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "column_fl",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "column_rl",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "column_fr",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "column_rr",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "case_feet",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "top_cap",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "front_panel",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "rear_panel",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "left_panel",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "right_panel",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "mb_mount_lower_rear",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "mb_mount_lower_front",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "mb_mount_upper_rear",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      },
+      {
+        "objectId": "mb_mount_upper_front",
+        "quantity": 1,
+        "orientationDeg": [
+          0,
+          0,
+          0
+        ],
+        "allowQuarterTurn": true
+      }
+    ]
+  },
+  "plates": [
+    {
+      "index": 1,
+      "fileName": "plate-001.3mf",
+      "widthMm": 256,
+      "depthMm": 256,
+      "usedWidthMm": 185.2,
+      "usedDepthMm": 237.2,
+      "utilization": 0.5328468504197239,
+      "placements": [
+        {
+          "objectId": "base",
+          "label": "Rounded support base",
+          "copyIndex": 1,
+          "resourceKey": "base:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 7,
+          "yMm": 7,
+          "zMm": 0,
+          "widthMm": 146,
+          "depthMm": 190,
+          "heightMm": 3
+        },
+        {
+          "objectId": "column_fl",
+          "label": "Flush rear-left column",
+          "copyIndex": 1,
+          "resourceKey": "column_fl:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 7,
+          "yMm": 230.2,
+          "zMm": 0,
+          "widthMm": 14,
+          "depthMm": 14,
+          "heightMm": 219
+        },
+        {
+          "objectId": "column_fr",
+          "label": "Flush rear-right column",
+          "copyIndex": 1,
+          "resourceKey": "column_fr:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 25,
+          "yMm": 230.2,
+          "zMm": 0,
+          "widthMm": 14,
+          "depthMm": 14,
+          "heightMm": 219
+        },
+        {
+          "objectId": "column_rl",
+          "label": "Flush front-left column",
+          "copyIndex": 1,
+          "resourceKey": "column_rl:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 43,
+          "yMm": 230.2,
+          "zMm": 0,
+          "widthMm": 14,
+          "depthMm": 14,
+          "heightMm": 219
+        },
+        {
+          "objectId": "column_rr",
+          "label": "Flush front-right column",
+          "copyIndex": 1,
+          "resourceKey": "column_rr:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 61,
+          "yMm": 230.2,
+          "zMm": 0,
+          "widthMm": 14,
+          "depthMm": 14,
+          "heightMm": 219
+        },
+        {
+          "objectId": "front_panel",
+          "label": "Slotless front panel",
+          "copyIndex": 1,
+          "resourceKey": "front_panel:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 7,
+          "yMm": 223.8,
+          "zMm": 0,
+          "widthMm": 146,
+          "depthMm": 2.4000000000000075,
+          "heightMm": 219
+        },
+        {
+          "objectId": "left_panel",
+          "label": "Rounded left vent",
+          "copyIndex": 1,
+          "resourceKey": "left_panel:q1",
+          "orientationDeg": [
+            0,
+            0,
+            90
+          ],
+          "xMm": 7,
+          "yMm": 201,
+          "zMm": 0,
+          "widthMm": 185.2,
+          "depthMm": 2.400000000000035,
+          "heightMm": 219
+        },
+        {
+          "objectId": "mb_mount_lower_front",
+          "label": "Lower front mount",
+          "copyIndex": 1,
+          "resourceKey": "mb_mount_lower_front:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 79,
+          "yMm": 230.2,
+          "zMm": 0,
+          "widthMm": 12,
+          "depthMm": 14,
+          "heightMm": 33.35
+        },
+        {
+          "objectId": "mb_mount_lower_rear",
+          "label": "Lower rear mount",
+          "copyIndex": 1,
+          "resourceKey": "mb_mount_lower_rear:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 95,
+          "yMm": 230.2,
+          "zMm": 0,
+          "widthMm": 12,
+          "depthMm": 14,
+          "heightMm": 33.35
+        },
+        {
+          "objectId": "mb_mount_upper_front",
+          "label": "Upper front mount",
+          "copyIndex": 1,
+          "resourceKey": "mb_mount_upper_front:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 111,
+          "yMm": 230.2,
+          "zMm": 0,
+          "widthMm": 12,
+          "depthMm": 14,
+          "heightMm": 38.16999999999999
+        },
+        {
+          "objectId": "mb_mount_upper_rear",
+          "label": "Upper rear mount",
+          "copyIndex": 1,
+          "resourceKey": "mb_mount_upper_rear:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 127,
+          "yMm": 230.2,
+          "zMm": 0,
+          "widthMm": 12,
+          "depthMm": 14,
+          "heightMm": 38.16999999999999
+        },
+        {
+          "objectId": "rear_panel",
+          "label": "Slotless rear panel",
+          "copyIndex": 1,
+          "resourceKey": "rear_panel:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 7,
+          "yMm": 207.4,
+          "zMm": 0,
+          "widthMm": 146,
+          "depthMm": 12.400000000000006,
+          "heightMm": 219
+        },
+        {
+          "objectId": "right_panel",
+          "label": "Rounded right vent",
+          "copyIndex": 1,
+          "resourceKey": "right_panel:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 157,
+          "yMm": 7,
+          "zMm": 0,
+          "widthMm": 2.4000000000000066,
+          "depthMm": 185.2,
+          "heightMm": 219
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "fileName": "plate-002.3mf",
+      "widthMm": 256,
+      "depthMm": 256,
+      "usedWidthMm": 146,
+      "usedDepthMm": 190,
+      "utilization": 0.4583911692775464,
+      "placements": [
+        {
+          "objectId": "top_cap",
+          "label": "Slotless top cap",
+          "copyIndex": 1,
+          "resourceKey": "top_cap:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 7,
+          "yMm": 7,
+          "zMm": 0,
+          "widthMm": 146,
+          "depthMm": 190,
+          "heightMm": 5
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "fileName": "plate-003.3mf",
+      "widthMm": 256,
+      "depthMm": 256,
+      "usedWidthMm": 142,
+      "usedDepthMm": 186,
+      "utilization": 0.4364465595875471,
+      "placements": [
+        {
+          "objectId": "case_feet",
+          "label": "Through-hole feet",
+          "copyIndex": 1,
+          "resourceKey": "case_feet:q0",
+          "orientationDeg": [
+            0,
+            0,
+            0
+          ],
+          "xMm": 7,
+          "yMm": 7,
+          "zMm": 0,
+          "widthMm": 142,
+          "depthMm": 186,
+          "heightMm": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "product_class": "mechanical",
+  "form_factor": "9.96-liter FDM-printed Mini-ITX computer enclosure",
+  "manufacturing_method": "fdm",
+  "details": {
+    "body_envelope_mm": {
+      "width": 152,
+      "depth": 260,
+      "height": 252,
+      "nominal_volume_l": 9.95904
+    },
+    "installed_envelope_mm": {
+      "width": 152,
+      "depth": 260,
+      "height": 256,
+      "foot_projection_below_body_mm": 4
+    },
+    "motherboard": "ASUS ROG STRIX Z390-I GAMING, Mini-ITX 170 x 170 mm; standard four-hole grid and rear I/O interface; preserve backside M.2 clearance",
+    "motherboard_mounting": {
+      "support_type": "four integral cylindrical printed standoffs: three fused to enclosure hosts and one fused to a detachable lower-front mount arm",
+      "pcb_backside_clearance_mm": 6.35,
+      "fastener": "four M3 screws into printed self-forming holes",
+      "detachable_lower_front_mount_arm": true,
+      "lower_front_mount_fastener": "one underside M3 screw through the base into the detachable printed arm",
+      "printed_joint_source": "printed-screw-joint-v1",
+      "heat_set_inserts": false,
+      "independent_metal_standoffs": false,
+      "independent_printed_standoffs": false,
+      "model_specific_check_result": "completed for ASUS ROG STRIX Z390-I GAMING using the official manual: 170 x 170 mm outline, standard four-hole grid, standard rear I/O, dual-DIMM/PCIe arrangement, and bottom-side M.2_2 clearance reservation"
+    },
+    "cpu_cooler": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm",
+    "gpu": "Colorful GeForce RTX 3060 NB DUO 12G V3 L-V, dual-fan dual-slot, inverted with PCIe fingers upward; official size 253.4 x 132.5 x 41 mm; the CAD deliverable excludes the power cable and requires an unobstructed 8-pin connector and cable-departure corridor",
+    "pcie_riser": "approximately 200 mm",
+    "gpu_support": "U-shaped far-end cradle fused into the removable front panel; the cradle leaves assembly clearance and soft-pad allowance, exits with the front panel, and is not a separate part",
+    "psu": "standard SFX 125 x 100 x 63.5 mm, rear straight-in installation",
+    "sfx_rear_interface": "four 4.2 mm holes at 113 x 51.5 mm spacing with unobstructed driver access",
+    "layout": "six-piece 152 x 260 x 252 mm enclosure with exact ASUS motherboard, Colorful RTX 3060 GPU, lower PCIe support beam and standard SFX PSU",
+    "storage": "M.2 only; no separate drive bays",
+    "case_fans": "none required by default",
+    "ventilation": "large perforated side panels; solid front panel",
+    "front_io": "one 12.2 mm diameter power-button mounting aperture only; button body, cap, actuator and cable path are outside the current CAD deliverable",
+    "panel_magnets": "15 x 10 x 4 mm embedded magnets retained by a centered screw",
+    "priority": "verified hardware installation and maintainability within the fixed enclosure envelope",
+    "gpu_envelope_mm": {
+      "length": 253.4,
+      "height": 132.5,
+      "thickness": 41
+    }
+  },
+  "open_questions": [],
+  "requirement_conflicts": [
+    {
+      "id": "sfx_rear_mount_spacing_mismatch",
+      "prd_path": "/details/sfx_rear_interface",
+      "prd_statement": "four 4.2 mm holes at 113 x 51.5 mm spacing with unobstructed driver access",
+      "observed_state": "enclosure-integrated revision 269 generates the four SFX rear holes at 119 x 52.5 mm spacing because the hole centers are x=±59.5 mm and z=8.5/61.0 mm",
+      "source": "cad-workbench/enclosure-integrated@revision-269-6bade7bd-f5bf-4d62-aca5-26959bd93d72",
+      "detected_at": "2026-08-13T09:20:00Z",
+      "resolution": "design_reverted",
+      "resolution_reason": "保留已确认的 113 x 51.5 mm SFX 后板接口要求，并把 CAD 后板孔位修回该要求。",
+      "question_id": "sfx_rear_mount_spacing_mismatch",
+      "resolved_at": "2026-08-13T09:36:27.993Z"
+    },
+    {
+      "id": "gpu_cpu_cooler_envelope_conflict",
+      "prd_path": "/details/cpu_cooler",
+      "prd_statement": "Thermalright AXP120-X67, 123.5 x 120 x 67 mm; compact dual-slot GPU within 180 x 115 x 40 mm; both must fit the fixed enclosure layout",
+      "observed_state": "enclosure-integrated revision 272 places the GPU shroud at x=-51..-11 mm across the CPU y/z region while the required 67 mm cooler projects from the motherboard component side to about x=-56.45 mm, producing about 40 mm of hard overlap",
+      "source": "cad-workbench/enclosure-integrated@revision-272-f487f588-859c-495e-8fe7-cee64ef8d5c6; review-272-8f41bc61-629c-485a-a0b3-3b94f0de3277",
+      "detected_at": "2026-08-13T10:28:00Z",
+      "resolution": "design_reverted",
+      "resolution_reason": "用户指出主板方向错误；保留 AXP120-X67 与双槽 GPU 要求，翻转主板元件面并修正安装平面布局。",
+      "question_id": "gpu_cpu_cooler_envelope_conflict",
+      "resolved_at": "2026-08-13T10:37:45.333Z"
+    },
+    {
+      "id": "gpu_support_front_panel_integration",
+      "prd_path": "/details/gpu_support",
+      "prd_statement": "removable far-end U support with assembly clearance and soft-pad allowance",
+      "observed_state": "The user removed the separate far-end support and explicitly requires the U-shaped GPU cradle to be fused into the removable front panel instead of published as another part.",
+      "source": "user_input@2026-08-14T10:44:46Z",
+      "detected_at": "2026-08-14T10:44:46Z",
+      "resolution": "requirement_updated",
+      "resolution_reason": "显卡远端支撑改为前面板内侧的一体结构；拆下前面板时支撑随面板退出，不再增加独立零件。",
+      "question_id": "gpu_support_front_panel_integration",
+      "resolved_at": "2026-08-14T10:44:46Z"
+    },
+    {
+      "id": "power_button_hole_only",
+      "prd_path": "/details/front_io",
+      "prd_statement": "power button only",
+      "observed_state": "The user explicitly requires the CAD deliverable to retain only the existing power-button mounting hole and not model the button, cap, actuator or cable path.",
+      "source": "user_input@2026-08-14T10:44:46Z",
+      "detected_at": "2026-08-14T10:44:46Z",
+      "resolution": "requirement_updated",
+      "resolution_reason": "当前 CAD 交付只要求保留电源按钮安装孔；按钮本体与执行结构暂不纳入模型。",
+      "question_id": "power_button_hole_only",
+      "resolved_at": "2026-08-14T10:44:46Z"
+    },
+    {
+      "id": "gpu_exact_model_envelope_conflict",
+      "prd_path": "/details/gpu",
+      "prd_statement": "compact dual-slot GPU within the confirmed 180 x 115 x 40 mm concept envelope",
+      "observed_state": "The selected Colorful GeForce RTX 3060 NB DUO 12G V3 L-V is officially 253.4 x 132.5 x 41.0 mm, dual-fan and 2-slot. Enclosure revision 292 still publishes a 180 x 115 x 40 mm single-fan GPU reference. Its latent 253.4 mm length audit leaves only about 0.6 mm to the front inner wall, while the front-panel cradle provides only about 0.5 mm clearance per side for the 41 mm card and overlaps the inverted card's far-end lower-edge power-connector region.",
+      "source": "Colorful official product specification; cad-workbench/enclosure-integrated@revision-292-03facbdc-c27a-4dac-91a7-2e559b41569c; user_input@2026-08-15",
+      "detected_at": "2026-08-15T07:36:39Z",
+      "resolution": "requirement_updated",
+      "resolution_reason": "锁定 Colorful GeForce RTX 3060 NB DUO 12G V3 L-V，并把机箱外深调整为 260 mm；重建真实双风扇参考、120 mm 双槽后开口、前托架和倒置 8-pin 避让。",
+      "question_id": "gpu_exact_model_envelope_conflict",
+      "resolved_at": "2026-08-15T08:10:42.642Z"
+    }
+  ],
+  "change_log": [
+    {
+      "id": "sfx_rear_mount_spacing_mismatch",
+      "prd_path": "/details/sfx_rear_interface",
+      "from": "CAD rear-hole spacing 119 x 52.5 mm",
+      "to": "CAD rear-hole spacing 113 x 51.5 mm; confirmed PRD statement unchanged",
+      "reason": "User chose to keep the confirmed SFX interface requirement and repair the downstream CAD.",
+      "question_id": "sfx_rear_mount_spacing_mismatch",
+      "confirmed_at": "2026-08-13T09:36:27.993Z"
+    },
+    {
+      "id": "gpu_cpu_cooler_envelope_conflict",
+      "prd_path": "/details/cpu_cooler",
+      "from": "motherboard component side toward -X, overlapping the dual-slot GPU",
+      "to": "motherboard PCB at x=4.2 mm with components and AXP120-X67 envelope toward +X; GPU remains on -X",
+      "reason": "User identified the motherboard orientation error; CAD revision 278 corrected the standoff datum and reference board orientation while keeping both hardware requirements.",
+      "question_id": "gpu_cpu_cooler_envelope_conflict",
+      "confirmed_at": "2026-08-13T10:37:45.333Z"
+    },
+    {
+      "id": "gpu_support_front_panel_integration",
+      "prd_path": "/details/gpu_support",
+      "from": "removable far-end U support as a separate support item",
+      "to": "U-shaped far-end cradle fused into the removable front panel; no separate support part",
+      "reason": "User explicitly requested that the previously deleted support return only as front-panel-integrated geometry.",
+      "question_id": "gpu_support_front_panel_integration",
+      "confirmed_at": "2026-08-14T10:44:46Z",
+      "digest_after": "sha256:13b628346639846098d59fbc569752f06734bca181c3f629ea3a42c988dfb52b"
+    },
+    {
+      "id": "power_button_hole_only",
+      "prd_path": "/details/front_io",
+      "from": "externally operable modeled power button",
+      "to": "12.2 mm mounting aperture only; button and actuator omitted from CAD",
+      "reason": "User explicitly asked to leave the hole and defer the button hardware.",
+      "question_id": "power_button_hole_only",
+      "confirmed_at": "2026-08-14T10:44:46Z",
+      "digest_after": "sha256:13b628346639846098d59fbc569752f06734bca181c3f629ea3a42c988dfb52b"
+    },
+    {
+      "id": "gpu_exact_model_envelope_conflict",
+      "prd_path": "/details/gpu",
+      "from": "compact dual-slot GPU within 180 x 115 x 40 mm concept envelope; case depth 256 mm",
+      "to": "Colorful GeForce RTX 3060 NB DUO 12G V3 L-V at 253.4 x 132.5 x 41 mm; case depth 260 mm",
+      "reason": "User selected the exact graphics card and chose to revise the enclosure for reliable real-hardware fit.",
+      "question_id": "gpu_exact_model_envelope_conflict",
+      "confirmed_at": "2026-08-15T08:10:42.642Z",
+      "digest_after": "sha256:c9d047b2843e00d5482a9b551a9aa200098b783d489eba15966739b546f88ba2"
+    },
+    {
+      "id": "motherboard_exact_model_selected",
+      "prd_path": "/details/motherboard",
+      "from": "standard Mini-ITX motherboard, exact model selected later by user",
+      "to": "ASUS ROG STRIX Z390-I GAMING with bottom-side M.2_2 clearance reservation",
+      "reason": "The user supplied the exact motherboard model and requested a real-specification CAD check.",
+      "question_id": "user_input_2026_08_15_exact_hardware",
+      "confirmed_at": "2026-08-15T08:40:00Z",
+      "digest_after": "sha256:8fbf3855caa051855cf9bafee8268253250682e63f409c81a8fe59e0dd6b9e0a"
+    }
+  ],
+  "notes": "Exact CAD fit-check hardware: ASUS ROG STRIX Z390-I GAMING, Thermalright AXP120-X67, Colorful GeForce RTX 3060 NB DUO 12G V3 L-V, and the standard SFX mechanical interface. Acceptance includes the front-panel far-end GPU cradle and the unobstructed inverted 8-pin corridor.",
+  "confirmed_by_user": true,
+  "confirmed_at": "2026-08-15T08:43:00Z",
+  "prd_path": "product/prd.md",
+  "requirement_baseline": {
+    "digest": "sha256:b453db1f35e079c2f699e1dfb3f2c749c53f37ba1aa2e3f4f815d79cc95f4dbc",
+    "stamped_at": "2026-08-15T08:43:00Z"
+  }
+}

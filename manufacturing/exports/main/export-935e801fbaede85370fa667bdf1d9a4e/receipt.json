@@ -1,0 +1,118 @@
+{
+  "documentId": "main",
+  "revision": 40,
+  "revisionId": "revision-40-19d24dcb-2e93-41ce-afe5-2731e1f71278",
+  "schemaVersion": 2,
+  "exportId": "export-935e801fbaede85370fa667bdf1d9a4e",
+  "generatedAt": "2026-07-23T11:30:40.272Z",
+  "documentSha256": "527a9dc41347d325399027dd51d2f2d94a01d9859d806e068d46c3cda90de692",
+  "role": "enclosure",
+  "stateRevision": "0421a7a155387187508f022b9bb309280d6a75f928e471c00c8eaceb5abf8675",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "main",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 40,
+      "revisionId": "revision-40-19d24dcb-2e93-41ce-afe5-2731e1f71278",
+      "documentSha256": "4f4b3370b428ee1bf69681190213f3542272211b95417aef476085145218ce5d",
+      "manifestSha256": "caf3699768218ca79dabb7462507f21e4a3795e80344493979649347108878b4",
+      "stepSha256": "c8ed5ed134d2ca2ad41cc287bf2ced4ad751101614ada4a3255a5858d13312c1"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/main/brief.md",
+      "sha256": "4e3a237ae26eeb60fed444f1357016a748c659b92464f3800952e4ba2fa82b30"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "07e8912e395ad48d67afb7cca835ee7e5a02d4f5965819077ccb7cb9afbec517",
+      "documentRequirementSha256": "5bdb7f8b7c6d0df8382e55ed19b14366641f6e25533868f809cb8e26591f2943",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "manufacturing_handoff",
+      "formats": [
+        "step",
+        "stl"
+      ]
+    },
+    "stateRevision": "0421a7a155387187508f022b9bb309280d6a75f928e471c00c8eaceb5abf8675"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "caf3699768218ca79dabb7462507f21e4a3795e80344493979649347108878b4",
+    "stepSha256": "c8ed5ed134d2ca2ad41cc287bf2ced4ad751101614ada4a3255a5858d13312c1"
+  },
+  "exportAlgorithm": {
+    "version": 1,
+    "bootstrapSha256": "38af5abf5706761d4e70d46996cfa3783f24f7c307d0e06e47393ed96d911a4a"
+  },
+  "sourceHashes": {
+    "enclosure/assembly_interfaces": "76b7f1a8a1cfba93a6d4720c0f3c7b46abdb9969a7f52437058a1f19ee14a55b",
+    "enclosure/front_cover": "f17a563c42effe2a272e0b95ca256e3b4b9725eea3dbaa34c553dcd2f83eca39",
+    "enclosure/heatset_hardware": "8f08a7bc1ee20a73da211c39ebe24a687da8251b728550688feef6819771b2ae",
+    "enclosure/insert_pocket_calibration": "0822b785d217fccb2062628c7debe103db0ce46ad160912dca2e51dd9b027b45",
+    "enclosure/installed_hardware": "67f76167fbfb14f5d2e8c26e8f77d365d4cea32dcbbea4e6605b7de0e5a21f6e",
+    "enclosure/layout_references": "2ef3b370e970662cae293340a347a32ab9853fa50b033c8b4d13733b0196956f",
+    "enclosure/outer_shell": "69d1d982825632bc2278767148799c0daa2c3469caa45334f7544d866b9751f6",
+    "enclosure/panel_fasteners": "e9495392e3dc67e6ba712137c10e8864a86537323ea23419c3905a815a4af024",
+    "enclosure/riser_adjustable_retention": "2a8512f7e4ba191ec31e270b876e1fdd801ffa317bcf1c5395065609bdbe6e4f",
+    "enclosure/top_fasteners": "0fe5a266e579a7d69ea2dfbaab1f1abe0274634ced8c02ad1b40991549693518"
+  },
+  "assetHashes": {},
+  "shapeHashes": {
+    "base_and_frame": "7ed20cbc6cffed8e3a97002f72f866b0f0557d6bf8add85d04b784a8d92e881a",
+    "board_M3_heatset_inserts": "b05d22117e0c6895a5de206048bd3f59408157a20b820079b3590d9441a7641e",
+    "case_feet": "29dfa6daf6afe3d19228fc489ce309d13da9038cf38589739946ac6a1fb9b223",
+    "front_M3_heatset_inserts": "19b80de7266f2cafa8e0cf67cf27828ead02d91266c43c337db3eaeaf46796a9",
+    "front_M3_screws": "484b02bbf7574f6be95eec0836575b8ac43d039441f36a2d6d0f79afe0c3535c",
+    "front_panel_mounts": "95c5312732a6b5b6c9051f7f0945ddf88439ed131b321fc3982c5feaa50bbe48",
+    "front_vent_panel": "c090914f13a982ec3cf234f0cc39469f4d466e076c5ada341754fcdaac5ed407",
+    "gpu_front_support": "dcefd1f92cab755f9846c32db458987108c28042a49de78d35867f4c3c750199",
+    "gpu_rear_io_frame": "6c3f08253b576299782a7b7b1795a63559629be5d95216442ebc2e8c1406b907",
+    "gpu_riser_shelf": "0f77b09dadf93a70a4854067373baaa9f49a6950dc0c0c88427d6a93b01aa417",
+    "gpu_side_clamps": "df38833c2f8f03e1f2bd62eb4f918cfdfd061d36aa74f12db58416d60c387a49",
+    "left_M3_screws": "7faba361da94e80eed08ade7cc1dd64e5f12ba62da03e0af96f1c5670b1f02f7",
+    "left_vent_panel": "90d598fa2ddb49d1701c6c645d8331b3099ce7bb2b517558abf08f8a4682f040",
+    "motherboard_tray": "da57f4a769bb36b43b0217f0ed08ab34e94d7ac5d5396addf78e35fe766e361f",
+    "one_u_psu_cradle": "1681d84853ebeee0ba3e2f780d66deaf1dc3a59e0700e7716e20657b422845cf",
+    "power_button": "a0428d20e2a00f255e621c6466968b8acb3ac7b196952f307276dc42540b130b",
+    "rear_io_panel": "334c7e49f893d559992b0f7f44f3da0bbcdb12e3dda4e27f8404ad219058249a",
+    "rear_M3_heatset_inserts": "2e35cff9e432edb39527bbaa01f2dbdac118cd904b6633389a9a232b2cfbcf60",
+    "rear_M3_screws": "2f7b56f74f6095c56d5914e1034ae77b0a8b00defc3ae12d2815ca5ceb4666be",
+    "rear_panel_mounts": "490f081fdc95a6adebf64510e672f9aa85fb47fe31ae27bdcf0e1e7fe158b54a",
+    "right_M3_screws": "2a69596f8cb89eb64e2fb0232c8fc64e067797866ec33731d8d1e5e16b569182",
+    "right_vent_panel": "0f0b852f6c42f826e7b5ef35aaa161ba059e3b563d66c5661df7f2a14e43d3c0",
+    "riser_clamp_bars": "aef0c1ba1931cd8559d3a990ff53c9d8245396028c0d22f8644a17b6eaedf380",
+    "riser_clamp_M3_screws": "62f08cb8cbe8e7b6f7277fbd84fa6cbe216ec6fa1a422df91c974e75418e6da7",
+    "side_M3_heatset_inserts": "8979ba95fc4905d9be4424f4299b34f821e12074ad0fc07ec36f3c0fd3d3ac93",
+    "top_cap": "014f1d1218bcd64eb50d1daa923b5ce9daa8488d5a9fc52e2236819eccf9b6ce",
+    "top_M3_heatset_inserts": "f8bb8561fddf459fc25aa898c69aed4de1cca0c2d7ff472ece4aab40c1624fc8",
+    "top_M3_screws": "7879ddf2ae3892b4241f4a1d2a57a994c9874f8771bfc729c69a97b4637b8aa2"
+  },
+  "runtime": {
+    "manifestHash": "39b117bb7303c87ed20882ea59b46485ac25666dbc65f57f16516111f5edd7c5",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyRevision": "e326046ce020dbaaa8aa2ec977802d6dbfbea6d3ec8ed324c7e17a7d427df2cb"
+  },
+  "assertions": [],
+  "artifacts": [
+    {
+      "path": "artifacts/cad-workbench/documents/main/exports/export-935e801fbaede85370fa667bdf1d9a4e/model.step",
+      "role": "model/step",
+      "sha256": "c8ed5ed134d2ca2ad41cc287bf2ced4ad751101614ada4a3255a5858d13312c1",
+      "sizeBytes": 40853825
+    }
+  ],
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "362b3b580ef2418bcda710c677beea6a",
+    "projectId": "2f2e2513-3845-4074-81ff-eb4f90089df0",
+    "receiptPath": "artifacts/cad-workbench/documents/main/exports/export-935e801fbaede85370fa667bdf1d9a4e/receipt.json",
+    "payloadSha256": "9c7534251e5de6f52b320a22ab3f55cb6361bb0f653e1bc2a51c381544339593",
+    "mac": "4e3a3ff5a7a24fc3f4d04bfeebc1673db065ca48c89e64c529138372ae4344f5"
+  },
+  "status": "draft"
+}

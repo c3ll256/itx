@@ -1,0 +1,117 @@
+{
+  "documentId": "enclosure-integrated",
+  "revision": 92,
+  "revisionId": "revision-92-1652185d-bf18-48e8-9446-7ff21da91879",
+  "schemaVersion": 2,
+  "exportId": "export-b5120ffa93248916300d587e5f02d27a",
+  "generatedAt": "2026-08-03T12:01:38.301Z",
+  "documentSha256": "5184a9dcac990e41ce005edbf5c1e0fe0f021bb2f928b6b2d45bd2ae4b986033",
+  "role": "enclosure",
+  "stateRevision": "e12a9c2217e4a92cd12403878e029b678b3ecbba84e32ac41a487899c280de10",
+  "stateManifest": {
+    "schemaVersion": 1,
+    "documentId": "enclosure-integrated",
+    "role": "enclosure",
+    "geometry": {
+      "revision": 92,
+      "revisionId": "revision-92-1652185d-bf18-48e8-9446-7ff21da91879",
+      "documentSha256": "7d6191187b67ee009b8eb0aadaed27ff6bc9ecd9e3e9684feef1126168e0b5f2",
+      "manifestSha256": "0b55c0d02789bf67b2393356fba844a863149b94b431ef4791a419615a5910c0",
+      "stepSha256": "92b0f1a33be8eb8d4d56f51cd46f914e16ea7457989b7d2a64e6a2199fec0efa"
+    },
+    "brief": {
+      "path": "workspace/cad-workbench/documents/enclosure-integrated/brief.md",
+      "sha256": "5a123e362530850394f61118c456c40b775aa0c2e87984be952f0b79e5fbfc63"
+    },
+    "requirement": {
+      "artifactContractPath": "workspace/product/artifact-contract.json",
+      "artifactContractSha256": "144b9035487b7fcfccfbfda6181f0096688bbf1d5b6a0d7b001c98e4b5b46039",
+      "documentRequirementSha256": "71bad8d93a22aeef77447005ad05d90eaaf94c84192ab7df52f732cacb528283",
+      "inputs": []
+    },
+    "delivery": {
+      "target": "visual_review",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateRevision": "e12a9c2217e4a92cd12403878e029b678b3ecbba84e32ac41a487899c280de10"
+  },
+  "revisionArtifacts": {
+    "manifestSha256": "0b55c0d02789bf67b2393356fba844a863149b94b431ef4791a419615a5910c0",
+    "stepSha256": "92b0f1a33be8eb8d4d56f51cd46f914e16ea7457989b7d2a64e6a2199fec0efa"
+  },
+  "exportAlgorithm": {
+    "version": 1,
+    "bootstrapSha256": "5bda783d8055009a86280eb622fa40926ce25ba224af64b3f18d1b73999c27fe"
+  },
+  "sourceHashes": {
+    "enclosure/edge_softening": "bf247a664a193133719ea216d05f16733d0dfb892da9259a7970385909e58448",
+    "enclosure/flush_column_envelopes": "608ea429dff2617f55c6c62a79d71d2800e3297c629b52a05f1f8341220d2000",
+    "enclosure/foot_through_cleanup": "03c2080f98bb10ccd757d25eaa09daf1820948bf034e88a1b9c0835f0c4c9c45",
+    "enclosure/front_power_button_position": "65b7c49082c7055b75a5799d5d497c57e0ce752376d01a21ac6a090188fb9cdd",
+    "enclosure/gpu_envelope_fit_audit": "3e6576001fbeb21b2c28f49b0ee9bd90af4cf4a7e8dad1b9168f96899dc21c79",
+    "enclosure/internals": "bc3b8ddd83640363f0270c3418e366aeb67cd7ea045c4503e394a0b7dbbb3df8",
+    "enclosure/p1s_split_modules": "599ccba301623c4fd50af1f69c0949cb192a5717ccf899787fdde51d8c127812",
+    "enclosure/power_button_tray_clearance": "32adb71219ddf3610c9ca01f337ac01a199986b082efce777f3010c4a9531292",
+    "enclosure/rear_io_column_clearance": "56633225aa9f955bf5be424222c829c8be890c277b4bf8e81547c5a959fce7c7",
+    "enclosure/rear_panel_fastening": "c97abad2d5379bf9ce17965ab688fc79df5ff0526227f058eca136c0b01f9fd1",
+    "enclosure/remove_top_cap_thickening": "20ad210441f8a80473931f35876a3c2382078c26fd7d49f59c41c29110d051ca",
+    "enclosure/screw_kit_v1_audit": "b5dbf0f37449e4b87c69e13a4225871ef76f07e149082cf4c2ad774500eee178",
+    "enclosure/shell_columns": "7986fdd0b710ca823e8a9779f5f4265da317cbf35cb6612c8636de2682a1b214",
+    "enclosure/standard_gpu_slots": "aa6433e3ec812d666e248d42cf3c283cfc48ebe7bb056f9d5c37f520c9457463",
+    "enclosure/tray_base_screw": "6f0c996914a2bb64ea983792f4cf8721a44f312f647ee0a8548a82ffe5913221",
+    "enclosure/tray_base_slot": "406858da98d57b0e5429cae59c430f0742513deec1dba6661b4f49722edd8676",
+    "enclosure/tray_hidden_mounts": "e96d3de5e843e40562d001e76fbfb8c99ef2ac0f1dd58946cfb77d22c3f5b724",
+    "enclosure/tray_top_rear_locators": "19f93e730a178925722028763493abab63522f9ed089283f47e12d81266b9bdb"
+  },
+  "assetHashes": {},
+  "shapeHashes": {
+    "base": "9e70a9bfee66cb455d4c371fe96d967accbcc66924b367ee23778a22051e85b0",
+    "case_feet": "95c0ff5a43f8ac39d3e889afef91786c8201e7d644e6902f78655124fa6e16a5",
+    "column_fl": "55f471ef3850af081382e7a6e914220eb5f8bbfd33cd39f443bdac6d35b26715",
+    "column_fr": "5b69e1aed26467bd672e33eae3ee76d5f107585cfab39d8ff01348c855c25b88",
+    "column_rl": "f83a7830c66be992a092c9d4a099baffeb22170b7e314b0a65d788a9747fc296",
+    "column_rr": "8b599ee672eeba6ddf2d2e87dda9c45411bc240831c3dd6f8e93ada169d98d73",
+    "front_panel": "562776b1dc937c603094517b6b8a84987c0399467420831b506c0307feb52a55",
+    "left_panel": "daa1d215d227992e9ddb0b71d3f82fd340ec90801d46c6ff1e25bd8e154d8d28",
+    "mb_mount_lower_front": "03f062c81687bc948431b80f655b7c69346904d26a49d8f96db60b6d4b977b88",
+    "mb_mount_lower_rear": "ddae256aad1f4fbeed36a42c1fed73fcc8ad06c5ccf2b26c90f7d3dd9fefe5ff",
+    "mb_mount_upper_front": "eacd1b18772dcf86528aca4c9ff3d00db822e1719fe25e77c1e6fb46bd7b8037",
+    "mb_mount_upper_rear": "47c55733bb57437a61e0878d8d76d92c58d8c39f8671f38e50d036e380d45b6c",
+    "rear_panel": "a0ad9713551cb27a87c588695b33bcf214e28c3afc708b2aa6d5714786f3ca05",
+    "right_panel": "cb9cf75e464a65270b34476ad57e93d3fe53d22918053aa6fe85570ccb98ffa6",
+    "top_cap": "eb8c99458ce43a4638c1e3fcd37db40d242643bb39f75fba2c611c4ceb054008"
+  },
+  "runtime": {
+    "manifestHash": "6f32c39b4879b87125efe76a5af86d1199cd262713ae595f50b7e052a30b861b",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyRevision": "50d78db682edfc69f5188d838e410ae79c107f3c5c698718cbceee1196299eed"
+  },
+  "assertions": [],
+  "artifacts": [
+    {
+      "path": "artifacts/cad-workbench/documents/enclosure-integrated/exports/export-b5120ffa93248916300d587e5f02d27a/model.step",
+      "role": "model/step",
+      "sha256": "92b0f1a33be8eb8d4d56f51cd46f914e16ea7457989b7d2a64e6a2199fec0efa",
+      "sizeBytes": 3666297
+    }
+  ],
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "362b3b580ef2418bcda710c677beea6a",
+    "projectId": "2f2e2513-3845-4074-81ff-eb4f90089df0",
+    "receiptPath": "artifacts/cad-workbench/documents/enclosure-integrated/exports/export-b5120ffa93248916300d587e5f02d27a/receipt.json",
+    "payloadSha256": "1cdd9130e5f0f8a00afee1e9a8ac712676009d4c4a86641a7a6222f6cbd9538c",
+    "mac": "7e3d0018c97d6c87fe8a5c9ab6defd155089bdfc5bfab3416afef9ce3bff9e26"
+  },
+  "status": "reviewed",
+  "review": {
+    "reviewId": "review-92-051ed64b-fab9-4be6-88a6-10bf4fe68c7b",
+    "path": "workspace/cad-workbench/documents/enclosure-integrated/reviews/review-92-051ed64b-fab9-4be6-88a6-10bf4fe68c7b/receipt.json",
+    "sha256": "e560521e0a7d726e5865cd2032d271eedc6a1ef1c049f9f8cbc306bcfff50b2b"
+  }
+}
