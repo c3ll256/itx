@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "buildNumber": 3,
+  "sourceHash": "15ad71d7a13400a6991c844a2c4f498db3da789a7c9b6369a31c3ec534a571a3",
+  "units": "mm",
+  "coordinateFrame": "replicator-world-z-up",
+  "targets": [
+    {
+      "id": "lower_front_mount_coupon",
+      "label": "lower_front_mount_coupon",
+      "cells": [
+        {
+          "id": "lower_front_mount_coupon",
+          "target": "lower_front_mount_coupon",
+          "order": 0,
+          "path": "design/mitx-lower-front-fit-test/source/parts/lower_front_mount_coupon/000-lower_front_mount_coupon.py",
+          "sha256": "327f2979142c88461023de19a8299d37333e8dc35abf9415e52a2065dc4a2dd3"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "mount_coupon",
+      "target": "lower_front_mount_coupon",
+      "label": "Lower front mount",
+      "kind": "generated",
+      "shapeHash": "005b202f59fc493eab5722228aed8d7fc79412f97b639c97055347d8eb973309",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    }
+  ],
+  "assets": [],
+  "updatedAt": "2026-08-18T10:14:41.917Z",
+  "parameters": {
+    "lower_front_mount_coupon": {
+      "mount_web_depth_x": 4,
+      "mount_web_width_y": 10,
+      "mount_total_height_z": 79.85,
+      "mount_foot_depth_x": 12,
+      "mount_foot_width_y": 14,
+      "mount_foot_height_z": 7,
+      "mount_standoff_height_x": 6.35,
+      "mount_standoff_diameter": 8,
+      "mount_standoff_fuse_overlap_x": 0.6,
+      "mount_board_hole_below_top_z": 5,
+      "mount_board_screw_engagement_x": 6,
+      "mount_base_screw_engagement_z": 5,
+      "mount_detachable_anchor_x": -2
+    }
+  }
+}
