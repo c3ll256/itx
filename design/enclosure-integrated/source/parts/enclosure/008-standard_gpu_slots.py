@@ -8,15 +8,18 @@ rear_panel = Box(
     align=(Align.CENTER, Align.CENTER, Align.MIN),
 ).moved(Location((0, rear_y, base_t)))
 
-# ATX-family removable I/O-shield chassis aperture. microATX Interface
-# Specification v1.0, Figure 5 (PDF page 13), locates the 1.750-inch aperture
-# from 0.150 inch below the component-side PCB surface; it is not flush to a PCB face.
+# ATX-family removable I/O-shield chassis aperture. Mini-ITX Addendum v2
+# delegates this interface to the microATX specification. microATX Motherboard
+# Interface Specification v1.2 Figure 4 defines the aperture lower short edge
+# 0.088 +/- 0.010 inch (2.24 +/- 0.25 mm) below the PCB solder-side surface /
+# chassis-standoff top. The 3.81 mm value is only derived for a 1.57 mm PCB.
 io_shield_nominal_short = param('io_shield_nominal_short', 44.45)
 io_shield_nominal_long = param('io_shield_nominal_long', 158.75)
 io_shield_edge_clearance = param('io_shield_edge_clearance', 0.20)
-IO_APERTURE_BELOW_PCB_COMPONENT_FACE_MM = 3.81
-io_pcb_component_face_x = board_plane_x + board_side * board_proxy_thickness
-io_shield_lower_x = io_pcb_component_face_x - board_side * IO_APERTURE_BELOW_PCB_COMPONENT_FACE_MM
+IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM = 2.24
+IO_APERTURE_DATUM_TOLERANCE_MM = 0.25
+io_pcb_solder_face_x = board_plane_x
+io_shield_lower_x = io_pcb_solder_face_x - board_side * IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM
 io_cut_w = io_shield_nominal_short + 2 * io_shield_edge_clearance
 io_cut_h = io_shield_nominal_long + 2 * io_shield_edge_clearance
 io_inner_edge_x = io_shield_lower_x - board_side * io_shield_edge_clearance
@@ -90,7 +93,8 @@ side_land = (flange_w - dual_slot_opening_width) / 2
 assert dual_slot_opening_width > slot_pitch + slot_w
 assert side_land >= 10.0 and len(slot_joints) == 2
 assert board_side * io_cut_x > 0 and board_side * slot_center_x < 0
-assert abs((io_pcb_component_face_x - io_shield_lower_x) - board_side * IO_APERTURE_BELOW_PCB_COMPONENT_FACE_MM) < 0.001
+assert abs((io_pcb_solder_face_x - io_shield_lower_x) - board_side * IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM) < 0.001
+assert IO_APERTURE_DATUM_TOLERANCE_MM == 0.25
 assert abs(flange_z - slot_z0) < 0.01
 publish('rear_panel', rear_panel, 'Flipped GPU rear opening')
-print(f'IO_APERTURE_DATUM_PASS: lower short edge is {IO_APERTURE_BELOW_PCB_COMPONENT_FACE_MM:.2f} mm below the component-side PCB surface; cut center x={io_cut_x:.2f} mm.')
+print(f'IO_APERTURE_DATUM_PASS: lower short edge is {IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM:.2f} +/- {IO_APERTURE_DATUM_TOLERANCE_MM:.2f} mm below the PCB solder face; cut center x={io_cut_x:.2f} mm.')
