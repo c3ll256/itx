@@ -23,6 +23,7 @@ mitx_pcb_lower_from_bottom = MITX_LOWER_FROM_BOTTOM_MM
 mitx_pcb_upper_from_bottom = MITX_UPPER_FROM_BOTTOM_MM
 mitx_pcb = Box(mitx_pcb_thickness, mitx_pcb_width_y, mitx_pcb_height_z, align=(Align.MIN, Align.MIN, Align.MIN)).moved(Location((mitx_pcb_plane_x, mitx_pcb_rear_edge_y, mitx_pcb_bottom_z)))
 mitx_pcb_top_z = mitx_pcb_bottom_z + mitx_pcb_height_z
+mitx_pcb_solder_face_x = mitx_pcb_plane_x
 mitx_pcb_component_face_x = mitx_pcb_plane_x + mitx_pcb_thickness
 mitx_pcb_holes_yz = [
     (mitx_pcb_rear_edge_y + mitx_pcb_rear_lower_from_rear, mitx_pcb_bottom_z + mitx_pcb_lower_from_bottom),
@@ -46,25 +47,29 @@ for mitx_ring_y, mitx_ring_z in mitx_pcb_holes_yz:
     mitx_mount_rings.append(mitx_ring_outer - mitx_ring_inner)
 publish('mitx_mount_rings', Compound(children=mitx_mount_rings), 'Four mounting rings')
 
-# Standard ATX-family rear I/O shield envelope used by full-height Mini-ITX.
-# The chassis aperture is 44.45 x 158.75 mm. Its lower short-edge datum is
-# 3.81 mm below the motherboard component-side PCB surface; it is not flush
-# with either PCB face. Connector openings and stamped spring tabs are board-specific.
-MITX_IO_SHIELD_SHORT_X_MM = 44.45
-MITX_IO_SHIELD_LONG_Z_MM = 158.75
-MITX_IO_APERTURE_BELOW_PCB_TOP_MM = 3.81
+# ATX-family rear I/O chassis-interface proxy used by full-height Mini-ITX.
+# Mini-ITX Addendum v2 delegates rear connector placement to the microATX
+# interface. microATX Motherboard Interface Specification v1.2 Figure 4 sets
+# the aperture lower short edge 0.088 +/- 0.010 inch (2.24 +/- 0.25 mm) below
+# the PCB solder-side surface / chassis-standoff top. The often quoted 3.81 mm
+# is only a derived value for a nominal 1.57 mm PCB and is not the datum.
+# Connector openings, stamped lips and spring tabs remain motherboard-specific.
+MITX_IO_APERTURE_SHORT_X_MM = 44.45
+MITX_IO_APERTURE_LONG_Z_MM = 158.75
+MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM = 2.24
+MITX_IO_APERTURE_DATUM_TOLERANCE_MM = 0.25
 mitx_io_shield_thickness_y = param('mitx_io_shield_thickness_y', 0.50)
 mitx_io_shield_rear_offset_y = param('mitx_io_shield_rear_offset_y', 1.00)
-mitx_io_shield_x0 = mitx_pcb_component_face_x - MITX_IO_APERTURE_BELOW_PCB_TOP_MM
-mitx_io_shield_z0 = mitx_pcb_top_z - MITX_IO_SHIELD_LONG_Z_MM
+mitx_io_shield_x0 = mitx_pcb_solder_face_x - MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM
+mitx_io_shield_z0 = mitx_pcb_top_z - MITX_IO_APERTURE_LONG_Z_MM
 mitx_io_shield_center_y = mitx_pcb_rear_edge_y - mitx_io_shield_rear_offset_y
 mitx_rear_io = Box(
-    MITX_IO_SHIELD_SHORT_X_MM,
+    MITX_IO_APERTURE_SHORT_X_MM,
     mitx_io_shield_thickness_y,
-    MITX_IO_SHIELD_LONG_Z_MM,
+    MITX_IO_APERTURE_LONG_Z_MM,
     align=(Align.MIN, Align.CENTER, Align.MIN),
 ).moved(Location((mitx_io_shield_x0, mitx_io_shield_center_y, mitx_io_shield_z0)))
-publish('mitx_rear_io', mitx_rear_io, 'Standard I-O shield envelope')
+publish('mitx_rear_io', mitx_rear_io, 'ATX I-O interface proxy')
 
 mitx_cpu_socket_depth_x = param('mitx_cpu_socket_depth_x', 5.0)
 mitx_cpu_socket_width_y = param('mitx_cpu_socket_width_y', 45.0)
@@ -144,10 +149,11 @@ assert abs((mitx_pcb_holes_yz[1][0] - mitx_pcb_holes_yz[0][0]) - 154.94) < 0.001
 assert abs((mitx_pcb_holes_yz[3][0] - mitx_pcb_holes_yz[2][0]) - 132.08) < 0.001
 assert abs((mitx_pcb_holes_yz[2][1] - mitx_pcb_holes_yz[0][1]) - 157.48) < 0.001
 assert abs((mitx_pcb_holes_yz[2][0] - mitx_pcb_holes_yz[0][0]) - 22.86) < 0.001
-assert abs((mitx_pcb_component_face_x - mitx_io_shield_x0) - MITX_IO_APERTURE_BELOW_PCB_TOP_MM) < 0.001
-assert mitx_io_shield_x0 < mitx_pcb_plane_x < mitx_pcb_component_face_x
-assert abs((mitx_io_shield_z0 + MITX_IO_SHIELD_LONG_Z_MM) - mitx_pcb_top_z) < 0.001
+assert abs((mitx_pcb_solder_face_x - mitx_io_shield_x0) - MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM) < 0.001
+assert MITX_IO_APERTURE_DATUM_TOLERANCE_MM == 0.25
+assert mitx_io_shield_x0 < mitx_pcb_solder_face_x < mitx_pcb_component_face_x
+assert abs((mitx_io_shield_z0 + MITX_IO_APERTURE_LONG_Z_MM) - mitx_pcb_top_z) < 0.001
 assert mitx_io_shield_rear_offset_y > mitx_io_shield_thickness_y / 2
 assert mitx_axp120x67_base_x > -11.0
 assert mitx_axp120x67_base_x + mitx_axp120x67_depth_x < 74.0
-print(f'MINI_ITX_IO_SHIELD_PASS: aperture lower edge is {MITX_IO_APERTURE_BELOW_PCB_TOP_MM:.2f} mm below the component-side PCB surface; shield envelope is not flush with either PCB face.')
+print(f'MINI_ITX_IO_DATUM_PASS: interface lower edge is {MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM:.2f} +/- {MITX_IO_APERTURE_DATUM_TOLERANCE_MM:.2f} mm below the PCB solder face; derived component-face distance is {mitx_pcb_thickness + MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM:.2f} mm.')
