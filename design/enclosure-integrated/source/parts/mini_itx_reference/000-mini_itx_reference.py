@@ -46,18 +46,23 @@ for mitx_ring_y, mitx_ring_z in mitx_pcb_holes_yz:
     mitx_mount_rings.append(mitx_ring_outer - mitx_ring_inner)
 publish('mitx_mount_rings', Compound(children=mitx_mount_rings), 'Four mounting rings')
 
-mitx_rear_io_depth_y = param('mitx_rear_io_depth_y', 12.0)
-mitx_rear_io_height_z = param('mitx_rear_io_height_z', 44.45)
-mitx_rear_io_width_x = param('mitx_rear_io_width_x', 34.0)
-mitx_rear_io_bottom_z = param('mitx_rear_io_bottom_z', 88.0)
-mitx_rear_io_base_x = param('mitx_rear_io_base_x', 5.8)
-mitx_rear_io_port_gap_z = param('mitx_rear_io_port_gap_z', 1.5)
-mitx_rear_io_port_count = 4
-mitx_rear_io_port_h = (mitx_rear_io_height_z - mitx_rear_io_port_gap_z * (mitx_rear_io_port_count - 1)) / mitx_rear_io_port_count
-mitx_rear_io_ports = []
-for mitx_port_i in range(mitx_rear_io_port_count):
-    mitx_rear_io_ports.append(Box(mitx_rear_io_width_x, mitx_rear_io_depth_y, mitx_rear_io_port_h, align=(Align.MIN, Align.MAX, Align.MIN)).moved(Location((mitx_rear_io_base_x, mitx_pcb_rear_edge_y, mitx_rear_io_bottom_z + mitx_port_i * (mitx_rear_io_port_h + mitx_rear_io_port_gap_z)))))
-publish('mitx_rear_io', Compound(children=mitx_rear_io_ports), 'Rear I-O envelope')
+# Standard ATX-family removable rear I/O shield blank used by full-height Mini-ITX.
+# The 44.45 x 158.75 mm outer envelope is fixed by the chassis interface standard.
+# Connector cutouts vary by retail motherboard, so this generic reference is an uncut blank.
+MITX_IO_SHIELD_SHORT_X_MM = 44.45
+MITX_IO_SHIELD_LONG_Z_MM = 158.75
+mitx_io_shield_thickness_y = param('mitx_io_shield_thickness_y', 0.50)
+mitx_io_shield_rear_offset_y = param('mitx_io_shield_rear_offset_y', 1.00)
+mitx_io_shield_x0 = mitx_pcb_plane_x
+mitx_io_shield_z0 = mitx_pcb_top_z - MITX_IO_SHIELD_LONG_Z_MM
+mitx_io_shield_center_y = mitx_pcb_rear_edge_y - mitx_io_shield_rear_offset_y
+mitx_rear_io = Box(
+    MITX_IO_SHIELD_SHORT_X_MM,
+    mitx_io_shield_thickness_y,
+    MITX_IO_SHIELD_LONG_Z_MM,
+    align=(Align.MIN, Align.CENTER, Align.MIN),
+).moved(Location((mitx_io_shield_x0, mitx_io_shield_center_y, mitx_io_shield_z0)))
+publish('mitx_rear_io', mitx_rear_io, 'Standard I-O shield blank')
 
 mitx_cpu_socket_depth_x = param('mitx_cpu_socket_depth_x', 5.0)
 mitx_cpu_socket_width_y = param('mitx_cpu_socket_width_y', 45.0)
@@ -137,6 +142,9 @@ assert abs((mitx_pcb_holes_yz[1][0] - mitx_pcb_holes_yz[0][0]) - 154.94) < 0.001
 assert abs((mitx_pcb_holes_yz[3][0] - mitx_pcb_holes_yz[2][0]) - 132.08) < 0.001
 assert abs((mitx_pcb_holes_yz[2][1] - mitx_pcb_holes_yz[0][1]) - 157.48) < 0.001
 assert abs((mitx_pcb_holes_yz[2][0] - mitx_pcb_holes_yz[0][0]) - 22.86) < 0.001
+assert abs(mitx_io_shield_x0 - mitx_pcb_plane_x) < 0.001
+assert abs((mitx_io_shield_z0 + MITX_IO_SHIELD_LONG_Z_MM) - mitx_pcb_top_z) < 0.001
+assert mitx_io_shield_rear_offset_y > mitx_io_shield_thickness_y / 2
 assert mitx_axp120x67_base_x > -11.0
 assert mitx_axp120x67_base_x + mitx_axp120x67_depth_x < 74.0
-print('MINI_ITX_STANDARD_PATTERN_PASS: PCB and four mounts use the standard asymmetric 157.48 mm I/O-edge-axis spacing; components and AXP120-X67 face +X.')
+print(f'MINI_ITX_IO_SHIELD_PASS: standard blank is {MITX_IO_SHIELD_SHORT_X_MM:.2f} x {MITX_IO_SHIELD_LONG_Z_MM:.2f} mm, starts at the PCB plane, and aligns its top edge to the PCB top datum.')
