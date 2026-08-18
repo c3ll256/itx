@@ -1,34 +1,34 @@
 # Standard Mini-ITX mechanical reference, not a claim of a specific retail motherboard.
-# Corrected installation: PCB at x=4.2 mm, mounting support on -X, components and cooler toward +X.
-# Mount coordinates come from the standard asymmetric Figure 3 pattern; those
-# external dimensions are constants rather than user-editable parameters.
+# PCB outline and C/F/H/J mount coordinates follow the standard asymmetric pattern.
 mitx_pcb_thickness = param('mitx_pcb_thickness', 1.6)
 mitx_pcb_width_y = param('mitx_pcb_width_y', 170.0)
 mitx_pcb_height_z = param('mitx_pcb_height_z', 170.0)
 mitx_pcb_mount_hole_diameter = param('mitx_pcb_mount_hole_diameter', 3.96)
 mitx_pcb_plane_x = param('mitx_pcb_plane_x', 4.2)
 mitx_pcb_rear_edge_y = param('mitx_pcb_rear_edge_y', -126.0)
-mitx_pcb_bottom_z = param('mitx_pcb_bottom_z', 71.5)
+# Preserve the current board datum while the mounting-position correction is handled separately.
+MITX_PCB_BOTTOM_Z_MM = 71.50
+mitx_pcb_bottom_z = MITX_PCB_BOTTOM_Z_MM
 MITX_REAR_LOWER_FROM_REAR_MM = 10.16
 MITX_FRONT_LOWER_FROM_REAR_MM = 165.10
 MITX_REAR_UPPER_FROM_REAR_MM = 33.02
 MITX_FRONT_UPPER_FROM_REAR_MM = 165.10
-MITX_LOWER_FROM_TOP_MM = 163.83
-MITX_UPPER_FROM_TOP_MM = 6.35
+MITX_LOWER_FROM_BOTTOM_MM = 6.35
+MITX_UPPER_FROM_BOTTOM_MM = 163.83
 mitx_pcb_rear_lower_from_rear = MITX_REAR_LOWER_FROM_REAR_MM
 mitx_pcb_front_lower_from_rear = MITX_FRONT_LOWER_FROM_REAR_MM
 mitx_pcb_rear_upper_from_rear = MITX_REAR_UPPER_FROM_REAR_MM
 mitx_pcb_front_upper_from_rear = MITX_FRONT_UPPER_FROM_REAR_MM
-mitx_pcb_lower_from_top = MITX_LOWER_FROM_TOP_MM
-mitx_pcb_upper_from_top = MITX_UPPER_FROM_TOP_MM
+mitx_pcb_lower_from_bottom = MITX_LOWER_FROM_BOTTOM_MM
+mitx_pcb_upper_from_bottom = MITX_UPPER_FROM_BOTTOM_MM
 mitx_pcb = Box(mitx_pcb_thickness, mitx_pcb_width_y, mitx_pcb_height_z, align=(Align.MIN, Align.MIN, Align.MIN)).moved(Location((mitx_pcb_plane_x, mitx_pcb_rear_edge_y, mitx_pcb_bottom_z)))
 mitx_pcb_top_z = mitx_pcb_bottom_z + mitx_pcb_height_z
 mitx_pcb_component_face_x = mitx_pcb_plane_x + mitx_pcb_thickness
 mitx_pcb_holes_yz = [
-    (mitx_pcb_rear_edge_y + mitx_pcb_rear_lower_from_rear, mitx_pcb_top_z - mitx_pcb_lower_from_top),
-    (mitx_pcb_rear_edge_y + mitx_pcb_front_lower_from_rear, mitx_pcb_top_z - mitx_pcb_lower_from_top),
-    (mitx_pcb_rear_edge_y + mitx_pcb_rear_upper_from_rear, mitx_pcb_top_z - mitx_pcb_upper_from_top),
-    (mitx_pcb_rear_edge_y + mitx_pcb_front_upper_from_rear, mitx_pcb_top_z - mitx_pcb_upper_from_top),
+    (mitx_pcb_rear_edge_y + mitx_pcb_rear_lower_from_rear, mitx_pcb_bottom_z + mitx_pcb_lower_from_bottom),
+    (mitx_pcb_rear_edge_y + mitx_pcb_front_lower_from_rear, mitx_pcb_bottom_z + mitx_pcb_lower_from_bottom),
+    (mitx_pcb_rear_edge_y + mitx_pcb_rear_upper_from_rear, mitx_pcb_bottom_z + mitx_pcb_upper_from_bottom),
+    (mitx_pcb_rear_edge_y + mitx_pcb_front_upper_from_rear, mitx_pcb_bottom_z + mitx_pcb_upper_from_bottom),
 ]
 for mitx_hole_y, mitx_hole_z in mitx_pcb_holes_yz:
     mitx_hole = Cylinder(mitx_pcb_mount_hole_diameter / 2, mitx_pcb_thickness + 2.0, align=(Align.CENTER, Align.CENTER, Align.CENTER)).rotate(Axis.Y, 90).moved(Location((mitx_pcb_plane_x + mitx_pcb_thickness / 2, mitx_hole_y, mitx_hole_z)))
@@ -46,14 +46,16 @@ for mitx_ring_y, mitx_ring_z in mitx_pcb_holes_yz:
     mitx_mount_rings.append(mitx_ring_outer - mitx_ring_inner)
 publish('mitx_mount_rings', Compound(children=mitx_mount_rings), 'Four mounting rings')
 
-# Standard ATX-family removable rear I/O shield blank used by full-height Mini-ITX.
-# The 44.45 x 158.75 mm outer envelope is fixed by the chassis interface standard.
-# Connector cutouts vary by retail motherboard, so this generic reference is an uncut blank.
+# Standard ATX-family rear I/O shield envelope used by full-height Mini-ITX.
+# The chassis aperture is 44.45 x 158.75 mm. Its lower short-edge datum is
+# 3.81 mm below the motherboard component-side PCB surface; it is not flush
+# with either PCB face. Connector openings and stamped spring tabs are board-specific.
 MITX_IO_SHIELD_SHORT_X_MM = 44.45
 MITX_IO_SHIELD_LONG_Z_MM = 158.75
+MITX_IO_APERTURE_BELOW_PCB_TOP_MM = 3.81
 mitx_io_shield_thickness_y = param('mitx_io_shield_thickness_y', 0.50)
 mitx_io_shield_rear_offset_y = param('mitx_io_shield_rear_offset_y', 1.00)
-mitx_io_shield_x0 = mitx_pcb_plane_x
+mitx_io_shield_x0 = mitx_pcb_component_face_x - MITX_IO_APERTURE_BELOW_PCB_TOP_MM
 mitx_io_shield_z0 = mitx_pcb_top_z - MITX_IO_SHIELD_LONG_Z_MM
 mitx_io_shield_center_y = mitx_pcb_rear_edge_y - mitx_io_shield_rear_offset_y
 mitx_rear_io = Box(
@@ -62,7 +64,7 @@ mitx_rear_io = Box(
     MITX_IO_SHIELD_LONG_Z_MM,
     align=(Align.MIN, Align.CENTER, Align.MIN),
 ).moved(Location((mitx_io_shield_x0, mitx_io_shield_center_y, mitx_io_shield_z0)))
-publish('mitx_rear_io', mitx_rear_io, 'Standard I-O shield blank')
+publish('mitx_rear_io', mitx_rear_io, 'Standard I-O shield envelope')
 
 mitx_cpu_socket_depth_x = param('mitx_cpu_socket_depth_x', 5.0)
 mitx_cpu_socket_width_y = param('mitx_cpu_socket_width_y', 45.0)
@@ -115,7 +117,7 @@ mitx_chipset_center_z = param('mitx_chipset_center_z', 111.0)
 mitx_chipset = Box(mitx_chipset_depth_x, mitx_chipset_width_y, mitx_chipset_height_z, align=(Align.MIN, Align.CENTER, Align.CENTER)).moved(Location((mitx_pcb_component_face_x, mitx_chipset_center_y, mitx_chipset_center_z)))
 publish('mitx_chipset', mitx_chipset, 'Chipset heatsink')
 
-# Required Thermalright AXP120-X67 mechanical envelope on the corrected +X component side.
+# Required Thermalright AXP120-X67 mechanical envelope on the +X component side.
 mitx_axp120x67_depth_x = param('mitx_axp120x67_depth_x', 67.0)
 mitx_axp120x67_width_y = param('mitx_axp120x67_width_y', 123.5)
 mitx_axp120x67_height_z = param('mitx_axp120x67_height_z', 120.0)
@@ -142,9 +144,10 @@ assert abs((mitx_pcb_holes_yz[1][0] - mitx_pcb_holes_yz[0][0]) - 154.94) < 0.001
 assert abs((mitx_pcb_holes_yz[3][0] - mitx_pcb_holes_yz[2][0]) - 132.08) < 0.001
 assert abs((mitx_pcb_holes_yz[2][1] - mitx_pcb_holes_yz[0][1]) - 157.48) < 0.001
 assert abs((mitx_pcb_holes_yz[2][0] - mitx_pcb_holes_yz[0][0]) - 22.86) < 0.001
-assert abs(mitx_io_shield_x0 - mitx_pcb_plane_x) < 0.001
+assert abs((mitx_pcb_component_face_x - mitx_io_shield_x0) - MITX_IO_APERTURE_BELOW_PCB_TOP_MM) < 0.001
+assert mitx_io_shield_x0 < mitx_pcb_plane_x < mitx_pcb_component_face_x
 assert abs((mitx_io_shield_z0 + MITX_IO_SHIELD_LONG_Z_MM) - mitx_pcb_top_z) < 0.001
 assert mitx_io_shield_rear_offset_y > mitx_io_shield_thickness_y / 2
 assert mitx_axp120x67_base_x > -11.0
 assert mitx_axp120x67_base_x + mitx_axp120x67_depth_x < 74.0
-print(f'MINI_ITX_IO_SHIELD_PASS: standard blank is {MITX_IO_SHIELD_SHORT_X_MM:.2f} x {MITX_IO_SHIELD_LONG_Z_MM:.2f} mm, starts at the PCB plane, and aligns its top edge to the PCB top datum.')
+print(f'MINI_ITX_IO_SHIELD_PASS: aperture lower edge is {MITX_IO_APERTURE_BELOW_PCB_TOP_MM:.2f} mm below the component-side PCB surface; shield envelope is not flush with either PCB face.')
