@@ -5,7 +5,11 @@ mitx_pcb_width_y = param('mitx_pcb_width_y', 170.0)
 mitx_pcb_height_z = param('mitx_pcb_height_z', 170.0)
 mitx_pcb_mount_hole_diameter = param('mitx_pcb_mount_hole_diameter', 3.96)
 mitx_pcb_plane_x = param('mitx_pcb_plane_x', 4.2)
-mitx_pcb_rear_edge_y = param('mitx_pcb_rear_edge_y', -126.0)
+# Rear-panel sandwich: board rear edge = rear-panel inner face + stamped I/O
+# shield thickness. The shield is ~1 mm of rolled steel, not the earlier 0.5 mm
+# estimate; the user's printed fit confirms the board sits 1 mm farther forward
+# (-125.0 instead of -126.0) behind that 1 mm shield.
+mitx_pcb_rear_edge_y = param('mitx_pcb_rear_edge_y', -125.0)
 # Preserve the current board datum while the mounting-position correction is handled separately.
 MITX_PCB_BOTTOM_Z_MM = 71.50
 mitx_pcb_bottom_z = MITX_PCB_BOTTOM_Z_MM
@@ -56,13 +60,14 @@ MITX_IO_APERTURE_SHORT_X_MM = 44.45
 MITX_IO_APERTURE_LONG_Z_MM = 158.75
 MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM = 2.24
 MITX_IO_APERTURE_DATUM_TOLERANCE_MM = 0.25
-mitx_io_shield_thickness_y = param('mitx_io_shield_thickness_y', 0.50)
-mitx_io_shield_rear_offset_y = param('mitx_io_shield_rear_offset_y', 0.50)
+mitx_io_shield_thickness_y = param('mitx_io_shield_thickness_y', 1.00)
 mitx_io_shield_top_overhang_z = param('mitx_io_shield_top_overhang_z', 2.54)
 mitx_io_shield_x0 = mitx_pcb_solder_face_x - MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM
 mitx_io_shield_top_z = mitx_pcb_top_z + mitx_io_shield_top_overhang_z
 mitx_io_shield_z0 = mitx_io_shield_top_z - MITX_IO_APERTURE_LONG_Z_MM
-mitx_io_shield_center_y = mitx_pcb_rear_edge_y - mitx_io_shield_rear_offset_y
+# Sandwich: the stamped shield fills the gap between the rear-panel inner face
+# and the board rear edge, so its center sits half its thickness behind the edge.
+mitx_io_shield_center_y = mitx_pcb_rear_edge_y - mitx_io_shield_thickness_y / 2
 mitx_rear_io = Box(
     MITX_IO_APERTURE_SHORT_X_MM,
     mitx_io_shield_thickness_y,
@@ -154,7 +159,8 @@ assert MITX_IO_APERTURE_DATUM_TOLERANCE_MM == 0.25
 assert mitx_io_shield_x0 < mitx_pcb_solder_face_x < mitx_pcb_component_face_x
 assert abs((mitx_io_shield_z0 + MITX_IO_APERTURE_LONG_Z_MM) - (mitx_pcb_top_z + mitx_io_shield_top_overhang_z)) < 0.001
 assert mitx_io_shield_top_overhang_z > 0.0
-assert mitx_io_shield_rear_offset_y > mitx_io_shield_thickness_y / 2
+assert abs((mitx_io_shield_center_y + mitx_io_shield_thickness_y / 2) - mitx_pcb_rear_edge_y) < 0.001
+assert 0.8 <= mitx_io_shield_thickness_y <= 1.4
 assert mitx_axp120x67_base_x > -11.0
 assert mitx_axp120x67_base_x + mitx_axp120x67_depth_x < 74.0
-print(f'MINI_ITX_IO_FIT_PASS: top overhang={mitx_io_shield_top_overhang_z:.2f} mm, rear offset={mitx_io_shield_rear_offset_y:.2f} mm, solder-face datum={MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM:.2f} mm.')
+print(f'MINI_ITX_IO_FIT_PASS: top overhang={mitx_io_shield_top_overhang_z:.2f} mm, shield t={mitx_io_shield_thickness_y:.2f} mm, rear edge y={mitx_pcb_rear_edge_y:.2f} mm, solder-face datum={MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM:.2f} mm.')

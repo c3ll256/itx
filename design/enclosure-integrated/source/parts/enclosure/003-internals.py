@@ -1,15 +1,21 @@
 # Mini-ITX mount construction from the standard asymmetric four-hole pattern.
 # Figure 3 uses 157.48 mm across the I/O-edge axis. These are external
 # standard dimensions, so they are constants rather than user parameters.
-mitx_board_width=param('mitx_board_width',170.0); mitx_board_height=param('mitx_board_height',170.0); mitx_board_rear_edge_y=param('mitx_board_rear_edge_y',-126.0); mitx_board_z_min=param('mitx_board_z_min',71.5)
+# Board rear edge = rear-panel inner face + 1 mm stamped I/O shield (see the
+# mini_itx_reference sandwich note); -125.0 puts the four standard holes 1 mm
+# farther forward than the earlier -126.0 estimate.
+mitx_board_width=param('mitx_board_width',170.0); mitx_board_height=param('mitx_board_height',170.0); mitx_board_rear_edge_y=param('mitx_board_rear_edge_y',-125.0)
+# Fixed enclosure interface datum: the user's printed rear-I/O aperture fits at this board position.
+MITX_BOARD_BOTTOM_Z_MM=71.50
+mitx_board_z_min=MITX_BOARD_BOTTOM_Z_MM
 MITX_REAR_UPPER_FROM_REAR_MM=33.02
 MITX_FRONT_UPPER_FROM_REAR_MM=165.10
 MITX_REAR_LOWER_FROM_REAR_MM=10.16
 MITX_FRONT_LOWER_FROM_REAR_MM=165.10
-MITX_UPPER_FROM_TOP_MM=6.35
-MITX_LOWER_FROM_TOP_MM=163.83
+MITX_LOWER_FROM_BOTTOM_MM=6.35
+MITX_UPPER_FROM_BOTTOM_MM=163.83
 mitx_rear_upper_from_rear=MITX_REAR_UPPER_FROM_REAR_MM; mitx_front_upper_from_rear=MITX_FRONT_UPPER_FROM_REAR_MM; mitx_rear_lower_from_rear=MITX_REAR_LOWER_FROM_REAR_MM; mitx_front_lower_from_rear=MITX_FRONT_LOWER_FROM_REAR_MM
-mitx_upper_from_top=MITX_UPPER_FROM_TOP_MM; mitx_lower_from_top=MITX_LOWER_FROM_TOP_MM
+mitx_lower_from_bottom=MITX_LOWER_FROM_BOTTOM_MM; mitx_upper_from_bottom=MITX_UPPER_FROM_BOTTOM_MM
 legacy_square_rear=param('mitx_mount_rear_offset',6.35); legacy_square_front=param('mitx_mount_front_offset',163.83)
 legacy_square_lower=param('mitx_mount_lower_offset',6.35); legacy_square_upper=param('mitx_mount_upper_offset',163.83)
 board_face_x=param('mitx_board_face_x',-2.15)
@@ -25,7 +31,7 @@ board_plane_x=board_face_x+board_side*mitx_standoff_height; board_screw_outer_x=
 corrected_foot_anchor_x=board_face_x-foot_depth_x/2
 front_lower_screw_x=corrected_foot_anchor_x; rear_lower_screw_x=board_side*rear_lower_anchor_mag; upper_screw_x=corrected_foot_anchor_x
 board_top_z=mitx_board_z_min+mitx_board_height
-lower_mount_z=board_top_z-mitx_lower_from_top; upper_mount_z=board_top_z-mitx_upper_from_top
+lower_mount_z=mitx_board_z_min+mitx_lower_from_bottom; upper_mount_z=mitx_board_z_min+mitx_upper_from_bottom
 lower_mount_ys=(mitx_board_rear_edge_y+mitx_rear_lower_from_rear,mitx_board_rear_edge_y+mitx_front_lower_from_rear)
 upper_mount_ys=(mitx_board_rear_edge_y+mitx_rear_upper_from_rear,mitx_board_rear_edge_y+mitx_front_upper_from_rear)
 lower_mount_parts=[]; upper_mount_parts=[]; board_screw_lengths=[]; plate_screw_lengths=[]
