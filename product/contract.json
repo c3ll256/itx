@@ -71,7 +71,7 @@
     "documents": [
       {
         "role": "enclosure",
-        "design_id": "enclosure-integrated",
+        "document_id": "enclosure-integrated",
         "description": "Complete printable Mini-ITX enclosure assembly with four integral cylindrical motherboard standoffs, a detachable lower-front motherboard mount arm, SFX rear insertion, inverted dual-slot GPU support integrated into the removable front panel, a power-button mounting aperture and six enclosure panels",
         "delivery_target": "manufacturing_handoff",
         "required_formats": [
@@ -85,19 +85,6 @@
           "sfx_fit",
           "panel_retention",
           "power_button_access"
-        ],
-        "reference_ids": []
-      },
-      {
-        "role": "motherboard_mount_fit_coupon",
-        "design_id": "mitx-lower-front-fit-test",
-        "description": "Standalone FDM fit-check coupon reproducing the current detachable lower-front Mini-ITX motherboard mount arm, including its integral standoff and printed M3 interfaces",
-        "delivery_target": "printable_part",
-        "required_formats": [
-          "step"
-        ],
-        "interface_ids": [
-          "mini_itx_direct_mount"
         ],
         "reference_ids": []
       }
