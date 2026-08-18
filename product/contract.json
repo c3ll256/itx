@@ -71,7 +71,7 @@
     "documents": [
       {
         "role": "enclosure",
-        "document_id": "enclosure-integrated",
+        "design_id": "enclosure-integrated",
         "description": "Complete printable Mini-ITX enclosure assembly with four integral cylindrical motherboard standoffs, a detachable lower-front motherboard mount arm, SFX rear insertion, inverted dual-slot GPU support integrated into the removable front panel, a power-button mounting aperture and six enclosure panels",
         "delivery_target": "manufacturing_handoff",
         "required_formats": [
