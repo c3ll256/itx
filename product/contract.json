@@ -56,7 +56,7 @@
     {
       "id": "power_button_access",
       "kind": "user_control",
-      "description": "Provide one externally accessible 12.2 mm diameter power-button mounting aperture. The current CAD deliverable intentionally excludes the purchased switch body, button cap, actuator and internal cable path.",
+      "description": "Provide one externally accessible 12.2 mm diameter power-button mounting aperture at the upper-left of the front panel, centered at X=+50 mm and Z=227 mm in the enclosure frame (+X is left when viewed from the exterior front). The current CAD deliverable intentionally excludes the purchased switch body, button cap, actuator and internal cable path.",
       "source": "user_requested",
       "required": true
     }
