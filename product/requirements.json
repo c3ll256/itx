@@ -67,8 +67,12 @@
       "source": "user"
     },
     "gpu": {
-      "value": "Colorful GeForce RTX 3060 NB DUO 12G V3 L-V；用户实测显卡本体（不含 PCIe 挡板）241 × 132.5 × 41 mm，挡板 L 耳沿长度方向后伸 8.8 mm，CAD 总长度包络 249.8 mm；双风扇、双槽、倒置安装且 PCIe 金手指朝上；结构避让 8-pin 接口与出线通道",
+      "value": "Colorful GeForce RTX 3060 NB DUO 12G V3 L-V；用户实测显卡本体（不含 PCIe 挡板）241 × 132.5 × 41 mm，挡板 L 耳沿长度方向后伸 8.8 mm，CAD 总长度包络 249.8 mm；双风扇、双槽、倒置安装且 PCIe 金手指朝上；结构避让 8-pin 接口与出线通道，且显卡、前端承托不得与前面板 80 mm 风扇框体干涉",
       "source": "user"
+    },
+    "gpu_lateral_position": {
+      "value": "当前显卡槽中心 X=-43 mm，较前一版向机箱中心回移 2 mm；外侧 PCIe 固定螺钉承载区域约 8.5 mm，显卡本体至风扇框体约 5.5 mm，前端承托至风扇框体约 1.3 mm",
+      "source": "default"
     },
     "pcie_riser": {
       "value": "约 200 mm PCIe 延长线",

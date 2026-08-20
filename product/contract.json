@@ -28,7 +28,7 @@
     {
       "id": "gpu_riser_fit",
       "kind": "internal_fit",
-      "description": "Fit the inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V using the user-measured 241 x 132.5 x 41 mm card body, an 8.8 mm rearward PCIe bracket-ear extension for a 249.8 mm total CAD envelope, a 106 mm rear dual-slot opening and lower PCIe support beam. The front-panel-integrated far-end cradle must provide at least 1 mm clearance per side and leave the inverted 8-pin connector/cable corridor open.",
+      "description": "Fit the inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V using the user-measured 241 x 132.5 x 41 mm card body, an 8.8 mm rearward PCIe bracket-ear extension for a 249.8 mm total CAD envelope, a 106 mm rear dual-slot opening centered at X=-43 mm and the raised lower PCIe retention bracket. Preserve an approximately 8.5 mm outboard screw land. The front-panel-integrated far-end cradle must provide at least 1 mm clearance per side, leave the inverted 8-pin connector/cable corridor open, and remain free of interference with both front 80 mm fan frames.",
       "source": "user_requested",
       "required": true
     },

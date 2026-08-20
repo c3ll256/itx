@@ -38,10 +38,11 @@ rear_panel = rear_panel - Box(
     align=(Align.CENTER, Align.CENTER, Align.MIN),
 ).moved(Location((psu_cut_x, -D / 2, psu_cut_z)))
 
-# Card position: the user moved the card 14 mm further away from the motherboard,
-# so the slot pair now sits 45 mm from the case centre on the non-board side.
+# Current card position: the slot pair was brought 2 mm back toward the case
+# centre from the previous X=-45 mm position, leaving it 43 mm from centre on
+# the non-board side while increasing the outboard retention-screw land.
 slot_pitch = param('gpu_slot_pitch', 20.32)
-slot_center_mag = abs(param('gpu_slot_pair_center_mag', 45.0))
+slot_center_mag = abs(param('gpu_slot_pair_center_mag', 43.0))
 slot_center_x = -board_side * slot_center_mag
 slot_centers = (slot_center_x - slot_pitch / 2, slot_center_x + slot_pitch / 2)
 slot_w = param('gpu_slot_width', 18.0)
