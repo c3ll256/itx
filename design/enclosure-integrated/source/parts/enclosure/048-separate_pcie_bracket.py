@@ -5,6 +5,7 @@
 # card position and stays inside the case outline instead of being set by hand.
 pcie_bracket_shelf_depth_y = param('pcie_bracket_shelf_depth_y', flange_d)
 pcie_bracket_shelf_thickness_z = param('pcie_bracket_shelf_thickness_z', flange_t)
+pcie_bracket_lift_z = param('pcie_bracket_lift_z', 2.0)
 pcie_bracket_tab_width_x = param('pcie_bracket_tab_width_x', 10.0)
 pcie_bracket_tab_min_width_x = param('pcie_bracket_tab_min_width_x', 6.0)
 pcie_bracket_tab_depth_y = param('pcie_bracket_tab_depth_y', 3.2)
@@ -19,13 +20,14 @@ pcie_bracket_expected_rear_screws = param('pcie_bracket_expected_rear_screws', 2
 pcie_bracket_outline_margin_x = param('pcie_bracket_outline_margin_x', 3.0)
 
 pcie_bracket_width_x = flange_w
+pcie_bracket_base_z = flange_z + pcie_bracket_lift_z
 
 pcie_shelf = Box(
     pcie_bracket_width_x,
     pcie_bracket_shelf_depth_y,
     pcie_bracket_shelf_thickness_z,
     align=(Align.CENTER, Align.CENTER, Align.MIN),
-).moved(Location((pcie_shelf_center_x, flange_y, flange_z)))
+).moved(Location((pcie_shelf_center_x, flange_y, pcie_bracket_base_z)))
 
 # The outboard land is narrower than the inboard one at this card position, so
 # each retention tab is sized to the land it actually stands on.
@@ -51,23 +53,27 @@ for pcie_tab_x, pcie_tab_w, _land in pcie_tab_specs:
         pcie_bracket_tab_depth_y,
         pcie_bracket_tab_height_z,
         align=(Align.CENTER, Align.CENTER, Align.MIN),
-    ).moved(Location((pcie_tab_x, pcie_tab_y, flange_z))))
+    ).moved(Location((pcie_tab_x, pcie_tab_y, pcie_bracket_base_z))))
     pcie_tab_center_xs.append(pcie_tab_x)
 pcie_bracket = (pcie_shelf + pcie_tabs[0] + pcie_tabs[1]).clean()
 
-# Keep the original two vertical GPU bracket-ear attachment axes.
+# Keep the original GPU-ear axes fixed to the card. The through-stack proxy now
+# includes the requested air gap, so the screw kit chooses hardware that still
+# reaches the raised printed shelf without moving the GPU or its rear opening.
+pcie_gpu_stack_height = pcie_bracket_gpu_ear_thickness + pcie_bracket_lift_z
+pcie_gpu_axis_z = flange_z - pcie_bracket_gpu_ear_thickness
 pcie_gpu_proxy = Box(
     pcie_bracket_width_x,
     pcie_bracket_shelf_depth_y - 2.0,
-    pcie_bracket_gpu_ear_thickness,
+    pcie_gpu_stack_height,
     align=(Align.CENTER, Align.CENTER, Align.MIN),
-).moved(Location((pcie_shelf_center_x, flange_y, flange_z - pcie_bracket_gpu_ear_thickness)))
+).moved(Location((pcie_shelf_center_x, flange_y, pcie_gpu_axis_z)))
 pcie_gpu_joints = []
 for i, x in enumerate(slot_centers):
     joint = make_screw_joint_v1(
         size='M3',
-        at=Location((x, flange_y, flange_z - pcie_bracket_gpu_ear_thickness), (180, 0, 0)),
-        through=[(pcie_gpu_proxy, pcie_bracket_gpu_ear_thickness)],
+        at=Location((x, flange_y, pcie_gpu_axis_z), (180, 0, 0)),
+        through=[(pcie_gpu_proxy, pcie_gpu_stack_height)],
         engage_depth=pcie_bracket_gpu_engagement,
         into=pcie_bracket,
         head='socket_cap',
@@ -80,11 +86,11 @@ for i, x in enumerate(slot_centers):
     pcie_bracket = (pcie_bracket - joint.engage_cuts).clean()
     pcie_gpu_joints.append(joint)
 
-# Screw the separate bracket into the rear panel through the two side tabs.
+# Screw the raised separate bracket into the rear panel through the two side tabs.
 # The screw-joint kit uses local -Z as insertion; +90 degrees about X points
 # local -Z from the rear exterior toward the enclosure interior (+Y).
 pcie_rear_joints = []
-pcie_rear_screw_z = flange_z + pcie_bracket_rear_screw_z_offset
+pcie_rear_screw_z = pcie_bracket_base_z + pcie_bracket_rear_screw_z_offset
 for i, (pcie_tab_x, pcie_tab_w, _land) in enumerate(pcie_tab_specs):
     tab_proxy = Box(
         pcie_tab_w,
@@ -112,11 +118,14 @@ for i, (pcie_tab_x, pcie_tab_w, _land) in enumerate(pcie_tab_specs):
 pcie_gpu_hardware = Compound(children=[j.hardware for j in pcie_gpu_joints])
 pcie_rear_hardware = Compound(children=[j.hardware for j in pcie_rear_joints])
 pcie_connection_inventory = {
-    'gpu-ears-to-pcie-bracket': 'printed-screw-joint-v1 x2',
+    'gpu-ears-to-pcie-bracket': 'printed-screw-joint-v1 x2 with raised through stack',
     'pcie-bracket-to-rear-panel': 'printed-screw-joint-v1 x2',
 }
 pcie_overlap = pcie_bracket & rear_panel
 pcie_bracket_bb = pcie_bracket.bounding_box()
+assert pcie_bracket_lift_z >= 0.0
+assert abs(pcie_bracket_bb.min.Z - pcie_bracket_base_z) < 0.01
+assert abs((pcie_bracket_base_z - flange_z) - pcie_bracket_lift_z) < 0.01
 assert len(pcie_gpu_joints) == int(pcie_bracket_expected_gpu_screws)
 assert len(pcie_rear_joints) == int(pcie_bracket_expected_rear_screws)
 assert all(pcie_connection_inventory.values())
@@ -128,14 +137,13 @@ for _x, pcie_tab_w, _land in pcie_tab_specs:
 # The whole bracket must stay inside the case outline at the moved card position.
 assert pcie_bracket_bb.min.X >= -W/2 + pcie_bracket_outline_margin_x - 0.001
 assert pcie_bracket_bb.max.X <= W/2 - pcie_bracket_outline_margin_x + 0.001
-publish('rear_panel', rear_panel, 'Rear with PCIe mounts')
-publish('pcie_bracket', pcie_bracket, 'Dual-slot PCIe bracket')
+publish('rear_panel', rear_panel, 'Rear with raised PCIe mounts')
+publish('pcie_bracket', pcie_bracket, 'Raised dual-slot bracket')
 publish('pcie_gpu_screws', pcie_gpu_hardware, 'GPU bracket screws')
-publish('pcie_rear_screws', pcie_rear_hardware, 'PCIe rear screws')
+publish('pcie_rear_screws', pcie_rear_hardware, 'Raised PCIe rear screws')
 print(
-    f'PCIE_BRACKET_SEPARATE_PASS: shelf x={pcie_bracket_bb.min.X:.1f}..{pcie_bracket_bb.max.X:.1f} mm '
-    f'inside the {W:.0f} mm outline; GPU screws=2; rear tabs '
-    f'{pcie_tab_specs[0][1]:.1f} mm at x={pcie_tab_specs[0][0]:.1f} and '
-    f'{pcie_tab_specs[1][1]:.1f} mm at x={pcie_tab_specs[1][0]:.1f}; '
-    f'rear screw length={pcie_rear_joints[0].screw_length_mm:.0f} mm.'
+    f'PCIE_BRACKET_RAISED_PASS: bracket raised {pcie_bracket_lift_z:.1f} mm to '
+    f'z={pcie_bracket_bb.min.Z:.1f}..{pcie_bracket_bb.max.Z:.1f}; '
+    f'GPU axes unchanged with through stack={pcie_gpu_stack_height:.1f} mm; '
+    f'rear screw z={pcie_rear_screw_z:.1f} mm and length={pcie_rear_joints[0].screw_length_mm:.0f} mm.'
 )
