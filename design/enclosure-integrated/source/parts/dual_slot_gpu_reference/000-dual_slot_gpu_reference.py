@@ -1,17 +1,18 @@
-# Exact envelope proxy for Colorful GeForce RTX 3060 NB DUO 12G V3 L-V.
-# The published 253.4 mm length includes the rear PCIe bracket's L-shaped
-# mounting ear. The cooler/shroud body is therefore shorter by the ear's
-# 8.8 mm rearward projection.
-COLORFUL_OFFICIAL_OVERALL_LENGTH_Y = 253.4
-COLORFUL_L_EAR_REAR_Y = -134.0
+# Envelope proxy for the user's dual-slot Colorful RTX 3060 NB DUO 12G V3 L-V.
+# User-measured: the card body without the PCIe bracket is 241 mm long, and the
+# bracket plate stands 106 mm above the mounting ear. Both are measurements of
+# the physical card, so they are constants rather than user parameters.
+COLORFUL_BODY_LENGTH_Y = 241.0
+COLORFUL_L_EAR_PROJECTION_Y = 8.8
+COLORFUL_OFFICIAL_OVERALL_LENGTH_Y = COLORFUL_BODY_LENGTH_Y + COLORFUL_L_EAR_PROJECTION_Y
 COLORFUL_BODY_REAR_Y = -125.2
-COLORFUL_L_EAR_PROJECTION_Y = COLORFUL_BODY_REAR_Y - COLORFUL_L_EAR_REAR_Y
-COLORFUL_BODY_LENGTH_Y = COLORFUL_OFFICIAL_OVERALL_LENGTH_Y - COLORFUL_L_EAR_PROJECTION_Y
+COLORFUL_L_EAR_REAR_Y = COLORFUL_BODY_REAR_Y - COLORFUL_L_EAR_PROJECTION_Y
+COLORFUL_BODY_FRONT_Y = COLORFUL_BODY_REAR_Y + COLORFUL_BODY_LENGTH_Y
 COLORFUL_HEIGHT_Z = 132.5
 COLORFUL_THICKNESS_X = 41.0
 COLORFUL_BOTTOM_Z = 97.0
-assert abs(COLORFUL_L_EAR_PROJECTION_Y - 8.8) < 0.01
-assert abs(COLORFUL_BODY_LENGTH_Y - 244.6) < 0.01
+COLORFUL_BRACKET_HEIGHT_Z = 106.0
+assert abs(COLORFUL_OFFICIAL_OVERALL_LENGTH_Y - 249.8) < 0.01
 
 gpu_ref_center_x = param('gpu_ref_center_x', -31.0)
 gpu_ref_shroud = Box(
@@ -21,7 +22,7 @@ gpu_ref_shroud = Box(
 publish('gpu_shroud', gpu_ref_shroud, 'Colorful GPU body')
 
 colorful_pcb_thickness_x = param('colorful_pcb_thickness_x', 1.6)
-colorful_pcb_length_y = param('colorful_pcb_length_y', 236.2)
+colorful_pcb_length_y = param('colorful_pcb_length_y', 232.6)
 colorful_pcb_height_z = param('colorful_pcb_height_z', 118.0)
 gpu_ref_pcb = Box(
     colorful_pcb_thickness_x, colorful_pcb_length_y, colorful_pcb_height_z,
@@ -35,12 +36,11 @@ publish('gpu_pcb', gpu_ref_pcb, 'Colorful GPU PCB')
 
 colorful_bracket_width_x = param('colorful_bracket_width_x', 39.0)
 colorful_bracket_depth_y = param('colorful_bracket_depth_y', 1.0)
-colorful_bracket_height_z = param('colorful_bracket_height_z', 120.0)
 colorful_mount_ear_depth_y = param('colorful_mount_ear_depth_y', 8.0)
 colorful_mount_ear_thickness_z = param('colorful_mount_ear_thickness_z', 0.8)
 colorful_mount_ear_overlap_y = param('colorful_mount_ear_overlap_y', 0.2)
 gpu_ref_bracket_plate = Box(
-    colorful_bracket_width_x, colorful_bracket_depth_y, colorful_bracket_height_z,
+    colorful_bracket_width_x, colorful_bracket_depth_y, COLORFUL_BRACKET_HEIGHT_Z,
     align=(Align.CENTER, Align.MAX, Align.MIN),
 ).moved(Location((gpu_ref_center_x, -126.0, COLORFUL_BOTTOM_Z)))
 gpu_ref_mount_ear = Box(
@@ -59,11 +59,16 @@ colorful_port_width_x = param('colorful_port_width_x', 8.0)
 colorful_port_depth_y = param('colorful_port_depth_y', 3.0)
 colorful_port_height_z = param('colorful_port_height_z', 16.0)
 colorful_port_pitch_x = param('colorful_port_pitch_x', 9.5)
+colorful_port_first_offset_x = -14.0
 gpu_ref_ports = [
     Box(
         colorful_port_width_x, colorful_port_depth_y, colorful_port_height_z,
         align=(Align.CENTER, Align.MAX, Align.CENTER),
-    ).moved(Location((-45.0 + i * colorful_port_pitch_x, -126.0, COLORFUL_PORT_CENTER_Z_FLIPPED)))
+    ).moved(Location((
+        gpu_ref_center_x + colorful_port_first_offset_x + i * colorful_port_pitch_x,
+        -126.0,
+        COLORFUL_PORT_CENTER_Z_FLIPPED,
+    )))
     for i in range(4)
 ]
 publish('gpu_display_ports', Compound(children=gpu_ref_ports), 'Flipped HDMI and DP')
@@ -72,11 +77,16 @@ colorful_vent_width_x = param('colorful_vent_width_x', 2.8)
 colorful_vent_depth_y = param('colorful_vent_depth_y', 2.0)
 colorful_vent_height_z = param('colorful_vent_height_z', 38.0)
 colorful_vent_pitch_x = param('colorful_vent_pitch_x', 5.2)
+colorful_vent_first_offset_x = -13.0
 gpu_ref_vents = [
     Box(
         colorful_vent_width_x, colorful_vent_depth_y, colorful_vent_height_z,
         align=(Align.CENTER, Align.MAX, Align.CENTER),
-    ).moved(Location((-44.0 + i * colorful_vent_pitch_x, -126.5, COLORFUL_VENT_CENTER_Z_FLIPPED)))
+    ).moved(Location((
+        gpu_ref_center_x + colorful_vent_first_offset_x + i * colorful_vent_pitch_x,
+        -126.5,
+        COLORFUL_VENT_CENTER_Z_FLIPPED,
+    )))
     for i in range(6)
 ]
 publish('gpu_rear_vents', Compound(children=gpu_ref_vents), 'Flipped rear vents')
@@ -116,7 +126,7 @@ colorful_fin_height_z = param('colorful_fin_height_z', 96.0)
 colorful_fin_pitch_y = param('colorful_fin_pitch_y', 7.0)
 gpu_ref_fins = []
 y = COLORFUL_BODY_REAR_Y + 12.0
-while y < COLORFUL_BODY_REAR_Y + COLORFUL_BODY_LENGTH_Y - 8.0:
+while y < COLORFUL_BODY_FRONT_Y - 8.0:
     gpu_ref_fins.append(
         Box(
             colorful_fin_depth_x, colorful_fin_thickness_y, colorful_fin_height_z,
@@ -142,8 +152,10 @@ publish('gpu_pcie_fingers', gpu_ref_pcie_fingers, 'Upward PCIe fingers')
 colorful_power_width_x = param('colorful_power_width_x', 22.0)
 colorful_power_length_y = param('colorful_power_length_y', 24.0)
 colorful_power_height_z = param('colorful_power_height_z', 12.0)
-colorful_power_center_x = param('colorful_power_center_x', -22.0)
-colorful_power_center_y = param('colorful_power_center_y', 106.0)
+# The 8-pin zone belongs to the card: it stays 9 mm inboard of the card centre
+# and 13.4 mm behind the card nose whatever the card length or position is.
+colorful_power_center_x = gpu_ref_center_x + 9.0
+colorful_power_center_y = COLORFUL_BODY_FRONT_Y - 13.4
 gpu_ref_power_zone = Box(
     colorful_power_width_x, colorful_power_length_y, colorful_power_height_z,
     align=(Align.CENTER, Align.CENTER, Align.MAX),
@@ -162,8 +174,9 @@ assert finger_bb.min.Z >= shroud_bb.max.Z - 0.05
 assert ear_bb.max.Z <= COLORFUL_BOTTOM_Z + 0.05
 assert power_bb.max.Y <= shroud_bb.max.Y + 0.01
 assert COLORFUL_PORT_CENTER_Z_FLIPPED > COLORFUL_VENT_CENTER_Z_FLIPPED
+assert COLORFUL_PORT_CENTER_Z_FLIPPED + colorful_port_height_z / 2 <= COLORFUL_BOTTOM_Z + COLORFUL_BRACKET_HEIGHT_Z
 print(
-    f'COLORFUL_GPU_LENGTH_PASS: official overall={COLORFUL_OFFICIAL_OVERALL_LENGTH_Y:.1f} mm '
-    f'including {COLORFUL_L_EAR_PROJECTION_Y:.1f} mm L-ear; body={COLORFUL_BODY_LENGTH_Y:.1f} mm; '
-    f'body front y={shroud_bb.max.Y:.1f}.'
+    f'COLORFUL_GPU_LENGTH_PASS: measured body={COLORFUL_BODY_LENGTH_Y:.1f} mm without bracket; '
+    f'overall={COLORFUL_OFFICIAL_OVERALL_LENGTH_Y:.1f} mm including the {COLORFUL_L_EAR_PROJECTION_Y:.1f} mm L-ear; '
+    f'bracket plate={COLORFUL_BRACKET_HEIGHT_Z:.1f} mm; body nose y={shroud_bb.max.Y:.1f}.'
 )

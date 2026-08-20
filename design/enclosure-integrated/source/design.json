@@ -1,0 +1,2524 @@
+{
+  "schemaVersion": 1,
+  "buildNumber": 391,
+  "sourceHash": "3e02ba12a6b33044e9c955a44b5e5bca56d734b02c86e6479d226173e88c8bd0",
+  "units": "mm",
+  "coordinateFrame": "replicator-world-z-up",
+  "targets": [
+    {
+      "id": "enclosure",
+      "label": "enclosure",
+      "cells": [
+        {
+          "id": "shell_columns",
+          "target": "enclosure",
+          "order": 0,
+          "path": "design/enclosure-integrated/source/parts/enclosure/000-shell_columns.py",
+          "sha256": "ecd47e8ce35d8bdab4c33c98663b1e56ef7187cb13bc4d7fa5ad02b0625d4937"
+        },
+        {
+          "id": "split_case_feet",
+          "target": "enclosure",
+          "order": 1,
+          "path": "design/enclosure-integrated/source/parts/enclosure/001-split_case_feet.py",
+          "sha256": "cecbcaaa92cf36be14aaf22c04bc8097f932b3ebf045e8ac79137648ff9b6442"
+        },
+        {
+          "id": "foot_through_cleanup",
+          "target": "enclosure",
+          "order": 2,
+          "path": "design/enclosure-integrated/source/parts/enclosure/002-foot_through_cleanup.py",
+          "sha256": "064091a9f81e01347be780d30b3fba2c4eda3cdb451464a99eb1ca3213338f5a"
+        },
+        {
+          "id": "internals",
+          "target": "enclosure",
+          "order": 3,
+          "path": "design/enclosure-integrated/source/parts/enclosure/003-internals.py",
+          "sha256": "a8cf1116ee78cdfdcd1e80d60ec4cf6275024997cd8a87e86120785a35a918ee"
+        },
+        {
+          "id": "tray_base_slot",
+          "target": "enclosure",
+          "order": 4,
+          "path": "design/enclosure-integrated/source/parts/enclosure/004-tray_base_slot.py",
+          "sha256": "406858da98d57b0e5429cae59c430f0742513deec1dba6661b4f49722edd8676"
+        },
+        {
+          "id": "edge_softening",
+          "target": "enclosure",
+          "order": 5,
+          "path": "design/enclosure-integrated/source/parts/enclosure/005-edge_softening.py",
+          "sha256": "bf247a664a193133719ea216d05f16733d0dfb892da9259a7970385909e58448"
+        },
+        {
+          "id": "power_button_tray_clearance",
+          "target": "enclosure",
+          "order": 6,
+          "path": "design/enclosure-integrated/source/parts/enclosure/006-power_button_tray_clearance.py",
+          "sha256": "32adb71219ddf3610c9ca01f337ac01a199986b082efce777f3010c4a9531292"
+        },
+        {
+          "id": "rear_io_column_clearance",
+          "target": "enclosure",
+          "order": 7,
+          "path": "design/enclosure-integrated/source/parts/enclosure/007-rear_io_column_clearance.py",
+          "sha256": "782a0d33ccba196ab469870884063825bdd44274b4c1dd9e21596adc2dee8bc3"
+        },
+        {
+          "id": "standard_gpu_slots",
+          "target": "enclosure",
+          "order": 8,
+          "path": "design/enclosure-integrated/source/parts/enclosure/008-standard_gpu_slots.py",
+          "sha256": "fdf7a6a827b0847f7f9e675c2e98a7f2174032a86ec8f39a226c5befd71933e4"
+        },
+        {
+          "id": "sfx_psu_support",
+          "target": "enclosure",
+          "order": 9,
+          "path": "design/enclosure-integrated/source/parts/enclosure/009-sfx_psu_support.py",
+          "sha256": "3a23495ccb5dbac570e69e002e1afef4a480ccd4b318030d948aab48317a970d"
+        },
+        {
+          "id": "sfx_rear_mounting",
+          "target": "enclosure",
+          "order": 10,
+          "path": "design/enclosure-integrated/source/parts/enclosure/010-sfx_rear_mounting.py",
+          "sha256": "efd4811d190f255fa3404c035151b05d3a8c164eb60f4f446ef080bc24244d37"
+        },
+        {
+          "id": "rear_panel_fastening",
+          "target": "enclosure",
+          "order": 11,
+          "path": "design/enclosure-integrated/source/parts/enclosure/011-rear_panel_fastening.py",
+          "sha256": "ccc7b3180798d7f94705cf0cc693a36694c39735e06587611414b20d372e491c"
+        },
+        {
+          "id": "tray_top_rear_locators",
+          "target": "enclosure",
+          "order": 12,
+          "path": "design/enclosure-integrated/source/parts/enclosure/012-tray_top_rear_locators.py",
+          "sha256": "19f93e730a178925722028763493abab63522f9ed089283f47e12d81266b9bdb"
+        },
+        {
+          "id": "tray_hidden_mounts",
+          "target": "enclosure",
+          "order": 13,
+          "path": "design/enclosure-integrated/source/parts/enclosure/013-tray_hidden_mounts.py",
+          "sha256": "e96d3de5e843e40562d001e76fbfb8c99ef2ac0f1dd58946cfb77d22c3f5b724"
+        },
+        {
+          "id": "tray_base_screw",
+          "target": "enclosure",
+          "order": 14,
+          "path": "design/enclosure-integrated/source/parts/enclosure/014-tray_base_screw.py",
+          "sha256": "6f0c996914a2bb64ea983792f4cf8721a44f312f647ee0a8548a82ffe5913221"
+        },
+        {
+          "id": "flush_column_envelopes",
+          "target": "enclosure",
+          "order": 15,
+          "path": "design/enclosure-integrated/source/parts/enclosure/015-flush_column_envelopes.py",
+          "sha256": "608ea429dff2617f55c6c62a79d71d2800e3297c629b52a05f1f8341220d2000"
+        },
+        {
+          "id": "front_power_button_position",
+          "target": "enclosure",
+          "order": 16,
+          "path": "design/enclosure-integrated/source/parts/enclosure/016-front_power_button_position.py",
+          "sha256": "5c8e153315faebb16c363837fcb1a2c9a2ce34f9ffe49cdad137e1bd6abc71f8"
+        },
+        {
+          "id": "remove_top_cap_thickening",
+          "target": "enclosure",
+          "order": 17,
+          "path": "design/enclosure-integrated/source/parts/enclosure/017-remove_top_cap_thickening.py",
+          "sha256": "20ad210441f8a80473931f35876a3c2382078c26fd7d49f59c41c29110d051ca"
+        },
+        {
+          "id": "screw_kit_v1_audit",
+          "target": "enclosure",
+          "order": 18,
+          "path": "design/enclosure-integrated/source/parts/enclosure/018-screw_kit_v1_audit.py",
+          "sha256": "af3840aa3ccf31db7466d3b207be7f11ca0452c3b1e69ac3b095ea83dfc58c80"
+        },
+        {
+          "id": "gpu_envelope_fit_audit",
+          "target": "enclosure",
+          "order": 19,
+          "path": "design/enclosure-integrated/source/parts/enclosure/019-gpu_envelope_fit_audit.py",
+          "sha256": "e76fce3c43c9fd46c6cd6edd78d1ab5b3662d9a3f313694f2fb9dd2dde268238"
+        },
+        {
+          "id": "p1s_split_modules",
+          "target": "enclosure",
+          "order": 20,
+          "path": "design/enclosure-integrated/source/parts/enclosure/020-p1s_split_modules.py",
+          "sha256": "8fec8a2e85e46c7a79a620af6de8dd27ad2b15fa85d4890a83609ce1a840ff9a"
+        },
+        {
+          "id": "sfx_column_delete_final",
+          "target": "enclosure",
+          "order": 21,
+          "path": "design/enclosure-integrated/source/parts/enclosure/021-sfx_column_delete_final.py",
+          "sha256": "7db209cbea2d2db0f71e8dbaeedf3feb9de5226582fa92c7c39ecbdb922d0ed6"
+        },
+        {
+          "id": "left_rear_integrated_support",
+          "target": "enclosure",
+          "order": 22,
+          "path": "design/enclosure-integrated/source/parts/enclosure/022-left_rear_integrated_support.py",
+          "sha256": "b89aaf3c9e9bcb97d49574366cb7a01a402360674a9d8d23d3de0ddd55f8d316"
+        },
+        {
+          "id": "rear_right_base_contact",
+          "target": "enclosure",
+          "order": 23,
+          "path": "design/enclosure-integrated/source/parts/enclosure/023-rear_right_base_contact.py",
+          "sha256": "d583b1be205c98a7b3bc852c5e27d14356d221faf51f93a2bc78caf5dd036bc2"
+        },
+        {
+          "id": "final_top_and_left_magnet_alignment",
+          "target": "enclosure",
+          "order": 24,
+          "path": "design/enclosure-integrated/source/parts/enclosure/024-final_top_and_left_magnet_alignment.py",
+          "sha256": "8ce22062b8c53d8b22067b0ead43da8e89d55b59bb19778dd71e3502d532fd4f"
+        },
+        {
+          "id": "flat_sfx_floor",
+          "target": "enclosure",
+          "order": 25,
+          "path": "design/enclosure-integrated/source/parts/enclosure/025-flat_sfx_floor.py",
+          "sha256": "e3785d9e7fad2ceef2c71bcc65535a337ea7f2d710e075ea468043bbd2131f8d"
+        },
+        {
+          "id": "rear_panel_final_hole_restore",
+          "target": "enclosure",
+          "order": 26,
+          "path": "design/enclosure-integrated/source/parts/enclosure/026-rear_panel_final_hole_restore.py",
+          "sha256": "e9999f88865a9833e82ed0026aa99bc91f97651645ae007efe5767a84b978b2e"
+        },
+        {
+          "id": "side_panel_steel_slots_and_finger_pull",
+          "target": "enclosure",
+          "order": 27,
+          "path": "design/enclosure-integrated/source/parts/enclosure/027-side_panel_steel_slots_and_finger_pull.py",
+          "sha256": "85d1cc236803169a056e597421ed7c8b6ac2d4d8c74a1df6e73b4d8404a6a859"
+        },
+        {
+          "id": "integrated_base_feet_final",
+          "target": "enclosure",
+          "order": 28,
+          "path": "design/enclosure-integrated/source/parts/enclosure/028-integrated_base_feet_final.py",
+          "sha256": "bbb62c8f4208fb47ccae65c1304cd2ddc466bb41a288173f97c97dabad1cb2a9"
+        },
+        {
+          "id": "final_coaxial_integrated_base",
+          "target": "enclosure",
+          "order": 29,
+          "path": "design/enclosure-integrated/source/parts/enclosure/029-final_coaxial_integrated_base.py",
+          "sha256": "8658062b4ecf44c5e94df7095c034931106782e4a6d4cdb3998ad3de7bd07545"
+        },
+        {
+          "id": "final_rear_right_top_joint",
+          "target": "enclosure",
+          "order": 30,
+          "path": "design/enclosure-integrated/source/parts/enclosure/030-final_rear_right_top_joint.py",
+          "sha256": "bfbee84349571da25cd02a4b64328ff4f48529009310b17f5873828b990c5094"
+        },
+        {
+          "id": "rear_right_arm_step_cleanup",
+          "target": "enclosure",
+          "order": 31,
+          "path": "design/enclosure-integrated/source/parts/enclosure/031-rear_right_arm_step_cleanup.py",
+          "sha256": "16dbfe302c3a59be8f770afcb50481a2545e14129aa8e252ff70f5892867adef"
+        },
+        {
+          "id": "four_piece_frame_trial",
+          "target": "enclosure",
+          "order": 32,
+          "path": "design/enclosure-integrated/source/parts/enclosure/032-four_piece_frame_trial.py",
+          "sha256": "c182c78e31acd7dfbba6a9f25314a8f3b29b6a00f232c91bced1ed73d7df254d"
+        },
+        {
+          "id": "frame_variable_sync",
+          "target": "enclosure",
+          "order": 33,
+          "path": "design/enclosure-integrated/source/parts/enclosure/033-frame_variable_sync.py",
+          "sha256": "f4372de4be5654b83d6d700506f29d2dde9e46de146543d24b1fb0c2c1f83298"
+        },
+        {
+          "id": "remove_vertical_returns",
+          "target": "enclosure",
+          "order": 34,
+          "path": "design/enclosure-integrated/source/parts/enclosure/034-remove_vertical_returns.py",
+          "sha256": "f03297a19c625ee55662761046e11f3f96a76205bc232228a894831df71e98d1"
+        },
+        {
+          "id": "rear_panel_mb_tab",
+          "target": "enclosure",
+          "order": 35,
+          "path": "design/enclosure-integrated/source/parts/enclosure/035-rear_panel_mb_tab.py",
+          "sha256": "609daf304ffd2584f07ee3383dcc4e20c6ceea8b30134c328a257afcc01b7918"
+        },
+        {
+          "id": "close_legacy_panel_holes",
+          "target": "enclosure",
+          "order": 36,
+          "path": "design/enclosure-integrated/source/parts/enclosure/036-close_legacy_panel_holes.py",
+          "sha256": "465493669f5e470a75e4bfa7bc87a267e5b3c5a2294e01d340bac284b9d1c8cb"
+        },
+        {
+          "id": "slim_interface_rebuild",
+          "target": "enclosure",
+          "order": 37,
+          "path": "design/enclosure-integrated/source/parts/enclosure/037-slim_interface_rebuild.py",
+          "sha256": "abda2a0956fd0a267ef9b35dadaed73645c1a7c55a2e8930d480d1e8ff577252"
+        },
+        {
+          "id": "panel_interface_audit",
+          "target": "enclosure",
+          "order": 38,
+          "path": "design/enclosure-integrated/source/parts/enclosure/038-panel_interface_audit.py",
+          "sha256": "1c660e254b6362ee6623cc7023632ce9065eea56e31efc899e5ee90901890ed0"
+        },
+        {
+          "id": "chamfer_end_panels",
+          "target": "enclosure",
+          "order": 39,
+          "path": "design/enclosure-integrated/source/parts/enclosure/039-chamfer_end_panels.py",
+          "sha256": "cc0e8add4f5589b40ed74656cbafd885b4592b178e93db53d1a009277952c1e2"
+        },
+        {
+          "id": "chamfer_side_panel_perimeters",
+          "target": "enclosure",
+          "order": 40,
+          "path": "design/enclosure-integrated/source/parts/enclosure/040-chamfer_side_panel_perimeters.py",
+          "sha256": "0d4d6334e1b494475359087d24a6e60314aec8ea59cb37bdfe5379569a819efa"
+        },
+        {
+          "id": "chamfer_top_panel",
+          "target": "enclosure",
+          "order": 41,
+          "path": "design/enclosure-integrated/source/parts/enclosure/041-chamfer_top_panel.py",
+          "sha256": "246c3e5c22bf5b261e474e939c6fe4444398bd0f7fc5396f8d0125af1ded9f90"
+        },
+        {
+          "id": "chamfer_base_panel",
+          "target": "enclosure",
+          "order": 42,
+          "path": "design/enclosure-integrated/source/parts/enclosure/042-chamfer_base_panel.py",
+          "sha256": "ce727fe81168f214353ed54da030727f7f188c7dbc9134e86ddae15399c8e89a"
+        },
+        {
+          "id": "post_chamfer_interface_audit",
+          "target": "enclosure",
+          "order": 43,
+          "path": "design/enclosure-integrated/source/parts/enclosure/043-post_chamfer_interface_audit.py",
+          "sha256": "2c518a6a2cfe8f50c9a683ab6b815678c14466d82449a6966bdf3f18a61e65bb"
+        },
+        {
+          "id": "rear_panel_surface_cleanup",
+          "target": "enclosure",
+          "order": 44,
+          "path": "design/enclosure-integrated/source/parts/enclosure/044-rear_panel_surface_cleanup.py",
+          "sha256": "d58a66ebda87fe2bc699c290bf2671c3ca92fb4179082591e4ff9f3b74db86f3"
+        },
+        {
+          "id": "rear_print_surface_flatten",
+          "target": "enclosure",
+          "order": 45,
+          "path": "design/enclosure-integrated/source/parts/enclosure/045-rear_print_surface_flatten.py",
+          "sha256": "54d2a08b3b09246d9dc15b32d6882a511ec7c2863b45945820671ab5afdaa068"
+        },
+        {
+          "id": "single_corner_holes_top_base",
+          "target": "enclosure",
+          "order": 46,
+          "path": "design/enclosure-integrated/source/parts/enclosure/046-single_corner_holes_top_base.py",
+          "sha256": "e5253e03fdb1e48e3304427df0a618935def16d489d19294310f07c0f7e75dd6"
+        },
+        {
+          "id": "separate_lower_mb_mount",
+          "target": "enclosure",
+          "order": 47,
+          "path": "design/enclosure-integrated/source/parts/enclosure/047-separate_lower_mb_mount.py",
+          "sha256": "ec480c47e4e5644dd2b65dc0ed3b4a5e227eff0ba2f85349539263fbb72e1531"
+        },
+        {
+          "id": "separate_pcie_bracket",
+          "target": "enclosure",
+          "order": 48,
+          "path": "design/enclosure-integrated/source/parts/enclosure/048-separate_pcie_bracket.py",
+          "sha256": "f095a59fb540f0434063bbb3cc32c64fa5a8b196262012873b5a1a6b8e60e994"
+        },
+        {
+          "id": "sfx_rear_insertion_clearance",
+          "target": "enclosure",
+          "order": 49,
+          "path": "design/enclosure-integrated/source/parts/enclosure/049-sfx_rear_insertion_clearance.py",
+          "sha256": "b0813671d12c10824a5c94b533fee2295b563e91f7837620b346fab573bfcfaf"
+        },
+        {
+          "id": "sfx_four_hole_final_access",
+          "target": "enclosure",
+          "order": 50,
+          "path": "design/enclosure-integrated/source/parts/enclosure/050-sfx_four_hole_final_access.py",
+          "sha256": "d3afe407492901a20169d60ffa9bf19a7250f9ec4334bcf293d88f7fe6ebb93b"
+        },
+        {
+          "id": "corner_foot_head_recesses",
+          "target": "enclosure",
+          "order": 51,
+          "path": "design/enclosure-integrated/source/parts/enclosure/051-corner_foot_head_recesses.py",
+          "sha256": "72773eee9efc082bac906069cffa18820848564bc6e219f7fc5a79a5c5a0d2b2"
+        },
+        {
+          "id": "rear_panel_final_outline_trim",
+          "target": "enclosure",
+          "order": 52,
+          "path": "design/enclosure-integrated/source/parts/enclosure/052-rear_panel_final_outline_trim.py",
+          "sha256": "c724dd5a9473639c729ac9237270885b90cac8c17c612fef62afcc2e05d69132"
+        },
+        {
+          "id": "panel_magnets_15mm_final",
+          "target": "enclosure",
+          "order": 53,
+          "path": "design/enclosure-integrated/source/parts/enclosure/053-panel_magnets_15mm_final.py",
+          "sha256": "4451001cdcf91b8e5289612592e43b4a4bbbcde0a0ce6d5173e4ed36172de04a"
+        },
+        {
+          "id": "remove_annotated_base_upright",
+          "target": "enclosure",
+          "order": 54,
+          "path": "design/enclosure-integrated/source/parts/enclosure/054-remove_annotated_base_upright.py",
+          "sha256": "424494a6097f388d49e2c2a79a92b05ba585f844857b642cc93dafea72d198ff"
+        },
+        {
+          "id": "flush_sfx_mount_holes",
+          "target": "enclosure",
+          "order": 55,
+          "path": "design/enclosure-integrated/source/parts/enclosure/055-flush_sfx_mount_holes.py",
+          "sha256": "98d02eeaa74156fa9d390d37750c04d1c7e4fab037487a724b3ed17885993a56"
+        },
+        {
+          "id": "connection_step_cleanup",
+          "target": "enclosure",
+          "order": 56,
+          "path": "design/enclosure-integrated/source/parts/enclosure/056-connection_step_cleanup.py",
+          "sha256": "920b31aee22defdadf30fdf1aa1a2db0af94ce8828bb7e237409d0949bab9639"
+        },
+        {
+          "id": "rear_magnet_single_platform_cleanup",
+          "target": "enclosure",
+          "order": 57,
+          "path": "design/enclosure-integrated/source/parts/enclosure/057-rear_magnet_single_platform_cleanup.py",
+          "sha256": "4b48f353b50debe11d15a2d5aef99fff5a7ad68a1e26e06f95797715256b0373"
+        },
+        {
+          "id": "sfx_mount_spacing_113x51p5",
+          "target": "enclosure",
+          "order": 58,
+          "path": "design/enclosure-integrated/source/parts/enclosure/058-sfx_mount_spacing_113x51p5.py",
+          "sha256": "bf0b57fc15877f9be5be6bf3d90860b6feeff74dd024e0ed8f46f9455c4022d5"
+        },
+        {
+          "id": "io_shield_clip_land",
+          "target": "enclosure",
+          "order": 59,
+          "path": "design/enclosure-integrated/source/parts/enclosure/059-io_shield_clip_land.py",
+          "sha256": "478ea5ffce3216fbeddf38744fdd3c5b34fca06ee0c2333548bede3aadca6108"
+        },
+        {
+          "id": "front_panel_integrated_gpu_cradle",
+          "target": "enclosure",
+          "order": 60,
+          "path": "design/enclosure-integrated/source/parts/enclosure/060-front_panel_integrated_gpu_cradle.py",
+          "sha256": "35c3ea4024c19101414f9a5050a28e91a3c2d1866a34ce49c88791f9fc210707"
+        },
+        {
+          "id": "axp120_direct_intake",
+          "target": "enclosure",
+          "order": 61,
+          "path": "design/enclosure-integrated/source/parts/enclosure/061-axp120_direct_intake.py",
+          "sha256": "bcd3bf83d7f4e977eef6632238087e0807f36f1d1e91c82950984f40a30759c8"
+        },
+        {
+          "id": "p1s_front_edge_margin",
+          "target": "enclosure",
+          "order": 62,
+          "path": "design/enclosure-integrated/source/parts/enclosure/062-p1s_front_edge_margin.py",
+          "sha256": "ec63888f4b46ec5e19e3f6bf305cea2cc9a137d940c8dc0e91ea4d3a2851fc58"
+        },
+        {
+          "id": "enclosure",
+          "target": "enclosure",
+          "order": 63,
+          "path": "design/enclosure-integrated/source/parts/enclosure/063-enclosure.py",
+          "sha256": "e035fc85ccb324f15ff1c1926c61be6f40227d8e0ec10a4279e2441b7935e664"
+        },
+        {
+          "id": "front_80mm_intake_fans",
+          "target": "enclosure",
+          "order": 64,
+          "path": "design/enclosure-integrated/source/parts/enclosure/064-front_80mm_intake_fans.py",
+          "sha256": "67a40d58ff6f982798511b258839ed62be1dc5dafd84ac67b4e24d4503ccc1b0"
+        },
+        {
+          "id": "base_120mm_intake_fan",
+          "target": "enclosure",
+          "order": 65,
+          "path": "design/enclosure-integrated/source/parts/enclosure/065-base_120mm_intake_fan.py",
+          "sha256": "44c158b0a042b347c5dfe7c0161b739e01e2fb7aea5ebfdfa77fa35776db2389"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "mini_itx_reference",
+      "label": "mini_itx_reference",
+      "cells": [
+        {
+          "id": "mini_itx_reference",
+          "target": "mini_itx_reference",
+          "order": 0,
+          "path": "design/enclosure-integrated/source/parts/mini_itx_reference/000-mini_itx_reference.py",
+          "sha256": "24b512e27ebd606fc6b02ecadba3c12c4af2f876caeb99252de7fce4747f8fdd"
+        },
+        {
+          "id": "rog_strix_backside_m2",
+          "target": "mini_itx_reference",
+          "order": 1,
+          "path": "design/enclosure-integrated/source/parts/mini_itx_reference/001-rog_strix_backside_m2.py",
+          "sha256": "425f922f24c3f9fbaf3a9d2e12bdce892c61bf63dd6e11caa6904f619d8b1a0f"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "sfx_psu_reference",
+      "label": "sfx_psu_reference",
+      "cells": [
+        {
+          "id": "sfx_psu_reference",
+          "target": "sfx_psu_reference",
+          "order": 0,
+          "path": "design/enclosure-integrated/source/parts/sfx_psu_reference/000-sfx_psu_reference.py",
+          "sha256": "0050b7b50b5b0a91cce8aee9c57b0be17d3fa181c1a7a6e3692c3b291fc846d0"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "dual_slot_gpu_reference",
+      "label": "dual_slot_gpu_reference",
+      "cells": [
+        {
+          "id": "dual_slot_gpu_reference",
+          "target": "dual_slot_gpu_reference",
+          "order": 0,
+          "path": "design/enclosure-integrated/source/parts/dual_slot_gpu_reference/000-dual_slot_gpu_reference.py",
+          "sha256": "773c73ab212022c739d27c75c248bf266bae5a72235b98386a0353fa0a3494f9"
+        },
+        {
+          "id": "physical_orientation_audit",
+          "target": "dual_slot_gpu_reference",
+          "order": 1,
+          "path": "design/enclosure-integrated/source/parts/dual_slot_gpu_reference/001-physical_orientation_audit.py",
+          "sha256": "becac967312b332174eaf1c500c21e3323e7b74d3a45d503bdf5dd29b65577d3"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "base",
+      "target": "enclosure",
+      "label": "Base with 120 mm front intake",
+      "kind": "generated",
+      "shapeHash": "b367d3c33328313c3bfe1f19fef5fdcf2643b0f8de9b3fd678629289bb9d9d91",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "top_cap",
+      "target": "enclosure",
+      "label": "Full-depth top",
+      "kind": "generated",
+      "shapeHash": "1685eac689ebee5ec196a8bb409c95ee7d927677b173b0765b38ed1fdb370a84",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "front_panel",
+      "target": "enclosure",
+      "label": "Front with dual 80 mm intakes",
+      "kind": "generated",
+      "shapeHash": "2e651b252d8422600718013492ec7a3952c1e2a719cf9ce9cd6fdb4816eb33ba",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "rear_panel",
+      "target": "enclosure",
+      "label": "Rear with open SFX edge",
+      "kind": "generated",
+      "shapeHash": "cf6aef8825d02ea7e80f72c24ed11035fc619d639ff7de5685d42bebe7d15893",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "left_panel",
+      "target": "enclosure",
+      "label": "Left full honeycomb",
+      "kind": "generated",
+      "shapeHash": "ea499093388b598b741f14f54dbb780d3ebaebf9f41f34b7de92ba45ecafd995",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "right_panel",
+      "target": "enclosure",
+      "label": "Right full honeycomb",
+      "kind": "generated",
+      "shapeHash": "9f396112279113456d6dbe3541139d8eb177dd02beb4385310d2ccd4707df9af",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "pcie_bracket",
+      "target": "enclosure",
+      "label": "Dual-slot PCIe bracket",
+      "kind": "generated",
+      "shapeHash": "8c221157bb5aa23850189d2a3f5a68c85364226769f43df350dfc18a1195c987",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "pcie_gpu_screws",
+      "target": "enclosure",
+      "label": "GPU bracket screws",
+      "kind": "generated",
+      "shapeHash": "f206cec640499b785c8f98713b94bb81adfe596ec0ad86f7ca2ab7a1975476c6",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "pcie_rear_screws",
+      "target": "enclosure",
+      "label": "PCIe rear screws",
+      "kind": "generated",
+      "shapeHash": "29e9dcb845f815c5c1061738db469b9f1d0698cadbf8a636188349d3ec13ac00",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_pcb",
+      "target": "mini_itx_reference",
+      "label": "Mini-ITX PCB reference",
+      "kind": "generated",
+      "shapeHash": "510dd80e0251604c430536b38b3356cecbbf5a7c341cbc94dc4269651b7cc481",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_mount_rings",
+      "target": "mini_itx_reference",
+      "label": "Four mounting rings",
+      "kind": "generated",
+      "shapeHash": "96073985123faafca4b820109b5a4d91a07d3a06a8439aa5da2811e956c8588f",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_rear_io",
+      "target": "mini_itx_reference",
+      "label": "ATX I-O fit envelope",
+      "kind": "generated",
+      "shapeHash": "120a00b5d3e3b9e78f495384e44e3547fcacb57791164b77bedc24f83415f4dc",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_cpu_socket",
+      "target": "mini_itx_reference",
+      "label": "CPU socket envelope",
+      "kind": "generated",
+      "shapeHash": "a56f9afb555017ce6ea12dca2a393f98c203054772f35d543ae47c2ddd1e2b33",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_dimm_bank",
+      "target": "mini_itx_reference",
+      "label": "Dual DIMM slots",
+      "kind": "generated",
+      "shapeHash": "53def04940d7c6ff6e27f737bab9ae89c7f0cc97b8a9fbc5560eda7751102694",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_pcie_slot",
+      "target": "mini_itx_reference",
+      "label": "PCIe x16 slot",
+      "kind": "generated",
+      "shapeHash": "0a51bf55c432ab16e20b37fe94ff20832c32eaffae16ce5f9121e6ab30e11d59",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_atx_power",
+      "target": "mini_itx_reference",
+      "label": "24-pin ATX header",
+      "kind": "generated",
+      "shapeHash": "74f03b101091e9591bc763ad3de49170f6ab0edede0f636890a69608126def0d",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_eps_power",
+      "target": "mini_itx_reference",
+      "label": "CPU power header",
+      "kind": "generated",
+      "shapeHash": "7faa005632b9c353e4adfcf889892c9b1c2ac3d7414a02bfa93aea60d542c2bb",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_chipset",
+      "target": "mini_itx_reference",
+      "label": "Chipset heatsink",
+      "kind": "generated",
+      "shapeHash": "2555b342d004d9ae09afad1ab80c66bbd01352ac3cf7012604c20f0e2b0c7bee",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_axp120x67_envelope",
+      "target": "mini_itx_reference",
+      "label": "AXP120-X67 envelope",
+      "kind": "generated",
+      "shapeHash": "16280e0382e281d151ed8c570bac2ad9a22a3d152684ab57e5db549c0f307664",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_axp120x67_fan",
+      "target": "mini_itx_reference",
+      "label": "AXP120-X67 fan",
+      "kind": "generated",
+      "shapeHash": "870116d43e72f203025ffe74f1432e72d46e4412b2ecf6d84d34450e1ca73900",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "mitx_m2_bottom",
+      "target": "mini_itx_reference",
+      "label": "ROG backside M.2 keepout",
+      "kind": "generated",
+      "shapeHash": "7b528b67ed8f82da900266234c2d92c71f5fc83eba8ce8a5d9f7a1e4497a58bc",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "sfx_chassis",
+      "target": "sfx_psu_reference",
+      "label": "SFX chassis reference",
+      "kind": "generated",
+      "shapeHash": "2b9351a3b7e73b4bda331e3649f3bb81b654ff9ac293c1aec9012774464eb5ce",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "sfx_fan_grille",
+      "target": "sfx_psu_reference",
+      "label": "SFX fan grille",
+      "kind": "generated",
+      "shapeHash": "19fb3f9c8faadfcd7b6ff278bc98b6ec1670ec3e50f23261f891ae404efa99c2",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "sfx_ac_inlet",
+      "target": "sfx_psu_reference",
+      "label": "AC inlet reference",
+      "kind": "generated",
+      "shapeHash": "ee8987c23431481411ea6e75bd7ca7acd969a48ee8749467d5e32fb662319d83",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "sfx_switch",
+      "target": "sfx_psu_reference",
+      "label": "PSU switch reference",
+      "kind": "generated",
+      "shapeHash": "f83d383be96650d4e42a4291fc0aebc9226a5fc29d9dafce19b42c699a036749",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "sfx_modular_bank",
+      "target": "sfx_psu_reference",
+      "label": "Modular cable bank",
+      "kind": "generated",
+      "shapeHash": "61216b474c269fabd3c1313d61fb1f35f5a0e4a50b227acfb8e68f9cb8cc5003",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_shroud",
+      "target": "dual_slot_gpu_reference",
+      "label": "Colorful GPU body",
+      "kind": "generated",
+      "shapeHash": "61c8348933e77e79f5c4470a19f1dcd5540aaa8eb3fb77ba67a3a0045849bfce",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_pcb",
+      "target": "dual_slot_gpu_reference",
+      "label": "Colorful GPU PCB",
+      "kind": "generated",
+      "shapeHash": "5ca97043b1e7c3f84a1d62db20a607da9f1a4d8c6b5cc289b9c2b230a75de7c8",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_rear_bracket",
+      "target": "dual_slot_gpu_reference",
+      "label": "Flipped dual-slot bracket",
+      "kind": "generated",
+      "shapeHash": "71e109326961b8c1bcdbd8d31dbc52b9c1eaff66cdbdd03fe794e2de159061d0",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_display_ports",
+      "target": "dual_slot_gpu_reference",
+      "label": "Flipped HDMI and DP",
+      "kind": "generated",
+      "shapeHash": "dbd6e3ad3d586429341560ea3be4c1ba12e82283822e6a30e77097b023726bed",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_rear_vents",
+      "target": "dual_slot_gpu_reference",
+      "label": "Flipped rear vents",
+      "kind": "generated",
+      "shapeHash": "4637c8d332236e37efdd2291d5054d2eadf142ca9a1e691b759e5931fdb60a3f",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_fan",
+      "target": "dual_slot_gpu_reference",
+      "label": "Outward dual fans",
+      "kind": "generated",
+      "shapeHash": "fd1cb5dc65802649b42ade61477611b4c1edff47fc07557d1a21405a55feaceb",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_heatsink",
+      "target": "dual_slot_gpu_reference",
+      "label": "Colorful heatsink fins",
+      "kind": "generated",
+      "shapeHash": "90dc152730362e9f98eaaf56ab8cdf18763aa0da2f14891a72097bda2ed5cc82",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_pcie_fingers",
+      "target": "dual_slot_gpu_reference",
+      "label": "Upward PCIe fingers",
+      "kind": "generated",
+      "shapeHash": "077be2460f9860667b739a5c2365f88bfb37e5d08630df71a85777f0243436b2",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "gpu_power_zone",
+      "target": "dual_slot_gpu_reference",
+      "label": "Lower inverted 8-pin zone",
+      "kind": "generated",
+      "shapeHash": "258c524f9d2a7e9ba1943b73ea636b4c3fc73915bcdb8058ac611ca1ab4c1443",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    }
+  ],
+  "assets": [],
+  "updatedAt": "2026-08-20T10:11:53.470Z",
+  "parameters": {
+    "enclosure": {
+      "case_width": 152,
+      "case_depth": 256,
+      "case_height": 252,
+      "base_thickness": 3,
+      "top_cap_thickness": 3,
+      "panel_thickness": 2,
+      "top_cap_inner_thickness": 2,
+      "top_cap_inner_inset": 5,
+      "column_size": 14,
+      "panel_clearance": 0.6,
+      "legacy_tray_axis_x": 4,
+      "end_station_z_low": 30,
+      "end_station_z_high": 247,
+      "side_station_z_low": 58,
+      "side_station_z_high": 167,
+      "station_pocket_size": 10.2,
+      "station_pocket_depth": 3.2,
+      "station_proxy_size": 10,
+      "station_proxy_depth": 3,
+      "station_edge_offset": 1.6,
+      "station_proxy_offset": 1.5,
+      "top_joint_engagement": 3,
+      "foot_radius": 8,
+      "foot_height": 4,
+      "power_button_radius": 6.1,
+      "panel_cut_depth": 8,
+      "initial_button_x": 0,
+      "initial_button_z": 211,
+      "rear_io_width": 48,
+      "rear_io_height": 126,
+      "rear_io_x": -35,
+      "rear_io_z": 74,
+      "rear_aux_width": 48,
+      "rear_aux_height": 122,
+      "rear_aux_x": 31,
+      "rear_aux_z": 96,
+      "psu_cut_width": 46,
+      "psu_cut_height": 86,
+      "psu_cut_x": 31,
+      "psu_cut_z": 4,
+      "vent_radius": 5,
+      "vent_pitch": 18,
+      "vent_stagger": 9,
+      "vent_y_limit": 72,
+      "vent_z_start": 18,
+      "vent_z_stop": 216,
+      "general_default_engagement": 5,
+      "rear_panel_default_engagement": 5.6,
+      "power_button_x": 50,
+      "power_button_z": 25,
+      "power_button_cut_depth": 8,
+      "front_panel_fillet_radius": 0.7,
+      "front_panel_fillet_min_edge": 210,
+      "power_button_min_edge_clearance": 15,
+      "mitx_board_width": 170,
+      "mitx_board_height": 170,
+      "mitx_hole_edge_inset": 6.35,
+      "mitx_board_y_center": 0,
+      "mitx_board_z_min": 75.31,
+      "mitx_board_face_x": -2.15,
+      "mitx_arm_depth_x": 4,
+      "mitx_arm_width_y": 10,
+      "mitx_screw_engagement": 2.4,
+      "mitx_foot_depth_x": 12,
+      "mitx_foot_width_y": 14,
+      "mitx_foot_height_z": 7,
+      "mitx_lower_anchor_x": 2,
+      "mitx_upper_anchor_x": -1.5,
+      "mitx_lower_anchor_engagement": 5,
+      "mitx_upper_cap_extra_stack": 2,
+      "mitx_upper_anchor_engagement": 3,
+      "mitx_board_proxy_thickness": 1.6,
+      "mitx_board_proxy_size": 8,
+      "mitx_legacy_slot_width": 3.2,
+      "expected_screw_joint_count": 38,
+      "gpu_slot_pitch": 20.32,
+      "gpu_slot_pair_center_x": 31,
+      "gpu_slot_width": 18,
+      "gpu_slot_height": 120,
+      "gpu_slot_z0": 97,
+      "gpu_flange_width": 64,
+      "gpu_flange_depth": 10,
+      "gpu_flange_thickness": 3.2,
+      "gpu_bracket_ear_thickness": 0.8,
+      "gpu_bracket_engagement": 2.4,
+      "gpu_envelope_length": 253.4,
+      "gpu_envelope_height": 132.5,
+      "gpu_envelope_thickness": 40,
+      "gpu_length_clearance": 4,
+      "gpu_height_clearance": 4,
+      "gpu_thickness_clearance": 4,
+      "p1s_plate_size": 256,
+      "base_rear_depth": 132,
+      "base_front_depth": 132,
+      "top_rear_depth": 132,
+      "top_front_depth": 132,
+      "side_rear_depth": 129.6,
+      "side_front_depth": 129.6,
+      "base_splice_length": 110,
+      "base_splice_width": 18,
+      "base_splice_thickness": 5,
+      "top_splice_length": 110,
+      "top_splice_width": 18,
+      "top_splice_thickness": 5,
+      "left_splice_thickness": 5,
+      "left_splice_width": 18,
+      "left_splice_height": 150,
+      "right_splice_thickness": 5,
+      "right_splice_width": 18,
+      "right_splice_height": 150,
+      "p1s_splice_engagement": 3,
+      "p1s_splice_axis_offset": 6,
+      "p1s_horizontal_splice_axis_x": 45,
+      "p1s_side_splice_z_low": 60,
+      "p1s_side_splice_z_high": 165,
+      "gpu_min_length_clearance": 0.5,
+      "p1s_build_limit": 256,
+      "p1s_single_piece_limit": 256,
+      "panel_edge_radius": 0.7,
+      "shell_edge_radius": 1.2,
+      "mitx_board_rear_edge_y": -125,
+      "mitx_rear_upper_from_rear": 33.02,
+      "mitx_front_upper_from_rear": 165.1,
+      "mitx_rear_lower_from_rear": 10.16,
+      "mitx_front_lower_from_rear": 165.1,
+      "mitx_upper_from_top": 6.35,
+      "mitx_lower_from_top": 163.83,
+      "io_shield_nominal_short": 44.45,
+      "io_shield_nominal_long": 158.75,
+      "io_shield_edge_clearance": 0.3,
+      "io_board_plane_offset": 6.35,
+      "sfx_rear_cut_width": 104,
+      "sfx_rear_cut_height": 50,
+      "sfx_rear_cut_x": 0,
+      "sfx_rear_cut_z": 3.5,
+      "io_column_relief_x_min": -60,
+      "io_column_relief_depth_x": 5,
+      "io_column_relief_width_y": 16,
+      "io_column_relief_z_min": 102.25,
+      "io_column_relief_z_max": 259,
+      "rear_restore_width_x": 10.2,
+      "rear_restore_depth_y": 10.8,
+      "rear_restore_height_z": 10.2,
+      "rear_restore_y_offset": 5.4,
+      "mitx_rear_lower_anchor_x": -67,
+      "mitx_rear_bridge_z0": 70.5,
+      "mitx_rear_bridge_height": 6,
+      "mitx_rear_side_leg_width": 5,
+      "sfx_psu_width": 125,
+      "sfx_psu_depth": 100,
+      "sfx_psu_height": 63.5,
+      "sfx_psu_rear_clearance": 0.8,
+      "sfx_guide_side_clearance": 0.8,
+      "sfx_guide_width": 3,
+      "sfx_guide_height": 10,
+      "sfx_guide_overrun": 1,
+      "sfx_front_stop_depth": 3,
+      "sfx_front_stop_height": 4,
+      "sfx_bridge_vertical_clearance": 4,
+      "sfx_guide_wall_clearance": 4,
+      "sfx_rear_leg_clearance": 2,
+      "sfx_rear_width_clearance": 0.8,
+      "sfx_column_side_clearance": 1.5,
+      "sfx_column_top_clearance": 2,
+      "sfx_column_notch_depth": 18,
+      "sfx_mount_hole_diameter": 4.2,
+      "sfx_mount_horizontal_inset": 6,
+      "sfx_mount_vertical_inset": 6,
+      "sfx_mount_cut_depth": 8,
+      "gpu_dual_slot_opening_width": 39,
+      "gpu_ear_projection_above_flange": 6,
+      "sfx_lower_screw_access_width": 12,
+      "sfx_lower_screw_access_height": 12,
+      "sfx_lower_screw_access_depth": 24,
+      "sfx_column_free_height": 70,
+      "sfx_header_height": 8,
+      "sfx_header_depth": 12,
+      "sfx_header_side_inset": 2,
+      "sfx_bay_extra_width": 3,
+      "sfx_header_vertical_clearance": 3,
+      "left_rear_integrated_bridge_width": 10,
+      "left_rear_integrated_bridge_depth": 14,
+      "left_rear_integrated_bridge_height": 8,
+      "left_rear_integrated_bridge_x": -8,
+      "left_rear_integrated_bridge_y": -104.5,
+      "left_rear_integrated_bridge_z": 70,
+      "psu_guide_delete_margin": 0.4,
+      "psu_stop_delete_margin": 0.4,
+      "rear_column_lower_cut_width": 16,
+      "rear_column_lower_cut_depth": 18,
+      "left_rear_arm_height": 8,
+      "left_rear_arm_depth": 14,
+      "left_rear_arm_z": 70,
+      "left_rear_arm_x_min": -64,
+      "left_rear_arm_x_max": 0,
+      "left_rear_arm_y": -115,
+      "sfx_floor_width": 128,
+      "sfx_floor_depth": 102,
+      "sfx_floor_thickness": 3,
+      "sfx_floor_rear_offset": 0,
+      "sfx_floor_shave_height": 14,
+      "sfx_floor_shave_overlap": 0.02,
+      "flat_base_width": 146,
+      "flat_base_depth": 256,
+      "flat_base_thickness": 3,
+      "rear_floor_anchor_x": -67,
+      "front_floor_anchor_x": 2,
+      "flat_floor_anchor_engagement": 5,
+      "left_rear_profile_x_min": -70.4,
+      "left_rear_profile_x_max": -56.4,
+      "left_rear_profile_y_min": -125.4,
+      "left_rear_profile_y_max": -108,
+      "left_rear_spine_z_min": 70,
+      "left_rear_spine_z_max": 259,
+      "left_rear_transition_height": 30,
+      "left_rear_outer_leg_x_max": -62.6,
+      "left_rear_leg_z_min": 3,
+      "left_rear_leg_z_max": 82,
+      "right_rear_leg_x_min": 62.6,
+      "right_rear_leg_x_max": 70.4,
+      "right_rear_leg_y_min": -125.4,
+      "right_rear_leg_y_max": -111.4,
+      "right_rear_leg_z_min": 3,
+      "right_rear_leg_z_max": 82,
+      "legacy_left_rear_datum_size": 0.2,
+      "legacy_left_rear_datum_x": -69.8,
+      "legacy_left_rear_datum_y": -124.8,
+      "legacy_left_rear_datum_z": 4,
+      "rear_foot_sfx_clearance": 0.3,
+      "right_rear_sfx_clearance": 0.3,
+      "foot_fl_diameter": 16,
+      "foot_rl_diameter": 16,
+      "foot_fr_diameter": 16,
+      "foot_rr_diameter": 16,
+      "foot_fl_height": 4,
+      "foot_rl_height": 4,
+      "foot_fr_height": 4,
+      "foot_rr_height": 4,
+      "final_cap_outer_thickness": 3,
+      "final_cap_inner_thickness": 2,
+      "final_cap_inset": 5,
+      "final_top_engagement": 3,
+      "final_upper_mount_engagement": 3,
+      "final_left_rear_magnet_pocket_size": 10.2,
+      "final_left_rear_magnet_pocket_depth": 3.2,
+      "final_left_rear_magnet_proxy_size": 10,
+      "final_left_rear_magnet_proxy_depth": 3,
+      "final_left_rear_magnet_edge_offset": 1.6,
+      "final_left_rear_magnet_proxy_offset": 1.5,
+      "final_left_rear_magnet_engagement": 5,
+      "side_magnet_height_z": 15.2,
+      "side_magnet_width_y": 10.2,
+      "side_magnet_pocket_depth_x": 4.2,
+      "side_magnet_proxy_height_z": 15,
+      "side_magnet_proxy_width_y": 10,
+      "side_magnet_proxy_depth_x": 4,
+      "side_magnet_edge_offset_x": 2.1,
+      "side_magnet_proxy_offset_x": 2,
+      "side_magnet_engagement": 6,
+      "rear_magnet_restore_extra_z": 0.8,
+      "rear_case_pad_width_x": 10.2,
+      "rear_case_pad_depth_y": 10.8,
+      "rear_case_pad_height_z": 10.2,
+      "rear_case_pad_y_offset": 5.4,
+      "rear_case_panel_patch_width": 8,
+      "rear_case_panel_patch_height": 8,
+      "rear_case_screw_z_low": 30,
+      "rear_case_screw_z_high": 247,
+      "sfx_final_hole_diameter": 4.2,
+      "sfx_final_hole_patch_diameter": 8,
+      "sfx_final_hole_cut_depth": 8,
+      "side_panel_steel_plate_height_z": 15,
+      "side_panel_steel_plate_width_y": 10,
+      "side_panel_steel_plate_thickness_x": 1,
+      "side_panel_steel_slot_height_clearance": 0.3,
+      "side_panel_steel_slot_width_clearance": 0.3,
+      "side_panel_steel_slot_thickness_clearance": 0.15,
+      "side_panel_steel_slot_edge_overrun": 0.4,
+      "side_panel_finger_notch_radius": 9,
+      "side_panel_finger_notch_z": 130,
+      "side_panel_finger_notch_cut_depth": 6,
+      "integrated_foot_diameter": 16,
+      "integrated_foot_height": 4,
+      "integrated_foot_overlap": 0.4,
+      "retired_foot_datum_size": 0.2,
+      "coax_column_restore_width": 14,
+      "coax_column_restore_depth": 14,
+      "coax_column_restore_height": 10,
+      "coax_column_engagement": 5,
+      "retired_foot_datum_offset_x": 3,
+      "retired_foot_datum_offset_y": 3,
+      "retired_foot_storage_x": 0,
+      "retired_foot_storage_y": 0,
+      "retired_foot_storage_z": 131,
+      "retired_foot_storage_pitch": 0.08,
+      "rr_top_restore_width": 14,
+      "rr_top_restore_depth": 14,
+      "rr_top_restore_height": 10,
+      "rr_top_engagement": 5,
+      "rr_top_pilot_diameter": 2.6,
+      "rr_top_pilot_depth": 20,
+      "rr_top_trim_margin": 2,
+      "rr_top_trim_height": 12,
+      "rr_step_trim_x_min": -1,
+      "rr_step_trim_x_max": 12,
+      "rr_step_trim_y_min": -126.5,
+      "rr_step_trim_y_max": -107.5,
+      "rr_arm_top_z": 76.5,
+      "rr_step_trim_top_z": 86,
+      "rr_lip_trim_x_min": 58,
+      "rr_lip_trim_x_max": 75,
+      "rr_lip_trim_y_min": -128,
+      "rr_lip_flush_y": -125.4,
+      "rr_lip_trim_z_min": 198,
+      "rr_lip_trim_z_max": 222,
+      "rr_mount_ear_preserve_clearance": 0,
+      "frame_bridge_overlap_y": 0.2,
+      "frame_bridge_width_x": 14,
+      "frame_bridge_height_z": 256,
+      "frame_retired_marker_size": 0.05,
+      "frame_retired_marker_pitch": 0.08,
+      "frame_retired_marker_z": 131,
+      "frame_rail_depth": 16,
+      "frame_rail_height": 12,
+      "frame_edge_return_thickness": 3,
+      "frame_edge_return_depth": 10,
+      "frame_edge_overlap": 0.35,
+      "frame_tongue_width": 118,
+      "frame_tongue_depth": 3,
+      "frame_tongue_height": 1.8,
+      "frame_tongue_clearance": 0.25,
+      "frame_joint_x_inset": 9.6,
+      "frame_joint_y_inset": 10.6,
+      "frame_joint_engagement": 5,
+      "frame_joint_count_expected": 8,
+      "frame_magnet_pad_depth_x": 8,
+      "frame_magnet_pad_depth_y": 12,
+      "frame_magnet_pad_height_z": 20,
+      "frame_magnet_pocket_depth_x": 4.2,
+      "frame_magnet_pocket_width_y": 10.2,
+      "frame_magnet_pocket_height_z": 15.2,
+      "frame_magnet_proxy_depth_x": 4.2,
+      "frame_magnet_proxy_width_y": 10,
+      "frame_magnet_proxy_height_z": 15,
+      "frame_magnet_engagement": 3.2,
+      "frame_magnet_count_expected": 8,
+      "retired_column_marker_size": 0.05,
+      "retired_column_marker_pitch": 0.08,
+      "retired_column_marker_z": 131,
+      "return_relief_width": 3.4,
+      "return_relief_depth": 9.75,
+      "return_relief_end_margin": 0.15,
+      "return_relief_min_height": 1,
+      "point_frame_audit_min_gap": 20,
+      "corner_joint_count_expected": 8,
+      "corner_pad_width_x": 16,
+      "corner_pad_depth_y": 16,
+      "corner_pad_height_z": 16,
+      "corner_pad_overlap": 0.35,
+      "corner_screw_x_inset": 9.6,
+      "corner_screw_y_inset": 10.6,
+      "corner_screw_engagement": 5,
+      "rear_mb_tab_width_x": 8,
+      "rear_mb_tab_height_z": 12,
+      "rear_mb_tab_end_margin_y": 5,
+      "rear_mb_tab_panel_overlap": 0.35,
+      "rear_mb_screw_engagement": 2.4,
+      "foot_cleanup_expected_count": 4,
+      "foot_cleanup_stack_height": 7,
+      "retired_anchor_patch_radius": 4.5,
+      "retired_anchor_patch_margin": 0.2,
+      "lower_front_fuse_overlap": 0.6,
+      "side_panel_magnet_station_inset_y": 8,
+      "side_panel_inner_clearance": 0.4,
+      "frame_sync_expected_rear_joints": 4,
+      "panel_intersection_tolerance_mm3": 0.02,
+      "rear_fixing_point_expected": 4,
+      "side_strike_pocket_expected": 8,
+      "magnet10_steel_height_z": 10,
+      "magnet10_steel_width_y": 10,
+      "magnet10_steel_thickness_x": 1,
+      "magnet10_slot_height_clearance": 0.3,
+      "magnet10_slot_width_clearance": 0.3,
+      "magnet10_slot_thickness_clearance": 0.15,
+      "magnet10_station_inset_y": 8,
+      "magnet10_carrier_expected": 8,
+      "magnet10_strike_pocket_expected": 8,
+      "slim2_corner_width_x": 12,
+      "slim2_corner_depth_y": 12,
+      "slim2_corner_height_z": 10,
+      "slim2_corner_panel_overlap": 0.5,
+      "slim2_corner_engagement": 4.2,
+      "slim_corner_screw_x_inset": 8.5,
+      "slim_corner_screw_y_inset": 8.5,
+      "magnet10_width_y": 10,
+      "magnet10_height_z": 10,
+      "magnet10_depth_x": 3,
+      "magnet10_pocket_clearance": 0.2,
+      "magnet10_back_wall": 1.2,
+      "magnet10_rebuild_carrier_width_y": 13,
+      "magnet10_rebuild_carrier_height_z": 13,
+      "legacy_corner_relief_width_x": 18.5,
+      "legacy_corner_relief_depth_y": 16,
+      "legacy_corner_relief_height_z": 18,
+      "legacy_magnet_relief_width_x": 18.5,
+      "legacy_magnet_relief_depth_y": 16,
+      "legacy_magnet_relief_height_z": 24,
+      "end_panel_vertical_chamfer": 0.35,
+      "end_panel_vertical_min_length": 200,
+      "side_panel_perimeter_chamfer": 0.3,
+      "side_panel_perimeter_min_length": 200,
+      "top_skin_chamfer": 0.4,
+      "top_skin_edge_min_length": 100,
+      "top_skin_min_z": 256.99,
+      "base_skin_chamfer": 0.4,
+      "base_skin_edge_min_length": 100,
+      "base_skin_min_z": -0.01,
+      "base_skin_max_z": 3.01,
+      "post_chamfer_intersection_tolerance": 0.02,
+      "postless_io_top_clearance": 0.5,
+      "postless_io_side_clearance": 0.5,
+      "top_skin_threshold_margin": 0.01,
+      "rear_cleanup_patch_width_x": 8,
+      "rear_cleanup_patch_height_z": 8,
+      "rear_cleanup_patch_depth_y": 2,
+      "rear_cleanup_hole_x": 66.4,
+      "rear_cleanup_hole_z_low": 30,
+      "rear_cleanup_hole_z_high": 247,
+      "rear_cleanup_top_bridge_min": 2,
+      "rear_print_clip_width_x": 152,
+      "rear_print_clip_depth_y": 32,
+      "rear_print_clip_height_z": 246,
+      "rear_print_disabled_sfx_patch_diameter": 8,
+      "rear_print_disabled_sfx_side": -1,
+      "rear_print_expected_disabled_sfx_holes": 2,
+      "rear_print_visual_red_hole_count": 1,
+      "top_corner_repair_patch_diameter": 12,
+      "top_corner_repair_patch_height": 5,
+      "base_corner_repair_patch_diameter": 12,
+      "base_corner_repair_patch_height": 7,
+      "corner_repair_legacy_y": 118.4,
+      "corner_repair_current_y": 117.4,
+      "corner_repair_legacy_x": 66.4,
+      "corner_repair_current_x": 66.4,
+      "mb_lower_mount_web_depth_x": 4,
+      "mb_lower_mount_width_y": 10,
+      "mb_lower_mount_height_z": 83.4,
+      "mb_lower_mount_foot_depth_x": 12,
+      "mb_lower_mount_foot_width_y": 14,
+      "mb_lower_mount_foot_height_z": 7,
+      "mb_lower_mount_board_face_x": 4.2,
+      "mb_lower_mount_y": 39.099999999999994,
+      "mb_lower_mount_board_hole_z": 81.4,
+      "mb_lower_mount_board_engagement": 2.4,
+      "mb_lower_mount_base_screw_x": -2,
+      "mb_lower_mount_base_engagement": 5,
+      "mb_lower_mount_clearance_margin": 1,
+      "mb_lower_mount_base_patch_margin": 1,
+      "mb_lower_mount_expected_joints": 2,
+      "pcie_bracket_width_x": 64,
+      "pcie_bracket_shelf_depth_y": 10,
+      "pcie_bracket_shelf_thickness_z": 3.2,
+      "pcie_bracket_tab_width_x": 10,
+      "pcie_bracket_tab_depth_y": 3.2,
+      "pcie_bracket_tab_height_z": 16,
+      "pcie_bracket_tab_opening_gap_x": 1,
+      "pcie_bracket_rear_screw_z_offset": 10,
+      "pcie_bracket_rear_engagement": 4.2,
+      "pcie_bracket_gpu_engagement": 2.4,
+      "pcie_bracket_gpu_ear_thickness": 0.8,
+      "pcie_bracket_expected_gpu_screws": 2,
+      "pcie_bracket_expected_rear_screws": 2,
+      "base_direct_mb_mount_web_depth_x": 4,
+      "base_direct_mb_mount_width_y": 10,
+      "base_direct_mb_mount_height_z": 78.4,
+      "base_direct_mb_mount_foot_depth_x": 12,
+      "base_direct_mb_mount_foot_width_y": 14,
+      "base_direct_mb_mount_foot_height_z": 7,
+      "base_direct_mb_mount_hole_z": 76.4,
+      "base_direct_mb_mount_hole_engagement": 2.4,
+      "base_direct_mb_mount_expected_count": 1,
+      "base_sfx_clear_width": 126.6,
+      "base_sfx_clear_depth": 100.8,
+      "base_sfx_clear_height": 65.5,
+      "base_sfx_clear_rear_y": -126,
+      "base_sfx_floor_preserve_z": 3,
+      "base_sfx_expected_residual_volume": 0.02,
+      "gpu_end_support_center_x": -31,
+      "gpu_end_support_depth_y": 18,
+      "gpu_end_support_front_clearance_y": 2,
+      "gpu_end_support_center_y": 52,
+      "gpu_end_support_top_z": 96.2,
+      "gpu_end_support_tower_width_x": 20,
+      "gpu_end_support_tower_depth_y": 14,
+      "gpu_end_support_foot_width_x": 36,
+      "gpu_end_support_foot_depth_y": 18,
+      "gpu_end_support_foot_height_z": 8,
+      "gpu_end_support_pad_thickness_z": 4,
+      "gpu_end_support_cradle_inner_width_x": 40.8,
+      "gpu_end_support_lip_thickness_x": 3,
+      "gpu_end_support_lip_height_z": 5,
+      "gpu_end_support_soft_pad_allowance_z": 0.8,
+      "gpu_end_support_screw_spacing_x": 18,
+      "gpu_end_support_screw_engagement": 5,
+      "gpu_end_support_expected_screws": 2,
+      "sfx_final_land_diameter": 14,
+      "sfx_final_land_thickness": 2.4,
+      "sfx_final_land_overlap": 0.2,
+      "sfx_final_tool_clearance_width": 12,
+      "sfx_final_tool_clearance_height": 12,
+      "sfx_final_tool_clearance_depth": 20,
+      "sfx_final_tool_clearance_start_y": -125.95,
+      "sfx_final_through_cut_depth": 32,
+      "sfx_final_expected_holes": 4,
+      "sfx_final_min_land_to_opening": 2,
+      "corner_foot_recess_diameter": 7,
+      "corner_foot_recess_depth": 3.2,
+      "corner_foot_recess_floor_z": -4,
+      "corner_foot_recess_expected_count": 4,
+      "corner_foot_recess_min_radial_wall": 4,
+      "corner_foot_recess_cutter_overrun": 0.2,
+      "pcie_inner_rail_width_x": 64,
+      "pcie_inner_rail_depth_y": 6,
+      "pcie_inner_rail_height_z": 5,
+      "pcie_inner_rail_panel_overlap_y": 0.4,
+      "pcie_inner_rail_slit_height_z": 1.2,
+      "pcie_inner_rail_center_x": -31,
+      "pcie_inner_rail_expected_count": 1,
+      "pcie_foot_clip_outer_width_x": 12,
+      "pcie_foot_clip_outer_depth_y": 6,
+      "pcie_foot_clip_outer_height_z": 10,
+      "pcie_foot_clip_slot_width_x": 6,
+      "pcie_foot_clip_slot_depth_y": 2,
+      "pcie_foot_clip_slot_height_z": 7,
+      "pcie_foot_clip_entry_clearance_z": 1,
+      "pcie_foot_clip_panel_overlap_y": 0.4,
+      "pcie_foot_clip_inner_surface_y": -126,
+      "pcie_foot_clip_expected_count": 2,
+      "pcie_wrap_clip_width_x": 43,
+      "pcie_wrap_clip_roof_depth_y": 5.2,
+      "pcie_wrap_clip_roof_thickness_z": 3,
+      "pcie_wrap_clip_lip_thickness_y": 2,
+      "pcie_wrap_clip_lip_height_z": 6,
+      "pcie_wrap_clip_channel_depth_y": 1.2,
+      "pcie_wrap_clip_opening_overlap_z": 1,
+      "pcie_wrap_clip_panel_overlap_y": 0.4,
+      "pcie_wrap_clip_center_x": -31,
+      "pcie_wrap_clip_expected_count": 1,
+      "pcie_frame_outer_width_x": 43,
+      "pcie_frame_outer_depth_y": 5.2,
+      "pcie_frame_outer_height_z": 10,
+      "pcie_frame_inner_width_x": 37,
+      "pcie_frame_inner_height_z": 4,
+      "pcie_frame_wall_side_x": 3,
+      "pcie_frame_wall_top_bottom_z": 3,
+      "pcie_frame_panel_overlap_y": 0.4,
+      "pcie_frame_center_x": -31,
+      "pcie_frame_opening_top_z": 207,
+      "pcie_frame_expected_count": 1,
+      "pcie_frame_aperture_overrun_y": 0.4,
+      "pcie_sleeve_outer_length_x": 43,
+      "pcie_sleeve_outer_depth_y": 8,
+      "pcie_sleeve_outer_height_z": 10,
+      "pcie_sleeve_inner_depth_y": 4,
+      "pcie_sleeve_inner_height_z": 4,
+      "pcie_sleeve_wall_y": 2,
+      "pcie_sleeve_wall_z": 3,
+      "pcie_sleeve_bore_overrun_x": 0.5,
+      "pcie_sleeve_panel_overlap_y": 0.4,
+      "pcie_sleeve_center_x": -31,
+      "pcie_sleeve_top_z": 207,
+      "pcie_sleeve_expected_count": 1,
+      "pcie_single_frame_outer_length_x": 8,
+      "pcie_single_frame_outer_depth_y": 8,
+      "pcie_single_frame_outer_height_z": 10,
+      "pcie_single_frame_inner_depth_y": 4,
+      "pcie_single_frame_inner_height_z": 4,
+      "pcie_single_frame_wall_y": 2,
+      "pcie_single_frame_wall_z": 3,
+      "pcie_single_frame_bore_overrun_x": 0.5,
+      "pcie_single_frame_panel_overlap_y": 0.4,
+      "pcie_single_frame_right_edge_x": -9.5,
+      "pcie_single_frame_center_x": -13.5,
+      "pcie_single_frame_top_z": 207,
+      "pcie_single_frame_expected_count": 1,
+      "pcie_half_frame_width_x": 8,
+      "pcie_half_frame_projection_y": 4,
+      "pcie_half_frame_inner_gap_y": 1.2,
+      "pcie_half_frame_inner_height_z": 6,
+      "pcie_half_frame_wall_y": 1.2,
+      "pcie_half_frame_wall_z": 1.2,
+      "pcie_half_frame_panel_overlap_y": 0.4,
+      "pcie_half_frame_right_edge_x": -9.5,
+      "pcie_half_frame_center_x": -13.5,
+      "pcie_half_frame_top_z": 207,
+      "pcie_half_frame_expected_count": 1,
+      "pcie_u_outer_width_x": 43,
+      "pcie_u_projection_y": 3.4,
+      "pcie_u_rail_width": 2.4,
+      "pcie_u_thickness_z": 2.4,
+      "pcie_u_panel_overlap_y": 0.4,
+      "pcie_u_center_x": -31,
+      "pcie_u_top_z": 207,
+      "pcie_u_expected_count": 1,
+      "pcie_u_target_gap_y": 1,
+      "pcie_u_min_strong_section": 2,
+      "rear_final_trim_width_x": 152,
+      "rear_final_trim_depth_y": 32,
+      "rear_final_trim_outward_allowance_y": 1,
+      "rear_final_trim_bottom_z": 3,
+      "rear_final_trim_top_z": 249,
+      "rear_final_trim_expected_min_z": 3,
+      "mitx_gauge_width_y": 170,
+      "mitx_gauge_height_z": 170,
+      "mitx_gauge_thickness_x": 1.6,
+      "mitx_gauge_hole_diameter": 4,
+      "mitx_gauge_hole_cut_depth": 6,
+      "mitx_gauge_rear_edge_y": -126,
+      "mitx_gauge_bottom_z": 71.5,
+      "mitx_gauge_mount_face_x": 4.2,
+      "mitx_gauge_io_width_x": 44.45,
+      "mitx_gauge_io_height_z": 158.75,
+      "mitx_gauge_io_depth_y": 6,
+      "mitx_gauge_io_board_offset_x": 6.35,
+      "mitx_gauge_expected_holes": 4,
+      "mitx_gauge_forward_install_offset_y": 8,
+      "mitx_gauge_side_entry_offset_x": 72,
+      "mb_direct_standoff_gap_x": 6.35,
+      "mb_direct_backing_depth_x": 8,
+      "mb_direct_backing_width_y": 14,
+      "mb_direct_backing_half_height_z": 7,
+      "mb_direct_old_tip_cut_width_y": 18,
+      "mb_direct_old_tip_cut_margin_x": 0.8,
+      "mb_direct_old_tip_cut_margin_z": 0.5,
+      "mb_direct_m3_engagement_x": 4,
+      "mb_direct_expected_joints": 4,
+      "mb_direct_board_proxy_thickness": 1.6,
+      "mb_direct_board_proxy_size": 8,
+      "panel_magnet15_width_y": 15,
+      "panel_magnet15_height_z": 10,
+      "panel_magnet15_depth_x": 4,
+      "panel_magnet15_pocket_clearance": 0.2,
+      "panel_magnet15_back_wall_x": 3,
+      "panel_magnet15_carrier_width_y": 19,
+      "panel_magnet15_carrier_height_z": 14,
+      "panel_magnet15_center_screw_engagement": 3.2,
+      "panel_magnet15_expected": 8,
+      "panel_magnet15_station_inset_y": 10,
+      "panel_magnet15_steel_thickness_x": 1,
+      "panel_magnet15_steel_clearance": 0.3,
+      "panel_magnet15_steel_depth_clearance": 0.15,
+      "panel_magnet15_side_patch_width_y": 16,
+      "panel_magnet15_side_patch_height_z": 14,
+      "mitx_path_side_entry_offset_x": 72,
+      "mitx_path_forward_offset_y": 8,
+      "mitx_path_slide_clearance_x": 0.5,
+      "mitx_path_max_intersection_mm3": 0.001,
+      "mitx_driver_corridor_radius": 3.5,
+      "mitx_driver_corridor_start_clearance_x": 2,
+      "mitx_driver_corridor_end_clearance_x": 2,
+      "mitx_driver_corridor_expected": 4,
+      "mb_local_pad_gap_x": 6.35,
+      "mb_local_pad_overlap_x": 0.2,
+      "mb_local_pad_width_y": 10,
+      "mb_local_pad_height_z": 10,
+      "mb_local_m3_engagement_x": 4,
+      "mb_local_board_proxy_thickness": 1.6,
+      "mb_local_board_proxy_size": 8,
+      "mb_local_expected_joints": 4,
+      "mb_local_sfx_check_inset_y": 0.5,
+      "mb_diag_arm_depth_x": 4,
+      "mb_diag_arm_width_y": 10,
+      "mb_diag_arm_height_z": 78.4,
+      "mb_diag_foot_depth_x": 12,
+      "mb_diag_foot_width_y": 14,
+      "mb_diag_foot_height_z": 7,
+      "mb_diag_remove_margin_xy": 0.6,
+      "mb_diag_floor_repair_overlap": 0.2,
+      "mb_diag_standoff_gap_x": 6.35,
+      "mb_diag_marker_min_size": 0.4,
+      "mb_retired_hole_patch_depth_x": 3.8,
+      "mb_retired_hole_patch_width_y": 8,
+      "mb_retired_hole_patch_height_z": 8,
+      "mb_mount_lower_front_arm_depth_x": 4,
+      "mb_mount_lower_front_width_y": 10,
+      "mb_mount_lower_front_height_z": 78.4,
+      "mb_mount_lower_front_foot_depth_x": 12,
+      "mb_mount_lower_front_foot_width_y": 14,
+      "mb_mount_lower_front_foot_height_z": 7,
+      "mb_mount_lower_front_base_engagement": 5,
+      "mb_mount_lower_front_separation_margin_xy": 0.6,
+      "mb_mount_lower_front_floor_repair_overlap": 0.2,
+      "mb_mount_lower_front_expected_base_screws": 1,
+      "marked_upright_clearance_xy": 0.5,
+      "marked_upright_cut_height": 252,
+      "marked_upright_floor_skin": 0,
+      "marked_upright_cut_x": 13.000000000000002,
+      "marked_upright_cut_y": 15,
+      "sfx_flush_patch_diameter": 8,
+      "sfx_flush_cut_depth": 1,
+      "sfx_flush_outer_face_y": -128,
+      "rear_flush_plane_y": -128,
+      "rear_flush_trim_depth": 2,
+      "rear_flush_trim_width": 156,
+      "rear_flush_trim_height": 256,
+      "rear_flush_outer_plane_y": -128,
+      "rear_flush_outer_trim_depth": 2,
+      "sfx_flush_zone_diameter": 8,
+      "sfx_flush_inner_plane_y": -126,
+      "sfx_flush_inner_cut_depth": 6,
+      "rear_flush_zone_diameter": 16,
+      "rear_flush_inner_plane_y": -126,
+      "rear_flush_inner_cut_depth": 30,
+      "connection_cleanup_extra_depth": 0.15,
+      "connection_cleanup_face_trim": 0.35,
+      "rear_magnet_cleanup_width_x": 18,
+      "rear_magnet_cleanup_depth_y": 20,
+      "rear_magnet_cleanup_height_z": 22,
+      "rear_magnet_clean_carrier_depth_x": 7.2,
+      "rear_magnet_clean_carrier_width_y": 19,
+      "rear_magnet_clean_carrier_height_z": 14,
+      "rear_magnet_skin_guard": 0.05,
+      "mitx_integrated_standoff_height": 6.35,
+      "mitx_integrated_standoff_diameter": 8,
+      "mitx_standoff_fuse_overlap": 0.6,
+      "mitx_integrated_standoff_engagement": 6,
+      "restored_lower_front_mount_count": 1,
+      "mitx_mount_rear_offset": 6.35,
+      "mitx_mount_front_offset": 163.83,
+      "mitx_mount_lower_offset": 6.35,
+      "mitx_mount_upper_offset": 163.83,
+      "lower_front_detachable_engagement": 5,
+      "mitx_fit_gauge_width": 170,
+      "mitx_fit_gauge_height": 170,
+      "mitx_fit_gauge_thickness": 0.8,
+      "mitx_fit_gauge_frame_edge": 3,
+      "mitx_fit_gauge_hole_diameter": 3.2,
+      "mitx_fit_gauge_marker_diameter": 10,
+      "sfx_rear_mount_hole_diameter": 4.2,
+      "sfx_rear_mount_horizontal_spacing": 113,
+      "sfx_rear_mount_vertical_spacing": 51.5,
+      "sfx_legacy_hole_fill_diameter": 5.2,
+      "sfx_legacy_hole_fill_depth": 2.4,
+      "sfx_corrected_driver_width": 12,
+      "sfx_corrected_driver_height": 12,
+      "sfx_corrected_driver_depth": 20,
+      "sfx_corrected_through_depth": 32,
+      "rear_lower_restore_width_x": 9.2,
+      "rear_case_lower_pad_width_x": 9.2,
+      "rear_case_lower_panel_patch_width_x": 7,
+      "io_shield_keepout_extra_mm": 0,
+      "io_shield_recess_overcut_y": 0.3,
+      "front_gpu_cradle_center_x": -31,
+      "front_gpu_cradle_reference_rear_y": -125.2,
+      "front_gpu_cradle_reference_length_y": 180,
+      "front_gpu_cradle_reference_thickness_x": 40,
+      "front_gpu_cradle_reference_bottom_z": 97,
+      "front_gpu_cradle_reference_height_z": 115,
+      "front_gpu_cradle_end_engagement_y": 5,
+      "front_gpu_cradle_side_clearance_x": 1,
+      "front_gpu_cradle_pad_gap_z": 1,
+      "front_gpu_cradle_wall_x": 3,
+      "front_gpu_cradle_shelf_thickness_z": 3,
+      "front_gpu_cradle_side_height_z": 10,
+      "front_gpu_cradle_panel_overlap_y": 0.6,
+      "front_gpu_cradle_root_depth_y": 30,
+      "front_gpu_cradle_root_height_z": 15,
+      "front_gpu_cradle_root_overlap_z": 0.6,
+      "axp_intake_center_y": -42,
+      "axp_intake_center_z": 169,
+      "axp_intake_reference_fan_plane_x": 72.8,
+      "axp_intake_fan_diameter": 120,
+      "axp_intake_radial_clearance": 6,
+      "axp_intake_ring_width": 2.8,
+      "axp_intake_spoke_width": 3.2,
+      "axp_intake_hub_diameter": 36,
+      "axp_intake_fuse_overlap": 0.5,
+      "axp_intake_cut_overtravel": 1,
+      "p1s_front_edge_recess": 5,
+      "p1s_min_edge_margin": 1,
+      "rear_lower_sfx_side_clearance": 1.5,
+      "rear_lower_sfx_relief_depth_y": 20,
+      "rear_lower_sfx_relief_height_z": 65.5,
+      "rear_lower_sfx_skin_guard_y": 0.05,
+      "rear_lower_corner_min_thread_wall": 2,
+      "rear_lower_relief_expected_residual": 0.02,
+      "front_gpu_power_corridor_length_y": 30,
+      "front_gpu_power_corridor_height_z": 24,
+      "transition_axis_limit": 260,
+      "p1s_axis_limit": 256,
+      "front_gpu_bulge_depth_y": 4,
+      "front_gpu_bulge_overlap_y": 0.4,
+      "front_gpu_bulge_margin_x": 6,
+      "front_gpu_bulge_margin_z": 6,
+      "front_gpu_pocket_clearance_x": 1.2,
+      "front_gpu_pocket_clearance_z": 1.2,
+      "front_gpu_pocket_front_clearance_y": 1.2,
+      "front_gpu_bulge_outer_skin_y": 2.6,
+      "front_gpu_power_corridor_width_x": 22,
+      "front_gpu_power_corridor_center_exact_x": -22,
+      "front_gpu_power_corridor_center_y": 106,
+      "front_gpu_power_corridor_center_z": 90,
+      "front_gpu_panel_overlap_y": 0.4,
+      "rear_sfx_edge_opening_width_x": 104,
+      "rear_sfx_edge_opening_bottom_z": 3,
+      "rear_sfx_edge_opening_top_z": 3.5,
+      "rear_sfx_edge_opening_depth_y": 8,
+      "rear_sfx_edge_boolean_overcut": 0.1,
+      "io_shield_top_overhang_z": 2.54,
+      "honeycomb_hex_size": 18,
+      "honeycomb_wall_thickness": 2.5,
+      "honeycomb_panel_margin": 8,
+      "honeycomb_magnet_clearance": 12,
+      "honeycomb_hex_across_flats": 16,
+      "honeycomb_web_thickness": 2.6,
+      "honeycomb_margin_ends_y": 9,
+      "honeycomb_margin_bottom_z": 10,
+      "honeycomb_margin_top_z": 10,
+      "honeycomb_magnet_keepout_y": 22,
+      "honeycomb_magnet_keepout_z": 20,
+      "honeycomb_cut_overtravel": 1,
+      "honeycomb_magnet_keepout_radius": 16,
+      "top_edge_round_radius": 2,
+      "top_perimeter_tolerance": 2,
+      "top_face_z_tolerance": 0.05,
+      "base_edge_round_radius": 2,
+      "base_perimeter_tolerance": 2,
+      "base_face_z_tolerance": 0.05,
+      "base_round_safety_factor": 0.85,
+      "top_round_safety_factor": 0.85,
+      "case_corner_radius": 10,
+      "top_corner_tolerance": 1,
+      "top_corner_safety_factor": 0.9,
+      "base_corner_tolerance": 1,
+      "base_corner_safety_factor": 0.9,
+      "gpu_slot_pair_center_mag": 45,
+      "gpu_dual_slot_opening_height": 106,
+      "pcie_shelf_outer_margin_x": 4,
+      "pcie_shelf_min_side_land": 6,
+      "gpu_min_fan_intake_gap_x": 6,
+      "gpu_min_board_side_gap_x": 12,
+      "retired_front_mb_patch_diameter": 11,
+      "retired_front_mb_patch_overlap_z": 0.2,
+      "retired_front_mb_expected_mounts": 0,
+      "fan80_aperture_diameter": 76,
+      "fan80_screw_hole_diameter": 4.4,
+      "fan80_center_x": 23,
+      "fan80_lower_center_z": 76,
+      "fan80_upper_center_z": 161,
+      "fan80_min_clearance": 3,
+      "fan80_expected_count": 2,
+      "fan120_aperture_diameter": 114,
+      "fan120_screw_hole_diameter": 4.4,
+      "fan120_center_x": 0,
+      "fan120_center_y": 58,
+      "fan120_min_clearance": 3,
+      "fan120_expected_count": 1,
+      "pcie_shelf_inner_land_x": 14,
+      "pcie_shelf_min_land_x": 6,
+      "pcie_bracket_tab_min_width_x": 6,
+      "pcie_bracket_outline_margin_x": 3
+    },
+    "mini_itx_reference": {
+      "mitx_pcb_thickness": 1.6,
+      "mitx_pcb_width_y": 170,
+      "mitx_pcb_height_z": 170,
+      "mitx_pcb_mount_hole_diameter": 3.96,
+      "mitx_pcb_plane_x": 4.2,
+      "mitx_pcb_rear_edge_y": -125,
+      "mitx_pcb_bottom_z": 75.31,
+      "mitx_pcb_rear_lower_from_rear": 10.16,
+      "mitx_pcb_front_lower_from_rear": 165.1,
+      "mitx_pcb_rear_upper_from_rear": 33.02,
+      "mitx_pcb_front_upper_from_rear": 165.1,
+      "mitx_pcb_lower_from_top": 165.1,
+      "mitx_pcb_upper_from_top": 6.35,
+      "mitx_mount_rings_outer_diameter": 7,
+      "mitx_mount_rings_inner_diameter": 3.96,
+      "mitx_mount_rings_thickness_x": 0.25,
+      "mitx_mount_rings_plane_x": 4.2,
+      "mitx_rear_io_depth_y": 12,
+      "mitx_rear_io_height_z": 158.75,
+      "mitx_rear_io_width_x": 34,
+      "mitx_rear_io_bottom_z": 82.75,
+      "mitx_rear_io_base_x": 5.8,
+      "mitx_rear_io_port_gap_z": 1.5,
+      "mitx_cpu_socket_depth_x": 5,
+      "mitx_cpu_socket_width_y": 45,
+      "mitx_cpu_socket_height_z": 45,
+      "mitx_cpu_socket_center_y": -42,
+      "mitx_cpu_socket_center_z": 169,
+      "mitx_dimm_bank_depth_x": 8,
+      "mitx_dimm_bank_slot_width_y": 5.5,
+      "mitx_dimm_bank_slot_height_z": 133,
+      "mitx_dimm_bank_pitch_y": 8,
+      "mitx_dimm_bank_first_center_y": 24,
+      "mitx_dimm_bank_bottom_z": 91,
+      "mitx_pcie_slot_depth_x": 11,
+      "mitx_pcie_slot_length_y": 89,
+      "mitx_pcie_slot_height_z": 11,
+      "mitx_pcie_slot_rear_y": -104,
+      "mitx_pcie_slot_bottom_z": 79,
+      "mitx_atx_power_depth_x": 12,
+      "mitx_atx_power_width_y": 10,
+      "mitx_atx_power_height_z": 52,
+      "mitx_atx_power_center_y": 39,
+      "mitx_atx_power_bottom_z": 136,
+      "mitx_eps_power_depth_x": 12,
+      "mitx_eps_power_width_y": 20,
+      "mitx_eps_power_height_z": 10,
+      "mitx_eps_power_rear_y": -118,
+      "mitx_eps_power_bottom_z": 224,
+      "mitx_chipset_depth_x": 8,
+      "mitx_chipset_width_y": 36,
+      "mitx_chipset_height_z": 36,
+      "mitx_chipset_center_y": -15,
+      "mitx_chipset_center_z": 111,
+      "mitx_axp120x67_depth_x": 67,
+      "mitx_axp120x67_width_y": 123.5,
+      "mitx_axp120x67_height_z": 120,
+      "mitx_axp120x67_base_x": 5.8,
+      "mitx_axp120x67_center_y": -42,
+      "mitx_axp120x67_center_z": 169,
+      "mitx_axp120x67_fan_diameter": 120,
+      "mitx_axp120x67_fan_hub_diameter": 32,
+      "mitx_axp120x67_fan_ring_width": 2,
+      "mitx_axp120x67_fan_thickness_x": 1,
+      "mitx_axp120x67_fan_plane_x": 72.8,
+      "rog_m2_bottom_depth_x": 4,
+      "rog_m2_bottom_width_y": 28,
+      "rog_m2_bottom_height_z": 85,
+      "rog_m2_bottom_center_y": -30,
+      "rog_m2_bottom_center_z": 145,
+      "rog_m2_bottom_clearance_to_support_x": 2.35,
+      "mitx_io_shield_thickness_y": 1,
+      "mitx_io_shield_rear_offset_y": 0.5,
+      "mitx_io_shield_top_overhang_z": 2.54
+    },
+    "sfx_psu_reference": {
+      "sfx_ref_width_x": 125,
+      "sfx_ref_depth_y": 100,
+      "sfx_ref_height_z": 63.5,
+      "sfx_ref_rear_clearance_y": 0.8,
+      "sfx_ref_rear_y": -125.2,
+      "sfx_ref_bottom_z": 3,
+      "sfx_ref_mount_hole_diameter": 4.2,
+      "sfx_ref_mount_spacing_x": 113,
+      "sfx_ref_mount_spacing_z": 51.5,
+      "sfx_ref_mount_ring_outer_diameter": 9,
+      "sfx_ref_mount_ring_inner_diameter": 4.2,
+      "sfx_ref_mount_ring_thickness_y": 0.35,
+      "sfx_ref_fan_outer_diameter": 92,
+      "sfx_ref_fan_hub_diameter": 27,
+      "sfx_ref_fan_grille_thickness_z": 1,
+      "sfx_ref_fan_center_y": -75.2,
+      "sfx_ref_fan_z": 66.5,
+      "sfx_ref_ac_inlet_width_x": 27,
+      "sfx_ref_ac_inlet_depth_y": 3,
+      "sfx_ref_ac_inlet_height_z": 31,
+      "sfx_ref_ac_inlet_center_x": 20,
+      "sfx_ref_ac_inlet_bottom_z": 14,
+      "sfx_ref_switch_width_x": 13,
+      "sfx_ref_switch_depth_y": 3,
+      "sfx_ref_switch_height_z": 20,
+      "sfx_ref_switch_center_x": 45,
+      "sfx_ref_switch_bottom_z": 38,
+      "sfx_ref_modular_bank_width_x": 92,
+      "sfx_ref_modular_bank_depth_y": 5,
+      "sfx_ref_modular_bank_height_z": 42,
+      "sfx_ref_modular_bank_bottom_z": 13,
+      "sfx_ref_mount_cut_depth_y": 8,
+      "sfx_ref_mount_cut_center_offset_y": 2,
+      "sfx_ref_fan_ring_2_diameter": 74,
+      "sfx_ref_fan_ring_3_diameter": 56,
+      "sfx_ref_fan_ring_4_diameter": 38,
+      "sfx_ref_fan_ring_width": 2,
+      "sfx_ref_fan_cut_extra_z": 0.3,
+      "sfx_ref_fan_cut_offset_z": 0.1
+    },
+    "dual_slot_gpu_reference": {
+      "gpu_ref_length_y": 180,
+      "gpu_ref_height_z": 115,
+      "gpu_ref_thickness_x": 40,
+      "gpu_ref_center_x": -45,
+      "gpu_ref_rear_y": -126,
+      "gpu_ref_bottom_z": 97,
+      "gpu_ref_rear_clearance_y": 0.8,
+      "gpu_ref_pcb_thickness_x": 1.6,
+      "gpu_ref_pcb_length_y": 176,
+      "gpu_ref_pcb_height_z": 108,
+      "gpu_ref_pcb_right_x": -13,
+      "gpu_ref_pcb_rear_y": -123.2,
+      "gpu_ref_pcb_bottom_z": 100,
+      "gpu_ref_bracket_width_x": 39,
+      "gpu_ref_bracket_depth_y": 1,
+      "gpu_ref_bracket_height_z": 110,
+      "gpu_ref_bracket_center_x": -31,
+      "gpu_ref_bracket_bottom_z": 97,
+      "gpu_ref_port_width_x": 11,
+      "gpu_ref_port_depth_y": 3,
+      "gpu_ref_port_height_z": 16,
+      "gpu_ref_port_pitch_x": 15,
+      "gpu_ref_port_center_z": 145,
+      "gpu_ref_port_start_x": -46,
+      "gpu_ref_vent_slot_width_x": 3,
+      "gpu_ref_vent_slot_depth_y": 2,
+      "gpu_ref_vent_slot_height_z": 34,
+      "gpu_ref_vent_slot_pitch_x": 6,
+      "gpu_ref_vent_slot_center_z": 184,
+      "gpu_ref_fan_outer_diameter": 88,
+      "gpu_ref_fan_hub_diameter": 28,
+      "gpu_ref_fan_ring_width": 2.5,
+      "gpu_ref_fan_thickness_x": 1.2,
+      "gpu_ref_fan_center_y": -34,
+      "gpu_ref_fan_center_z": 154.5,
+      "gpu_ref_fan_face_x": -51,
+      "gpu_ref_fin_depth_x": 28,
+      "gpu_ref_fin_thickness_y": 1.2,
+      "gpu_ref_fin_height_z": 88,
+      "gpu_ref_fin_pitch_y": 7,
+      "gpu_ref_fin_start_y": -112,
+      "gpu_ref_pcie_finger_width_x": 3,
+      "gpu_ref_pcie_finger_length_y": 78,
+      "gpu_ref_pcie_finger_height_z": 5,
+      "gpu_ref_pcie_finger_center_y": -68,
+      "gpu_ref_pcie_finger_bottom_z": 212,
+      "gpu_ref_power_zone_width_x": 18,
+      "gpu_ref_power_zone_length_y": 24,
+      "gpu_ref_power_zone_height_z": 12,
+      "gpu_ref_power_zone_center_x": -20,
+      "gpu_ref_power_zone_center_y": 40,
+      "gpu_ref_power_zone_bottom_z": 212,
+      "colorful_pcb_thickness_x": 1.6,
+      "colorful_pcb_length_y": 236.2,
+      "colorful_pcb_height_z": 118,
+      "colorful_bracket_width_x": 39,
+      "colorful_bracket_depth_y": 1,
+      "colorful_bracket_height_z": 120,
+      "colorful_port_width_x": 8,
+      "colorful_port_depth_y": 3,
+      "colorful_port_height_z": 16,
+      "colorful_port_pitch_x": 9.5,
+      "colorful_vent_width_x": 2.8,
+      "colorful_vent_depth_y": 2,
+      "colorful_vent_height_z": 38,
+      "colorful_vent_pitch_x": 5.2,
+      "colorful_fan_diameter": 91,
+      "colorful_fan_hub_diameter": 28,
+      "colorful_fan_ring_width": 2.5,
+      "colorful_fan_thickness_x": 1.2,
+      "colorful_fan_pitch_y": 102,
+      "colorful_fan_center_y": 1.5,
+      "colorful_fin_depth_x": 28,
+      "colorful_fin_thickness_y": 1.2,
+      "colorful_fin_height_z": 96,
+      "colorful_fin_pitch_y": 7,
+      "colorful_finger_width_x": 3,
+      "colorful_finger_length_y": 78,
+      "colorful_finger_height_z": 5,
+      "colorful_power_width_x": 22,
+      "colorful_power_length_y": 24,
+      "colorful_power_height_z": 12,
+      "colorful_power_center_x": -22,
+      "colorful_power_center_y": 106,
+      "gpu_orientation_tolerance": 0.05,
+      "gpu_orientation_min_fan_outboard": 0.5,
+      "gpu_orientation_min_pcb_inboard": 1,
+      "gpu_orientation_finger_top_overlap": 0.05,
+      "colorful_mount_ear_depth_y": 8,
+      "colorful_mount_ear_thickness_z": 0.8,
+      "colorful_mount_ear_overlap_y": 0.2,
+      "gpu_body_min_nose_inset": 1
+    }
+  }
+}

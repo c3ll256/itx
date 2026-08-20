@@ -1,13 +1,47 @@
-# Publish and verify the detachable lower-front Mini-ITX mount retained by an underside M3 screw.
-base_direct_mb_mount_web_depth_x=param('base_direct_mb_mount_web_depth_x',arm_depth_x); base_direct_mb_mount_width_y=param('base_direct_mb_mount_width_y',arm_width_y)
-base_direct_mb_mount_height_z=param('base_direct_mb_mount_height_z',lower_mount_z+5.0-base_t)
-base_direct_mb_mount_foot_depth_x=param('base_direct_mb_mount_foot_depth_x',foot_depth_x); base_direct_mb_mount_foot_width_y=param('base_direct_mb_mount_foot_width_y',foot_width_y); base_direct_mb_mount_foot_height_z=param('base_direct_mb_mount_foot_height_z',foot_height_z)
-base_direct_mb_mount_hole_z=param('base_direct_mb_mount_hole_z',lower_mount_z)
-_active_mb_engagement=mitx_standoff_engagement if 'mitx_standoff_engagement' in globals() else motherboard_engagement
-base_direct_mb_mount_hole_engagement=param('base_direct_mb_mount_hole_engagement',_active_mb_engagement); base_direct_mb_mount_expected_count=param('base_direct_mb_mount_expected_count',1)
-lower_front_mb_mount=lower_front_mount if 'lower_front_mount' in globals() else lower_mount_parts[1]
-base_direct_mb_connection_inventory={'motherboard-to-detachable-arm':'printed-screw-joint-v1','detachable-arm-to-base':'printed-screw-joint-v1 underside M3'}
-assert int(base_direct_mb_mount_expected_count)==1 and base.solids().__len__()==1 and lower_front_mb_mount.solids().__len__()==1
-assert all(base_direct_mb_connection_inventory.values())
-publish('base',base,'Base with detachable ITX mount'); publish('lower_front_mb_mount',lower_front_mb_mount,'Detachable MB mount')
-print(f'MB_DETACHABLE_BASE_PASS: lower-front Mini-ITX mount is a separate solid at z={base_direct_mb_mount_hole_z:.2f} mm and is serviced by one underside M3 screw.')
+# User decision: the lower-front Mini-ITX support standing on the base is
+# removed. Its floor area is now used by the front bottom intake fan, and the
+# board keeps its rear-lower point plus the two upper points.
+# Only the retired underside screw path has to be closed again.
+retired_front_mb_patch_diameter = param('retired_front_mb_patch_diameter', 11.0)
+retired_front_mb_patch_overlap_z = param('retired_front_mb_patch_overlap_z', 0.2)
+retired_front_mb_expected_mounts = param('retired_front_mb_expected_mounts', 0)
+
+def solid_volume(shape):
+    if shape is None:
+        return 0.0
+    return sum(s.volume for s in shape.solids())
+
+retired_front_mb_patch = Cylinder(
+    retired_front_mb_patch_diameter / 2,
+    base_t + retired_front_mb_patch_overlap_z,
+    align=(Align.CENTER, Align.CENTER, Align.MIN),
+).moved(Location((front_floor_anchor_x, lower_mount_ys[1], 0.0)))
+base = (base + retired_front_mb_patch).clean()
+base = (base & Box(
+    W + 10.0, D + 10.0, base_t + foot_height,
+    align=(Align.CENTER, Align.CENTER, Align.MIN),
+).moved(Location((0, 0, -foot_height)))).clean()
+
+# The retired screw axis must be solid again in the finished base.
+retired_front_mb_probe = Cylinder(
+    2.4, base_t,
+    align=(Align.CENTER, Align.CENTER, Align.MIN),
+).moved(Location((front_floor_anchor_x, lower_mount_ys[1], 0.0)))
+retired_front_mb_void = retired_front_mb_probe.volume - solid_volume(base & retired_front_mb_probe)
+
+mb_mount_inventory = {
+    'rear-lower': 'rear-panel integrated standoff, printed-screw-joint-v1',
+    'upper-rear': 'top-panel fused arm, printed-screw-joint-v1',
+    'upper-front': 'top-panel fused arm, printed-screw-joint-v1',
+}
+assert int(retired_front_mb_expected_mounts) == 0
+assert base.solids().__len__() == 1
+assert retired_front_mb_void < 1.0
+assert abs(base.bounding_box().max.Z - base_t) < 0.01
+assert len(mb_mount_inventory) == 3 and all(mb_mount_inventory.values())
+publish('base', base, 'Base without front MB post')
+print(
+    f'FRONT_MB_POST_REMOVED: lower-front Mini-ITX support deleted; underside screw path at '
+    f'x={front_floor_anchor_x:.1f}, y={lower_mount_ys[1]:.1f} closed with residual void '
+    f'{retired_front_mb_void:.3f} mm^3; three board mounting points remain.'
+)
