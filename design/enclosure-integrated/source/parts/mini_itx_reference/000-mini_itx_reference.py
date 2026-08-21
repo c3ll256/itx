@@ -44,12 +44,19 @@ mitx_mount_rings_outer_diameter = param('mitx_mount_rings_outer_diameter', 7.0)
 mitx_mount_rings_inner_diameter = param('mitx_mount_rings_inner_diameter', 3.96)
 mitx_mount_rings_thickness_x = param('mitx_mount_rings_thickness_x', 0.25)
 mitx_mount_rings_plane_x = param('mitx_mount_rings_plane_x', 4.2)
+# The PCB keeps all four standard holes, but the enclosure intentionally omits
+# the lower-front support so the front-bottom intake fan can occupy that floor area.
+MITX_RETIRED_FRONT_LOWER_HOLE_INDEX = 1
+mitx_active_mount_holes_yz = [
+    hole_yz for hole_index, hole_yz in enumerate(mitx_pcb_holes_yz)
+    if hole_index != MITX_RETIRED_FRONT_LOWER_HOLE_INDEX
+]
 mitx_mount_rings = []
-for mitx_ring_y, mitx_ring_z in mitx_pcb_holes_yz:
+for mitx_ring_y, mitx_ring_z in mitx_active_mount_holes_yz:
     mitx_ring_outer = Cylinder(mitx_mount_rings_outer_diameter / 2, mitx_mount_rings_thickness_x, align=(Align.CENTER, Align.CENTER, Align.CENTER)).rotate(Axis.Y, 90).moved(Location((mitx_mount_rings_plane_x - mitx_mount_rings_thickness_x / 2, mitx_ring_y, mitx_ring_z)))
     mitx_ring_inner = Cylinder(mitx_mount_rings_inner_diameter / 2, mitx_mount_rings_thickness_x + 0.4, align=(Align.CENTER, Align.CENTER, Align.CENTER)).rotate(Axis.Y, 90).moved(Location((mitx_mount_rings_plane_x - mitx_mount_rings_thickness_x / 2, mitx_ring_y, mitx_ring_z)))
     mitx_mount_rings.append(mitx_ring_outer - mitx_ring_inner)
-publish('mitx_mount_rings', Compound(children=mitx_mount_rings), 'Four mounting rings')
+publish('mitx_mount_rings', Compound(children=mitx_mount_rings), 'Three mounting rings')
 
 # ATX-family rear I/O chassis-interface proxy used by full-height Mini-ITX.
 # The short-axis aperture datum follows microATX v1.2 Figure 4: 2.24 +/- 0.25 mm
@@ -154,6 +161,9 @@ assert abs((mitx_pcb_holes_yz[1][0] - mitx_pcb_holes_yz[0][0]) - 154.94) < 0.001
 assert abs((mitx_pcb_holes_yz[3][0] - mitx_pcb_holes_yz[2][0]) - 132.08) < 0.001
 assert abs((mitx_pcb_holes_yz[2][1] - mitx_pcb_holes_yz[0][1]) - 157.48) < 0.001
 assert abs((mitx_pcb_holes_yz[2][0] - mitx_pcb_holes_yz[0][0]) - 22.86) < 0.001
+assert len(mitx_pcb_holes_yz) == 4
+assert len(mitx_active_mount_holes_yz) == 3
+assert mitx_pcb_holes_yz[MITX_RETIRED_FRONT_LOWER_HOLE_INDEX] not in mitx_active_mount_holes_yz
 assert abs((mitx_pcb_solder_face_x - mitx_io_shield_x0) - MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM) < 0.001
 assert MITX_IO_APERTURE_DATUM_TOLERANCE_MM == 0.25
 assert mitx_io_shield_x0 < mitx_pcb_solder_face_x < mitx_pcb_component_face_x
@@ -163,4 +173,8 @@ assert abs((mitx_io_shield_center_y + mitx_io_shield_thickness_y / 2) - mitx_pcb
 assert 0.8 <= mitx_io_shield_thickness_y <= 1.4
 assert mitx_axp120x67_base_x > -11.0
 assert mitx_axp120x67_base_x + mitx_axp120x67_depth_x < 74.0
-print(f'MINI_ITX_IO_FIT_PASS: top overhang={mitx_io_shield_top_overhang_z:.2f} mm, shield t={mitx_io_shield_thickness_y:.2f} mm, rear edge y={mitx_pcb_rear_edge_y:.2f} mm, solder-face datum={MITX_IO_APERTURE_BELOW_PCB_SOLDER_FACE_MM:.2f} mm.')
+print(
+    f'MINI_ITX_THREE_MOUNT_REFERENCE_PASS: PCB retains {len(mitx_pcb_holes_yz)} standard holes; '
+    f'enclosure mount reference shows {len(mitx_active_mount_holes_yz)} active rings with the lower-front point retired. '
+    f'IO top overhang={mitx_io_shield_top_overhang_z:.2f} mm, shield t={mitx_io_shield_thickness_y:.2f} mm.'
+)
