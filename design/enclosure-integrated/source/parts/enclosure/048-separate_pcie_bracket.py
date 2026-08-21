@@ -18,16 +18,25 @@ pcie_bracket_gpu_ear_thickness = param('pcie_bracket_gpu_ear_thickness', bracket
 pcie_bracket_expected_gpu_screws = param('pcie_bracket_expected_gpu_screws', 2)
 pcie_bracket_expected_rear_screws = param('pcie_bracket_expected_rear_screws', 2)
 pcie_bracket_outline_margin_x = param('pcie_bracket_outline_margin_x', 3.0)
+# User-measured correction from the rear exterior view: +X is screen-right and
+# negative Y moves rearward/outside. Both GPU-ear axes move together so the
+# standard 20.32 mm slot pitch is preserved.
+pcie_bracket_gpu_axis_right_x = param('pcie_bracket_gpu_axis_right_x', 3.6)
+pcie_bracket_gpu_axis_outward_y = param('pcie_bracket_gpu_axis_outward_y', 3.6)
 
 pcie_bracket_width_x = flange_w
 pcie_bracket_base_z = flange_z + pcie_bracket_lift_z
+# Extend only the rear/outboard edge by the same amount as the Y correction so
+# the shifted M3 holes retain the original edge land instead of breaking open.
+pcie_bracket_effective_shelf_depth_y = pcie_bracket_shelf_depth_y + pcie_bracket_gpu_axis_outward_y
+pcie_bracket_effective_shelf_y = flange_y - pcie_bracket_gpu_axis_outward_y / 2.0
 
 pcie_shelf = Box(
     pcie_bracket_width_x,
-    pcie_bracket_shelf_depth_y,
+    pcie_bracket_effective_shelf_depth_y,
     pcie_bracket_shelf_thickness_z,
     align=(Align.CENTER, Align.CENTER, Align.MIN),
-).moved(Location((pcie_shelf_center_x, flange_y, pcie_bracket_base_z)))
+).moved(Location((pcie_shelf_center_x, pcie_bracket_effective_shelf_y, pcie_bracket_base_z)))
 
 # The outboard land is narrower than the inboard one at this card position, so
 # each retention tab is sized to the land it actually stands on.
@@ -57,22 +66,24 @@ for pcie_tab_x, pcie_tab_w, _land in pcie_tab_specs:
     pcie_tab_center_xs.append(pcie_tab_x)
 pcie_bracket = (pcie_shelf + pcie_tabs[0] + pcie_tabs[1]).clean()
 
-# Keep the original GPU-ear axes fixed to the card. The through-stack proxy now
-# includes the requested air gap, so the screw kit chooses hardware that still
-# reaches the raised printed shelf without moving the GPU or its rear opening.
+# Shift both GPU-ear screw axes by the user's measured +X/right and -Y/outward
+# correction. The through-stack proxy follows the extended shelf footprint, and
+# the printed-screw-joint kit continues to own the M3 profile and hardware.
 pcie_gpu_stack_height = pcie_bracket_gpu_ear_thickness + pcie_bracket_lift_z
 pcie_gpu_axis_z = flange_z - pcie_bracket_gpu_ear_thickness
+pcie_gpu_axis_y = flange_y - pcie_bracket_gpu_axis_outward_y
+pcie_gpu_axis_xs = tuple(x + pcie_bracket_gpu_axis_right_x for x in slot_centers)
 pcie_gpu_proxy = Box(
     pcie_bracket_width_x,
-    pcie_bracket_shelf_depth_y - 2.0,
+    pcie_bracket_effective_shelf_depth_y - 2.0,
     pcie_gpu_stack_height,
     align=(Align.CENTER, Align.CENTER, Align.MIN),
-).moved(Location((pcie_shelf_center_x, flange_y, pcie_gpu_axis_z)))
+).moved(Location((pcie_shelf_center_x, pcie_bracket_effective_shelf_y, pcie_gpu_axis_z)))
 pcie_gpu_joints = []
-for i, x in enumerate(slot_centers):
+for i, x in enumerate(pcie_gpu_axis_xs):
     joint = make_screw_joint_v1(
         size='M3',
-        at=Location((x, flange_y, pcie_gpu_axis_z), (180, 0, 0)),
+        at=Location((x, pcie_gpu_axis_y, pcie_gpu_axis_z), (180, 0, 0)),
         through=[(pcie_gpu_proxy, pcie_gpu_stack_height)],
         engage_depth=pcie_bracket_gpu_engagement,
         into=pcie_bracket,
@@ -118,12 +129,15 @@ for i, (pcie_tab_x, pcie_tab_w, _land) in enumerate(pcie_tab_specs):
 pcie_gpu_hardware = Compound(children=[j.hardware for j in pcie_gpu_joints])
 pcie_rear_hardware = Compound(children=[j.hardware for j in pcie_rear_joints])
 pcie_connection_inventory = {
-    'gpu-ears-to-pcie-bracket': 'printed-screw-joint-v1 x2 with raised through stack',
+    'gpu-ears-to-pcie-bracket': 'printed-screw-joint-v1 x2 with user-measured X/Y correction',
     'pcie-bracket-to-rear-panel': 'printed-screw-joint-v1 x2',
 }
 pcie_overlap = pcie_bracket & rear_panel
 pcie_bracket_bb = pcie_bracket.bounding_box()
+pcie_gpu_y_land = pcie_gpu_axis_y - pcie_bracket_bb.min.Y
 assert pcie_bracket_lift_z >= 0.0
+assert pcie_bracket_gpu_axis_right_x >= 0.0
+assert pcie_bracket_gpu_axis_outward_y >= 0.0
 assert abs(pcie_bracket_bb.min.Z - pcie_bracket_base_z) < 0.01
 assert abs((pcie_bracket_base_z - flange_z) - pcie_bracket_lift_z) < 0.01
 assert len(pcie_gpu_joints) == int(pcie_bracket_expected_gpu_screws)
@@ -134,16 +148,23 @@ assert pcie_overlap is None or pcie_overlap.volume < 0.02
 # Both tabs must still be wide enough to carry an M3 screw.
 for _x, pcie_tab_w, _land in pcie_tab_specs:
     assert pcie_tab_w >= pcie_bracket_tab_min_width_x
-# The whole bracket must stay inside the case outline at the moved card position.
+# The whole bracket must stay inside the case X outline at the moved card position.
 assert pcie_bracket_bb.min.X >= -W/2 + pcie_bracket_outline_margin_x - 0.001
 assert pcie_bracket_bb.max.X <= W/2 - pcie_bracket_outline_margin_x + 0.001
+# Shifted axes retain their slot pitch and remain fully inside shelf material.
+assert abs((pcie_gpu_axis_xs[1] - pcie_gpu_axis_xs[0]) - slot_pitch) < 0.001
+assert min(pcie_gpu_axis_xs) >= pcie_shelf_x_min + 3.0
+assert max(pcie_gpu_axis_xs) <= pcie_shelf_x_max - 3.0
+assert pcie_gpu_y_land >= 3.0
+assert pcie_gpu_axis_y <= pcie_bracket_bb.max.Y - 3.0
 publish('rear_panel', rear_panel, 'Rear with raised PCIe mounts')
-publish('pcie_bracket', pcie_bracket, 'Raised dual-slot bracket')
-publish('pcie_gpu_screws', pcie_gpu_hardware, 'GPU bracket screws')
+publish('pcie_bracket', pcie_bracket, 'Shifted dual-slot bracket')
+publish('pcie_gpu_screws', pcie_gpu_hardware, 'Shifted GPU screws')
 publish('pcie_rear_screws', pcie_rear_hardware, 'Raised PCIe rear screws')
 print(
-    f'PCIE_BRACKET_RAISED_PASS: bracket raised {pcie_bracket_lift_z:.1f} mm to '
-    f'z={pcie_bracket_bb.min.Z:.1f}..{pcie_bracket_bb.max.Z:.1f}; '
-    f'GPU axes unchanged with through stack={pcie_gpu_stack_height:.1f} mm; '
-    f'rear screw z={pcie_rear_screw_z:.1f} mm and length={pcie_rear_joints[0].screw_length_mm:.0f} mm.'
+    f'PCIE_GPU_AXIS_SHIFT_PASS: GPU axes right +{pcie_bracket_gpu_axis_right_x:.1f} mm '
+    f'and outward -{pcie_bracket_gpu_axis_outward_y:.1f} mm to '
+    f'x={pcie_gpu_axis_xs[0]:.2f}/{pcie_gpu_axis_xs[1]:.2f}, y={pcie_gpu_axis_y:.2f}; '
+    f'pitch={pcie_gpu_axis_xs[1]-pcie_gpu_axis_xs[0]:.2f} mm, rear Y land={pcie_gpu_y_land:.1f} mm; '
+    f'bracket y={pcie_bracket_bb.min.Y:.1f}..{pcie_bracket_bb.max.Y:.1f} mm.'
 )

@@ -1,19 +1,20 @@
-# enclosure-integrated
+# Integrated Mini-ITX Enclosure
 
-- 六件式 FDM Mini-ITX 机箱；当前实体外框为 152 × 256 × 252 mm，底部四个 4 mm 脚使安装总高为 256 mm，并保持在产品允许的 152 × 260 × 252 mm 最大主体包络内。
-- 主板目标为 ASUS ROG STRIX Z390-I GAMING / 标准 Mini-ITX 170 × 170 mm。保留三个约 6.35 mm 高的一体打印支撑点：后下支撑与后板一体，前后两个上支撑与顶盖一体；底部前方固定点及其底板孔已按用户要求删除。三个 M3 自成型接口由 printed-screw-joint-v1 生成，螺钉轴线可达。
-- `mitx_mount_rings` 是厚度仅 0.25 mm 的主板四个标准安装孔参考标记，不是机箱支撑、紧固件或打印结构。标准主板本身仍有四个孔，但当前机箱只支撑其中后下、后上、前上三个位置；前下参考环下方没有 enclosure 支撑实体。
-- CPU 散热器为 Thermalright AXP120-X67，按 123.5 × 120 × 67 mm 固定包络，外侧基准 X=72.8 mm。右侧蜂窝板在风扇区域做 0.8 mm 内侧浅让位，局部内面为 X=74.8 mm，因此真实散热器包络间隙为 2.0 mm；局部蜂窝筋仍保留 1.2 mm 打印深度，右侧板外表面与 152 mm 总宽不变。
-- GPU 为 Colorful GeForce RTX 3060 NB DUO 12G V3 L-V。采用用户实测本体尺寸 241 × 132.5 × 41 mm（不含 PCIe 挡板）；挡板 L 耳沿长度方向后伸 8.8 mm，CAD 总长度包络 249.8 mm。显卡倒置、PCIe 金手指朝上。当前显卡槽、显卡参考体和前端托架中心统一为 X=-43 mm，较前一版向机箱中心回移 2.0 mm。
-- GPU 后部双槽开口底边保持 Z=112 mm，顶部 Z=218 mm，净高 106 mm。PCIe 支架采用非对称侧耳并保持在 152 mm 机箱宽度内；回移后外侧固定螺钉承载区域由约 6.5 mm 增至约 8.5 mm。独立打印固定架相对原始高度上移 2.0 mm，在显卡挡板底耳与架体之间保留 2.0 mm 垂直空间。后板两颗固定螺钉随架体上移，显卡耳螺钉保持显卡轴线并由 printed-screw-joint-v1 选择贯穿长度。前端 U 形承托与 front_panel 为同一实体，并避让 8-pin 接口/出线区。
-- 前面板靠主板侧设置两个 80 mm 风扇位，中心为 X=23 mm、Z=76/161 mm；固定孔 Ø4.4 mm、71.5 mm 方距。原 76 mm 大圆孔已替换为一体式圆头长槽格栅：槽宽 6.0 mm、筋宽 3.0 mm、连续外圈 4.0 mm。显卡回移后，显卡本体至风扇框体最近横向间隙约 5.5 mm，前端 U 形托架至风扇框体最近横向间隙约 1.3 mm，且实体干涉检查通过。
-- 底板靠前设置一个 120 mm 风扇位，中心为 X=0 mm、Y=58 mm；固定孔 Ø4.4 mm、105 mm 方距。原 114 mm 大圆孔已替换为一体式圆头长槽格栅：槽宽 7.0 mm、筋宽 3.2 mm、连续外圈 5.0 mm，计算开孔面积约 5480 mm²、相对 114 mm 名义圆面积约 53.7%。
-- `base_fan120_reference` 是安装在底板内侧的标准尺寸装配参考模型：120 × 120 × 25 mm、105 mm 安装孔方距，位置 X=0、Y=58、底面 Z=3 mm。未指定具体商品型号且组件目录没有精确 STEP，因此该对象仅用于框体、孔位、轮毂和叶片占位比较，不声称复刻任何厂商风扇，也不属于打印零件。
-- 底板风扇装配检查：风扇顶部 Z=28 mm；至主板下缘约 43.5 mm，至显卡下缘约 69 mm；后缘至 SFX 前缘约 23.2 mm；前缘至前面板主体内表面约 8 mm。底板现有完整 120 × 120 × 25 mm 风扇包络实体断言同时覆盖 SFX、显卡、前面板结构和下方 80 mm 风扇，当前构建通过。
-- 底部进气注意事项：底脚仅提供约 4 mm 桌面间隙。以整个机箱底边周长乘 4 mm 作一阶上限估算，周边进气截面约 3264 mm²，仅约为底部格栅开孔面积的 60%；真实桌面边界和脚部遮挡还会降低有效进气，因此机械安装可行，但贴桌使用可能产生额外风阻与噪音。当前查询仅检查并建立参考模型，未擅自提高脚高。
-- 三处风扇固定均为 free connection：M4 间隙孔穿过打印面板，螺钉拧入购买风扇框体；格栅与面板/底板保持单一实体，不制作打印螺纹。底部风扇螺钉头、滤网和线缆未在当前参考模型中表示，选购具体风扇后仍需核对螺钉头高度和出线方向。
-- SFX 使用标准 125 × 100 × 63.5 mm 包络并从后部直线推入；后板保留 4 × Ø4.2 mm、113 × 51.5 mm 孔距与批头通道。
-- 前面板左上角提供 Ø12.2 mm 电源按钮安装孔，中心 X=+50 mm、Z=227 mm；+X 在机箱正面外观视图中为左侧。孔距顶部与左侧实体边缘均约 15.9 mm，且避开上部风扇固定孔、顶盖和磁铁载体。按钮本体、帽、执行件和走线不属于本 CAD 交付。
-- 前、左、右外围面板使用 15 × 10 × 4 mm 嵌入磁铁并由中心 M3 螺钉固定；后板螺钉固定。
-- 最终检查重点：三个实际主板支撑点（不要把四个主板孔参考环计作支撑）、AXP120-X67 的 2.0 mm 侧向间隙与 1.2 mm 局部网筋深度、实测 GPU 249.8 mm 总包络、X=-43 mm 显卡轴线、106 mm PCIe 开口、约 8.5 mm 外侧螺钉承载区域、后部固定架的 2.0 mm 抬升间隙、前风扇与显卡/托架间隙、底板 120 mm 风扇参考模型及其 4 mm 底部进气限制、GPU 供电区、SFX 插入、左上角电源按钮孔、三处圆头格栅以及六面板装配完整性。
-- 正式交付为 STEP；GLB 预览由最终 STEP 刷新。
+Parametric compact enclosure with:
+
+- Rounded outer shell assembled from separate FDM-printable base, top cap, front, rear, left, and right panels.
+- Mini-ITX motherboard reference envelope and standard mounting pattern.
+- SFX PSU reference and rear mounting provision.
+- User GPU envelope 241 × 132.5 × 41 mm plus 8.8 mm rear L-ear extension (249.8 mm total CAD envelope), installed as a dual-slot card.
+- Rear PCIe opening Z=112..218 mm (106 mm high) with removable raised dual-slot retention bracket.
+- GPU slot/opening center X=-43 mm. The two GPU-ear M3 retention axes keep the standard 20.32 mm pitch and include the user-measured rear-view correction: 3.6 mm to the right (+X) and 3.6 mm outward/rearward (-Y), giving axes X=-49.56/-29.24 mm and Y=-136.6 mm. The bracket shelf extends outward by the same 3.6 mm to preserve complete printed thread profiles and 5.0 mm rear edge land; the two bracket-to-rear-panel screws remain unchanged.
+- Front panel with two 80 mm fan positions and integrated U-shaped GPU nose support; the support follows the GPU X location and preserves clearance from the fixed fan frames.
+- Front-panel power-button opening at appearance upper-left, Ø12.2 mm, X=+50 mm, Z=227 mm.
+- Base-front standard 120 × 120 × 25 mm fan position centered at X=0, Y=58 mm with 105 mm square mounting pitch, Ø4.4 mm mounting holes, and rounded-slot grille.
+- Generic standard-size 120 mm fan assembly reference placed on the inside of the base at X=0, Y=58, Z=3..28 mm for fit and airflow comparison. It is a dimensional reference, not a vendor-specific or printable fan.
+- The base fan clears modeled motherboard, GPU, SFX PSU, front panel, rear panel, GPU support, and the lower front 80 mm fan frame. Current nominal bottom ground gap is about 4 mm and remains the primary intake restriction; fan wire exit, filter, pads, and screw heads must be checked after a real fan model is selected.
+- Rounded-slot fan grilles on the front and base.
+- Magnet pockets for 15 × 10 × 4 mm magnets using centered screws.
+- Bottom-front motherboard fastening point intentionally removed.
+
+All enclosure parts retain user-editable parameters for overall dimensions, panel thickness, ventilation, fan features, and fastening geometry. Purchased-component standards and externally fixed dimensions remain named constants or reference-model geometry.
