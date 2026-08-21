@@ -1,7 +1,8 @@
 # Envelope proxy for the user's dual-slot Colorful RTX 3060 NB DUO 12G V3 L-V.
-# User-measured: the card body without the PCIe bracket is 241 mm long, and the
-# bracket plate stands 106 mm above the mounting ear. Both are measurements of
-# the physical card, so they are constants rather than user parameters.
+# User-measured: the card body without the PCIe bracket is 241 mm long and the
+# bracket plate is 106 mm high. The metal bracket baseline follows the active
+# PCIe opening lower edge at Z=97 mm; a later cell applies the measured 7.5 mm
+# body-only extension below this fixed bracket datum.
 COLORFUL_BODY_LENGTH_Y = 241.0
 COLORFUL_L_EAR_PROJECTION_Y = 8.8
 COLORFUL_OFFICIAL_OVERALL_LENGTH_Y = COLORFUL_BODY_LENGTH_Y + COLORFUL_L_EAR_PROJECTION_Y
@@ -10,7 +11,8 @@ COLORFUL_L_EAR_REAR_Y = COLORFUL_BODY_REAR_Y - COLORFUL_L_EAR_PROJECTION_Y
 COLORFUL_BODY_FRONT_Y = COLORFUL_BODY_REAR_Y + COLORFUL_BODY_LENGTH_Y
 COLORFUL_HEIGHT_Z = 132.5
 COLORFUL_THICKNESS_X = 41.0
-COLORFUL_BOTTOM_Z = 97.0
+CURRENT_PCIE_OPENING_BOTTOM_Z_MM = 97.0
+COLORFUL_BOTTOM_Z = CURRENT_PCIE_OPENING_BOTTOM_Z_MM
 COLORFUL_BRACKET_HEIGHT_Z = 106.0
 assert abs(COLORFUL_OFFICIAL_OVERALL_LENGTH_Y - 249.8) < 0.01
 
@@ -178,5 +180,6 @@ assert COLORFUL_PORT_CENTER_Z_FLIPPED + colorful_port_height_z / 2 <= COLORFUL_B
 print(
     f'COLORFUL_GPU_LENGTH_PASS: measured body={COLORFUL_BODY_LENGTH_Y:.1f} mm without bracket; '
     f'overall={COLORFUL_OFFICIAL_OVERALL_LENGTH_Y:.1f} mm including the {COLORFUL_L_EAR_PROJECTION_Y:.1f} mm L-ear; '
-    f'bracket plate={COLORFUL_BRACKET_HEIGHT_Z:.1f} mm; body nose y={shroud_bb.max.Y:.1f}.'
+    f'bracket datum={COLORFUL_BOTTOM_Z:.1f} mm; plate={COLORFUL_BRACKET_HEIGHT_Z:.1f} mm; '
+    f'body nose y={shroud_bb.max.Y:.1f}.'
 )
