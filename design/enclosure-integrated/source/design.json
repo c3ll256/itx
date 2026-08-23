@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "buildNumber": 450,
-  "sourceHash": "7fa25fd1cb92021068501a170b553600ba5197517680467fea48588e0ddd486a",
+  "buildNumber": 453,
+  "sourceHash": "40bdc55d942d9c104b468b9ecfb5f6b96fdd94923cf48cc593b4209399ebd5e9",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
   "targets": [
@@ -490,7 +490,7 @@
           "target": "enclosure",
           "order": 68,
           "path": "design/enclosure-integrated/source/parts/enclosure/068-final_panel_corner_and_edge_finish.py",
-          "sha256": "907222e07f1320204a4bed9123ec7997b15aa0d121075d4715753d4e4e4a1c62"
+          "sha256": "eab5e8af50769e518d7a25fed0d0492a4686d0ac44ee1fa57128bddfda2c4e03"
         },
         {
           "id": "final_io_single_clip_land",
@@ -678,7 +678,7 @@
       "target": "enclosure",
       "label": "Single rear corner blocks without skin patches",
       "kind": "generated",
-      "shapeHash": "e9699632d9a33f65075eaf70bfd28493039f4a02845f2900d89c02052263bc93",
+      "shapeHash": "7cdbd67e3451b38747d3f390bd2df894fd73d3af5e356209772ca5bff1a105b1",
       "transform": {
         "positionMm": [
           0,
@@ -782,7 +782,7 @@
       "target": "enclosure",
       "label": "Shifted GPU screws",
       "kind": "generated",
-      "shapeHash": "228a0edafe82ead6b5e596fbbd7aee4f8adafe3c4572405bed9a86b6363d668d",
+      "shapeHash": "d213979fbdf7162053706a81e3aa67d24d5376e56268841417837c4676ff4020",
       "transform": {
         "positionMm": [
           0,
@@ -808,7 +808,7 @@
       "target": "enclosure",
       "label": "Raised PCIe rear screws",
       "kind": "generated",
-      "shapeHash": "a42e491a9296aa63f3fc16398bbcd9a4ebbf14001822f2c3a07469a3ed4df2e6",
+      "shapeHash": "3ae82ff8fa4e4d985e6e2910213e8c3262cf9127798f451e322b4790abf924b6",
       "transform": {
         "positionMm": [
           0,
@@ -860,7 +860,7 @@
       "target": "mini_itx_reference",
       "label": "Three mounting rings",
       "kind": "generated",
-      "shapeHash": "c9d84eccfb8c3c8fcd593a8cbf7163b5a59a03071f49b21da214ddc34003ea28",
+      "shapeHash": "239c2ae2940513a353a17929d4a168dd83f695030155f2620f2ba4a7d2dbddb1",
       "transform": {
         "positionMm": [
           0,
@@ -886,7 +886,7 @@
       "target": "mini_itx_reference",
       "label": "ATX I-O fit envelope",
       "kind": "generated",
-      "shapeHash": "1e86e10487090d88b0cb98d7fb7266f1edbebae826d9dcd7be29493afe76869f",
+      "shapeHash": "9084fd489df123f15bdbca99f8eb42af1e46813f008dff1eee859d5f506c04e1",
       "transform": {
         "positionMm": [
           0,
@@ -912,7 +912,7 @@
       "target": "mini_itx_reference",
       "label": "CPU socket envelope",
       "kind": "generated",
-      "shapeHash": "88e2a1576dab06b2794cf91cd26c13075467df5f966badd42f0941979240c6a5",
+      "shapeHash": "9013dc97758bc6a44a45529a7874de2586ed66242e339729711104f6507970e3",
       "transform": {
         "positionMm": [
           0,
@@ -938,7 +938,7 @@
       "target": "mini_itx_reference",
       "label": "Dual DIMM slots",
       "kind": "generated",
-      "shapeHash": "b48a657042b442769ad6341fc33ea25774e719bb01b46ad18fe6e0bad1bd69b0",
+      "shapeHash": "d4f1fc4ba2a4ef06e94f7491330063ccdfe2d1723158857e6154f5aa3486bc59",
       "transform": {
         "positionMm": [
           0,
@@ -964,7 +964,7 @@
       "target": "mini_itx_reference",
       "label": "PCIe x16 slot",
       "kind": "generated",
-      "shapeHash": "fa5272a3e06c89236191315b873466e060830a23948505cabfcec80669fc9af3",
+      "shapeHash": "c26959457b4618aa60e1c22986570bafd6975fa1dc9bffc81086569c6063e754",
       "transform": {
         "positionMm": [
           0,
@@ -990,7 +990,7 @@
       "target": "mini_itx_reference",
       "label": "24-pin ATX header",
       "kind": "generated",
-      "shapeHash": "b582b298c091736faacea11cd472b46f561942d3228c1962b87a067ca868f33c",
+      "shapeHash": "2eba541c8bf29cfa4e05b9af85bd61a39cd497a7244df05c640b3c908d09c1f0",
       "transform": {
         "positionMm": [
           0,
@@ -1016,7 +1016,7 @@
       "target": "mini_itx_reference",
       "label": "CPU power header",
       "kind": "generated",
-      "shapeHash": "b29b6cb6445ff9860946047b83461298176acfd94878ee153d66f8cc31e96faa",
+      "shapeHash": "1c1e30258fc8f6393080522f99e5ec96e643fa2f2386876e832970239674abfa",
       "transform": {
         "positionMm": [
           0,
@@ -1042,7 +1042,7 @@
       "target": "mini_itx_reference",
       "label": "Chipset heatsink",
       "kind": "generated",
-      "shapeHash": "8f308b379c6a3737786a719b3a5f5a055b036cbc5cc1f72291ffeb4ebd33334d",
+      "shapeHash": "625939b3c4e529408ced4197dd10f25f710767c30eeda7e5c6952ebb8711edf1",
       "transform": {
         "positionMm": [
           0,
@@ -1068,7 +1068,7 @@
       "target": "mini_itx_reference",
       "label": "AXP120-X67 envelope",
       "kind": "generated",
-      "shapeHash": "a43d1c5f7c5ccc7947e182aa34bb2340832888c779a91165030d9de3149835fe",
+      "shapeHash": "7d5d8f751c539d2ce79c019705e23ef796b03c725354e0f0c5fe9d8c4bf57706",
       "transform": {
         "positionMm": [
           0,
@@ -1094,7 +1094,7 @@
       "target": "mini_itx_reference",
       "label": "AXP120-X67 fan",
       "kind": "generated",
-      "shapeHash": "85a00ba0416ae9695d34445c2df99c102538c48c5e731cdaac13457a2ecda583",
+      "shapeHash": "901bcb53f5600b9452a9ba893e74f54777cd54af337d7e728eb88431764c8bf2",
       "transform": {
         "positionMm": [
           0,
@@ -1120,7 +1120,7 @@
       "target": "mini_itx_reference",
       "label": "ROG backside M.2 keepout",
       "kind": "generated",
-      "shapeHash": "32bef83ae4a00c0c9f6e4a5a9416da576bb022677258052f1af8e848aabc82ef",
+      "shapeHash": "30c927cbd67ceff2eb0729811389dcb6f3f0a4ec508cb78b163047d0de5d6d7c",
       "transform": {
         "positionMm": [
           0,
@@ -1172,7 +1172,7 @@
       "target": "sfx_psu_reference",
       "label": "SFX fan grille",
       "kind": "generated",
-      "shapeHash": "9efeccedbbe3c8dcb6f44a9598395edf1757558b1ca75757cd7f2694bfeae4aa",
+      "shapeHash": "18ae3032cec006fb0861d275980d58198614f103f11257f9a0b67c4bb273062b",
       "transform": {
         "positionMm": [
           0,
@@ -1198,7 +1198,7 @@
       "target": "sfx_psu_reference",
       "label": "AC inlet reference",
       "kind": "generated",
-      "shapeHash": "1ee95eafd4d99d30ce7e657d87a48294d5ad59b134e3400eff8a22b878d1145d",
+      "shapeHash": "3d03c7f40a39a3bf1d18f639a322e6752e2a65f3105e4f530c531656905cbb81",
       "transform": {
         "positionMm": [
           0,
@@ -1224,7 +1224,7 @@
       "target": "sfx_psu_reference",
       "label": "PSU switch reference",
       "kind": "generated",
-      "shapeHash": "c607ce320a29310ab6c141bf71fad4b653d1a09bdcf135663841cc3a8ab2fd1c",
+      "shapeHash": "6adea35df1e9a3490bf938c5ebd3f6ee3789796be6b9c2907af61cf593e8989b",
       "transform": {
         "positionMm": [
           0,
@@ -1250,7 +1250,7 @@
       "target": "sfx_psu_reference",
       "label": "Modular cable bank",
       "kind": "generated",
-      "shapeHash": "5632aca9476e036962c74e0c2f478aec5ab83a233f81c492e7228d047ae6545a",
+      "shapeHash": "2e138e17d213ec9bb6b1ad6afc5e9e01b81dc0e4cc3b98917b6730ca6935d727",
       "transform": {
         "positionMm": [
           0,
@@ -1276,7 +1276,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Colorful GPU body",
       "kind": "generated",
-      "shapeHash": "ceb29d1ad30d35964d444686c4b7b5ab9e9989ff973856e6895da17421368012",
+      "shapeHash": "b7a0688a20126de325e85e65d5e6c9242407f2d458c03ff3c08c194035658e6f",
       "transform": {
         "positionMm": [
           0,
@@ -1302,7 +1302,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Colorful GPU PCB",
       "kind": "generated",
-      "shapeHash": "e582c1312a1d21a5cfd93a4c0936d56c464e25de5faae00d67856528ab2ea8e1",
+      "shapeHash": "a69d0c7c641cd7a98970fad7e969081c7e7759f60362137466d9ceb2394360ab",
       "transform": {
         "positionMm": [
           0,
@@ -1328,7 +1328,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Flipped dual-slot bracket",
       "kind": "generated",
-      "shapeHash": "cb91258a113a071d12707496a1a6a8bd158331a35e84b066de2d05fa565c287b",
+      "shapeHash": "974cf8c03d923614194c65d7d7c5c4c71dcff87acf4816674b17b496ddd52bc4",
       "transform": {
         "positionMm": [
           0,
@@ -1354,7 +1354,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Flipped HDMI and DP",
       "kind": "generated",
-      "shapeHash": "bc074ce21dd0fd7036d4da2c8128dd56f997dfb277888fd862a264ff847588f4",
+      "shapeHash": "f6e35b1d397f82f661579042557ee5864e7ef96b8e009c2e891ce394e28a2ea8",
       "transform": {
         "positionMm": [
           0,
@@ -1380,7 +1380,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Flipped rear vents",
       "kind": "generated",
-      "shapeHash": "d7aa7cf070ee07262638abb9758da94487ffe0d715a3dbbacf8dd87a2a82440c",
+      "shapeHash": "d465a2791137c083bb000528202826c447c7f6160bcdf0a341930dbe5768c5ac",
       "transform": {
         "positionMm": [
           0,
@@ -1406,7 +1406,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Outward dual fans",
       "kind": "generated",
-      "shapeHash": "4af5950259258a860a5201f659df5d9a20cf46d8da0aee69ad2b3753c4c588e7",
+      "shapeHash": "5be0daae3cbe26dec013de54ea6717e064b454956ece8231a5bd93aa26bda492",
       "transform": {
         "positionMm": [
           0,
@@ -1432,7 +1432,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Colorful heatsink fins",
       "kind": "generated",
-      "shapeHash": "2d2813035a024fa56c08465b1cfbdf5e56841fdc4a0a5f3da8ec7ecfce9af0b8",
+      "shapeHash": "7a50162ba6ce4dc98d999da8a3e7d0dc9af7e00d765d3293ecfb201857a6bd38",
       "transform": {
         "positionMm": [
           0,
@@ -1458,7 +1458,7 @@
       "target": "dual_slot_gpu_reference",
       "label": "Upward PCIe fingers",
       "kind": "generated",
-      "shapeHash": "b51d8b075cdbd390fd0b7ced62475a1944180cc092e87a757fb0d2368b4574ca",
+      "shapeHash": "45b32e981bb23de4696a7bc34642c3ed973bcca6fb348b4870c6f4f1d4880825",
       "transform": {
         "positionMm": [
           0,
@@ -1484,7 +1484,7 @@
       "target": "base_120mm_fan_reference",
       "label": "120 mm fan reference",
       "kind": "generated",
-      "shapeHash": "c844ede54387a70260d4b6c71584c1252fdbfda2b86e2e3dc2a9f8265bff73ed",
+      "shapeHash": "b382bf7efeb04ed59884a8cb29ed7ee4e9ab7c02c5f4205eee28cd17e300eee8",
       "transform": {
         "positionMm": [
           0,
@@ -1507,7 +1507,7 @@
     }
   ],
   "assets": [],
-  "updatedAt": "2026-08-23T12:34:14.867Z",
+  "updatedAt": "2026-08-23T13:34:31.355Z",
   "parameters": {
     "enclosure": {
       "case_width": 152,
@@ -2520,7 +2520,15 @@
       "final_glued_magnet_skin_restore_overlap": 0.15,
       "final_corner_skin_restore_overlap": 0.15,
       "final_glued_magnet_side_inset": 0.4,
-      "final_glued_strike_repair_overlap_x": 0.2
+      "final_glued_strike_repair_overlap_x": 0.2,
+      "final_rear_magnet_outer_setback_y": 0,
+      "final_rear_edge_flap_trim_width_x": 0.8,
+      "final_rear_edge_flap_trim_depth_y": 5.4,
+      "final_rear_edge_flap_trim_height_z": 18,
+      "final_rear_edge_flap_trim_gap_x": 0.001,
+      "final_rear_skin_rebuild_width_x": 20,
+      "final_rear_skin_rebuild_height_z": 24,
+      "final_rear_skin_rebuild_overcut_y": 0.2
     },
     "mini_itx_reference": {
       "mitx_pcb_thickness": 1.6,
