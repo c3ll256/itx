@@ -17,7 +17,9 @@ Parametric compact enclosure with:
 - Generic standard-size 120 mm fan assembly reference placed on the inside of the base at X=0, Y=58, Z=3..28 mm for fit and airflow comparison. It is a dimensional reference, not a vendor-specific or printable fan.
 - The base fan clears modeled motherboard, GPU, SFX PSU, front panel, rear panel, GPU support, and the lower front 80 mm fan frame. Current nominal bottom ground gap is about 4 mm and remains the primary intake restriction; fan wire exit, filter, pads, and screw heads must be checked after a real fan model is selected.
 - Rounded-slot fan grilles on the front and base.
-- Magnet pockets for 15 × 10 × 4 mm magnets using centered screws.
+- Eight 10 × 5 × 2 mm rectangular magnets in compact adhesive pockets. Final pocket size is 10.5 × 5.5 × 2.5 mm, providing 0.5 mm total installation allowance on each nominal dimension. The surrounding printable wall and back floor are 1.2 mm, and there are no magnet-retention screws.
+- The motherboard rear I/O opening is re-cut after panel reinforcement and has one continuous 1.0 mm clip land rather than nested reinforcement layers.
+- The front and rear panels use eight single 12 × 12 × 10 mm top/bottom corner blocks, rebuilt once on the final skin surfaces while retaining the existing M3 screw-joint axes.
 - Bottom-front motherboard fastening point intentionally removed.
 
-All enclosure parts retain user-editable parameters for overall dimensions, panel thickness, ventilation, fan features, and fastening geometry. Purchased-component standards and externally fixed dimensions remain named constants or reference-model geometry.
+All enclosure parts retain user-editable parameters for overall dimensions, panel thickness, ventilation, fan features, magnet clearances, and fastening geometry. Purchased-component standards and externally fixed dimensions remain named constants or reference-model geometry.
