@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "buildNumber": 453,
-  "sourceHash": "40bdc55d942d9c104b468b9ecfb5f6b96fdd94923cf48cc593b4209399ebd5e9",
+  "buildNumber": 466,
+  "sourceHash": "ad7db5dc5bde4acdbde7cc0eb797a10640fc22f7878f6b87b10543bb881d497b",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
   "targets": [
@@ -490,21 +490,21 @@
           "target": "enclosure",
           "order": 68,
           "path": "design/enclosure-integrated/source/parts/enclosure/068-final_panel_corner_and_edge_finish.py",
-          "sha256": "eab5e8af50769e518d7a25fed0d0492a4686d0ac44ee1fa57128bddfda2c4e03"
+          "sha256": "5618e9eda772a3b544df3f1aee109986a7ba2b6aeae1aee823ab67cf3eff9243"
         },
         {
           "id": "final_io_single_clip_land",
           "target": "enclosure",
           "order": 69,
           "path": "design/enclosure-integrated/source/parts/enclosure/069-final_io_single_clip_land.py",
-          "sha256": "e7a7516a4e4dd51dc4404ae088dd683a9f98e37a3607cda67b5648a9bfe8e7d7"
+          "sha256": "729e90963173306bfd18c8aba4fad02dcbac9bdd21a2c154e62e98e07b3bdaa6"
         },
         {
           "id": "final_single_corner_blocks",
           "target": "enclosure",
           "order": 70,
           "path": "design/enclosure-integrated/source/parts/enclosure/070-final_single_corner_blocks.py",
-          "sha256": "8852b0addec34cffd20faafde7c7b80af3faaa22b98977451e58a62834e9c9a4"
+          "sha256": "085e1cc1572058f5ff201955d6a82ff266b3b555d313adfe8882c34299679fbe"
         },
         {
           "id": "final_side_panel_envelope_trim",
@@ -512,6 +512,34 @@
           "order": 71,
           "path": "design/enclosure-integrated/source/parts/enclosure/071-final_side_panel_envelope_trim.py",
           "sha256": "78f4bc1601d60ee9d4d5a23140ae593a230894a9cb29a37daa4005f675fa8786"
+        },
+        {
+          "id": "final_front_magnet_guard_trim",
+          "target": "enclosure",
+          "order": 72,
+          "path": "design/enclosure-integrated/source/parts/enclosure/072-final_front_magnet_guard_trim.py",
+          "sha256": "4a83f9ed535d92b087cd8bdb6a3362f5339688f518fcca77bcfd485d533a4929"
+        },
+        {
+          "id": "simple_center_screw_panel_magnets",
+          "target": "enclosure",
+          "order": 73,
+          "path": "design/enclosure-integrated/source/parts/enclosure/073-simple_center_screw_panel_magnets.py",
+          "sha256": "446b36c5a1ddda3444743a694fd1f1591040434cd9a7a66bd6f7bc074ae723ae"
+        },
+        {
+          "id": "final_simple_strike_envelope_trim",
+          "target": "enclosure",
+          "order": 74,
+          "path": "design/enclosure-integrated/source/parts/enclosure/074-final_simple_strike_envelope_trim.py",
+          "sha256": "9973d8e8a31f4360e8ce5eb732ec4eff31a5c6506a6e58aa5d19f87874122437"
+        },
+        {
+          "id": "flush_simple_strike_panel_edges",
+          "target": "enclosure",
+          "order": 75,
+          "path": "design/enclosure-integrated/source/parts/enclosure/075-flush_simple_strike_panel_edges.py",
+          "sha256": "cb32ea1e01f1edc5f1f053a65926a9dfb3056429300ba87e60a77259c8eaa2d1"
         }
       ],
       "dependencies": []
@@ -650,9 +678,9 @@
     {
       "id": "front_panel",
       "target": "enclosure",
-      "label": "Single front corner blocks without skin patches",
+      "label": "Embedded front magnet cups",
       "kind": "generated",
-      "shapeHash": "b4c2c2a63379eb6ebf88ffee2ba30e6a82ec29c357c384fb4e84d5c0c286ed9e",
+      "shapeHash": "148359639c7fc8d4c22369094a10a38177e641da244fe2a18c176f3b0efb2d5b",
       "transform": {
         "positionMm": [
           0,
@@ -676,9 +704,9 @@
     {
       "id": "rear_panel",
       "target": "enclosure",
-      "label": "Single rear corner blocks without skin patches",
+      "label": "Simple rear magnet pockets",
       "kind": "generated",
-      "shapeHash": "7cdbd67e3451b38747d3f390bd2df894fd73d3af5e356209772ca5bff1a105b1",
+      "shapeHash": "2121448d7da81d48d9e5cac1511f8ab990a0067c10d4350f7dfeefa5bfbb11d5",
       "transform": {
         "positionMm": [
           0,
@@ -702,9 +730,9 @@
     {
       "id": "left_panel",
       "target": "enclosure",
-      "label": "Trimmed left magnet interface",
+      "label": "Flush left magnet edge",
       "kind": "generated",
-      "shapeHash": "5a23aed1204b0ae3f69d9ea420b991ded1a47e338c15eff01fb1896518889363",
+      "shapeHash": "738e656c76f63630a2e8fd81a8374738feaf468d0abc3b59946a28d8afb2e2ac",
       "transform": {
         "positionMm": [
           0,
@@ -728,9 +756,9 @@
     {
       "id": "right_panel",
       "target": "enclosure",
-      "label": "Trimmed right magnet interface",
+      "label": "Flush right magnet edge",
       "kind": "generated",
-      "shapeHash": "84ebb27211c701f69b95f16a648819bb1150eddd3527bf611e591a0a43b2f8c8",
+      "shapeHash": "dd1156c41e4497ee6c78ac80675763bf2ff45700e3af5caaffe5a7f5339b9611",
       "transform": {
         "positionMm": [
           0,
@@ -782,7 +810,7 @@
       "target": "enclosure",
       "label": "Shifted GPU screws",
       "kind": "generated",
-      "shapeHash": "d213979fbdf7162053706a81e3aa67d24d5376e56268841417837c4676ff4020",
+      "shapeHash": "41167ecc327cf7e7b21608d18435677f6bd00992aaa4d6056ffa2f68699e295d",
       "transform": {
         "positionMm": [
           0,
@@ -808,7 +836,7 @@
       "target": "enclosure",
       "label": "Raised PCIe rear screws",
       "kind": "generated",
-      "shapeHash": "3ae82ff8fa4e4d985e6e2910213e8c3262cf9127798f451e322b4790abf924b6",
+      "shapeHash": "30c4b0784f6b4afc67a25a6890b141e3ae63a97abbbb50c1d3796bd855013a88",
       "transform": {
         "positionMm": [
           0,
@@ -1507,7 +1535,7 @@
     }
   ],
   "assets": [],
-  "updatedAt": "2026-08-23T13:34:31.355Z",
+  "updatedAt": "2026-08-23T16:22:38.871Z",
   "parameters": {
     "enclosure": {
       "case_width": 152,
@@ -2524,11 +2552,65 @@
       "final_rear_magnet_outer_setback_y": 0,
       "final_rear_edge_flap_trim_width_x": 0.8,
       "final_rear_edge_flap_trim_depth_y": 5.4,
-      "final_rear_edge_flap_trim_height_z": 18,
+      "final_rear_edge_flap_trim_height_z": 256,
       "final_rear_edge_flap_trim_gap_x": 0.001,
       "final_rear_skin_rebuild_width_x": 20,
       "final_rear_skin_rebuild_height_z": 24,
-      "final_rear_skin_rebuild_overcut_y": 0.2
+      "final_rear_skin_rebuild_overcut_y": 0.2,
+      "final_io_recess_depth_y": 1,
+      "final_front_guard_trim_width_x": 10,
+      "final_front_guard_trim_height_z": 20,
+      "final_front_guard_trim_depth_y": 0.2,
+      "final_front_guard_panel_overcut_y": 0.001,
+      "final_front_guard_carrier_gap": 0.01,
+      "simple_panel_magnet_height_z": 15,
+      "simple_panel_magnet_width_y": 10,
+      "simple_panel_magnet_depth_x": 4,
+      "simple_panel_magnet_planar_clearance": 0.2,
+      "simple_panel_magnet_carrier_depth_x": 8,
+      "simple_panel_magnet_wall_y": 1.6,
+      "simple_panel_magnet_wall_z": 1.6,
+      "simple_panel_magnet_panel_overlap_y": 0.8,
+      "simple_panel_magnet_side_clearance_x": 0.4,
+      "simple_panel_magnet_screw_engagement": 3.2,
+      "simple_panel_magnet_front_low_z": 25,
+      "simple_panel_magnet_front_high_z": 215,
+      "simple_panel_magnet_rear_low_z": 78,
+      "simple_panel_magnet_rear_high_z": 167,
+      "simple_panel_magnet_cleanup_width_x": 24,
+      "simple_panel_magnet_cleanup_depth_y": 22,
+      "simple_panel_magnet_cleanup_height_z": 28,
+      "simple_panel_strike_thickness_x": 1,
+      "simple_panel_strike_depth_clearance": 0.15,
+      "simple_panel_strike_planar_clearance": 0.3,
+      "simple_panel_strike_repair_depth_x": 1.35,
+      "simple_panel_strike_repair_width_y": 22,
+      "simple_panel_strike_repair_height_z": 24,
+      "simple_strike_trim_depth_y": 256,
+      "simple_strike_trim_height_z": 246,
+      "simple_strike_trim_thickness_x": 2.4,
+      "simple_strike_trim_corner_radius": 10,
+      "simple_strike_trim_expected_depth_y": 256,
+      "simple_strike_edge_inset_y": 0.35,
+      "simple_strike_flush_height_z": 246,
+      "simple_strike_flush_thickness_x": 2.4,
+      "simple_strike_flush_corner_radius": 10,
+      "simple_glued_magnet_height_z": 10,
+      "simple_glued_magnet_width_y": 5,
+      "simple_glued_magnet_depth_x": 2,
+      "simple_glued_magnet_planar_clearance": 0.5,
+      "simple_glued_magnet_depth_clearance": 0,
+      "simple_glued_magnet_back_wall_x": 1.2,
+      "simple_glued_magnet_wall_y": 1.2,
+      "simple_glued_magnet_wall_z": 1.2,
+      "simple_glued_magnet_panel_overlap_y": 0.5,
+      "simple_glued_magnet_side_inset_x": 0.4,
+      "simple_glued_magnet_cleanup_width_x": 20,
+      "simple_glued_magnet_cleanup_depth_y": 22,
+      "simple_glued_magnet_cleanup_height_z": 24,
+      "simple_glued_magnet_expected_count": 8,
+      "simple_front_glued_magnet_outer_skin_y": 1.2,
+      "simple_front_glued_magnet_expected_count": 4
     },
     "mini_itx_reference": {
       "mitx_pcb_thickness": 1.6,
