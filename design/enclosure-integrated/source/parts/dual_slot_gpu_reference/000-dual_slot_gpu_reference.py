@@ -3,6 +3,8 @@
 # bracket plate is 106 mm high. The metal bracket baseline follows the active
 # PCIe opening lower edge at Z=97 mm; a later cell applies the measured 7.5 mm
 # body-only extension below this fixed bracket datum.
+# The former 8-pin location box is intentionally absent: the user confirmed its
+# location was inaccurate and that the physical connector clears the cradle.
 COLORFUL_BODY_LENGTH_Y = 241.0
 COLORFUL_L_EAR_PROJECTION_Y = 8.8
 COLORFUL_OFFICIAL_OVERALL_LENGTH_Y = COLORFUL_BODY_LENGTH_Y + COLORFUL_L_EAR_PROJECTION_Y
@@ -151,35 +153,20 @@ gpu_ref_pcie_fingers = Box(
 )))
 publish('gpu_pcie_fingers', gpu_ref_pcie_fingers, 'Upward PCIe fingers')
 
-colorful_power_width_x = param('colorful_power_width_x', 22.0)
-colorful_power_length_y = param('colorful_power_length_y', 24.0)
-colorful_power_height_z = param('colorful_power_height_z', 12.0)
-# The 8-pin zone belongs to the card: it stays 9 mm inboard of the card centre
-# and 13.4 mm behind the card nose whatever the card length or position is.
-colorful_power_center_x = gpu_ref_center_x + 9.0
-colorful_power_center_y = COLORFUL_BODY_FRONT_Y - 13.4
-gpu_ref_power_zone = Box(
-    colorful_power_width_x, colorful_power_length_y, colorful_power_height_z,
-    align=(Align.CENTER, Align.CENTER, Align.MAX),
-).moved(Location((colorful_power_center_x, colorful_power_center_y, COLORFUL_BOTTOM_Z)))
-publish('gpu_power_zone', gpu_ref_power_zone, 'Lower inverted 8-pin zone')
-
 shroud_bb = gpu_ref_shroud.bounding_box()
 fan_bb = Compound(children=gpu_ref_fans).bounding_box()
 finger_bb = gpu_ref_pcie_fingers.bounding_box()
 ear_bb = gpu_ref_mount_ear.bounding_box()
-power_bb = gpu_ref_power_zone.bounding_box()
 assert abs(shroud_bb.size.Y - COLORFUL_BODY_LENGTH_Y) < 0.01
 assert abs(shroud_bb.max.Y - ear_bb.min.Y - COLORFUL_OFFICIAL_OVERALL_LENGTH_Y) < 0.01
 assert fan_bb.max.X <= shroud_bb.min.X + 0.05
 assert finger_bb.min.Z >= shroud_bb.max.Z - 0.05
 assert ear_bb.max.Z <= COLORFUL_BOTTOM_Z + 0.05
-assert power_bb.max.Y <= shroud_bb.max.Y + 0.01
 assert COLORFUL_PORT_CENTER_Z_FLIPPED > COLORFUL_VENT_CENTER_Z_FLIPPED
 assert COLORFUL_PORT_CENTER_Z_FLIPPED + colorful_port_height_z / 2 <= COLORFUL_BOTTOM_Z + COLORFUL_BRACKET_HEIGHT_Z
 print(
     f'COLORFUL_GPU_LENGTH_PASS: measured body={COLORFUL_BODY_LENGTH_Y:.1f} mm without bracket; '
     f'overall={COLORFUL_OFFICIAL_OVERALL_LENGTH_Y:.1f} mm including the {COLORFUL_L_EAR_PROJECTION_Y:.1f} mm L-ear; '
     f'bracket datum={COLORFUL_BOTTOM_Z:.1f} mm; plate={COLORFUL_BRACKET_HEIGHT_Z:.1f} mm; '
-    f'body nose y={shroud_bb.max.Y:.1f}.'
+    f'body nose y={shroud_bb.max.Y:.1f}; inaccurate 8-pin position proxy omitted.'
 )

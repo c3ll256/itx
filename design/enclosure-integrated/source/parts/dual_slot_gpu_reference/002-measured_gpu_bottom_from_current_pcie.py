@@ -15,7 +15,6 @@ gpu_ref_pcb = gpu_ref_pcb.moved(gpu_body_correction)
 gpu_ref_fans = [shape.moved(gpu_body_correction) for shape in gpu_ref_fans]
 gpu_ref_fins = [shape.moved(gpu_body_correction) for shape in gpu_ref_fins]
 gpu_ref_pcie_fingers = gpu_ref_pcie_fingers.moved(gpu_body_correction)
-gpu_ref_power_zone = gpu_ref_power_zone.moved(gpu_body_correction)
 
 gpu_ref_bracket_plate = gpu_ref_bracket_plate.moved(gpu_bracket_correction)
 gpu_ref_mount_ear = gpu_ref_mount_ear.moved(gpu_bracket_correction)
@@ -35,9 +34,8 @@ publish('gpu_rear_vents', Compound(children=gpu_ref_vents), 'Flipped rear vents'
 publish('gpu_fan', Compound(children=gpu_ref_fans), 'Outward dual fans')
 publish('gpu_heatsink', Compound(children=gpu_ref_fins), 'Colorful heatsink fins')
 publish('gpu_pcie_fingers', gpu_ref_pcie_fingers, 'Upward PCIe fingers')
-publish('gpu_power_zone', gpu_ref_power_zone, 'Lower inverted 8-pin zone')
 print(
     f'GPU_MEASURED_BOTTOM_DATUM_PASS: PCIe opening bottom={CURRENT_PCIE_OPENING_BOTTOM_Z_MM:.1f} mm; '
     f'body bottom={gpu_measured_bottom_z:.1f} mm; bracket remains at opening datum; '
-    f'body offset={gpu_bottom_below_pcie_opening_z:.1f} mm.'
+    f'body offset={gpu_bottom_below_pcie_opening_z:.1f} mm; inaccurate 8-pin location proxy is not published.'
 )

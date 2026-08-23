@@ -28,7 +28,7 @@
     {
       "id": "gpu_riser_fit",
       "kind": "internal_fit",
-      "description": "Fit the inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V using the user-measured 241 x 132.5 x 41 mm card body, an 8.8 mm rearward PCIe bracket-ear extension for a 249.8 mm total CAD envelope, a 106 mm rear dual-slot opening centered at X=-43 mm and the raised lower PCIe retention bracket. Preserve an approximately 8.5 mm outboard screw land. The front-panel-integrated far-end cradle must provide at least 1 mm clearance per side, leave the inverted 8-pin connector/cable corridor open, and remain free of interference with both front 80 mm fan frames.",
+      "description": "Fit the inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V using the user-measured 241 x 132.5 x 41 mm card body, an 8.8 mm rearward PCIe bracket-ear extension for a 249.8 mm total CAD envelope, a 106 mm rear dual-slot opening centered at X=-43 mm and the raised lower PCIe retention bracket. Preserve an approximately 8.5 mm outboard screw land. The front-panel-integrated far-end cradle must provide at least 1 mm clearance per side and remain free of interference with both front 80 mm fan frames. The prior CAD 8-pin location proxy is not authoritative and must not be used for collision acceptance; the user confirms the actual connector does not interfere with the current cradle and owns the cable solution.",
       "source": "user_requested",
       "required": true
     },
@@ -49,7 +49,7 @@
     {
       "id": "panel_retention",
       "kind": "mounting_interface",
-      "description": "Use embedded 15 x 10 x 4 mm magnets with centered screw retention for the designated removable panels, while keeping the rear panel screw-fastened and all retention features outside hardware service envelopes.",
+      "description": "Use eight 10 x 5 x 2 mm rectangular magnets in adhesive, screwless pockets on the front and rear end panels. Provide 10.5 x 5.5 mm planar pocket dimensions with 0.5 mm total allowance in length and width, retain an exact 2.0 mm pocket depth so bonded magnets finish flush, and use matching steel strike features on the removable side panels. Keep the rear panel body screw-fastened and all retention features outside hardware service envelopes.",
       "source": "user_requested",
       "required": true
     },

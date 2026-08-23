@@ -67,7 +67,7 @@
       "source": "user"
     },
     "gpu": {
-      "value": "Colorful GeForce RTX 3060 NB DUO 12G V3 L-V；用户实测显卡本体（不含 PCIe 挡板）241 × 132.5 × 41 mm，挡板 L 耳沿长度方向后伸 8.8 mm，CAD 总长度包络 249.8 mm；双风扇、双槽、倒置安装且 PCIe 金手指朝上；结构避让 8-pin 接口与出线通道，且显卡、前端承托不得与前面板 80 mm 风扇框体干涉",
+      "value": "Colorful GeForce RTX 3060 NB DUO 12G V3 L-V；用户实测显卡本体（不含 PCIe 挡板）241 × 132.5 × 41 mm，挡板 L 耳沿长度方向后伸 8.8 mm，CAD 总长度包络 249.8 mm；双风扇、双槽、倒置安装且 PCIe 金手指朝上；此前 CAD 中的 8-pin 位置代理不准确，用户确认实物接口不会与当前前端承托干涉，供电线材方案由用户处理；显卡与前端承托不得与前面板 80 mm 风扇框体干涉",
       "source": "user"
     },
     "gpu_lateral_position": {
@@ -107,7 +107,7 @@
       "source": "user"
     },
     "panel_retention": {
-      "value": "前、左、右外围面板使用 15 × 10 × 4 mm 嵌入式磁铁并以中心螺钉固定；后板使用螺钉固定",
+      "value": "前、后端板共设置八个 10 × 5 × 2 mm 矩形磁铁，采用胶粘、无磁铁固定螺丝；磁铁槽平面尺寸为 10.5 × 5.5 mm，长度与宽度各保留 0.5 mm 总安装余量，槽深保持 2.0 mm，使磁铁粘到底后与开口齐平；左右侧板保留对应钢片吸附件，后板主体仍使用螺钉固定",
       "source": "user"
     },
     "thermal_material_guidance": {

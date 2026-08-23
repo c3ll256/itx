@@ -30,7 +30,6 @@ front_button_radius=param('power_button_radius',6.1); cut_depth=param('panel_cut
 rear_io_w=param('rear_io_width',48.0); rear_io_h=param('rear_io_height',126.0); rear_io_x=param('rear_io_x',-35.0); rear_io_z=param('rear_io_z',74.0)
 rear_aux_w=param('rear_aux_width',48.0); rear_aux_h=param('rear_aux_height',122.0); rear_aux_x=param('rear_aux_x',31.0); rear_aux_z=param('rear_aux_z',96.0)
 psu_cut_w=param('sfx_rear_cut_width',125.8); psu_cut_h=param('sfx_rear_cut_height',64.3); psu_cut_x=param('sfx_rear_cut_x',0.0); psu_cut_z=param('sfx_rear_cut_z',3.5)
-vent_radius=param('vent_radius',5.0); vent_pitch=param('vent_pitch',18.0); vent_stagger=param('vent_stagger',9.0); vent_y_limit=param('vent_y_limit',72.0); vent_z_start=param('vent_z_start',18.0); vent_z_stop=param('vent_z_stop',216.0)
 outer_x=W/2-panel_t-clearance; outer_y=D/2-panel_t-clearance; post_x=outer_x-post/2; post_y=outer_y-post/2
 post_xy=[(-post_x,-post_y),(-post_x,post_y),(post_x,-post_y),(post_x,post_y)]; ids=('fl','rl','fr','rr')
 base=Box(W,D,base_t,align=(Align.CENTER,Align.CENTER,Align.MIN)); columns=[]; base_joints=[]; top_joints=[]; magnet_joint_count=0
@@ -57,16 +56,11 @@ for j in top_joints: top_cap=top_cap-j.through_cuts[0]
 front_y=D/2-panel_t/2; front_panel=Box(W,panel_t,H-base_t-cap_t,align=(Align.CENTER,Align.CENTER,Align.MIN)).moved(Location((0,front_y,base_t))); front_panel=front_panel-Cylinder(front_button_radius,cut_depth,align=(Align.CENTER,Align.CENTER,Align.CENTER)).rotate(Axis.X,90).moved(Location((initial_button_x,front_y,initial_button_z)))
 rear_y=-D/2+panel_t/2; rear_panel=Box(W,panel_t,H-base_t-cap_t,align=(Align.CENTER,Align.CENTER,Align.MIN)).moved(Location((0,rear_y,base_t)))
 rear_panel=rear_panel-Box(rear_io_w,cut_depth,rear_io_h,align=(Align.CENTER,Align.CENTER,Align.MIN)).moved(Location((rear_io_x,-D/2,rear_io_z)))-Box(rear_aux_w,cut_depth,rear_aux_h,align=(Align.CENTER,Align.CENTER,Align.MIN)).moved(Location((rear_aux_x,-D/2,rear_aux_z)))-Box(psu_cut_w,cut_depth,psu_cut_h,align=(Align.CENTER,Align.CENTER,Align.MIN)).moved(Location((psu_cut_x,-D/2,psu_cut_z)))
-def vent_panel(x):
-    panel=Box(panel_t,D-2*panel_t,H-base_t-cap_t,align=(Align.CENTER,Align.CENTER,Align.MIN)).moved(Location((x,0,base_t))); cuts=None
-    for row,z in enumerate(range(int(vent_z_start),int(vent_z_stop),int(vent_pitch))):
-        off=vent_stagger if row%2 else 0
-        for y in range(-int(vent_y_limit-vent_stagger),int(vent_y_limit-vent_stagger)+1,int(vent_pitch)):
-            yy=y+off
-            if -vent_y_limit<=yy<=vent_y_limit:
-                v=Cylinder(vent_radius,cut_depth,align=(Align.CENTER,Align.CENTER,Align.CENTER)).rotate(Axis.Y,90).moved(Location((x,yy,z))); cuts=v if cuts is None else cuts+v
-    return (panel-cuts).clean()
-left_panel=vent_panel(-W/2+panel_t/2); right_panel=vent_panel(W/2-panel_t/2)
+
+# Build side panels without the old circular vent pattern
+left_panel=Box(panel_t,D-2*panel_t,H-base_t-cap_t,align=(Align.CENTER,Align.CENTER,Align.MIN)).moved(Location((-W/2+panel_t/2,0,base_t)))
+right_panel=Box(panel_t,D-2*panel_t,H-base_t-cap_t,align=(Align.CENTER,Align.CENTER,Align.MIN)).moved(Location((W/2-panel_t/2,0,base_t)))
+
 assert len(columns)==4 and len(base_joints)==4 and len(feet)==4 and magnet_joint_count==16 and len(top_joints)==4
-publish('base',base,'Source base'); publish('top_cap',top_cap,'Source top'); publish('front_panel',front_panel,'Source front'); publish('rear_panel',rear_panel,'Source rear'); publish('left_panel',left_panel,'Left vent panel'); publish('right_panel',right_panel,'Right vent panel')
+publish('base',base,'Source base'); publish('top_cap',top_cap,'Source top'); publish('front_panel',front_panel,'Source front'); publish('rear_panel',rear_panel,'Source rear'); publish('left_panel',left_panel,'Left solid panel'); publish('right_panel',right_panel,'Right solid panel')
 print(f'RETIRED_COMPONENT_FILTER_ACTIVE: {len(retired_component_ids)} legacy object IDs are suppressed during the complete target replay.')

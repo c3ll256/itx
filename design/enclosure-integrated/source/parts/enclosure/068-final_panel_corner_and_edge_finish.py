@@ -5,32 +5,42 @@ final_magnet_width_y = param('final_glued_magnet_width_y', 5.0)
 final_magnet_height_z = param('final_glued_magnet_height_z', 10.0)
 final_magnet_depth_x = param('final_glued_magnet_depth_x', 2.0)
 final_magnet_install_clearance = param('final_glued_magnet_install_clearance', 0.50)
+final_magnet_depth_clearance = param('final_glued_magnet_depth_clearance', 0.0)
 final_magnet_wall = param('final_glued_magnet_wall', 1.20)
 final_magnet_panel_overlap = param('final_glued_magnet_panel_overlap', 0.50)
+final_magnet_side_inset = param('final_glued_magnet_side_inset', 0.40)
 final_magnet_cleanup_width_x = param('final_glued_magnet_cleanup_width_x', 20.0)
 final_magnet_cleanup_depth_y = param('final_glued_magnet_cleanup_depth_y', 22.0)
 final_magnet_cleanup_height_z = param('final_glued_magnet_cleanup_height_z', 24.0)
-final_magnet_cleanup_skin_inset = param('final_glued_magnet_cleanup_skin_inset', 0.35)
+final_magnet_cleanup_skin_inset = param('final_glued_magnet_cleanup_skin_inset', 0.0)
 final_strike_thickness_x = param('final_glued_strike_thickness_x', 1.0)
 final_strike_depth_clearance = param('final_glued_strike_depth_clearance', 0.15)
 final_strike_patch_width_y = param('final_glued_strike_patch_width_y', 20.0)
 final_strike_patch_height_z = param('final_glued_strike_patch_height_z', 22.0)
+final_strike_repair_overlap_x = param('final_glued_strike_repair_overlap_x', 0.20)
 
+# The user's 0.5 mm allowance applies across the 10 x 5 mm plan only.
+# Keep the 2 mm depth exact so a magnet bonded against the floor finishes flush
+# with the carrier opening instead of sitting 0.5 mm below it.
 final_magnet_pocket_width = final_magnet_width_y + final_magnet_install_clearance
 final_magnet_pocket_height = final_magnet_height_z + final_magnet_install_clearance
-final_magnet_pocket_depth = final_magnet_depth_x + final_magnet_install_clearance
+final_magnet_pocket_depth = final_magnet_depth_x + final_magnet_depth_clearance
 final_magnet_carrier_width = final_magnet_pocket_width + 2 * final_magnet_wall
 final_magnet_carrier_height = final_magnet_pocket_height + 2 * final_magnet_wall
 final_magnet_carrier_depth = final_magnet_pocket_depth + final_magnet_wall
 
 assert final_magnet_install_clearance == 0.50
+assert final_magnet_depth_clearance == 0.0
 assert final_magnet_pocket_width == 5.50
 assert final_magnet_pocket_height == 10.50
-assert final_magnet_pocket_depth == 2.50
+assert final_magnet_pocket_depth == 2.00
 assert final_magnet_wall >= 1.20
 assert final_magnet_carrier_width <= 7.90 + 0.01
 assert final_magnet_carrier_height <= 12.90 + 0.01
-assert final_magnet_carrier_depth <= 3.70 + 0.01
+assert final_magnet_carrier_depth <= 3.20 + 0.01
+assert final_magnet_cleanup_skin_inset == 0.0
+assert final_magnet_side_inset >= end_panel_vertical_chamfer
+assert final_strike_repair_overlap_x > 0
 
 # Derive the true inner faces after the late 5 mm panel reinforcement.
 front_final_outer_y = front_panel.bounding_box().max.Y
@@ -38,35 +48,36 @@ rear_final_outer_y = rear_panel.bounding_box().min.Y
 front_final_inner_y = front_final_outer_y - rear_target_thickness
 rear_final_inner_y = rear_final_outer_y + rear_target_thickness
 final_side_interface_x = W / 2 - panel_t
-final_carrier_center_x_abs = final_side_interface_x - final_magnet_carrier_depth / 2
-final_pocket_center_x_abs = final_side_interface_x - final_magnet_pocket_depth / 2
+# The end-panel vertical edges are chamfered by 0.35 mm. Recess the complete
+# carrier and pocket by 0.40 mm so no carrier edge can project beyond that side.
+final_carrier_center_x_abs = final_side_interface_x - final_magnet_side_inset - final_magnet_carrier_depth / 2
+final_pocket_center_x_abs = final_side_interface_x - final_magnet_side_inset - final_magnet_pocket_depth / 2
 final_front_station_y = front_final_inner_y - final_magnet_carrier_width / 2 + final_magnet_panel_overlap
 final_rear_station_y = rear_final_inner_y + final_magnet_carrier_width / 2 - final_magnet_panel_overlap
 
-# Remove every legacy carrier, copied lamination strip, and repair flange at the
-# eight end-panel stations. The cleanup enters the final skin by 0.35 mm; the
-# new carrier overlaps by 0.50 mm, leaving a clean 0.15 mm fused safety overlap.
+# Remove legacy carrier material only from the enclosure interior. The cleanup
+# starts exactly at the final inner-panel datum and never enters the panel skin,
+# so no broad recess or restorative patch is created around the compact carrier.
 for sy, station_y in ((1, final_front_station_y), (-1, final_rear_station_y)):
     rebuilt = front_panel if sy > 0 else rear_panel
     inner_y = front_final_inner_y if sy > 0 else rear_final_inner_y
-    cleanup_total_depth = final_magnet_cleanup_depth_y + final_magnet_cleanup_skin_inset
     for sx in (-1, 1):
         cleanup_x = sx * (final_side_interface_x - final_magnet_cleanup_width_x / 2)
         for zz in (side_station_z_low, side_station_z_high):
             if sy > 0:
                 cleanup = Box(
                     final_magnet_cleanup_width_x,
-                    cleanup_total_depth,
+                    final_magnet_cleanup_depth_y,
                     final_magnet_cleanup_height_z,
                     align=(Align.CENTER, Align.MAX, Align.CENTER),
-                ).moved(Location((cleanup_x, inner_y + final_magnet_cleanup_skin_inset, zz)))
+                ).moved(Location((cleanup_x, inner_y, zz)))
             else:
                 cleanup = Box(
                     final_magnet_cleanup_width_x,
-                    cleanup_total_depth,
+                    final_magnet_cleanup_depth_y,
                     final_magnet_cleanup_height_z,
                     align=(Align.CENTER, Align.MIN, Align.CENTER),
-                ).moved(Location((cleanup_x, inner_y - final_magnet_cleanup_skin_inset, zz)))
+                ).moved(Location((cleanup_x, inner_y, zz)))
             rebuilt = (rebuilt - cleanup).clean()
 
             carrier_x = sx * final_carrier_center_x_abs
@@ -89,30 +100,33 @@ for sy, station_y in ((1, final_front_station_y), (-1, final_rear_station_y)):
     else:
         rear_panel = rebuilt
 
-# Close the old strike recess footprint and cut one matching 0.5 mm-clearance
-# recess at each new front/rear station. These are simple steel strike pockets;
-# the magnets themselves remain on the end panels and are installed with glue.
+# Restore only the old oversized strike recesses from the inner face of each
+# side panel, never through the full panel thickness. Then cut the final compact
+# 5.5 x 10.5 x 1.15 mm strike pocket. This removes the old rectangular ghost
+# while preserving the outer face, perimeter chamfer, and panel outline.
 final_strike_depth = final_strike_thickness_x + final_strike_depth_clearance
+final_strike_repair_depth = final_strike_depth + final_strike_repair_overlap_x
+assert final_strike_repair_depth < panel_t
 for sx, side_shape in ((-1, left_panel), (1, right_panel)):
     revised = side_shape
-    side_panel_center_x = sx * (W / 2 - panel_t / 2)
     side_inner_x = sx * final_side_interface_x
+    repair_center_x = side_inner_x + sx * final_strike_repair_depth / 2
     strike_center_x = side_inner_x + sx * final_strike_depth / 2
     for station_y in (final_front_station_y, final_rear_station_y):
         for zz in (side_station_z_low, side_station_z_high):
-            patch = Box(
-                panel_t,
+            inner_repair = Box(
+                final_strike_repair_depth,
                 final_strike_patch_width_y,
                 final_strike_patch_height_z,
                 align=(Align.CENTER, Align.CENTER, Align.CENTER),
-            ).moved(Location((side_panel_center_x, station_y, zz)))
+            ).moved(Location((repair_center_x, station_y, zz)))
             strike = Box(
                 final_strike_depth,
                 final_magnet_pocket_width,
                 final_magnet_pocket_height,
                 align=(Align.CENTER, Align.CENTER, Align.CENTER),
             ).moved(Location((strike_center_x, station_y, zz)))
-            revised = (revised + patch - strike).clean()
+            revised = (revised + inner_repair - strike).clean()
     if sx < 0:
         left_panel = revised
     else:
@@ -120,8 +134,6 @@ for sx, side_shape in ((-1, left_panel), (1, right_panel)):
 
 assert all(p.solids().__len__() == 1 for p in (front_panel, rear_panel, left_panel, right_panel))
 
-# Final panel-corner finish. Earlier cells already soften shell edges; complete
-# the common R10 outline after the local interface cleanup.
 case_panel_corner_radius = param('case_panel_corner_radius', 10.0)
 case_corner_arc_tolerance = param('case_corner_arc_tolerance', 0.25)
 assert case_panel_corner_radius >= 6.0
@@ -167,10 +179,10 @@ assert len(left_corner_arcs_final) >= 4
 assert len(right_corner_arcs_final) >= 4
 assert all(p.solids().__len__() == 1 for p in (front_panel, rear_panel, left_panel, right_panel, top_cap, base))
 
-publish('front_panel', front_panel, 'Clean glued-magnet front')
-publish('rear_panel', rear_panel, 'Clean glued-magnet rear')
-publish('left_panel', left_panel, 'Clean left strike pockets')
-publish('right_panel', right_panel, 'Clean right strike pockets')
+publish('front_panel', front_panel, 'Inset flush magnet front')
+publish('rear_panel', rear_panel, 'Inset flush magnet rear')
+publish('left_panel', left_panel, 'Compact strike pockets on restored inner skin')
+publish('right_panel', right_panel, 'Compact strike pockets on restored inner skin')
 publish('top_cap', top_cap, 'Rounded top panel')
 publish('base', base, 'Rounded base panel')
-print(f'FINAL_MAGNET_CLEAN_PASS: pockets={final_magnet_pocket_height:.1f}x{final_magnet_pocket_width:.1f}x{final_magnet_pocket_depth:.1f} mm for 10x5x2 magnets; total clearance=0.5 mm; wall={final_magnet_wall:.1f} mm; all copied strips removed.')
+print(f'FLUSH_MAGNET_PASS: pocket={final_magnet_pocket_height:.1f}x{final_magnet_pocket_width:.1f}x{final_magnet_pocket_depth:.1f} mm for 10x5x2 magnets; planar clearance=0.5 mm total; depth clearance=0.0 mm; wall={final_magnet_wall:.1f} mm; side inset={final_magnet_side_inset:.2f} mm; old strike recesses restored only from the inner face.')
