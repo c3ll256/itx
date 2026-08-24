@@ -1,14 +1,14 @@
-# Match the removable side-panel front/rear edges to the 0.35 mm chamfered
-# end-panel interface. This removes the last sub-millimetre repair ears while
-# retaining every final steel-strike recess inside the solid edge margin.
+# Keep the removable side panels inside the front/rear panel interfaces.
+# The side skin spans the net case depth between the end panels; it must not be
+# extended to the full 256 mm exterior depth by strike-repair geometry.
 simple_strike_edge_inset_y = param('simple_strike_edge_inset_y', end_panel_vertical_chamfer)
-simple_strike_flush_depth_y = D - 2.0 * simple_strike_edge_inset_y
+simple_strike_flush_depth_y = D - 2.0 * panel_t
 simple_strike_flush_height_z = param('simple_strike_flush_height_z', H - base_t - cap_t)
 simple_strike_flush_thickness_x = param('simple_strike_flush_thickness_x', panel_t + 0.40)
 simple_strike_flush_corner_radius = param('simple_strike_flush_corner_radius', case_panel_corner_radius)
 
 assert simple_strike_edge_inset_y >= end_panel_vertical_chamfer
-assert simple_strike_flush_depth_y < D
+assert simple_strike_flush_depth_y == D - 2.0 * panel_t
 assert simple_strike_flush_corner_radius == case_panel_corner_radius
 
 for sx, side_shape in ((-1, left_panel), (1, right_panel)):
@@ -30,6 +30,6 @@ for sx, side_shape in ((-1, left_panel), (1, right_panel)):
     else:
         right_panel = revised
 
-publish('left_panel', left_panel, 'Flush left magnet edge')
-publish('right_panel', right_panel, 'Flush right magnet edge')
-print(f'SIMPLE_STRIKE_EDGE_PASS: side-panel depth={simple_strike_flush_depth_y:.2f} mm with {simple_strike_edge_inset_y:.2f} mm front/rear inset; repair ears removed.')
+publish('left_panel', left_panel, 'Left panel within end faces')
+publish('right_panel', right_panel, 'Right panel within end faces')
+print(f'SIDE_EDGE_FLUSH_PASS: side-panel depth={simple_strike_flush_depth_y:.2f} mm; all strike-repair geometry stays between the front/rear interfaces.')
