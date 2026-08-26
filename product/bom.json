@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "requirements_digest": "dc7e274b9bdb28d2f7115b0d18a7ed9dfaa9716e93c39afbf5b1c49fa2579eb9",
+  "requirements_digest": "53fcc731e7f5334e02a48aa995bf1adf3cac57cd4df0b145be93f3be5bc4364d",
   "status": "review",
   "bom_ready": true,
   "items": [
@@ -27,7 +27,7 @@
       "id": "cpu_cooler",
       "role": "cpu_cooler",
       "name": "Thermalright AXP120-X67",
-      "description": "Low-profile CPU cooler; enclosure reservation envelope 123.5 x 120 x 67 mm.",
+      "description": "Low-profile CPU cooler with a nominal 123.5 x 120 x 67 mm cooler envelope. Physical assembly testing found the installed cooler approximately 4 mm beyond the former motherboard-side panel inner plane because the earlier CAD estimate omitted the CPU/socket stack height; the enclosure correction is an 8 mm one-sided width increase, not a minimum 8 mm final gap.",
       "quantity": 1,
       "supplier": "external_retail",
       "manufacturer": "Thermalright",
@@ -39,14 +39,14 @@
       "source": "product_prd",
       "assembly": {"method": "module_mount", "population": "mounted"},
       "required_user_evidence": ["Advisory procurement reminder: choose the socket-compatible retail variant for the final motherboard/CPU."],
-      "selection_reason": "Named cooler in the confirmed PRD.",
+      "selection_reason": "Named cooler in the confirmed PRD; retain the user-measured installed-height correction and the 8 mm motherboard-side enclosure extension when validating CAD fit.",
       "cad_relevance": {"envelope_mm": {"w": 123.5, "d": 120, "h": 67}}
     },
     {
       "id": "gpu",
       "role": "graphics_card",
       "name": "Colorful GeForce RTX 3060 NB DUO 12G V3 L-V",
-      "description": "User-measured dual-slot graphics card body is 241 x 132.5 x 41 mm; the rear L-ear extends 8.8 mm for a 249.8 mm total CAD length envelope. The card is inverted with PCIe fingers upward.",
+      "description": "User-measured dual-slot graphics card body is 241 x 132.5 x 41 mm; the rear L-ear extends 8.8 mm for a 249.8 mm total CAD length envelope. The card is inverted with PCIe fingers upward. Its 106 mm rear dual-slot opening spans Z=84.99..190.99 mm, with the lower edge aligned to the motherboard rear-I/O opening lower edge; the card body remains 7.5 mm below the bracket datum at Z=77.49 mm.",
       "quantity": 1,
       "supplier": "external_retail",
       "manufacturer": "Colorful",
@@ -59,7 +59,7 @@
       "required_user_evidence": ["Advisory procurement reminder: verify the purchased card matches the measured V3 L-V body and rear bracket geometry."],
       "supply_risk": "The auxiliary-power connector proxy was removed from CAD because it did not match the physical card; cable routing and connector clearance remain user-owned.",
       "selection_reason": "Matches the current user-specified GPU and physical measurements while retaining the active decision that the card is dual-slot and the user will handle power cabling.",
-      "cad_relevance": {"body_envelope_mm": {"length": 241, "height": 132.5, "thickness": 41}, "rear_l_ear_extension_mm": 8.8, "total_length_envelope_mm": 249.8, "slot_pitch_mm": 20.32, "orientation": "inverted, PCIe fingers upward"}
+      "cad_relevance": {"body_envelope_mm": {"length": 241, "height": 132.5, "thickness": 41}, "rear_l_ear_extension_mm": 8.8, "total_length_envelope_mm": 249.8, "slot_pitch_mm": 20.32, "orientation": "inverted, PCIe fingers upward", "vertical_datum_mm": {"motherboard_rear_io_opening_bottom_z": 84.99, "gpu_rear_opening_bottom_z": 84.99, "gpu_rear_opening_top_z": 190.99, "body_bottom_z": 77.49, "body_below_bracket": 7.5}}
     },
     {
       "id": "psu",
@@ -133,27 +133,43 @@
     },
     {
       "id": "top_screws",
-      "role": "enclosure_m3x8_fastener",
+      "role": "enclosure_and_motherboard_m3x8_fastener",
       "name": "ISO 4762 M3 x 8 socket-head screw",
-      "description": "Four screws fasten the top cap to the columns, four fasten the rear panel to the rear columns, two fasten the independent lower motherboard mounts through the base, and two fasten the independent upper motherboard mounts through the top cap.",
-      "quantity": 12,
+      "description": "Seven M3 x 8 socket-head screws: four fasten the rear panel to the rear screw spines, and three fasten the Mini-ITX motherboard directly to the three retained 6.35 mm integrated printed supports.",
+      "quantity": 7,
       "supplier": "external_fastener",
       "part_number": "ISO4762-M3X8",
       "part_identity": "d045b94a9ad4d198",
       "mpn": "ISO 4762 M3x8",
       "procurement_status": "external_procurement_required",
       "stock": "not_checked",
-      "source": "engineering_selection",
+      "source": "engineering_selection:printed-screw-joint-v1",
       "assembly": {"method": "manual", "population": "mounted"},
-      "selection_reason": "Revision 67 uses four kit-owned M3x8 top-cap joints: each screw passes through the complete 5 mm two-layer cap and engages 3 mm in its corner column. The same row also covers the screw-fixed rear panel and four independent motherboard-mount-to-plate interfaces; no heat-set insert is modeled.",
-      "cad_relevance": {"thread": "M3x0.5", "length_mm": 8, "uses": {"top_cap": 4, "rear_panel": 4, "lower_motherboard_mount_to_base": 2, "upper_motherboard_mount_to_top_cap": 2}, "top_cap_interface": {"clearance_through_mm": 5, "column_engagement_mm": 3, "corner_count": 4, "cad_revision": 67}}
+      "selection_reason": "Current requirements retain three integrated motherboard support points and four rear-panel screw joints. printed-screw-joint-v1 resolves the rear-lower and two upper motherboard fasteners to M3 x 8; no independent motherboard-mount plate screws remain.",
+      "cad_relevance": {"thread": "M3x0.5", "length_mm": 8, "uses": {"rear_panel": 4, "motherboard": 3}, "motherboard_supports": {"rear_lower_integrated": 1, "upper_integrated": 2, "lower_front_removed": true}, "cad_build": 517}
+    },
+    {
+      "id": "top_corner_countersunk_screws",
+      "role": "enclosure_m3x10_conical_countersunk_fastener",
+      "name": "M3 x 10 hex-drive conical countersunk screw",
+      "description": "Four flat-head screws fasten the top cap to the printed corner blocks. The user-measured maximum head diameter is 5.8 mm; the true conical kit-derived seats have approximately 6.12 mm entry diameter and finish flush with the top exterior surface.",
+      "quantity": 4,
+      "supplier": "external_fastener",
+      "part_number": "M3-CSK-HEX-10",
+      "mpn": "M3 x 10 hex socket countersunk",
+      "procurement_status": "external_procurement_required",
+      "stock": "not_checked",
+      "source": "engineering_selection:printed-screw-joint-v1_and_user_measurement",
+      "assembly": {"method": "manual", "population": "mounted"},
+      "selection_reason": "CAD build 517 retains four printed-screw-joint-v1 top corner joints resolved to M3 x 10 with true conical seats. A 0.20 mm offset of the exact kit cut accommodates the user-measured 5.8 mm maximum head diameter without replacing the kit geometry.",
+      "cad_relevance": {"thread": "M3x0.5", "length_mm": 10, "head_style": "conical_countersunk", "measured_max_head_diameter_mm": 5.8, "target_entry_diameter_mm": 6.12, "fit_allowance_total_diameter_mm": 0.32, "uses": {"top_cap_corner": 4}, "top_cap_interface": {"clearance_through_mm": 5, "corner_block_engagement_mm": 4.2, "corner_count": 4, "flush_exterior": true, "kit_cut_offset_mm": 0.2, "cad_build": 517}}
     },
     {
       "id": "motherboard_gpu_screws",
-      "role": "short_m3_socket_fastener",
+      "role": "gpu_bracket_m3x4_fastener",
       "name": "ISO 4762 M3 x 4 socket-head screw",
-      "description": "Four short screws fasten the Mini-ITX board to the printed arms; two more are inserted from below, pass upward through the GPU bracket ears, and engage the Revision 66 Z-axis through-threaded rear-panel flange.",
-      "quantity": 6,
+      "description": "Two screws are inserted from below, pass upward through the GPU bracket ears, and engage the through-threaded rear-panel flange.",
+      "quantity": 2,
       "supplier": "external_fastener",
       "part_number": "ISO4762-M3X4",
       "part_identity": "1809d0db8a53b905",
@@ -162,24 +178,24 @@
       "stock": "not_checked",
       "source": "engineering_selection:printed-screw-joint-v1",
       "assembly": {"method": "manual", "population": "mounted"},
-      "selection_reason": "Revision 50 uses 1.6 mm motherboard thickness plus 2.4 mm light-duty self-forming engagement, resolving exactly to M3x4. Revision 66 places the standard 0.8 mm GPU bracket ear under a 3.2 mm printed flange; printed-screw-joint-v1 termination=through resolves the same M3x4 length for bottom-to-top insertion without a blind floor.",
-      "cad_relevance": {"thread": "M3x0.5", "length_mm": 4, "uses": {"motherboard": 4, "gpu_bracket": 2}, "gpu_interface": {"axis": "+Z", "insertion_direction": "bottom_to_top", "screw_head_side": "below_flange", "bracket_ear_side": "flange_underside", "termination": "through", "bracket_ear_thickness_mm": 0.8, "printed_flange_thickness_mm": 3.2, "cad_revision": 66}}
+      "selection_reason": "The current motherboard fasteners are three M3 x 8 screws and are listed separately. The standard 0.8 mm GPU bracket ears beneath the 3.2 mm printed flange still resolve through printed-screw-joint-v1 to two M3 x 4 screws for bottom-to-top insertion.",
+      "cad_relevance": {"thread": "M3x0.5", "length_mm": 4, "uses": {"gpu_bracket": 2}, "gpu_interface": {"axis": "+Z", "insertion_direction": "bottom_to_top", "screw_head_side": "below_flange", "bracket_ear_side": "flange_underside", "termination": "through", "bracket_ear_thickness_mm": 0.8, "printed_flange_thickness_mm": 3.2, "cad_build": 517}}
     },
     {
       "id": "base_column_screws",
-      "role": "base_column_fastener",
-      "name": "ISO 4762 M3 x 12 socket-head screw",
+      "role": "base_column_m3x12_conical_countersunk_fastener",
+      "name": "M3 x 12 hex-drive conical countersunk screw",
+      "description": "Four flat-head screws enter from the undersides of four independently printed Ø16 x 4 mm feet with 1.2 mm rounded outer edges. The user-measured maximum head diameter is 5.8 mm; the enlarged true-conical kit-derived exterior foot entries measure approximately 6.717 mm, providing about 0.917 mm total diametral insertion clearance. Each seat is recessed an additional 1.2 mm, then the screw passes through one foot and the base and engages the matching lower front/rear-panel block, clamping all three printed parts.",
       "quantity": 4,
       "supplier": "external_fastener",
-      "part_number": "ISO4762-M3X12",
-      "part_identity": "8fab72cac6b73866",
-      "mpn": "ISO 4762 M3x12",
+      "part_number": "M3-CSK-HEX-12",
+      "mpn": "M3 x 12 hex socket countersunk",
       "procurement_status": "external_procurement_required",
       "stock": "not_checked",
-      "source": "engineering_selection",
+      "source": "engineering_selection:printed-screw-joint-v1_and_user_measurement",
       "assembly": {"method": "manual", "population": "mounted"},
-      "selection_reason": "Revision 68 uses four kit-owned M3x12 joints. Each screw enters from the foot underside, passes through the complete 4 mm detachable foot and 3 mm base, then engages its separate printed column; the foot clearance cuts are topologically cleaned so both foot faces remain open.",
-      "cad_relevance": {"thread": "M3x0.5", "length_mm": 12, "uses": {"foot_base_column": 4}, "foot_base_interface": {"insertion_direction": "bottom_to_top", "foot_clearance_through_mm": 4, "base_clearance_through_mm": 3, "column_receiver": "threaded_blind", "corner_count": 4, "cad_revision": 68}}
+      "selection_reason": "CAD build 519 retains four printed-screw-joint-v1 bottom corner joints resolved to M3 x 12. Based on the user's physical insertion feedback, the exact kit cuts are offset 0.45 mm for the foot-side exterior entries, producing approximately 6.717 mm openings for the measured 5.8 mm heads, and remain translated upward 1.2 mm to preserve usable reach without hand-modeling the screw hole. The top-cap cuts remain at their previous 0.20 mm offset.",
+      "cad_relevance": {"thread": "M3x0.5", "length_mm": 12, "head_style": "conical_countersunk", "measured_max_head_diameter_mm": 5.8, "minimum_entry_diameter_mm": 6.5, "measured_entry_diameter_mm": 6.71705, "fit_allowance_total_diameter_mm": 0.91705, "fit_allowance_per_side_mm": 0.458525, "uses": {"independent_foot_base_end_panel_block": 4}, "foot_base_interface": {"foot_construction": "four separate printed parts", "foot_diameter_mm": 16, "foot_height_mm": 4, "foot_outer_edge_radius_mm": 1.2, "rounded_underside_outer_diameter_mm": 13.6, "minimum_radial_material_at_entry_mm": 3.441475, "head_seat_extra_recess_mm": 1.2, "added_usable_reach_mm": 1.2, "kit_cut_offset_mm": 0.45, "top_cap_kit_cut_offset_mm": 0.2, "insertion_direction": "bottom_to_top", "foot_clearance_through_mm": 4, "base_clearance_through_mm": 3, "corner_block_engagement_mm": 4.2, "corner_count": 4, "head_below_or_flush": true, "cad_build": 519}}
     },
     {
       "id": "power_button",
@@ -192,7 +208,7 @@
       "procurement_status": "external_procurement_required",
       "stock": "not_checked",
       "source": "user_selected_supplier_url_and_confirmed_8mm_variant",
-      "product_url": "https://detail.tmall.com/item.htm?id=655230136762",
+
       "assembly": {"method": "through_hole", "population": "mounted"},
       "required_user_evidence": ["Advisory fit reminder: measure the received Φ8 mm button's threaded-body diameter and calibrate the printed test hole before the production front-panel print."],
       "supply_risk": "The login-gated listing prevented verification of threaded-body length, bezel diameter, rear terminal envelope and cable exit. These remain physical dry-fit checks, but do not block the current CAD because the button body and internal cable path are outside its scope.",
@@ -204,7 +220,7 @@
   "supply_risks": [
     {"id": "exact_user_selected_modules", "severity": "advisory", "description": "The motherboard and GPU identities are fixed by the current PRD. The exact commercial SFX PSU remains user-selected but is constrained by the standard 125 x 100 x 63.5 mm envelope and rear interface."},
     {"id": "magnet_and_strike_fit", "severity": "medium", "description": "Dry-fit one 10 x 5 x 2 mm magnet and one 10 x 10 x 1 mm steel strike in the printed pockets before bonding all eight stations; verify dimensional tolerance, polarity, coating and adhesive thickness."},
-    {"id": "printed_m3_fit", "severity": "medium", "description": "Print one M3 self-forming-hole coupon in the final material and process before printing production enclosure parts."}
+    {"id": "printed_m3_fit", "severity": "medium", "description": "Print one M3 self-forming-hole coupon and one independent-foot corner stack in the final material and process before production. Use the actual measured 5.8 mm conical flat-head screw to confirm the approximately 6.12 mm top entry and enlarged approximately 6.717 mm foot entry both seat correctly, the foot screw can be inserted from the exterior without force, the screw clamps foot/base/end-panel without a gap, and the printed edge does not split."}
   ],
   "unresolved_items": []
 }

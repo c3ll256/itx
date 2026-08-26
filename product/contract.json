@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "manufacturing_package",
-  "summary": "FDM-printable six-piece Mini-ITX enclosure, 152 x 260 x 252 mm, for ASUS ROG STRIX Z390-I GAMING, Thermalright AXP120-X67, inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V, a 200 mm riser, front-panel-integrated far-end GPU cradle, and a rear-inserted standard SFX PSU.",
+  "summary": "FDM-printable Mini-ITX enclosure with a six-panel main shell and four separately printed feet, 160 x 260 x 252 mm after an 8 mm motherboard-side width increase, for ASUS ROG STRIX Z390-I GAMING, Thermalright AXP120-X67, inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V, a 200 mm riser, front-panel-integrated far-end GPU cradle, and a rear-inserted standard SFX PSU.",
   "required_interfaces": [
     {
       "id": "mini_itx_direct_mount",
@@ -21,14 +21,14 @@
     {
       "id": "cooler_clearance",
       "kind": "internal_fit",
-      "description": "Fit the Thermalright AXP120-X67 envelope and preserve side-panel intake clearance.",
+      "description": "Shift only the motherboard-side wall outward by exactly 8 mm relative to the prior 152 mm-wide enclosure, preserving the motherboard, rear-I/O and SFX datums and the GPU-side enclosure wall. The GPU vertical datum is separately set by aligning the lower edge of the rear dual-slot opening with the lower edge of the motherboard rear-I/O opening. The user's physical build shows the installed cooler, including the previously omitted CPU/socket stack height, standing approximately 4 mm beyond the former side-panel inner plane. The acceptance criterion is the 8 mm one-sided width increase, not a minimum 8 mm final cooler clearance derived from the simplified CAD reference envelope.",
       "source": "user_requested",
       "required": true
     },
     {
       "id": "gpu_riser_fit",
       "kind": "internal_fit",
-      "description": "Fit the inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V using the user-measured 241 x 132.5 x 41 mm card body, an 8.8 mm rearward PCIe bracket-ear extension for a 249.8 mm total CAD envelope, a 106 mm rear dual-slot opening centered at X=-43 mm and the raised lower PCIe retention bracket. Preserve an approximately 8.5 mm outboard screw land. The front-panel-integrated far-end cradle must provide at least 1 mm clearance per side and remain free of interference with both front 80 mm fan frames. The prior CAD 8-pin location proxy is not authoritative and must not be used for collision acceptance; the user confirms the actual connector does not interfere with the current cradle and owns the cable solution.",
+      "description": "Fit the inverted Colorful GeForce RTX 3060 NB DUO 12G V3 L-V using the user-measured 241 x 132.5 x 41 mm card body and an 8.8 mm rearward PCIe bracket-ear extension for a 249.8 mm total CAD envelope. Use a 106 mm rear dual-slot opening centered at X=-43 mm with Z=84.99..190.99 mm, so its lower edge is aligned with the motherboard rear-I/O chassis opening lower edge at Z=84.99 mm; retain the measured 7.5 mm card-body extension below the metal bracket, placing the body lower edge at Z=77.49 mm. Preserve an approximately 8.5 mm outboard screw land. The front-panel-integrated far-end cradle must follow this datum, provide at least 1 mm clearance per side and remain free of interference with both front 80 mm fan frames. The prior CAD 8-pin location proxy is not authoritative and must not be used for collision acceptance; the user confirms the actual connector does not interfere with the current cradle and owns the cable solution.",
       "source": "user_requested",
       "required": true
     },
@@ -54,6 +54,13 @@
       "required": true
     },
     {
+      "id": "bottom_foot_fastening",
+      "kind": "mounting_interface",
+      "description": "Provide four independent 16 x 4 mm printed feet with 1.2 mm fillets on their upper and lower outer edges. At each bottom corner, one kit-generated M3 x 12 conical countersunk screw enters from the foot underside; recess its kit-defined head seat an additional 1.2 mm to add 1.2 mm usable reach, then pass through that foot and the separate base and thread into the matching lower block integrated with the front or rear panel, clamping foot, base and end panel with one fastener. The user-measured maximum countersunk-head diameter is 5.8 mm. The four foot-side exterior entries must be visibly larger than the head for FDM insertion and at least 6.5 mm diameter; the current kit-derived conical geometry measures approximately 6.717 mm. Keep the four M3 x 10 top-cap entries unchanged at approximately 6.12 mm.",
+      "source": "user_requested",
+      "required": true
+    },
+    {
       "id": "power_button_access",
       "kind": "user_control",
       "description": "Use the user-selected power button from Tmall item 655230136762. The user has confirmed the purchased variant is the Φ8 mm mounting size. Use an 8.2 mm target printed-panel cutout as the disclosed FDM clearance default, while retaining the established upper-left location centered at X=+50 mm and Z=227 mm in the enclosure frame (+X is left when viewed from the exterior front). Verify the received threaded body and printed-hole calibration before the production print. The current CAD deliverable intentionally excludes the purchased switch body, button cap, actuator and internal cable path.",
@@ -69,7 +76,7 @@
     }
   ],
   "assembly_story": {
-    "installation": "Remove the service side panel; insert the Mini-ITX motherboard from the side while forward of the rear panel, bring it onto the three retained approximately 6.35 mm integral printed support points, slide the rear I/O into the aperture and install three M3 screws directly into the printed self-forming holes. Then install the PCIe riser and inverted dual-slot GPU. Fit the removable front panel so its integral U-shaped cradle slides along the GPU length and supports the far end through the intended soft pad. Install the two front 80 mm fans and forward base 120 mm fan through their standard mounting holes behind the integral rounded-slot grilles. Push the SFX PSU straight in from the rear and complete the six-panel enclosure assembly.",
+    "installation": "Remove the service side panel; insert the Mini-ITX motherboard from the side while forward of the rear panel, bring it onto the three retained approximately 6.35 mm integral printed support points, slide the rear I/O into the aperture and install three M3 screws directly into the printed self-forming holes. Then install the PCIe riser and inverted dual-slot GPU. Fit the removable front panel so its integral U-shaped cradle slides along the GPU length and supports the far end through the intended soft pad. Install the two front 80 mm fans and forward base 120 mm fan through their standard mounting holes behind the integral rounded-slot grilles. Push the SFX PSU straight in from the rear. At each bottom corner, place the independent foot under the base and install one M3 x 12 countersunk screw upward through the foot and base into the matching lower front/rear-panel block, then complete the six-panel enclosure assembly.",
     "maintenance": "Remove the front panel along the GPU longitudinal axis so the integral cradle slides free with the panel; no separate GPU-support part is handled. Remove the appropriate magnetic side panel for routine access. The motherboard screws are intended for normal service rather than high-cycle repeated disassembly; avoid over-tightening. Remove the screw-fastened rear panel only when rear service access is required.",
     "user_access": [
       "power-button mounting aperture",
@@ -85,7 +92,7 @@
       {
         "role": "enclosure",
         "design_id": "enclosure-integrated",
-          "description": "Complete printable Mini-ITX enclosure assembly with three retained integral motherboard support points, SFX rear insertion, inverted dual-slot GPU support integrated into the removable front panel, two front 80 mm and one base 120 mm rounded-slot fan grilles, a power-button mounting aperture and six enclosure panels",
+          "description": "Complete printable Mini-ITX enclosure assembly with three retained integral motherboard support points, SFX rear insertion, inverted dual-slot GPU support integrated into the removable front panel, two front 80 mm and one base 120 mm rounded-slot fan grilles, a power-button mounting aperture, six enclosure panels and four independent bottom feet",
         "delivery_target": "manufacturing_handoff",
         "required_formats": [
           "step"
@@ -98,6 +105,7 @@
           "fan_grilles",
           "sfx_fit",
           "panel_retention",
+          "bottom_foot_fastening",
           "power_button_access"
         ],
         "reference_ids": [
