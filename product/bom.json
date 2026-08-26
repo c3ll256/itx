@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "requirements_digest": "9cdd5daea95be71e42cc385b3f66f8bacdd54c31b15427c16bbcf18b0f2024cc",
+  "requirements_digest": "88e55431fea775e8c19ee1cca2883bde9085e0ab3e7f62b6a4737ea6d7df2f9d",
   "status": "review",
   "bom_ready": true,
   "items": [
@@ -184,19 +184,20 @@
     {
       "id": "power_button",
       "role": "front_panel_control",
-      "name": "12 mm panel-mount momentary power button",
-      "description": "Normally-open momentary switch for the motherboard power header; the current 12.2 mm opening is at the exterior-view upper-left of the front panel, centered at model X=+50 mm and Z=227 mm.",
+      "name": "Tmall item 655230136762 panel-mount power button",
+      "description": "User-selected front-panel power button from Tmall item 655230136762. The displayed Φ8 mm / Φ10 mm values are treated as mounting-aperture variants; the disclosed design default selects the Φ10 mm version and a 10.2 mm target printed-panel cutout.",
       "quantity": 1,
-      "supplier": "external_retail",
-      "part_number": "SW-PANEL-MOMENTARY-12MM-NO",
-      "part_identity": "25c2e7183efabd24",
+      "supplier": "Tmall",
+      "part_number": "TMALL-655230136762-10MM",
       "procurement_status": "external_procurement_required",
       "stock": "not_checked",
-      "source": "product_prd",
+      "source": "user_selected_supplier_url_and_agent_default_variant",
+      "product_url": "https://detail.tmall.com/item.htm?id=655230136762",
       "assembly": {"method": "through_hole", "population": "mounted"},
-      "supply_risk": "Thread length and rear terminal envelope must fit the 2.4 mm panel and internal cable path.",
-      "selection_reason": "Matches the confirmed power-button-only front interface.",
-      "cad_relevance": {"panel_cutout_diameter_mm": 12.2, "footprint_on_face_mm": {"radius": 8}, "front_panel_location": {"view": "exterior", "region": "upper_left", "model_x_mm": 50, "model_z_mm": 227, "panel_thickness_mm": 2.4}}
+      "required_user_evidence": ["Advisory fit reminder: order the Φ10 mm variant and measure the received threaded-body diameter before the production front-panel print."],
+      "supply_risk": "The login-gated listing prevented verification of threaded-body length, bezel diameter, rear terminal envelope and cable exit. These remain physical dry-fit checks, but do not block the current CAD because the button body and internal cable path are outside its scope.",
+      "selection_reason": "Preserves the exact Tmall listing supplied by the user. Because the user did not know which displayed Φ8 mm / Φ10 mm option to choose, the disclosed default selects the more substantial Φ10 mm panel-mount variant instead of retaining the obsolete generic 12 mm button.",
+      "cad_relevance": {"mounting_size_options_mm": [8, 10], "selected_mounting_size_mm": 10, "target_panel_cutout_diameter_mm": 10.2, "front_panel_location": {"view": "exterior", "region": "upper_left", "model_x_mm": 50, "model_z_mm": 227, "panel_thickness_mm": 2.4}}
     }
   ],
   "alternatives": [],
