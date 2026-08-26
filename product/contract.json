@@ -56,7 +56,7 @@
     {
       "id": "power_button_access",
       "kind": "user_control",
-      "description": "Use the user-selected power button from Tmall item 655230136762. The Φ8 mm / Φ10 mm marking is treated as two mounting-aperture variants; because the user did not know which to choose, the disclosed design default is the Φ10 mm variant with a 10.2 mm target printed-panel cutout. Retain the established upper-left location centered at X=+50 mm and Z=227 mm in the enclosure frame (+X is left when viewed from the exterior front). Verify the received threaded body before the production print. The current CAD deliverable intentionally excludes the purchased switch body, button cap, actuator and internal cable path.",
+      "description": "Use the user-selected power button from Tmall item 655230136762. The user has confirmed the purchased variant is the Φ8 mm mounting size. Use an 8.2 mm target printed-panel cutout as the disclosed FDM clearance default, while retaining the established upper-left location centered at X=+50 mm and Z=227 mm in the enclosure frame (+X is left when viewed from the exterior front). Verify the received threaded body and printed-hole calibration before the production print. The current CAD deliverable intentionally excludes the purchased switch body, button cap, actuator and internal cable path.",
       "source": "user_requested",
       "required": true
     }
@@ -65,7 +65,7 @@
     {
       "id": "power_button_tmall_655230136762",
       "source": "user_requested",
-      "description": "User-selected Tmall front-panel power button item 655230136762; design default selects the Φ10 mm mounting variant because the listing itself is login-gated and the user did not know which of the displayed Φ8 mm / Φ10 mm options to choose."
+      "description": "User-selected Tmall front-panel power button item 655230136762; the user has confirmed the selected product is the Φ8 mm mounting variant."
     }
   ],
   "assembly_story": {

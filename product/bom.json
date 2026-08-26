@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "requirements_digest": "88e55431fea775e8c19ee1cca2883bde9085e0ab3e7f62b6a4737ea6d7df2f9d",
+  "requirements_digest": "dc7e274b9bdb28d2f7115b0d18a7ed9dfaa9716e93c39afbf5b1c49fa2579eb9",
   "status": "review",
   "bom_ready": true,
   "items": [
@@ -185,19 +185,19 @@
       "id": "power_button",
       "role": "front_panel_control",
       "name": "Tmall item 655230136762 panel-mount power button",
-      "description": "User-selected front-panel power button from Tmall item 655230136762. The displayed Φ8 mm / Φ10 mm values are treated as mounting-aperture variants; the disclosed design default selects the Φ10 mm version and a 10.2 mm target printed-panel cutout.",
+      "description": "User-selected front-panel power button from Tmall item 655230136762. The user has confirmed the selected product is the Φ8 mm mounting variant; the current FDM design default uses an 8.2 mm target printed-panel cutout.",
       "quantity": 1,
       "supplier": "Tmall",
-      "part_number": "TMALL-655230136762-10MM",
+      "part_number": "TMALL-655230136762-8MM",
       "procurement_status": "external_procurement_required",
       "stock": "not_checked",
-      "source": "user_selected_supplier_url_and_agent_default_variant",
+      "source": "user_selected_supplier_url_and_confirmed_8mm_variant",
       "product_url": "https://detail.tmall.com/item.htm?id=655230136762",
       "assembly": {"method": "through_hole", "population": "mounted"},
-      "required_user_evidence": ["Advisory fit reminder: order the Φ10 mm variant and measure the received threaded-body diameter before the production front-panel print."],
+      "required_user_evidence": ["Advisory fit reminder: measure the received Φ8 mm button's threaded-body diameter and calibrate the printed test hole before the production front-panel print."],
       "supply_risk": "The login-gated listing prevented verification of threaded-body length, bezel diameter, rear terminal envelope and cable exit. These remain physical dry-fit checks, but do not block the current CAD because the button body and internal cable path are outside its scope.",
-      "selection_reason": "Preserves the exact Tmall listing supplied by the user. Because the user did not know which displayed Φ8 mm / Φ10 mm option to choose, the disclosed default selects the more substantial Φ10 mm panel-mount variant instead of retaining the obsolete generic 12 mm button.",
-      "cad_relevance": {"mounting_size_options_mm": [8, 10], "selected_mounting_size_mm": 10, "target_panel_cutout_diameter_mm": 10.2, "front_panel_location": {"view": "exterior", "region": "upper_left", "model_x_mm": 50, "model_z_mm": 227, "panel_thickness_mm": 2.4}}
+      "selection_reason": "Preserves the exact Tmall listing supplied by the user and records the user's subsequent confirmation that the selected product is the Φ8 mm mounting variant.",
+      "cad_relevance": {"mounting_size_options_mm": [8, 10], "selected_mounting_size_mm": 8, "target_panel_cutout_diameter_mm": 8.2, "nominal_clearance_allowance_mm": 0.2, "front_panel_location": {"view": "exterior", "region": "upper_left", "model_x_mm": 50, "model_z_mm": 227, "panel_thickness_mm": 2.4}}
     }
   ],
   "alternatives": [],

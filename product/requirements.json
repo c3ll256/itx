@@ -119,9 +119,16 @@
     },
     "front_power_button_mounting": {
       "value": {
-        "selected_nominal_mounting_diameter_mm": 10,
-        "target_panel_cutout_diameter_mm": 10.2,
-        "selection_basis": "用户确认商品标注为 Φ8 mm / Φ10 mm 但不清楚含义；按面板按钮常用标注将其解释为两种安装孔规格，并默认选择更易操作、固定余量更大的 Φ10 mm 版本。打印生产件前需用收到的实物复测螺纹外径。"
+        "selected_nominal_mounting_diameter_mm": 8,
+        "selection_basis": "用户重新查看商品规格后确认所选按钮就是 Φ8 mm 安装规格。"
+      },
+      "source": "user"
+    },
+    "front_power_button_cutout": {
+      "value": {
+        "target_panel_cutout_diameter_mm": 8.2,
+        "nominal_clearance_allowance_mm": 0.2,
+        "verification": "Ø8.2 mm 是 FDM 打印的暂定开孔；生产打印前须用收到的实物复测螺纹安装段外径，并按实际打印孔径校准。"
       },
       "source": "default"
     },
