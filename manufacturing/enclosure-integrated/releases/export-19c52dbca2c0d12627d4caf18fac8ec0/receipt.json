@@ -1,23 +1,23 @@
 {
   "designId": "enclosure-integrated",
-  "buildNumber": 523,
-  "sourceHash": "7553746c38d38dbc4e6ea2b0525d4bac41c541db76f1402557e949932aaf4fe1",
+  "buildNumber": 524,
+  "sourceHash": "d5e22a065721fb78d6a42881bc9016fd95c816e4b1fd22a5732b7f032fec7785",
   "schemaVersion": 2,
-  "exportId": "export-ee4fb1db8272bea6649a1d3e9a785d19",
-  "generatedAt": "2026-08-28T12:39:46.360Z",
-  "designSha256": "e71e3e57f9e30abd1e0aaf34240f20606ba791c22b4f3975dac44661d2b59938",
+  "exportId": "export-19c52dbca2c0d12627d4caf18fac8ec0",
+  "generatedAt": "2026-08-28T13:33:53.851Z",
+  "designSha256": "bf9fb44684f3f7d3e4226de8db1004ab789592205b90d6a78f8f6c086340b64d",
   "role": "enclosure",
-  "stateHash": "cc836671370debdf30d9a782610e4d34fbea76c3cd627be6a8fc4dd16e565358",
+  "stateHash": "fd0dc15e78fd9ad5093bbdd15ea5e07fb40d4daecf96df83a91504d1c41b6171",
   "stateManifest": {
     "schemaVersion": 2,
     "designId": "enclosure-integrated",
     "role": "enclosure",
     "design": {
-      "buildNumber": 523,
-      "sourceHash": "7553746c38d38dbc4e6ea2b0525d4bac41c541db76f1402557e949932aaf4fe1",
-      "designSha256": "51e83eea53ac9ba59bba3ddc80b7c4deee19cd6e13e621909c3c85ae8e05af96",
-      "manifestSha256": "5562a66ca3efee3c8b02fe32c94dabb1b4f602df8ba3e1f9b341725ee056c2f4",
-      "stepSha256": "66bc4d3f48f3ad000b56e20e7a9ffbc50dedf8fa35a189bf71e482ef54b00472",
+      "buildNumber": 524,
+      "sourceHash": "d5e22a065721fb78d6a42881bc9016fd95c816e4b1fd22a5732b7f032fec7785",
+      "designSha256": "f6a183c66c26fa0beb149a15b37adc5faf7f852b10e5cf73d915dc560473b2a9",
+      "manifestSha256": "3622079d15b5e3f5cd4600d58d814764b04140b2a9c0c2229cc27c7df15ba492",
+      "stepSha256": "ffe02dba60ac7453313a1d944f3ae68d98a45b05d81b0222720890b90519ebf0",
       "pcbReleases": []
     },
     "brief": {
@@ -36,11 +36,11 @@
         "step"
       ]
     },
-    "stateHash": "cc836671370debdf30d9a782610e4d34fbea76c3cd627be6a8fc4dd16e565358"
+    "stateHash": "fd0dc15e78fd9ad5093bbdd15ea5e07fb40d4daecf96df83a91504d1c41b6171"
   },
   "buildArtifacts": {
-    "manifestSha256": "5562a66ca3efee3c8b02fe32c94dabb1b4f602df8ba3e1f9b341725ee056c2f4",
-    "stepSha256": "66bc4d3f48f3ad000b56e20e7a9ffbc50dedf8fa35a189bf71e482ef54b00472"
+    "manifestSha256": "3622079d15b5e3f5cd4600d58d814764b04140b2a9c0c2229cc27c7df15ba492",
+    "stepSha256": "ffe02dba60ac7453313a1d944f3ae68d98a45b05d81b0222720890b90519ebf0"
   },
   "exportAlgorithm": {
     "version": 1,
@@ -108,7 +108,7 @@
     "enclosure/remove_vertical_returns": "f03297a19c625ee55662761046e11f3f96a76205bc232228a894831df71e98d1",
     "enclosure/screw_kit_v1_audit": "af3840aa3ccf31db7466d3b207be7f11ca0452c3b1e69ac3b095ea83dfc58c80",
     "enclosure/separate_lower_mb_mount": "ec480c47e4e5644dd2b65dc0ed3b4a5e227eff0ba2f85349539263fbb72e1531",
-    "enclosure/separate_pcie_bracket": "d7f9773da330c8632adfbdc9d702d1cf0f164dddcbfd7a3d528d4b526a386e4e",
+    "enclosure/separate_pcie_bracket": "43553e8faea15117cb5552db5b51b1585e6bd1e72972368a71e17f69eb3c1869",
     "enclosure/separate_printed_feet": "68d361eb0627960c13315ef419b4016a88332aab6b7c97bdfc4982e04a794391",
     "enclosure/sfx_column_delete_final": "7db209cbea2d2db0f71e8dbaeedf3feb9de5226582fa92c7c39ecbdb922d0ed6",
     "enclosure/sfx_four_hole_final_access": "d3afe407492901a20169d60ffa9bf19a7250f9ec4334bcf293d88f7fe6ebb93b",
@@ -133,47 +133,47 @@
   "assetHashes": {},
   "shapeHashes": {
     "base": "267a145c5d370ab294781683a7cb98d5e62579f5f48e8c14a1c5d5ebe4f6b752",
-    "base_fan120_reference": "3af2a045ae0fe10a84300c2be2302503a8ff303a9bd3f009a44a9de7eca0fae3",
+    "base_fan120_reference": "7a393407080e4370bf77c7a4756b0633e1a1bdd72050b321525bbd7295bc33d1",
     "base_foot_front_left": "ca3c852bfeef9086e8b400336db98929870049393b8027ba1ee7e0e796de52c1",
-    "base_foot_front_left_screw": "168674dad5a18022dfe8036aa91f4d87d726be10a92cef2a3923d690a84c7274",
+    "base_foot_front_left_screw": "4df0773e06e9ea82549db0514715df1888436733ba3a67f31050db075b7eaf05",
     "base_foot_front_right": "af3ee78c11e54e971237761cbec80955d6bf29b2e8119c6bc586aa2dc4aa18df",
-    "base_foot_front_right_screw": "65b7a67dfb8a2ea5ce8876f85e2d698fedfa6a6f226805b024dd041f24f2cda8",
+    "base_foot_front_right_screw": "29f54c395faf4e3244a49e01f078f5d1c55a8d570e9b37d34beef43dd701c41a",
     "base_foot_rear_left": "ca3dbddfd304fe029d1b771c61befa1d4f40eca1305b078999e4c227ff0c7ee4",
-    "base_foot_rear_left_screw": "8c0aaded51274212cc00c4ab30ed764b0794db449aba6c895cfbb5d2710f670a",
+    "base_foot_rear_left_screw": "96e77ebca283ac6737e03dc8d3fafd444c78226edb351eac2686cbca7b48597c",
     "base_foot_rear_right": "caf342d0a107cfb6028374c68ba037275260c512773a552980e3e739ca597017",
-    "base_foot_rear_right_screw": "c21907a3804756fd3d2d0ae3ea36af2ae4d4289ad670328b6df0eb4286a46619",
+    "base_foot_rear_right_screw": "a8a9d97a75b0ec9b49560f92ce5a7d3949a17c9bdf3163fa7178083079e61725",
     "front_panel": "3315d6ecb99f6d109e89750f18cde50c5726f21ef58601acc47cbab65fd435ec",
-    "gpu_display_ports": "6d0604147951bcbbecfe924b343497af242a127433c9fa089a1d87d1e5a29cef",
-    "gpu_fan": "90581e03d8f5d54871c9e9ccd351ecbbbbe4ba87396f80ecff2c0780718d7bf2",
-    "gpu_heatsink": "35ef2eb9268aa0624d03db23d3f17fa548471a78e425963863e855178e13d5f7",
-    "gpu_pcb": "cd21fb4b928472fbb730b0e513b29abd1cc3250c0b2e8f2872167512ecf95b4c",
-    "gpu_pcie_fingers": "ff9007506a6f3ce31fa7fdf8d1c46fcaa64efdac58b96f29680907459e6d5cd1",
-    "gpu_rear_bracket": "f87c5fc48cb7844265d6356f38b830f56fc2e327089f1a9a5349957a7f81f0b5",
-    "gpu_rear_vents": "31b22716fae996a929c65bcf00ba3f2144fb9e2c3d4451f59a9f45179aea9226",
-    "gpu_shroud": "e40d48908e5d89ed086c7b9c039999a614df3f1f0af03849f6bfc8ca93c6f0a3",
+    "gpu_display_ports": "dfe320419eb01b2512e0a220f8a1a0d873acc872d043002050565fce238d251c",
+    "gpu_fan": "ddec41c627e353e56c1d93121e8e7b27a947593535630bcc190c7f5c774ec0b8",
+    "gpu_heatsink": "22524bd4b1bbd307d1bbe168fa34fb80a18df9c6b9ca7818839013a40fdf56c8",
+    "gpu_pcb": "2283adf50f3d9b1af21aacf4193b56ff2699634b8c0d13b5727433244a231d38",
+    "gpu_pcie_fingers": "dc88077e4a9da9d31bd1745934154d5ff5754affdd516f10190e38a03ef6edc1",
+    "gpu_rear_bracket": "6d9912b6cbf1c46d15bfd0c180f08e66130c9b58e08f6cffaeba68907c2235d1",
+    "gpu_rear_vents": "d343764a858125144ab5b6e285ac989f25d40adbcdce54c27bef8a78fcacbf59",
+    "gpu_shroud": "d93b69ea9f658a74dc9d133aad4539a567bd207bb2003cb25e2178d2a5c96d90",
     "left_panel": "79b23888f9829d778bc04d3468caa112ebb6e34f9c9826b2560880db457f71b7",
-    "mitx_atx_power": "c05b150bffee7d45f82992abe266523a5867192b5efeeb56ff2b17f1ca628ecc",
-    "mitx_axp120x67_envelope": "d64d22bba04cb4d72a742fbf816aa049cf30cef824196e9f690e4c2a23338fa5",
-    "mitx_axp120x67_fan": "62e51c3e8b7f3e584a4a71a7e651bacaa30e01d7a0caa3303c4c959ec7959474",
-    "mitx_chipset": "d8727a8db4814a1c2bdc83b8e66003b6985075c3e76aa25cbfe99137573e8345",
-    "mitx_cpu_socket": "29a337da7d6b19266dc95f664928d31948c96df0aaeb8fb12139a1fc8ab08b3d",
-    "mitx_dimm_bank": "5d559ca06267e7ff117898b82ab68e78d41d2b727e8f751d78980689b7115874",
-    "mitx_eps_power": "428723af782d55f2ccef23e0e604247932018b57f1e5880fd66d10ff954db87c",
-    "mitx_m2_bottom": "f539a254fc4062107576fff5ed07db8bc7ed04f692b1b638598ba8197247ce71",
-    "mitx_mount_rings": "57986cefa567942d890d058790fa3628fa91103f634c49e5534c44aaa95f824e",
+    "mitx_atx_power": "e19ffe73d1c3da0e1b019977ac13c3faaedb1ab87362275c700db8640eed6421",
+    "mitx_axp120x67_envelope": "8ae3ae5a2d3e21865796cf9520cac0170e1d9e9c040338afdc8da6525bebbabb",
+    "mitx_axp120x67_fan": "47875df2b0b361410f50f3bb830021db0fee929471115db0f7319489cada0d5c",
+    "mitx_chipset": "43f4bb2b2e15838e3cd3fea093c46810a9f12895e69be689da6b2a0a5d40782b",
+    "mitx_cpu_socket": "a8f7699b68f870500bea839d1e492c6f9b4ac0a77b107cb947f8063716d91971",
+    "mitx_dimm_bank": "11742af82eaa20bc358a94c9b9f3fad1d585da6944ffb8ac6a633075f5bcc6d4",
+    "mitx_eps_power": "3c07d69bb6c3436a8a873cacd4ead6ac99e00bab6c4fb72d7586a2aa454fe862",
+    "mitx_m2_bottom": "95f7625d529c7f2706b59e2e37fa46f8d734b085ae2348724bdefff1ca906c6b",
+    "mitx_mount_rings": "4ee40a01339bfc304e24593341baef2b1f3de0d33e139558324977f34ba3d22f",
     "mitx_pcb": "510dd80e0251604c430536b38b3356cecbbf5a7c341cbc94dc4269651b7cc481",
-    "mitx_pcie_slot": "174382070ee68d7f0fdb52c34ef04856a7b586127e767506d00413eff58d4e5d",
-    "mitx_rear_io": "bdeb19a0d8a681023d4339eedb56e55f6341cf966316d3187a4f612ead8f7afc",
-    "pcie_bracket": "40e8aaf01f65b5a44f175e038ae40ddca6a761463da49920908d1b423d4679c1",
-    "pcie_gpu_screws": "c031d649dab86855f490b37ea2c97605bdf4c4b1e29e069335409585786543af",
-    "pcie_rear_screws": "cee77e52c0c9b822835eb4553b6c66991e4904cb4375e92877b95fd930ed3310",
-    "rear_panel": "3d706b5f865a947f0b974dddec5d47903f61b63a399e78a9bf6f55927ec896a1",
-    "right_panel": "0ae6baa4c2cc7e7db2c0f46299e37f333ec3286e1f11409f629a80013bfec957",
-    "sfx_ac_inlet": "90870caaf1ca5d72cb34d05ed183a8a1d72f67a8c40f705d16874ca90b1db796",
+    "mitx_pcie_slot": "0e26012040486fba96a50c62f4bb139ab0851ab46c11a6466f39c9b8dad39d67",
+    "mitx_rear_io": "0a8478513124bbafe8b5722da6a63920e1c4a377b5a85c6341e134e0c2c1afee",
+    "pcie_bracket": "171e500bcd1af5491fdd5d1af30b751532e3ff595216599d8b35fe15f5385a36",
+    "pcie_gpu_screws": "447b8a71a589ad79aad177e55274db82d9af8b382c88437c58f4e7631e8cc77c",
+    "pcie_rear_screws": "ab046d07219f9e806c6362be534ebaae42f15459b2f3d0e59c8950495bbcb37f",
+    "rear_panel": "95666ca345be4c9fd14b598773f54dd22fecbf3601b3709be0a60d6c78607249",
+    "right_panel": "ad2ff7ce0cd53396116b20fc1f530ecdf0e2cb731e6cc3d8abc3af7d49aaced5",
+    "sfx_ac_inlet": "d41977b37425de7bb7bef9739788dde7a281870094d2a1ac84d5279f4040b048",
     "sfx_chassis": "2b9351a3b7e73b4bda331e3649f3bb81b654ff9ac293c1aec9012774464eb5ce",
-    "sfx_fan_grille": "67248fc5815e240776d221a5dc8d2048d5224ce753a0c59efe1ce615491d2aeb",
-    "sfx_modular_bank": "fe3fcce9e4c95eb1d1751bcb5e142a5d0d70a46f687016619896a6e0d3234a87",
-    "sfx_switch": "fde06cb8eb1df988133cb2d52bb0e5226726470a97bfc11e3b93b8e6784a82fb",
+    "sfx_fan_grille": "2d22d26377c6bdee669e8651f68399c37f2c8ddf42e9fe9cd08605b2e2b69d46",
+    "sfx_modular_bank": "3f6d9f4747ce663a6a675c3ba7d999ca47289425d6f43a1d362a9a1c8f06dc75",
+    "sfx_switch": "b213692a3ff07fba59dddcf678746844fd64d7fa4c6a9c9054b4c06a7d8c7d0a",
     "top_cap": "7a33f137757dff69ebbd0c18c71ec2859f310951f2d083af28e32878bd2f3dc6"
   },
   "runtime": {
@@ -185,10 +185,10 @@
   },
   "artifacts": [
     {
-      "path": "manufacturing/enclosure-integrated/releases/export-ee4fb1db8272bea6649a1d3e9a785d19/model.step",
+      "path": "manufacturing/enclosure-integrated/releases/export-19c52dbca2c0d12627d4caf18fac8ec0/model.step",
       "role": "model/step",
-      "sha256": "66bc4d3f48f3ad000b56e20e7a9ffbc50dedf8fa35a189bf71e482ef54b00472",
-      "sizeBytes": 13546789
+      "sha256": "ffe02dba60ac7453313a1d944f3ae68d98a45b05d81b0222720890b90519ebf0",
+      "sizeBytes": 13489662
     }
   ],
   "authority": {
@@ -196,14 +196,14 @@
     "algorithm": "hmac-sha256",
     "keyId": "362b3b580ef2418bcda710c677beea6a",
     "projectId": "2f2e2513-3845-4074-81ff-eb4f90089df0",
-    "receiptPath": "manufacturing/enclosure-integrated/releases/export-ee4fb1db8272bea6649a1d3e9a785d19/receipt.json",
-    "payloadSha256": "3cdb968d02f0c3968a0112e4e737c93154d05b9fbe244bbeb661ae7991502a5e",
-    "mac": "661f05e49b7512cc59206dc99dea931b1a6fd9b6379097a85b2b95cfc5821f89"
+    "receiptPath": "manufacturing/enclosure-integrated/releases/export-19c52dbca2c0d12627d4caf18fac8ec0/receipt.json",
+    "payloadSha256": "f60372c7af321670cdc5b6b82a509b856085074485d46e9c7a254c68778f62e2",
+    "mac": "fc081d20f5bc4fb9769686957a763514e3919263e16785d093367d7d5e3383b8"
   },
   "status": "reviewed",
   "review": {
-    "reviewId": "review-523-94a4283e-28f7-4ec7-918a-027367ef8823",
-    "path": ".work/builds/cad/enclosure-integrated/reviews/review-523-94a4283e-28f7-4ec7-918a-027367ef8823/receipt.json",
-    "sha256": "0e888cfa7dd98547d590ca5f37dc7b80ba95f297bb74a65a6a989b04a0cb869a"
+    "reviewId": "review-524-2884bd64-b5ff-46b4-8f3b-9370f3d08698",
+    "path": ".work/builds/cad/enclosure-integrated/reviews/review-524-2884bd64-b5ff-46b4-8f3b-9370f3d08698/receipt.json",
+    "sha256": "6aad655269d1f4ed17497167dbe2f33e4b32aea329d22c0583e90c3460f067e4"
   }
 }
