@@ -18,6 +18,8 @@ pcie_bracket_expected_rear_screws = param('pcie_bracket_expected_rear_screws', 2
 pcie_bracket_outline_margin_x = param('pcie_bracket_outline_margin_x', 3.0)
 pcie_bracket_gpu_axis_right_x = param('pcie_bracket_gpu_axis_right_x', 3.6)
 pcie_bracket_gpu_axis_outward_y = param('pcie_bracket_gpu_axis_outward_y', 3.6)
+pcie_bracket_outer_hole_left_shift_x = param('pcie_bracket_outer_hole_left_shift_x', 1.0)
+pcie_bracket_outer_hole_inward_shift_y = param('pcie_bracket_outer_hole_inward_shift_y', 1.0)
 
 pcie_bracket_alt_slot_right_x = param('pcie_bracket_alt_slot_right_x', 5.0)
 pcie_bracket_alt_slot_inward_y = param('pcie_bracket_alt_slot_inward_y', 6.0)
@@ -51,17 +53,28 @@ pcie_shelf = Box(
     align=(Align.CENTER, Align.CENTER, Align.MIN),
 ).moved(Location((pcie_shelf_center_x, pcie_bracket_effective_shelf_y, pcie_bracket_base_z)))
 
+# Preserve the upper keyed-insert row and the complete bracket envelope. Move
+# only the occupied outer row: X decreases to move left, Y increases to move inward.
 pcie_gpu_axis_z = flange_z - pcie_bracket_gpu_ear_thickness
-pcie_gpu_axis_y = flange_y - pcie_bracket_gpu_axis_outward_y
-pcie_gpu_axis_xs = tuple(x + pcie_bracket_gpu_axis_right_x for x in slot_centers)
-pcie_gpu_alt_axis_y = pcie_gpu_axis_y + pcie_bracket_alt_slot_inward_y + pcie_bracket_alt_hole_inward_shift_y
+pcie_gpu_outer_unshifted_y = flange_y - pcie_bracket_gpu_axis_outward_y
+pcie_gpu_outer_unshifted_xs = tuple(x + pcie_bracket_gpu_axis_right_x for x in slot_centers)
+pcie_gpu_axis_y = pcie_gpu_outer_unshifted_y + pcie_bracket_outer_hole_inward_shift_y
+pcie_gpu_axis_xs = tuple(
+    x - pcie_bracket_outer_hole_left_shift_x
+    for x in pcie_gpu_outer_unshifted_xs
+)
+pcie_gpu_alt_axis_y = (
+    pcie_gpu_outer_unshifted_y
+    + pcie_bracket_alt_slot_inward_y
+    + pcie_bracket_alt_hole_inward_shift_y
+)
 pcie_gpu_alt_axis_xs = tuple(
     x + pcie_bracket_alt_slot_right_x - pcie_bracket_alt_hole_left_shift_x
-    for x in pcie_gpu_axis_xs
+    for x in pcie_gpu_outer_unshifted_xs
 )
 
-# Keep the Build 520 insert envelope exactly as-is. Its dimensions continue to
-# use the former 3.4 mm circular-hole construction datum; only the internal cut changes.
+# Keep the keyed insert envelope exactly as-is. Its dimensions continue to use
+# the former 3.4 mm circular-hole construction datum; only the internal cut is threaded.
 pcie_alt_hole_radius = pcie_bracket_alt_slot_diameter/2
 pcie_insert_x_min = min(pcie_gpu_alt_axis_xs) - pcie_alt_hole_radius - pcie_bracket_insert_side_wall_x
 pcie_insert_x_max = max(pcie_gpu_alt_axis_xs) + pcie_alt_hole_radius + pcie_bracket_insert_side_wall_x
@@ -127,7 +140,7 @@ pcie_gpu_proxy = Box(
     pcie_gpu_stack_height, align=(Align.CENTER, Align.CENTER, Align.MIN),
 ).moved(Location((pcie_shelf_center_x, pcie_bracket_effective_shelf_y, pcie_gpu_axis_z)))
 
-# Existing occupied GPU-ear positions: explicitly M3 self-forming.
+# Occupied outer GPU-ear positions: explicitly M3 self-forming.
 pcie_gpu_joints = []
 for i, x in enumerate(pcie_gpu_axis_xs):
     j = make_screw_joint_v1(
@@ -140,7 +153,7 @@ for i, x in enumerate(pcie_gpu_axis_xs):
     pcie_bracket = (pcie_bracket - j.engage_cuts).clean()
     pcie_gpu_joints.append(j)
 
-# Same Build 520 centres, now M3 self-forming instead of 3.4 mm round clearance holes.
+# Upper keyed-insert centres remain unchanged.
 pcie_alt_joints = []
 for i, x in enumerate(pcie_gpu_alt_axis_xs):
     j = make_screw_joint_v1(
@@ -175,26 +188,36 @@ for i, (pcie_tab_x, pcie_tab_w, _land) in enumerate(pcie_tab_specs):
 pcie_gpu_hardware = Compound(children=[j.hardware for j in pcie_gpu_joints])
 pcie_rear_hardware = Compound(children=[j.hardware for j in pcie_rear_joints])
 pcie_connection_inventory = {
-    'gpu-ears-to-pcie-bracket': 'printed-screw-joint-v1 M3 self-forming x2 occupied',
-    'pcie-bracket-keyed-insert-positions': 'printed-screw-joint-v1 M3 self-forming x2 unoccupied',
+    'gpu-ears-to-pcie-bracket': 'printed-screw-joint-v1 M3 self-forming x2 occupied, shifted left/inward',
+    'pcie-bracket-keyed-insert-positions': 'printed-screw-joint-v1 M3 self-forming x2 unoccupied, unchanged',
     'pcie-bracket-to-rear-panel': 'bracket clearance + rear-panel M3 self-forming x2',
 }
 pcie_overlap = pcie_bracket & rear_panel
 pcie_overlap_volume = 0.0 if pcie_overlap is None else sum(s.volume for s in pcie_overlap)
 pcie_alt_interpair_pitch = pcie_gpu_alt_axis_xs[1] - pcie_gpu_alt_axis_xs[0]
+pcie_outer_interpair_pitch = pcie_gpu_axis_xs[1] - pcie_gpu_axis_xs[0]
+pcie_alt_to_active_dx = pcie_gpu_alt_axis_xs[0] - pcie_gpu_axis_xs[0]
+pcie_alt_to_active_dy = pcie_gpu_alt_axis_y - pcie_gpu_axis_y
 pcie_alt_to_active_center_spacing = (
-    (pcie_bracket_alt_slot_right_x-pcie_bracket_alt_hole_left_shift_x)**2
-    + (pcie_bracket_alt_slot_inward_y+pcie_bracket_alt_hole_inward_shift_y)**2
+    pcie_alt_to_active_dx**2 + pcie_alt_to_active_dy**2
 )**0.5
 pcie_alt_min_side_wall_thread = min(
     min(pcie_gpu_alt_axis_xs) - pcie_insert_x_min - M3_SELF_FORMING_R_OUT_MM,
     pcie_insert_x_max - max(pcie_gpu_alt_axis_xs) - M3_SELF_FORMING_R_OUT_MM,
 )
 pcie_alt_min_inward_wall_thread = pcie_insert_y_max - pcie_gpu_alt_axis_y - M3_SELF_FORMING_R_OUT_MM
+pcie_outer_min_edge_wall_thread = min(
+    min(pcie_gpu_axis_xs) - pcie_bracket_blank_bb.min.X - M3_SELF_FORMING_R_OUT_MM,
+    pcie_bracket_blank_bb.max.X - max(pcie_gpu_axis_xs) - M3_SELF_FORMING_R_OUT_MM,
+    pcie_gpu_axis_y - pcie_bracket_blank_bb.min.Y - M3_SELF_FORMING_R_OUT_MM,
+    pcie_bracket_blank_bb.max.Y - pcie_gpu_axis_y - M3_SELF_FORMING_R_OUT_MM,
+)
 pcie_bracket_final_bb = pcie_bracket.bounding_box()
 
-assert abs(pcie_bracket_alt_hole_left_shift_x - 1.0) < 0.001
-assert abs(pcie_bracket_alt_hole_inward_shift_y - 1.0) < 0.001
+assert abs(pcie_bracket_outer_hole_left_shift_x - 1.0) < 0.001
+assert abs(pcie_bracket_outer_hole_inward_shift_y - 1.0) < 0.001
+assert all(abs(a - (u - 1.0)) < 0.001 for a,u in zip(pcie_gpu_axis_xs, pcie_gpu_outer_unshifted_xs))
+assert abs(pcie_gpu_axis_y - (pcie_gpu_outer_unshifted_y + 1.0)) < 0.001
 assert len(pcie_gpu_joints) == int(pcie_bracket_expected_gpu_screws)
 assert len(pcie_alt_joints) == int(pcie_bracket_expected_alt_threads)
 assert len(pcie_rear_joints) == int(pcie_bracket_expected_rear_screws)
@@ -205,9 +228,11 @@ assert rear_panel.solids().__len__() == 1
 assert pcie_overlap_volume < 0.02
 assert all(w >= pcie_bracket_tab_min_width_x for _x,w,_land in pcie_tab_specs)
 assert abs(pcie_alt_interpair_pitch - slot_pitch) < 0.001
+assert abs(pcie_outer_interpair_pitch - slot_pitch) < 0.001
 assert pcie_alt_to_active_center_spacing >= 2*M3_SELF_FORMING_R_OUT_MM + 1.5
 assert pcie_alt_min_side_wall_thread > 1.0
 assert pcie_alt_min_inward_wall_thread > 1.0
+assert pcie_outer_min_edge_wall_thread > 1.0
 assert abs(pcie_bracket_final_bb.min.X - pcie_bracket_blank_bb.min.X) < 0.001
 assert abs(pcie_bracket_final_bb.max.X - pcie_bracket_blank_bb.max.X) < 0.001
 assert abs(pcie_bracket_final_bb.min.Y - pcie_bracket_blank_bb.min.Y) < 0.001
@@ -217,14 +242,16 @@ assert abs(pcie_bracket_final_bb.max.Z - pcie_bracket_blank_bb.max.Z) < 0.001
 assert pcie_insert_y_min < pcie_shelf_inner_edge_y < pcie_insert_y_max
 
 publish('rear_panel', rear_panel, 'Rear with keyed PCIe relief')
-publish('pcie_bracket', pcie_bracket, 'Keyed threaded PCIe bracket')
-publish('pcie_gpu_screws', pcie_gpu_hardware, 'Active GPU screws')
+publish('pcie_bracket', pcie_bracket, 'Shifted threaded PCIe bracket')
+publish('pcie_gpu_screws', pcie_gpu_hardware, 'Shifted GPU screws')
 publish('pcie_rear_screws', pcie_rear_hardware, 'Raised PCIe rear screws')
 print(
-    f'PCIE_KEYED_THREADS_PASS: keyed insert unchanged; active/alternate/rear receiving threads '
-    f'{len(pcie_gpu_joints)}/{len(pcie_alt_joints)}/{len(pcie_rear_joints)}; '
-    f'alternate centres x={pcie_gpu_alt_axis_xs[0]:.2f}/{pcie_gpu_alt_axis_xs[1]:.2f}, '
-    f'y={pcie_gpu_alt_axis_y:.2f}; conservative side/inward wall '
-    f'{pcie_alt_min_side_wall_thread:.3f}/{pcie_alt_min_inward_wall_thread:.3f} mm; '
-    f'panel overlap={pcie_overlap_volume:.4f} mm^3.'
+    f'PCIE_OUTER_HOLE_SHIFT_PASS: outer row from '
+    f'x={pcie_gpu_outer_unshifted_xs[0]:.2f}/{pcie_gpu_outer_unshifted_xs[1]:.2f}, '
+    f'y={pcie_gpu_outer_unshifted_y:.2f} to '
+    f'x={pcie_gpu_axis_xs[0]:.2f}/{pcie_gpu_axis_xs[1]:.2f}, y={pcie_gpu_axis_y:.2f}; '
+    f'left/inward={pcie_bracket_outer_hole_left_shift_x:.1f}/'
+    f'{pcie_bracket_outer_hole_inward_shift_y:.1f} mm; keyed row unchanged at '
+    f'x={pcie_gpu_alt_axis_xs[0]:.2f}/{pcie_gpu_alt_axis_xs[1]:.2f}, '
+    f'y={pcie_gpu_alt_axis_y:.2f}; panel overlap={pcie_overlap_volume:.4f} mm^3.'
 )
