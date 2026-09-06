@@ -1,1 +1,0 @@
-publish("enclosure_assembly", asset("workspace/cad-workbench/documents/enclosure-handoff/assets/5a66f00f8ed6251e5fdb97fe219144e5017251f717f0bb2728ed4b57b4606fa3.step"), "Reviewed screw-layout assembly")

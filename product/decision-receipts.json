@@ -15,7 +15,7 @@
         "rear_io_panel"
       ],
       "attachment_refs": [],
-      "fact_revision": 1,
+      "fact_version": 1,
       "status": "active",
       "context_hash": "b81e6effa2409e3d70573d4bc55ab9adeee0edc9e863d7c9228f1474ef859705"
     },
@@ -35,7 +35,7 @@
         "gpu_side_clamps"
       ],
       "attachment_refs": [],
-      "fact_revision": 1,
+      "fact_version": 1,
       "status": "active",
       "context_hash": "b81e6effa2409e3d70573d4bc55ab9adeee0edc9e863d7c9228f1474ef859705"
     },
@@ -53,7 +53,7 @@
         "rear_io_panel"
       ],
       "attachment_refs": [],
-      "fact_revision": 1,
+      "fact_version": 1,
       "status": "active",
       "context_hash": "b81e6effa2409e3d70573d4bc55ab9adeee0edc9e863d7c9228f1474ef859705"
     },
@@ -71,7 +71,7 @@
         "motherboard_tray"
       ],
       "attachment_refs": [],
-      "fact_revision": 1,
+      "fact_version": 1,
       "status": "active",
       "context_hash": "b81e6effa2409e3d70573d4bc55ab9adeee0edc9e863d7c9228f1474ef859705"
     },
@@ -91,7 +91,7 @@
         "motherboard_tray"
       ],
       "attachment_refs": [],
-      "fact_revision": 1,
+      "fact_version": 1,
       "status": "active",
       "context_hash": "b81e6effa2409e3d70573d4bc55ab9adeee0edc9e863d7c9228f1474ef859705"
     },
@@ -112,7 +112,7 @@
         "right_vent_panel"
       ],
       "attachment_refs": [],
-      "fact_revision": 1,
+      "fact_version": 1,
       "status": "active",
       "context_hash": "4e59430b0e62842011179c89133e603de637cdd87c3402741630413d9596a7fb"
     },
@@ -130,7 +130,7 @@
         "rear_io_panel"
       ],
       "attachment_refs": [],
-      "fact_revision": 1,
+      "fact_version": 1,
       "status": "active",
       "context_hash": "4e59430b0e62842011179c89133e603de637cdd87c3402741630413d9596a7fb"
     }

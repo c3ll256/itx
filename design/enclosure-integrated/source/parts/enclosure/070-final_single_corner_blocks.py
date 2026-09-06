@@ -11,12 +11,16 @@ final_corner_cleanup_depth_y = param('final_corner_cleanup_depth_y', 22.0)
 final_corner_cleanup_height_z = param('final_corner_cleanup_height_z', 20.0)
 final_corner_cleanup_skin_inset = param('final_corner_cleanup_skin_inset', 0.0)
 final_corner_expected = param('final_corner_expected', 8)
+final_lower_base_relief_xy_clearance = param('final_lower_base_relief_xy_clearance', 0.25)
+final_lower_base_relief_z_clearance = param('final_lower_base_relief_z_clearance', 0.25)
 
 assert final_corner_width_x == 12.0
 assert final_corner_depth_y == 12.0
 assert final_corner_height_z == 10.0
 assert final_corner_panel_overlap > final_corner_cleanup_skin_inset
 assert final_corner_cleanup_skin_inset == 0.0
+assert final_lower_base_relief_xy_clearance >= 0.2
+assert final_lower_base_relief_z_clearance >= 0.2
 assert len(slim2_corner_joints) == int(final_corner_expected)
 
 # Capture the nominal R10 end-panel envelopes before the corner blocks are
@@ -45,8 +49,21 @@ final_corner_rear_y = rear_final_inner_y + final_corner_depth_y / 2 - final_corn
 final_corner_lower_z = base_t
 final_corner_upper_z = H - cap_t - cap_inner_t
 
+# The base has a 2 mm inner reinforcement layer, inset 5 mm from the perimeter.
+# Give the lower fixing blocks a matching step-shaped relief, analogous to the
+# upper fixing structure's cap-side setback. The cutter is limited to each
+# lower block, so the exterior panel skin and unrelated lower features remain.
+final_lower_base_relief_envelope = Box(
+    W - 2 * base_inner_layer_inset + 2 * final_lower_base_relief_xy_clearance,
+    D - 2 * base_inner_layer_inset + 2 * final_lower_base_relief_xy_clearance,
+    base_inner_layer_thickness + final_lower_base_relief_z_clearance,
+    align=(Align.CENTER, Align.CENTER, Align.MIN),
+).moved(Location((0.0, 0.0, base_t)))
+
 joint_index = 0
 rebuilt_corner_count = 0
+lower_relief_count = 0
+lower_relief_volume = 0.0
 for sy in (-1, 1):
     rebuilt = rear_panel if sy < 0 else front_panel
     nominal_envelope = rear_nominal_corner_envelope if sy < 0 else front_nominal_corner_envelope
@@ -95,6 +112,15 @@ for sy in (-1, 1):
             final_corner_height_z,
             align=(Align.CENTER, Align.CENTER, Align.MAX),
         ).moved(Location((block_x, block_y, final_corner_upper_z)))
+
+        lower_relief = (lower_block & final_lower_base_relief_envelope).clean()
+        relief_volume = sum(s.volume for s in lower_relief.solids())
+        assert relief_volume > 0.0
+        lower_block = (lower_block - lower_relief).clean()
+        assert lower_block.solids().__len__() == 1
+        lower_relief_count += 1
+        lower_relief_volume += relief_volume
+
         rebuilt = (rebuilt + lower_block + upper_block).clean()
 
         bottom_joint = slim2_corner_joints[joint_index]
@@ -114,8 +140,10 @@ for sy in (-1, 1):
 
 assert joint_index == len(slim2_corner_joints)
 assert rebuilt_corner_count == int(final_corner_expected)
+assert lower_relief_count == 4
+assert lower_relief_volume > 0.0
 assert front_panel.solids().__len__() == 1
 assert rear_panel.solids().__len__() == 1
-publish('front_panel', front_panel, 'R10-trimmed front corner fixing blocks')
-publish('rear_panel', rear_panel, 'R10-trimmed rear corner fixing blocks')
-print(f'FINAL_SINGLE_CORNERS_PASS: {rebuilt_corner_count} compact {final_corner_width_x:.0f}x{final_corner_depth_y:.0f}x{final_corner_height_z:.0f} mm blocks rebuilt once and clipped to the nominal R{case_panel_corner_radius:.0f} panel envelopes.')
+publish('front_panel', front_panel, 'Base-relieved front corner blocks')
+publish('rear_panel', rear_panel, 'Base-relieved rear corner blocks')
+print(f'FINAL_SINGLE_CORNERS_PASS: {rebuilt_corner_count} compact {final_corner_width_x:.0f}x{final_corner_depth_y:.0f}x{final_corner_height_z:.0f} mm blocks rebuilt once; {lower_relief_count} lower blocks relieved for the {base_inner_layer_thickness:.1f} mm base thickening with {final_lower_base_relief_xy_clearance:.2f}/{final_lower_base_relief_z_clearance:.2f} mm XY/Z clearance; all clipped to the nominal R{case_panel_corner_radius:.0f} panel envelopes.')

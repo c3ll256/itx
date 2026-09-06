@@ -1,1 +1,0 @@
-# enclosure-column-kit

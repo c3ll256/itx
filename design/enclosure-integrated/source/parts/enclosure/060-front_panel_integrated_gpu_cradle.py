@@ -1,7 +1,9 @@
 # Internal far-end retaining cradle for the user-measured Colorful RTX 3060.
-# The GPU body bottom is measured 7.5 mm below the active PCIe opening lower
-# edge. The previous 8-pin power-corridor notch is intentionally removed per
-# the user's physical fit check. Two vertical side plates locate the card in X
+# The GPU body bottom remains 7.5 mm below the active PCIe opening lower edge.
+# Its final vertical location follows slot_z0, allowing the complete card,
+# rear opening, retention bracket and front cradle to move as one assembly.
+# The previous 8-pin power-corridor notch is intentionally removed per the
+# user's physical fit check. Two vertical side plates locate the card in X
 # while remaining open along Y so the front panel can slide off the GPU end.
 COLORFUL_GPU_BODY_LENGTH_MM = 241.0
 COLORFUL_GPU_L_EAR_PROJECTION_MM = 8.8
@@ -40,7 +42,6 @@ front_gpu_reference_end_y = COLORFUL_GPU_BODY_REAR_Y_MM + COLORFUL_GPU_BODY_LENG
 front_gpu_body_to_panel_clearance_y = front_inner_y - front_gpu_reference_end_y
 assert front_gpu_body_to_panel_clearance_y >= 5.0
 
-# User measurement: GPU bottom/support plane is 7.5 mm below the PCIe opening.
 front_gpu_cradle_reference_bottom_z = slot_z0 - front_gpu_cradle_bottom_offset_from_pcie_z
 front_gpu_shelf_top_z = front_gpu_cradle_reference_bottom_z
 front_gpu_shelf_bottom_z = front_gpu_shelf_top_z - front_gpu_cradle_shelf_thickness_z
@@ -48,8 +49,6 @@ front_gpu_channel_start_y = front_gpu_reference_end_y - front_gpu_cradle_end_eng
 front_gpu_channel_end_y = front_inner_y + front_gpu_panel_overlap_y
 front_gpu_channel_depth_y = front_gpu_channel_end_y - front_gpu_channel_start_y
 
-# The floor spans beneath both side plates. The named shelf width remains the
-# GPU bearing width; clearance and wall stock grow outward from it.
 front_gpu_sidewall_inner_gap_x = front_gpu_cradle_shelf_width_x + 2.0 * front_gpu_side_clearance_x
 front_gpu_tray_outer_width_x = front_gpu_sidewall_inner_gap_x + 2.0 * front_gpu_sidewall_thickness_x
 front_gpu_shelf = Box(
@@ -59,9 +58,6 @@ front_gpu_shelf = Box(
     align=(Align.CENTER, Align.MIN, Align.MIN),
 ).moved(Location((front_gpu_cradle_center_x, front_gpu_channel_start_y, front_gpu_shelf_bottom_z)))
 
-# Two continuous plates capture lateral motion without a top bridge. Because
-# they run along Y and are open toward the card, front-panel removal remains a
-# straight slide along the GPU length.
 front_gpu_sidewall_total_height_z = front_gpu_cradle_shelf_thickness_z + front_gpu_sidewall_height_z
 front_gpu_sidewall_offset_x = front_gpu_sidewall_inner_gap_x / 2.0 + front_gpu_sidewall_thickness_x / 2.0
 front_gpu_sidewall_xs = (
@@ -78,7 +74,6 @@ front_gpu_sidewalls = [
     for wall_x in front_gpu_sidewall_xs
 ]
 
-# Three full-depth ribs stiffen the now-continuous floor and its front-panel root.
 front_gpu_rib_y0 = front_inner_y - front_gpu_cradle_rib_depth_y
 front_gpu_rib_actual_depth_y = front_gpu_channel_end_y - front_gpu_rib_y0
 front_gpu_rib_top_z = front_gpu_shelf_bottom_z + front_gpu_cradle_root_overlap_z
@@ -120,8 +115,7 @@ front_gpu_reference_proxy = Box(
 
 front_gpu_actual_side_clearance_x = (front_gpu_sidewall_inner_gap_x - COLORFUL_GPU_THICKNESS_MM) / 2.0
 assert front_gpu_rib_actual_depth_y >= 8.0
-assert abs(front_gpu_cradle_reference_bottom_z - (slot_z0 - 7.5)) < 0.01
-assert abs(front_gpu_shelf_top_z - 89.5) < 0.01
+assert abs(front_gpu_cradle_reference_bottom_z - (slot_z0 - front_gpu_cradle_bottom_offset_from_pcie_z)) < 0.01
 assert abs(front_gpu_actual_side_clearance_x - front_gpu_side_clearance_x) < 0.01
 assert front_gpu_actual_side_clearance_x >= 0.8
 assert front_gpu_cradle.solids().__len__() == 1

@@ -36,6 +36,9 @@ panel_magnet15_end_inner_face_y = D / 2 - panel_t
 panel_magnet15_station_y = panel_magnet15_end_inner_face_y - panel_magnet15_carrier_width_y / 2 + panel_magnet15_panel_overlap_y
 panel_magnet15_station_inset_y = D / 2 - panel_magnet15_station_y
 panel_magnet15_repair_station_y = D / 2 - panel_magnet15_repair_inset_y
+panel_magnet15_slot_width = panel_magnet15_width_y + panel_magnet15_steel_clearance
+panel_magnet15_slot_height = panel_magnet15_height_z + panel_magnet15_steel_clearance
+panel_magnet15_slot_depth = panel_magnet15_steel_thickness_x + panel_magnet15_steel_depth_clearance
 
 assert panel_magnet15_width_y == 5.0
 assert panel_magnet15_height_z == 10.0
@@ -95,48 +98,12 @@ for sx in (-1, 1):
         panel_magnet15_rear_count += 1
 assert panel_magnet15_rear_count == int(panel_magnet15_expected) // 2
 
-# Restore obsolete front strike openings without creating a replacement here.
-# Rear strike recesses remain paired with the retained rear carriers. The final
-# front recesses are authored once beside the final compact front cups.
-panel_magnet15_slot_width = panel_magnet15_width_y + panel_magnet15_steel_clearance
-panel_magnet15_slot_height = panel_magnet15_height_z + panel_magnet15_steel_clearance
-panel_magnet15_slot_depth = panel_magnet15_steel_thickness_x + panel_magnet15_steel_depth_clearance
-panel_magnet15_rear_side_count = 0
-updated_side_panels = []
-for sx, panel in ((-1, left_panel), (1, right_panel)):
-    revised = panel
-    panel_x = sx * (W / 2 - panel_t / 2)
-    inner_face_x = sx * panel_magnet15_interface_face_x
-    pocket_center_x = inner_face_x + sx * panel_magnet15_slot_depth / 2
-    for sy in (-1, 1):
-        repair_station_y = sy * panel_magnet15_repair_station_y
-        for zz in (side_station_z_low, side_station_z_high):
-            patch = Box(
-                panel_t,
-                panel_magnet15_side_patch_width_y,
-                panel_magnet15_side_patch_height_z,
-                align=(Align.CENTER, Align.CENTER, Align.CENTER),
-            ).moved(Location((panel_x, repair_station_y, zz)))
-            revised = (revised + patch).clean()
-            if sy < 0:
-                strike = Box(
-                    panel_magnet15_slot_depth,
-                    panel_magnet15_slot_width,
-                    panel_magnet15_slot_height,
-                    align=(Align.CENTER, Align.CENTER, Align.CENTER),
-                ).moved(Location((pocket_center_x, -panel_magnet15_station_y, zz)))
-                revised = (revised - strike).clean()
-                panel_magnet15_rear_side_count += 1
-    updated_side_panels.append(revised)
-left_panel, right_panel = updated_side_panels
-assert panel_magnet15_rear_side_count == int(panel_magnet15_expected) // 2
+# Side panels pass through unchanged. No patch, refill, strike pocket, edge ear,
+# or local thickening is created here; final steel recesses are cut once later.
 assert front_panel.solids().__len__() == 1 and rear_panel.solids().__len__() == 1
 assert left_panel.solids().__len__() == 1 and right_panel.solids().__len__() == 1
 publish('front_panel', front_panel, 'Obsolete front magnets removed')
 publish('rear_panel', rear_panel, 'Rear glued magnets')
-publish('left_panel', left_panel, 'Rear strike recesses')
-publish('right_panel', right_panel, 'Rear strike recesses')
-print(
-    'FRONT_LEGACY_MAGNET_DELETE_PASS: obsolete front carriers deleted before '
-    'reinforcement; no front replacement generated; four rear carriers retained.'
-)
+publish('left_panel', left_panel, 'Unmodified left side panel')
+publish('right_panel', right_panel, 'Unmodified right side panel')
+print('FRONT_LEGACY_MAGNET_DELETE_PASS: obsolete front carriers deleted; four rear carriers retained; side-panel repair geometry retired.')
