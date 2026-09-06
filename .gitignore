@@ -24,11 +24,6 @@
 !/artifacts/**/*.json
 !/artifacts/**/*.md
 
-manufacturing/**
-!manufacturing/**/
-!manufacturing/**/*.json
-!manufacturing/**/*.md
-
 /product/references/cad-research/itx_panel_magnets_v1/9e3dd6ff.json
 /product/references/cad-research/itx_smaller_panel_magnets_v2/f63e6483.json
 /product/references/downloads/ROG_STRIX_Z390-I_GAMING_manual.pdf

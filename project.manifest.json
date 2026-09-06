@@ -1,8 +1,13 @@
 {
   "formatVersion": 4,
   "name": "itx",
-  "title": "约 10.5 L FDM 打印 Mini-ITX 机箱",
+  "title": "10.5 L Mini-ITX Case",
   "summary": "一款可用桌面 FDM 打印机制造的约 10.5 升 Mini-ITX 机箱，为指定主板、下压式散热器、双槽显卡与标准 SFX 电源提供可安装、可维护的紧凑方案。",
   "license": "MIT",
-  "artifacts": "rebuild"
+  "authors": [
+    {
+      "name": "c3ll256"
+    }
+  ],
+  "artifacts": "included"
 }
